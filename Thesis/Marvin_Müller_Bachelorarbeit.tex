@@ -174,7 +174,7 @@ Diese Arbeit behandelt das Thema KI, deshalb ist es essentiell hier einen allgem
 \subsection{Allgemein} % fold
 \label{sec:allgemein}
 Der Begriff KI beziehungsweise im Englischen AI beschreibt ein Teilgebiet der Informatik. Dabei gibt es zwei Arten von KI. Erstens die schwache KI, welche auch als enge KI bezeichnet wird. Diese Art der KI kann nur einzelne und beschränkte Aufgaben lösen. Der Begriff KI wurde bereits im Jahr 1956 als Konzept vorgeschlagen. Seitdem entwickelte sie sich immer weiter. Im Jahr 1997 verliert der damalige Schachweltmeister Garry Kasparov gegen den Schachcomputer Deep Blue von IBM und im Jahr 2016 besiegt der Computer AlphaGo von Google Lee Se-dol, ein Go-Meister aus Südkorea. Diese Erfolge zeigen die Entwicklung der KI (\cite{Hecker2018}) und (\cite{Roscher2025}), sind jedoch auf die schwache KI beschränkt.\\
-Als Zweites gibt es das Konzept der starken KI, auch als allgemeine KI bekannt. Folgende Graphik zeigt, wie diese ihre Umgebung wahrnimmt.
+Als Zweites gibt es das Konzept der starken KI, auch als allgemeine KI bekannt. Folgende Grafik zeigt, wie diese ihre Umgebung wahrnimmt.
 \begin{figure} [H]
     \centering
     \includegraphics[width=0.75\linewidth]{./Bilder/Fraunhofer_KI-Umgebung.png}
@@ -190,30 +190,38 @@ Es scheint dabei, dass die Maschinen sich selbst und ihre Umgebung wahrnehmen un
 \subsection{Bereiche der KI} % fold
 \label{sec:bereicheDerKI}
 Nachdem erklärt wurde um, was es sich bei KI handelt, ist es nun wichtig zu erklären, welche Bereiche und Teilgebiete es von KI gibt. Zu nennen sind dabei (\cite{Bhatt2021}), (\cite{Hecker2018}), (\cite{Mocko2021}), (\cite{Roscher2025}) und (\cite{Zhu2021}) maschinelles Lernen, Neuronale Netze und Deep Learning.
-Folgende Graphik zeigt anschaulich die einzelnen Teilgebiete der KI.
+Folgende Grafik zeigt anschaulich die einzelnen Teilgebiete der KI.
 \begin{figure} [H]
     \centering
-    \includegraphics[width=1\linewidth]{./Bilder/Mocko_Die Beziehung zwischen KI, maschinellem Lernen, neuronalen Netzen und Deep Learning.png}
+    \includegraphics[width=0.75\linewidth]{./Bilder/Mocko_Die Beziehung zwischen KI, maschinellem Lernen, neuronalen Netzen und Deep Learning.png}
     \caption{Die Beziehung zwischen KI, maschinellem Lernen, neuronalen Netzen und Deep Learning (\cite{Mocko2021})}
     \label{fig:enter-label}
 \end{figure}
-\noindent KI beziehungsweise AI wird bereits in Kapitel 2.1.1 beschrieben und umfasst die anderen drei Bereiche. Die Graphik ist dabei so zu verstehen, dass der größere Kreis die jeweils kleineren Kreise umfasst, das heißt Machine Learning ist ein Teil von KI, Neuronale Netze sind ein Teilgebiet von KI und Machine Learning und Deap Learning ist ein Teilgebiet von KI, Machine Learning und von Neuronalen Netzen. Im Folgenden werden nun die einzelnen Bereiche der KI erläutert.\\
+\noindent KI beziehungsweise AI wird bereits in Kapitel 2.1.1 beschrieben und umfasst die anderen drei Bereiche. Die Grafik ist dabei so zu verstehen, dass der größere Kreis die jeweils kleineren Kreise umfasst, das heißt maschinelles Lernen ist ein Teil von KI, Neuronale Netze sind ein Teilgebiet von KI und von maschinellem Lernen und Deap Learning ist ein Teilgebiet von KI, von maschinellem Lernen und von Neuronalen Netzen. Im Folgenden werden nun die einzelnen Bereiche der KI erläutert.\\
 \newpage
-\noindent\textbf{\underline{Machine Learning:}}\\
+\noindent\textbf{\underline{Maschinelles Lernen:}}\\
 \\
-Der Begriff Machine Learning beschreibt ...\\
+Maschinelles Lernen auf Englisch Machine Learning ist ein Teilgebiet der KI. Es beschreibt das Verfahren, in welchem Maschinen durch das Wiederholen von Aufgaben lernen. Dabei gibt es Algorithmen, welche mit Daten gefüttert werden und der Lernprozess ist eine Schleife, in welcher dieser wiederholt wird. Dadurch lernt die Maschine die Aufgabe zu lösen. Dies geschieht, in dem es Feedback erhält und so lernt, wie es die Aufgabe richtig löst. Es wird dabei kein Lösungsweg vorgegeben wie bei herkömmlichen Algorithmen, sondern die Maschine lernt durch Versuch und Irrtum beziehungsweise auf Englisch durch Trial and Error.\\
 \\
 \textbf{\underline{Neuronale Netze:}}\\
 \\
-Bei neuronalen Netzen handelt es sich um ...\\
+Bei neuronalen Netzen handelt es sich um ein Teilgebiet des maschinellen Lernens. Idee der neuronalen Netze ist es, menschliche Neuronen nachzubilden und somit menschliches Denken nachzuahmen. Ein neuronales Netz besteht dabei aus Knoten die aneinander gereiht sind. Sie haben eine Eingabeschicht, ein Hidden Layer welches aus einer Neuronenschicht besteht und eine Ausgabeschicht die miteinander vernetzt sind. Sie trainieren ebenfalls in Schleifen und Durchgängen und werden durch das wiederholen besser und schneller.\\
 \\
 \textbf{\underline{Deep Learning:}}\\
 \\
-Deep Learing ist ein Teilgebiet der Neuronalen Netze. ...
+Deep Learing ist ein Teilgebiet der Neuronalen Netze. Sie sind dadurch gekennzeichnet, sie ein Hidden Layer besitzen, (\cite{Dymatrix2018}) welches aus mehr als einer Neuronenschicht besteht. Folgende Grafik zeigt anschaulich ein Neuronales Netz und ein Deep Learing Netz.
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{./Bilder/Dymatrix_Deep_Learning_Networks.jpg}
+    \caption{Deep Learning Network Grafik (\cite{Dymatrix2018})}
+    \label{fig:enter-label}
+\end{figure}
+\noindent Sie können dabei Millionen Neuronenschichten beinhalten und dadurch immer komplexere Aufgaben lösen.
 %subsection bereicheDerKI (end)
 % section KI (end)
+\newpage
 
-\section{LLM} % (fold)
+\noindent\section{LLM} % (fold)
 \label{sec:llm}
 In dieser Arbeit wird/werden LLM(s) verwendet, über ihre Eigenschaften und Entwicklungen klärt dieses Kapitel auf
 
