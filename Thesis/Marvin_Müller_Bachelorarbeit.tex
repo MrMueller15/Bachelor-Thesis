@@ -265,7 +265,7 @@ Bereits in Kapitel 1 Motivation wird RAG erwähnt. RAG ist für diese Arbeit von
 
 \subsection{Definition RAG} % fold
 \label{sec:definitionRAG}
-RAG ist eine Technik in welcher einem LLM Dokumente zur Verfügung gestellt werden. Dabei werden die in den Dokumenten enthaltenen Informationen für das LLM (\cite{Honroth2024}), (\cite{Miesle2023}) und (\cite{Schmid2024}) nutzbar gemacht. Die Dokumente und Anfragen werden dabei in kleine Abschnitte, welche als Chunks bezeichnet werden, aufgeteilt. RAG lässt sich dabei in sehr vielen LLM anwenden und optimiert diese, ohne dass diese mit viel Aufwand trainiert werden können. Folgende Grafik zeigt anschaulich wie RAG funktioniert:
+RAG ist eine Technik, in welcher einem LLM Dokumente zur Verfügung gestellt werden. Dabei werden die in den Dokumenten enthaltenen Informationen für das LLM (\cite{Honroth2024}), (\cite{Miesle2023}) und (\cite{Schmid2024}) nutzbar gemacht. Die Dokumente und Anfragen werden dabei in kleine Abschnitte, welche als Chunks bezeichnet werden, aufgeteilt. RAG lässt sich dabei in sehr vielen LLM anwenden und optimiert diese, ohne dass diese mit viel Aufwand trainiert werden müssen. Folgende Grafik zeigt anschaulich, wie RAG funktioniert:
 
 \begin{figure} [H]
     \centering
@@ -273,31 +273,34 @@ RAG ist eine Technik in welcher einem LLM Dokumente zur Verfügung gestellt werd
     \caption{Wie funktioniert Retrieval Augmented Generation (RAG) im Detail (\cite{Honroth2024})}
     \label{fig:enter-label}
 \end{figure}
-\noindent Nun werden die einzelnen Schritte von RAG erklärt,\\
+\noindent Nun werden die einzelnen Schritte von RAG erklärt:\\
 \\
 \textbf{\underline{Indexierung:}}\\
-...\\
+\\
+Die Indexierung beschreibt den Prozess, wie die Daten aus einem Dokument in kürzere Abschnitte den Chunks aufgeteilt werden, um die Daten für die LLM verwertbar zu machen. Die Chunks werden maschinenlesbar gemacht und in einer Vektordatenbank gespeichert, aus welcher sie nun für die LLM zugreifbar sind. Sie werden vektorisiert.\\
 \\
 \textbf{\underline{Benutzereingabe:}}\\
-...\\
+\\
+Die Benutzereingabe erfolgt als Prompt in natürlicher Sprache, welche sich auf die im Dokument befindlichen Daten beziehen.\\
 \\
 \textbf{\underline{Retieval:}}\\
-...\\
+\\
+Nachdem die Maschine die Eingabe erhalten hat und diese ebenfalls vektorisiert hat, wird mit der Methode des nächsten Nachbarn, wird die höchste Ähnlichkeit zwischen der Eingabe und der in der Vektordatenbank gespeicherten Chunks priorisiert.\\
 \\
 \textbf{\underline{Augmentation:}}\\
-...\\
+\\
+Der LLM wird diese Kombination aus Prompt des Benutzers und der Kontext zu Verfügung gestellt.\\
 \\
 \textbf{\underline{Generation:}}\\
-...\\
 \\
-Die Werke von (\cite{Gao2024}), (\cite{LiuLinLiu2024}) und (\cite{Salemi2024}) kommen zu dem Schluss, dass durch RAG LLM bessere Erlebnisse liefern können. RAG ist jedoch kein Allheilmittel. 
+Es wird nun eine Antwort generiert, welches die erhaltenen Informationen und das Training des jeweiligen LLM kombiniert.\\
+\\
+Die Werke von (\cite{Gao2024}), (\cite{Lewis2021}), (\cite{Salemi2024}) und (\cite{Wu2024}) kommen zu dem Schluss, dass durch RAG LLM bessere Erlebnisse liefern können. Ergebnisse, welche RAG benutzen, zeichnen sich bei ihrer Performance aus und sind spezifischer und faktenreicher als Ergebnisse die nur von der LLM, ohne RAG erzeugt wurden.
 % section definitionRAG (end)
 
 \subsection{Einsatzmöglichkeiten von RAG} % fold
 \label{sec:einsatzmöglichkeitenVonRAG}
-RAG kann in dieser Arbeit auf zwei verschiedene Arten genutzt werden. Diese beiden können auch miteinander kombiniert werden.\\
-Die KI und LLM können sowohl Bilder als auch Text erkennen wenn diese zur Verfügung gestellt werden. Informationen und Anforderungen über welche die KI Testfälle erzeugen soll, können in Form von Bildern und Text dieser als Datei zur Verfügung gestellt werden.
-TODO QUELLEN finden ausschreiben
+RAG spielt in dieser Arbeit eine entscheidende Rolle. Mithilfe von RAG kann der LLM eine Anforderungsspezifikation zur Verfügung gestellt werden, aus welcher bereits manuell Anforderungstestfälle generiert wurden. Durch RAG kann die LLM diese Anforderungsspezifikation, welche eine PDF-Datei ist, gut verarbeiten und daraus Informationen ziehen. Dabei kann sie Informationen in Form von Text und von Bildern verarbeiten und berücksichtigen. Dies kann getrennt von einander geschehen, also PDF-Dateien sein, welche entweder nur Text oder Bilder enthalten, oder PDF-Dateien, welche Text und Bilder beinhalten.
 % section einsatzmöglichkeitenVonRAG (end)
 % section rag (end)
 
