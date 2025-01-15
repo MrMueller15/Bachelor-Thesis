@@ -330,31 +330,32 @@ TODO QUELLEN finden ausschreiben
 % section testfallkriterien (end)
 % section testfall (end)
 
-\section{Testspezifikation} % (fold)
-\label{sec:testspezifikation}
-Eine Testspezifikation ist das Fundament, aus welcher Testfälle erstellt werden. Ein Testfall überprüft ob die Anforderungen aus dieser Spezifikation erfüllt werden.
+\section{Anforderungsspezifikation} % (fold)
+\label{sec:anforderungsspezifikation}
+Eine Anforderungsspezifikation  ist das Fundament, aus welcher Testfälle erstellt werden. Ein Testfall überprüft ob die Anforderungen aus dieser Spezifikation erfüllt werden.
 
 \subsection{Definition Testspezifikation} % fold
 \label{sec:definitionTestspezifikation}
-Eine Testspezifikation wird folgendermaßen definiert\\
-Allgemein und auch Anforderungsspezifikation spezifisch
-TODO QUELLEN finden ausschreiben
+Eine Anforderungsspezifikation ist ein Dokument welches alle Anforderungen beziehungsweise Requirements enthält, welche das System erfüllen muss und dessen Erfüllbarkeit und nicht Erfüllbarkeit mit Testfällen abgedeckt und getestet werden. Da sie der Grund für die Testfälle sind, müssen Anforderungsspezifikationen vollständig, präzise und in sich konsistent sein. Anforderungsspezifikationen enthalten System- und Benutzeranforderungen. Systemanforderungen beschreiben dabei die Benutzeranforderungen genau, wobei die Benutzeranforderungen funktionale und nicht funktionale Requirements besitzen (\cite{Aysolmaz2018}), (\cite{Barmi2011}) und (\cite{Mustafa2021}). Nicht funktionale Reuqirements beschreiben zum Beispiel Sicherheit und Wartung. In dieser Arbeit geht es um funktionale Requirements, diese legen fest, was wie das System funktioniert und was passiert wenn etwas im positiven als auch wenn etwas im negativen passiert. Sie dienen als Grundlage für die Testfallgenerierung durch die LLM in dieser Arbeit.
 % section definitionTestspezifikation (end)
 
-\subsection{Merkmale einer Testspezifikation} % fold
-\label{sec:merkmaleEinerTestspezifikation}
-Ein Testfall hat folgende Merkmale\\
-Allgemein und auch Anforderungsspezifikation spezifisch
-TODO QUELLEN finden ausschreiben
-% section merkmaleEinerTestspezifikation (end)
-
-\subsection{Kriterien für Testspezifikation} % fold
-\label{sec:kriterienFürTestspezifikation}
-Eine Testspezifikation hat folgende Merkmale. Dies ist wichtig, da für diese Arbeit Testdaten aus Open Source Projekten verwendet werden. Das Ergebnis welches die KI liefern kann ist jedoch im Besonderen davon abhängig, wie gut die Testdaten sind. Aus diesen hier bestimmten Kriterien werden die passenden Testdaten für diese Arbeit gesucht und bestimmt.\\
-Allgemein und auch Anforderungsspezifikation spezifisch
-TODO QUELLEN finden ausschreiben
-% section kriterienFürTestspezifikation (end)
-% chapter grundlagen (end)
+\subsection{Bedeutung der Anforderungsspezifikation für die Testfallgenerierung} % fold
+\label{sec:bedeutungDerAnforderungsspezifikationFürDieTestfallgenerierung}
+In vielen Softwareprojekten werden Testfälle durch Requirements erzeugt (\cite{Aysolmaz2018}), (\cite{Barmi2011}) und (\cite{Mustafa2021}).
+Anforderungsspezifikationen dienen als Grundlage für die Testfallgenerierung durch die LLM in dieser Arbeit. Sie werden der LLM per RAG übermittelt und per Prompt dazu aufgerufen, Testfälle zu generieren, welche diese Requirements in Positiv- und Negativfällen abdecken. Dies ist essentiell für diese Arbeit, da es ohne Requirements nicht möglich ist, die von der LLM generierten Testfälle, auszuwerten. Mit ihrer Hilfe kann nun jedoch präzise festgestellt werden wie diese im Bereich Vollständigkeit, Qualität und Fehlerhäufigkeit vorkommen.\\
+\\
+\textbf{\underline{Vollständigkeit:}}\\
+\\
+Werden alle Requirements, welche dem LLM übergeben werden, im positiven wie im negativen, vollständig abgedeckt? Wenn Nein wie viele werden ausgelassen?\\
+\\
+\textbf{\underline{Qualität:}}\\
+\\
+Werden alle Requirements präzise wiedergegeben und vollständig getestet, oder gibt es Rechtschreibfehler, oder eine falsche Anordnung der Reihenfolge, oder werden Requirements aufgeteilt und falsch dargestellt?\\
+\\
+\textbf{\underline{Fehlerhäufigkeit:}}\\
+\\
+Wie viele Testschritte enthalten Informationen, welche sich nicht in der mitgegebenen Anforderungsspezifikation befinden und welche sind komplett frei erfunden und weisen keinen Zusammenhang mit dem System auf? So kann die Anzahl der Halluzinationen bestimmt und gezählt werden.
+% section bedeutungDerAnforderungsspezifikationFürDieTestfallgenerierung (end)
 
 \chapter{Related Work und aktuelle Forschung} % (fold)
 \label{sec:relatedWorkUndAktuelleForschung}
