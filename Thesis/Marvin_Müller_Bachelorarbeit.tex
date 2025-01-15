@@ -173,8 +173,7 @@ Diese Arbeit behandelt das Thema KI, deshalb ist es essentiell hier einen allgem
 
 \subsection{Allgemein} % fold
 \label{sec:allgemein}
-Der Begriff KI beziehungsweise im Englischen AI beschreibt ein Teilgebiet der Informatik. Dabei gibt es zwei Arten von KI. Erstens die schwache KI, welche auch als enge KI bezeichnet wird. Diese Art der KI kann nur einzelne und beschränkte Aufgaben lösen. Der Begriff KI wurde bereits im Jahr 1956 als Konzept vorgeschlagen. Seitdem entwickelte sie sich immer weiter. Im Jahr 1997 verliert der damalige Schachweltmeister Garry Kasparov gegen den Schachcomputer Deep Blue von IBM und im Jahr 2016 besiegt der Computer AlphaGo von Google Lee Se-dol, ein Go-Meister aus Südkorea. Diese Erfolge zeigen die Entwicklung der KI, sind jedoch auf die schwache KI beschränkt (\cite{Hecker2018}) und (\cite{Roscher2025}).\\
-Als Zweites gibt es das Konzept der starken KI, auch als allgemeine KI bekannt. Folgende Grafik zeigt, wie diese ihre Umgebung wahrnimmt.
+Der Begriff KI beziehungsweise im Englischen AI beschreibt ein Teilgebiet der Informatik. Dabei gibt es zwei Arten von KI. Erstens die schwache KI, welche auch als enge KI bezeichnet wird. Diese Art der KI kann nur einzelne und beschränkte Aufgaben lösen. Der Begriff KI wurde bereits im Jahr 1956 als Konzept vorgeschlagen. Seitdem entwickelte sie sich immer weiter. Im Jahr 1997 verliert der damalige Schachweltmeister Garry Kasparov gegen den Schachcomputer Deep Blue von IBM und im Jahr 2016 besiegt der Computer AlphaGo von Google Lee Se-dol, ein Go-Meister aus Südkorea. Diese Erfolge zeigen die Entwicklung der KI, sind jedoch auf die schwache KI beschränkt (\cite{Bhatt2021}), (\cite{Hecker2018}), (\cite{Mocko2021}), (\cite{Roscher2025}) und (\cite{Zhu2021}).Als Zweites gibt es das Konzept der starken KI, auch als allgemeine KI bekannt. Folgende Grafik zeigt, wie diese ihre Umgebung wahrnimmt.
 \begin{figure} [H]
     \centering
     \includegraphics[width=0.75\linewidth]{./Bilder/Fraunhofer_KI-Umgebung.png}
@@ -209,14 +208,16 @@ Bei neuronalen Netzen handelt es sich um ein Teilgebiet des maschinellen Lernens
 \\
 \textbf{\underline{Deep Learning:}}\\
 \\
-Deep Learing ist ein Teilgebiet der Neuronalen Netze. Sie sind dadurch gekennzeichnet, sie ein Hidden Layer besitzen, welches aus mehr als einer Neuronenschicht besteht (\cite{Dymatrix2018}). Folgende Grafik zeigt anschaulich ein Neuronales Netz und ein Deep Learing Netz.
+Deep Learing ist ein Teilgebiet der Neuronalen Netze. Sie sind dadurch gekennzeichnet, sie ein Hidden Layer besitzen, welches aus mehr als einer Neuronenschicht besteht (\cite{Bhatt2021}), (\cite{Dymatrix2018}) und (\cite{Zhu2021}). Folgende Grafik zeigt anschaulich ein Neuronales Netz und ein Deep Learning Netz.
 \begin{figure} [H]
     \centering
     \includegraphics[width=0.75\linewidth]{./Bilder/Dymatrix_Deep_Learning_Networks.jpg}
     \caption{Deep Learning Network Grafik (\cite{Dymatrix2018})}
     \label{fig:enter-label}
 \end{figure}
-\noindent Sie können dabei Millionen Neuronenschichten beinhalten und dadurch immer komplexere Aufgaben lösen.
+\noindent Sie können dabei Millionen Neuronenschichten beinhalten und dadurch immer komplexere Aufgaben lösen.\\
+\\
+Dies ist eine kurze Abhandlung über das Thema KI, weitere wichtige KI-Bereiche wie LLM, Prompting und RAG werden in den Kapiteln 2.2 LLM, 2.3 Prompting und im Kapitel 2.4 erläutert, da diese eine wichtige Rolle in dieser Arbeit spielen.
 %subsection bereicheDerKI (end)
 % section KI (end)
 \newpage
@@ -265,7 +266,7 @@ Bereits in Kapitel 1 Motivation wird RAG erwähnt. RAG ist für diese Arbeit von
 
 \subsection{Definition RAG} % fold
 \label{sec:definitionRAG}
-RAG ist eine Technik, in welcher einem LLM Dokumente zur Verfügung gestellt werden. Dabei werden die in den Dokumenten enthaltenen Informationen für das LLM nutzbar gemacht (\cite{Honroth2024}), (\cite{Miesle2023}) und (\cite{Schmid2024}). Die Dokumente und Anfragen werden dabei in kleine Abschnitte, welche als Chunks bezeichnet werden, aufgeteilt. RAG lässt sich dabei in sehr vielen LLM anwenden und optimiert diese, ohne dass diese mit viel Aufwand trainiert werden müssen. Folgende Grafik zeigt anschaulich, wie RAG funktioniert:
+RAG ist eine Technik, in welcher einem LLM Dokumente zur Verfügung gestellt werden. Dabei werden die in den Dokumenten enthaltenen Informationen für das LLM nutzbar gemacht (\cite{Gao2024}), (\cite{Honroth2024}), (\cite{Lewis2021}), (\cite{Miesle2023}), (\cite{Salemi2024}), (\cite{Schmid2024}) und (\cite{Wu2024}). Die Dokumente und Anfragen werden dabei in kleine Abschnitte, welche als Chunks bezeichnet werden, aufgeteilt. RAG lässt sich dabei in sehr vielen LLM anwenden und optimiert diese, ohne dass diese mit viel Aufwand trainiert werden müssen. Folgende Grafik zeigt anschaulich, wie RAG funktioniert:
 
 \begin{figure} [H]
     \centering
@@ -273,7 +274,7 @@ RAG ist eine Technik, in welcher einem LLM Dokumente zur Verfügung gestellt wer
     \caption{Wie funktioniert Retrieval Augmented Generation (RAG) im Detail (\cite{Honroth2024})}
     \label{fig:enter-label}
 \end{figure}
-\noindent Nun werden die einzelnen Schritte von RAG erklärt:\\
+\noindent Nun werden die einzelnen Schritte von RAG erklärt (\cite{Gao2024}), (\cite{Honroth2024}), (\cite{Lewis2021}), (\cite{Miesle2023}), (\cite{Salemi2024}), (\cite{Schmid2024}) und (\cite{Wu2024}):\\
 \\
 \textbf{\underline{Indexierung:}}\\
 \\
@@ -283,7 +284,7 @@ Die Indexierung beschreibt den Prozess, wie die Daten aus einem Dokument in kür
 \\
 Die Benutzereingabe erfolgt als Prompt in natürlicher Sprache, welche sich auf die im Dokument befindlichen Daten beziehen.\\
 \\
-\textbf{\underline{Retieval:}}\\
+\textbf{\underline{Retrieval:}}\\
 \\
 Nachdem die Maschine die Eingabe erhalten hat und diese ebenfalls vektorisiert hat, wird mit der Methode des nächsten Nachbarn, wird die höchste Ähnlichkeit zwischen der Eingabe und der in der Vektordatenbank gespeicherten Chunks priorisiert.\\
 \\
