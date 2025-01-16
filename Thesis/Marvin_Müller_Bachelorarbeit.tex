@@ -72,8 +72,9 @@
 \begin{description}
   \item[AI:] Artificial Intelligence
   \item[GUI:] Graphical User Interface (Deutsch: Grafische Benutzeroberfläche)
-  \item[LLM:] Large Language Model (Deutsch: Großes Sprachmodell)
   \item[KI:] Künstliche Intelligenz
+  \item[LLM:] Large Language Model (Deutsch: Großes Sprachmodell)
+  \item[NLP:] Natural Language Processing (Deutsch: Verarbeitung natürlicher Sprache)
   \item[RAG:] Retrieval Augmented Generation
 \end{description}
 
@@ -226,8 +227,15 @@ In dieser Arbeit wird/werden LLM(s) verwendet, über ihre Eigenschaften und Entw
 
 \subsection{Definition LLM} % fold
 \label{sec:definitionLLM}
-Unter dem Begriff LLM versteht man folgendes:
-TODO QUELLEN finden ausschreiben
+LLM ist ein Kombination aus zwei Bereichen der KI. Es ist ein Teilgebiet von Natural Language Processing (NLP), der Möglichkeit der Verarbeitung natürlicher Sprache, welche mit Hilfe der Trainingsmöglichkeit, welche Deep Learning bietet kombiniert. Folgende Grafik zeigt anschaulich, in welchem Gebiet LLM innerhalb der KI angesiedelt sind:
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=1\linewidth]{./Bilder/Hodiak_LLM und NLP Verschiedene Anwendungsfälle der Technologien.png}
+    \caption{LLM und NLP Verschiedene Anwendungsfälle der Technologien (\cite{Hodiak2024})}
+    \label{fig:enter-label}
+\end{figure}
+\noindent Dabei können diese Modelle durch das Training und der Verfügbarkeit von sehr großen Datenmengen, natürliche Sprache nachahmen. Ein bekanntes Beispiel für LLM sind Chatbots wie ChatGPT.
 % section definitionLLM (end)
 
 \subsection{Entwicklungen im Bereich LLM} % fold
@@ -326,7 +334,13 @@ Folgende Graphik zeigt ein Testfalldesign für eine SAP Applikation:
 \end{figure}
 \noindent Ein Testfall besitzt einen Namen, Vorbedingungen welche erfüllt sein müssen, damit der Testfall durchgeführt werden kann, Ziele die erreicht werden sollen. Der Testfall gliedert sich in Schritten, welche eine Beschreibung und ein erwartetes Ergebnis besitzen. In den Schritten wird somit überprüft, ob die Anwendung die Anforderungen erfüllt und somit das erwartete Ergebnis eintrifft. Testfälle können dabei positiv, als auch negativ sein. Bei negativen Testfällen wird überprüft ob das erwartete Ergebnis, wie erwartet nicht eintrifft, da die Voraussetzungen nicht erfüllt sind. In dieser Arbeit wird von der KI erwartet, dass es wenn es ein Testfall schreibt, diesen Aufbau einhält. Wenn sie es nicht macht, wird dies als negativ bewertet.
 % section aufbauEinesTestfall (end)
+
+\subsection{Testfallkriterien} % fold
+\label{sec:testfallkriterien}
+Folgende Werke zeigen Kriterien auf, welche Testfälle besitzen müssen.
+% section testfallkriterien (end)
 % section testfall (end)
+
 
 \section{Anforderungsspezifikation} % (fold)
 \label{sec:anforderungsspezifikation}
