@@ -216,12 +216,11 @@ Deep Learing ist ein Teilgebiet der Neuronalen Netze. Sie sind dadurch gekennzei
 \end{figure}
 \noindent Sie können dabei Millionen Neuronenschichten beinhalten und dadurch immer komplexere Aufgaben lösen.\\
 \\
-Dies ist eine kurze Abhandlung über das Thema KI, weitere wichtige KI-Bereiche wie LLM, Prompting und RAG werden in den Kapiteln 2.2 LLM, 2.3 Prompting und im Kapitel 2.4 erläutert, da diese eine wichtige Rolle in dieser Arbeit spielen.
+Dies ist eine kurze Abhandlung über das Thema KI(\cite{Bhatt2021}), (\cite{Hecker2018}), (\cite{Mocko2021}), (\cite{Roscher2025}) und (\cite{Zhu2021}). Weitere wichtige KI-Bereiche wie LLM, Prompting und RAG werden in den Kapiteln 2.2 LLM, 2.3 Prompting und im Kapitel 2.4 erläutert, da diese eine wichtige Rolle in dieser Arbeit spielen.
 %subsection bereicheDerKI (end)
 % section KI (end)
-\newpage
 
-\noindent\section{LLM} % (fold)
+\section{LLM} % (fold)
 \label{sec:llm}
 In dieser Arbeit wird/werden LLM(s) verwendet, über ihre Eigenschaften und Entwicklungen klärt dieses Kapitel auf
 
@@ -315,19 +314,18 @@ Allgemein und auch Anforderungstestfall spezifisch
 TODO QUELLEN finden ausschreiben
 % section definitionTestfall (end)
 
-\subsection{Merkmale eines Testfalls} % fold
-\label{sec:merkmaleEinesTestfalls}
-Ein Testfall hat folgende Merkmale\\
-Allgemein und auch Anforderungstestfall spezifisch
-TODO QUELLEN finden ausschreiben
-% section merkmaleEinesTestfall (end)
+\subsection{Aufbau eines Testfalls} % fold
+\label{sec:aufbauEinesTestfalls}
+Folgende Graphik zeigt ein Testfalldesign für eine SAP Applikation:
 
-\subsection{Testfallkriterien} % fold
-\label{sec:testfallkriterien}
-Ein Testfall hat folgende Kriterien. Diese müssen erfüllt werden, sodass ein Testfall als ausreichend oder als gut eingestuft werden kann. Diese Definition ist wichtig, damit nachvollziehbar ist, wie die Testfälle, welche die KI erzeugt hat, bewertet werden. In Kapitel 4 Methodik wird genauer darüber eingegangen.\\
-Allgemein und auch Anforderungstestfall spezifisch
-TODO QUELLEN finden ausschreiben
-% section testfallkriterien (end)
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=1\linewidth]{./Bilder/Enderli_Testfall im SAP Solution Manager.jpg}
+    \caption{Testfall im SAP Solution Manager (\cite{Enderli2019})}
+    \label{fig:enter-label}
+\end{figure}
+\noindent Ein Testfall besitzt einen Namen, Vorbedingungen welche erfüllt sein müssen, damit der Testfall durchgeführt werden kann, Ziele die erreicht werden sollen. Der Testfall gliedert sich in Schritten, welche eine Beschreibung und ein erwartetes Ergebnis besitzen. In den Schritten wird somit überprüft, ob die Anwendung die Anforderungen erfüllt und somit das erwartete Ergebnis eintrifft. Testfälle können dabei positiv, als auch negativ sein. Bei negativen Testfällen wird überprüft ob das erwartete Ergebnis, wie erwartet nicht eintrifft, da die Voraussetzungen nicht erfüllt sind. In dieser Arbeit wird von der KI erwartet, dass es wenn es ein Testfall schreibt, diesen Aufbau einhält. Wenn sie es nicht macht, wird dies als negativ bewertet.
+% section aufbauEinesTestfall (end)
 % section testfall (end)
 
 \section{Anforderungsspezifikation} % (fold)
