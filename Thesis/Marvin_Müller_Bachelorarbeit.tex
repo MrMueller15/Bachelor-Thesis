@@ -72,6 +72,10 @@
 \begin{description}
   \item[AI:] Artificial Intelligence
   \item[GUI:] Graphical User Interface (Deutsch: Grafische Benutzeroberfläche)
+  \item[IEC:] International Electrotechnical Commission
+  \item[IEEE:] Institute of Electrical and Electronics Engineers
+  \item[ISO:] International Organization for Standardization
+  \item[ISTQB:] International Software Testing Qualifications Board
   \item[KI:] Künstliche Intelligenz
   \item[LLM:] Large Language Model (Deutsch: Großes Sprachmodell)
   \item[NLP:] Natural Language Processing (Deutsch: Verarbeitung natürlicher Sprache)
@@ -314,14 +318,12 @@ In dieser Arbeit geht es um die Generierung von Testfällen durch KI. Es ist wic
 
 \subsection{Definition Testfall} % fold
 \label{sec:definitionTestfall}
-Ein Testfall beschreibt folgendes.\\
-Allgemein und auch Anforderungstestfall spezifisch
-TODO QUELLEN finden ausschreiben
+In dieser Arbeit werden Testfälle mit Hilfe von LLM erzeugt. Deshalb ist es wichtig zu beschreiben, was ein Testfall ist, wie er aufgebaut ist und welche Merkmal diese besitzen. Ein Testfall, ist wie bereits der Name sagt, ein Testszenario, in welchem getestet wird, ob die Anwendung die Funktionalitäten so erfüllt, wie sie erwartet werden. Für Testfälle gibt es eine internationale und standardisierte Definition und ein Regelwerk (\cite{IsoIecIeee2024}). Ein Standardwerk, welches die Testbegrifflichkeiten genau erläutert ist (\cite{Istqb2017}). Es beschreibt dabei sämtliche Begrifflichkeiten in Englisch und ihrer offiziellen deutschen Übersetzung.
 % section definitionTestfall (end)
 
 \subsection{Aufbau eines Testfalls} % fold
 \label{sec:aufbauEinesTestfalls}
-Folgende Graphik zeigt ein Testfalldesign für eine SAP Applikation:
+Ein Testfall besitzt eine ID, einen Namen, eine Beschreibung, Vorbedingungen welche erfüllt sein müssen, damit der Testfall durchgeführt werden kann, Ziele die erreicht werden sollen (\cite{IsoIecIeee2024}). Folgende Graphik zeigt ein Testfalldesign für eine SAP Applikation:
 
 \begin{figure} [H]
     \centering
@@ -329,13 +331,8 @@ Folgende Graphik zeigt ein Testfalldesign für eine SAP Applikation:
     \caption{Testfall im SAP Solution Manager (\cite{Enderli2019})}
     \label{fig:enter-label}
 \end{figure}
-\noindent Ein Testfall besitzt einen Namen, Vorbedingungen welche erfüllt sein müssen, damit der Testfall durchgeführt werden kann, Ziele die erreicht werden sollen. Der Testfall gliedert sich in Schritten, welche eine Beschreibung und ein erwartetes Ergebnis besitzen. In den Schritten wird somit überprüft, ob die Anwendung die Anforderungen erfüllt und somit das erwartete Ergebnis eintrifft. Testfälle können dabei positiv, als auch negativ sein. Bei negativen Testfällen wird überprüft ob das erwartete Ergebnis, wie erwartet nicht eintrifft, da die Voraussetzungen nicht erfüllt sind. In dieser Arbeit wird von der KI erwartet, dass es wenn es ein Testfall schreibt, diesen Aufbau einhält. Wenn sie es nicht macht, wird dies als negativ bewertet.
+\noindent Der Testfall gliedert sich in Schritten, welche eine Beschreibung und ein erwartetes Ergebnis besitzen. In den Schritten wird somit überprüft, ob die Anwendung die Anforderungen erfüllt und somit das erwartete Ergebnis eintrifft. Testfälle können dabei positiv, als auch negativ sein. Bei negativen Testfällen wird überprüft ob das erwartete Ergebnis, wie erwartet nicht eintrifft, da die Voraussetzungen nicht erfüllt sind. In dieser Arbeit wird von der KI erwartet, dass es wenn es ein Testfall schreibt, diesen Aufbau einhält. Wenn sie es nicht macht, wird dies als negativ bewertet.
 % section aufbauEinesTestfall (end)
-
-\subsection{Testfallkriterien} % fold
-\label{sec:testfallkriterien}
-Folgende Werke zeigen Kriterien auf, welche Testfälle besitzen müssen.
-% section testfallkriterien (end)
 % section testfall (end)
 
 
