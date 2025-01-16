@@ -335,14 +335,22 @@ TODO QUELLEN finden ausschreiben
 \label{sec:anforderungsspezifikation}
 Eine Anforderungsspezifikation  ist das Fundament, aus welcher Testfälle erstellt werden. Ein Testfall überprüft ob die Anforderungen aus dieser Spezifikation erfüllt werden.
 
-\subsection{Definition Testspezifikation} % fold
-\label{sec:definitionTestspezifikation}
-Eine Anforderungsspezifikation ist ein Dokument, welches alle Anforderungen beziehungsweise Requirements enthält, welche das System erfüllen muss und dessen Erfüllbarkeit und nicht Erfüllbarkeit mit Testfällen abgedeckt und getestet werden. Da sie der Grund für die Testfälle sind, müssen Anforderungsspezifikationen vollständig, präzise und in sich konsistent sein. Anforderungsspezifikationen enthalten System- und Benutzeranforderungen. Systemanforderungen beschreiben dabei die Benutzeranforderungen genau, wobei die Benutzeranforderungen funktionale und nicht funktionale Requirements besitzen (\cite{Aysolmaz2018}), (\cite{Barmi2011}), (\cite{Mustafa2021}) und (\cite{Visure2024}). Nicht funktionale Reuqirements beschreiben zum Beispiel Sicherheit und Wartung. In dieser Arbeit geht es um funktionale Requirements, diese legen fest, was wie das System funktioniert und was passiert, wenn etwas im Positiven als auch wenn etwas im Negativen passiert. Sie dienen als Grundlage für die Testfallgenerierung durch die LLM in dieser Arbeit.
-% section definitionTestspezifikation (end)
+\subsection{Definition Anforderungsspezifikation} % fold
+\label{sec:definitionAnforderungsspezifikation}
+Eine Anforderungsspezifikation ist ein Dokument, welches alle Anforderungen beziehungsweise Requirements enthält, welche das System erfüllen muss und dessen Erfüllbarkeit und nicht Erfüllbarkeit mit Testfällen abgedeckt und getestet werden. Da sie der Grund für die Testfälle sind, müssen Anforderungsspezifikationen vollständig, präzise und in sich konsistent sein. Anforderungsspezifikationen enthalten System- und Benutzeranforderungen. Systemanforderungen beschreiben dabei die Benutzeranforderungen genau, wobei die Benutzeranforderungen funktionale und nicht funktionale Requirements besitzen. Folgende Grafik veranschaulicht anhand eines Beispiels, den Unterschied zwischen funktionalen und nicht funktionalen Requirements:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{./Bilder/Jama Software_Eigenschaften von funktionalen vs nichtfunktionalen Requirements.jpg}
+    \caption{Eigenschaften von funktionalen vs nichtfunktionalen Requirements (\cite{JamaSoftware2024})}
+    \label{fig:enter-label}
+\end{figure}
+\noindent Nicht funktionale Reuqirements beschreiben zum Beispiel Sicherheit, Wartung und Systemanforderungen. In dieser Arbeit geht es um funktionale Requirements, diese legen fest, was wie das System funktioniert und was passiert, wenn etwas im Positiven als auch wenn etwas im Negativen passiert. Den Unterschied erkennt man gut an der Grafik. Während die funktionellen Requirements festlegen, dass das Auto schnell sein und eine rote Farbe besitzen muss, legt die nicht funktionalen Requirements exakt fest, welche Geschwindigkeit das Auto erreichen und welchen genauen Rotton dieses besitzen muss. Funktionale Requirements dienen als Grundlage für die Testfallgenerierung durch die LLM in dieser Arbeit (\cite{Aysolmaz2018}), (\cite{Barmi2011}), (\cite{JamaSoftware2024}), (\cite{Mustafa2021}) und (\cite{Visure2024}).
+% section definitionAnforderungsspezifikation (end)
 
 \subsection{Bedeutung der Anforderungsspezifikation für die Testfallgenerierung} % fold
 \label{sec:bedeutungDerAnforderungsspezifikationFürDieTestfallgenerierung}
-In vielen Softwareprojekten werden Testfälle durch Requirements erzeugt (\cite{Aysolmaz2018}), (\cite{Barmi2011}), (\cite{Mustafa2021}) und (\cite{Visure2024}). Anforderungsspezifikationen dienen als Grundlage für die Testfallgenerierung durch die LLM in dieser Arbeit. Sie werden der LLM per RAG übermittelt und per Prompt dazu aufgerufen, Testfälle zu generieren, welche diese Requirements in Positiv- und Negativfällen abdecken. Dies ist essenziell für diese Arbeit, da es ohne Requirements nicht möglich ist, die von der LLM generierten Testfälle, auszuwerten. Mit ihrer Hilfe kann nun jedoch präzise festgestellt werden, wie diese im Bereich Vollständigkeit, Qualität und Fehlerhäufigkeit vorkommen.\\
+In vielen Softwareprojekten werden Testfälle durch Requirements erzeugt (\cite{Aysolmaz2018}), (\cite{Barmi2011}), (\cite{JamaSoftware2024}), (\cite{Mustafa2021}) und (\cite{Visure2024}). Anforderungsspezifikationen dienen als Grundlage für die Testfallgenerierung durch die LLM in dieser Arbeit. Sie werden der LLM per RAG übermittelt und per Prompt dazu aufgerufen, Testfälle zu generieren, welche diese Requirements in Positiv- und Negativfällen abdecken. Dies ist essenziell für diese Arbeit, da es ohne Requirements nicht möglich ist, die von der LLM generierten Testfälle, auszuwerten. Mit ihrer Hilfe kann nun jedoch präzise festgestellt werden, wie diese im Bereich Vollständigkeit, Qualität und Fehlerhäufigkeit vorkommen.\\
 \\
 \textbf{\underline{Vollständigkeit:}}\\
 \\
