@@ -335,7 +335,6 @@ Ein Testfall besitzt eine ID, einen Namen, eine Beschreibung, Vorbedingungen wel
 % section aufbauEinesTestfall (end)
 % section testfall (end)
 
-
 \section{Anforderungsspezifikation} % (fold)
 \label{sec:anforderungsspezifikation}
 Eine Anforderungsspezifikation  ist das Fundament, aus welcher Testfälle erstellt werden. Ein Testfall überprüft ob die Anforderungen aus dieser Spezifikation erfüllt werden.
@@ -390,6 +389,24 @@ Der aus Sprachmodellen generierte Code wirft Fragen im Bereich der Qualität und
 
 \chapter{Methodik TODO Vorläufig muss überarbeitet werden!!!!} % (fold)
 \label{sec:methodik}
+Kapitel 4 beschreibt die Methodik der Arbeit, es beschreibt, das verwendete LLM, die Testdaten welche dem LLM zu Verfügung gestellt werden um die Testfälle zu generieren und die Qualitätskriterien, nach denen der generierten Testfälle ausgewertet und bewertet werden.
+
+\section{Verwendetes LLM} % (fold)
+\label{sec:verwendetesLLM}
+Dieser Abschnitt beschreibt das verwendete LLM, welche Eigenschaften es besitzt und aus welchen Gründen es für diese Arbeit verwendet wird. Für die Arbeit wird ChatGPT-4 von OpenAI verwendet (\cite{OpenAI2025}). Der Grund ist, dass ChatGPT-4 leistungsfähig und vielfältig ist und dabei, zwar eingeschränkt, aber kostenlos und öffentlich nutzbar ist. Der Nutzer muss sich lediglich per Email bei OpenAI registrieren und ChatGPT-4 ist nutzbar. Dies jedoch für den kostenlosen Zugang nur eingeschränkt. Da ChatGPT-4 ein sehr weit verbreitetes LLM ist, welches alle Funktionalitäten und Methoden kann, welche in Kapitel 2 erläutert werden bietet es sich gut für diese Arbeit an. Es kann RAG verwenden und neben Textdokumenten auch Bilder erkennen. Diese Funktion ist für die Testfallgenerierung essenziell, da es sich in dieser Arbeit um Anforderungstestfällen aus Anforderungsspezifikationen handelt. Bei Testdaten, bei welchen es sich um Anwendungen handelt, nach deren Funktionalitäten getestet werden, muss der Tester sich die Anwendung anschauen und aus der Anforderungsspezifikation die Testfälle ableiten. Da ChatGPT-4 Bilder erkennen und interpretieren kann, kann der Nutzer nun ChatGPT-4 Screenshots von der Anwendung schicken und diesem mitteilen um was für eine Art Screenshot es sich handelt, ob es das Startmenü ist oder eine Fehlermeldung. Da ChatGPT-4 auch eine Erinnerung besitzt, kann es sich diese Informationen leichter merken und bei einem Einspielen der Bilder sich die Struktur auch in anderen Chats merken und nutzen, selbst wenn der ursprüngliche Chat nicht mehr vorhanden ist. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{./Bilder/OpenAI_Erinnerungsfunktion ChatGPT-4.png}
+    \caption{Ein vom Autor dieses Werkes erstellter Screenshot, welcher die Erinnerungsfunktion von ChatGPT-4 zeigt (\cite{OpenAI2025})}
+    \label{fig:enter-label}
+\end{figure}
+\noindent Da RAG genutzt werden kann, kann die Anforderungsspezifikation per Textdatei zum Beispiel in Form einer PDF-Datei, ChatGPT-4 übermittelt werden. Mit einem Prompt kann ChatGPT-4 nun Testfälle erzeugen. Wie die Testdaten aussehen, wie der Prompt aussieht und nach welchen Kriterien die Ergebnisse eingeordnet und ausgewertet werden, wird in Kapitel 4.2 Testdaten, 4.3 Prompt und verwendete Methoden und 4.4 Qualitätskriterien beschrieben. Ein Vorteil ist auch, da ChatGPT-4 weit verbreitet und ganz leicht im Chatbot mit einer graphischen Benutzeroberfläche genutzt werden kann ohne Programmierkenntnissen, ohne das davor Parameter genau justiert werden müssen und ohne das für diese Arbeit, extra ein neues LLM erzeugt oder ein vorhandenes LLM antrainiert werden musste, beweist es das Potential für die Testfallgenerierung per KI. Da es leicht zugänglich und leicht ist gute Testfälle zu erzeugen. ChatGPT-4 ist auch in sämtlichen Sprachen, wie auf Englisch, auf Deutsch, auf Französisch und auf Spanisch nutzbar und kann so von Unternehmen und Softwareentwicklern weltweit genutzt werden. Genauere Informationen, wie ChatGPT-4 gegenüber anderen Modellen von OpenAI wie zum Beispiel ChatGPT-3.5 abschneidet findet sich auf der offiziellen Website (\cite{OpenAI2025}). 
+% section verwendetesLLM (end)
+
+\section{Testdaten Vorläufig muss überarbeitet werden!!!!} % (fold)
+\label{sec:testdaten}
+Die Testdaten welche für die Durchführung der Testfälle verwendet werden, werden in diesem Abschnitt erläutert.
 Als Grundlage zur Erstellung von Testfällen dienen Anforderungsspezifikationen. Wichtig ist dabei, dass man sowohl Anforderungsspezifikationen als auch manuell erstellte Testfälle, die aus diesen Anforderungsspezifikationen erstellt wurden, findet.\\
 \begin{figure} [h!]
     \centering
@@ -419,17 +436,6 @@ In dieser Arbeit wird ChatGPT verwendet.\\
 TODO AUSFORMULIEREN WARUM CHATGPT UND WELCHES MODELL WELCHE STATISTIKEN\\
 \\
 Wenn es LLM gibt, welche Testfälle generieren können, welche die Struktur und den Inhalt der Dokumente gut abdecken können, ist die Forschungsfrage positiv beantwortet. Am Ende werden die Ergebnisse kritisch eingeordnet und mögliche zukünftige Entwicklungen genannt.
-
-\section{Verwendetes LLM} % (fold)
-\label{sec:verwendetesLLM}
-Dieser Abschnitt beschreibt das verwendete LLM, welche Eigenschaften es besitzt und aus welchen Gründen es für diese Arbeit verwendet wird.
-TODO LLM beschreiben und Daten finden
-% section verwendetesLLM (end)
-
-\section{Testdaten} % (fold)
-\label{sec:testdaten}
-Die Testdaten welche für die Durchführung der Testfälle verwendet werden, werden in diesem Abschnitt erläutert.
-TODO Testdaten beschreiben und zeigen
 % section testdaten (end)
 
 \section{Prompt und verwendete Methoden} % (fold)
