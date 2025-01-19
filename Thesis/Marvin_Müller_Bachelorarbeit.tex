@@ -70,13 +70,12 @@
 \label{sec:abkuerzungsverzeichnis}
 
 \begin{description}
-  \item[AI:] Artificial Intelligence
+  \item[AI (KI):] Artificial Intelligence (Deutsch: Künstliche Intelligenz)
   \item[GUI:] Graphical User Interface (Deutsch: Grafische Benutzeroberfläche)
   \item[IEC:] International Electrotechnical Commission
   \item[IEEE:] Institute of Electrical and Electronics Engineers
   \item[ISO:] International Organization for Standardization
   \item[ISTQB:] International Software Testing Qualifications Board
-  \item[KI:] Künstliche Intelligenz
   \item[LLM:] Large Language Model (Deutsch: Großes Sprachmodell)
   \item[NLP:] Natural Language Processing (Deutsch: Verarbeitung natürlicher Sprache)
   \item[RAG:] Retrieval Augmented Generation
@@ -85,7 +84,7 @@
 \newpage
 \listoffigures
 \newpage
-\addchap{Gender Hinweis} % (fold)
+\addchap{Gender-Hinweis} % (fold)
 \label{sec:genderHinweis}
 In dieser Bachelorarbeit aus Gründen der besseren Lesbarkeit das generische Maskulinum verwendet. Dabei gilt die männliche Sprachform für alle Geschlechter.
 % chapter genderHinweis (end)
@@ -113,57 +112,49 @@ Die Ergebnisse dieser Bachelorarbeit zeigen, dass
 % report (begin)
 \chapter{Einleitung} % (fold)
 \label{sec:einleitung}
-Über die Motivation und das Ziel der Bachelorarbeit wird in Kapitel 1 Einleitung eingegangen.
+Kapitel 1, die Einleitung, widmet sich zunächst der Darstellung der Motivation, die der Bachelorarbeit zugrunde liegt und erläutert die Zielsetzung der Untersuchung. Dabei wird verdeutlicht, warum das Thema relevant ist und welchen Beitrag die Arbeit in diesem Kontext leisten soll. Darüber hinaus werden in diesem Kapitel die zentrale Forschungsfrage formuliert und die methodische Vorgehensweise beschrieben, mit der die gestellten Ziele erreicht werden sollen. Diese Erläuterungen dienen dazu, den inhaltlichen und methodischen Rahmen der Arbeit klar zu definieren.
 
 \section{Motivation} % (fold)
 \label{sec:motivation}
-In den vergangenen Jahren hat in dem Bereich Künstliche Intelligenz (KI) eine rasante Entwicklung stattgefunden. Diese hat dabei eine Auswirkung auf das private als auch auf das geschäftliche Leben. Der Artikel des Branchenverbandes der deutschen Informations- und Telekommunikationsbranche - Bitkom - führt die von ihnen durchgeführte Studie auf (\cite{StreimHecker2023}). Nach dieser hat sich der Anteil der deutschen Unternehmen, welche KI nutzen, von 9\% im Jahr 2022 auf 15\% im Jahr 2023 nahezu verdoppelt. Dabei sehen 68\% der Befragten KI als Chance.\\
+In den vergangenen Jahren hat in dem Bereich Künstliche Intelligenz (KI) eine rasante Entwicklung stattgefunden. Diese hat dabei eine Auswirkung auf das private als auch auf das geschäftliche Leben. Der Artikel des Branchenverbandes der deutschen Informations- und Telekommunikationsbranche - Bitkom - führt eine von ihnen durchgeführte Studie auf (\cite{StreimHecker2023}). Nach dieser hat sich der Anteil der deutschen Unternehmen, welche KI nutzen, von 9\% im Jahr 2022 auf 15\% im Jahr 2023 nahezu verdoppelt. Dabei sehen 68\% der Befragten KI als Chance.\\
 \\
-In einer Pressemitteilung vom 25. November 2024 gibt das Statistische Bundesamt bekannt, dass bereits 20\% der in Deutschland ansässigen Unternehmen KI verwenden (\cite{StatistischesBundesamt2024}). Dabei sind die drei häufigsten Einsatzbereiche für KI Textmining - Analyse geschriebener Sprache mit 48\%, Spracherkennung mit 47\% und die Erzeugung von natürlicher Sprache mit 34\%. Dies zeigt eine rasante Steigerung der Nutzung von KI alleine in den letzten drei Jahren und es lässt sich erkennen, dass KI bereits vielfältig einsetzbar und nutzbar ist. Gerade in der Informatik und der Softwareentwicklung.\\
+In einer Pressemitteilung vom 25. November 2024 gibt das Statistische Bundesamt bekannt, dass bereits 20\% der in Deutschland ansässigen Unternehmen KI verwenden (\cite{StatistischesBundesamt2024}). Dabei sind die drei häufigsten Einsatzbereiche für KI Textmining - Analyse geschriebener Sprache mit 48\%, Spracherkennung mit 47\% und die Erzeugung von natürlicher Sprache mit 34\%. Dies zeigt eine rasante Steigerung der Nutzung von KI alleine in den letzten drei Jahren und es lässt sich erkennen, dass KI bereits vielfältig einsetzbar und nutzbar ist. Gerade in der Informatik und im Bereich der Softwareentwicklung.\\
 \\
-In dieser Arbeit stehen KI Sprachmodelle im Vordergrund. Diese sogenannten Large Language Models (LLM) bieten sich  dafür an, redundante und sich ähnliche Aufgaben für den Anwender zu erledigen (\cite{Kerner2024}). Gut geeignet ist dafür die Textgenerierung durch LLM. LLM werden deshalb bereits in verschiedensten Bereichen der Textgenerierung verwendet. Zu nennen sind dabei Übersetzung, Texterstellung, Textzusammenfassung, Kategorisierung und Klassifizierung. Eine Anwendungsmöglichkeit der Textgenerierung ist deshalb die Testfallgenerierung durch die KI. Das Erstellen von Testfällen mithilfe von KI kann erhebliche Zeit- und Kosteneinsparungen für Unternehmen und Tester ermöglichen.\\
+In dieser Arbeit stehen KI-Sprachmodelle im Vordergrund. Diese sogenannten Large Language Models (LLM) bieten sich  dafür an, redundante und sich ähnliche Aufgaben für den Anwender zu erledigen (\cite{Kerner2024}). LLM werden deshalb bereits in verschiedensten Bereichen der Textgenerierung verwendet. Zu nennen sind dabei Übersetzung, Texterstellung, Textzusammenfassung, Kategorisierung und Klassifizierung. Eine Anwendungsmöglichkeit der Textgenerierung ist deshalb die Testfallgenerierung durch die KI. Das Erstellen von Testfällen mithilfe von KI kann erhebliche Zeit- und Kosteneinsparungen für Unternehmen und Tester ermöglichen.\\
 \\
-Ein Testfall hat eine Struktur, welche definierten Regeln entspricht. In der Softwareentwicklung, aber auch allgemein in fast allen beruflichen und wissenschaftlichen Bereichen wird getestet. Somit ist die Testfallgenerierung durch KI nahezu universell einsetzbar. Es gibt bereits KI Tools und Arbeiten, welche sich mit dem Thema KI erzeugte Testfälle beschäftigt haben. Zu nennen sind dabei die Werke von (\cite{Bozic2022}) und (\cite{WeingartzSuleymanov2024}). Vorteile von KI generierten Testfälle sind dabei eine gesteigerte Qualität und Kosten und Zeiteinsparungen.\\
+Ein Testfall hat eine Struktur, welche definierten Regeln entspricht. In der Softwareentwicklung, aber auch allgemein in fast allen beruflichen und wissenschaftlichen Bereichen wird getestet. Somit ist die Testfallgenerierung durch KI nahezu universell einsetzbar. Es gibt bereits KI-Tools und Arbeiten, welche sich mit dem Thema, mit Hilfe von KI erzeugte Testfälle, beschäftigt haben. Zu nennen sind dabei die Werke von (\cite{Bozic2022}) und (\cite{WeingartzSuleymanov2024}). Vorteile von KI generierten Testfällen sind dabei eine gesteigerte Qualität und Kosten und Zeiteinsparungen.\\
 \\
-In einer Arbeit wird die Wirksamkeit von LLM bei der Erstellung von Unit Tests untersucht (\cite{Ouédraogo2024}). Dabei kommen die Autoren zu dem Schluss, dass die mit LLM erzeugten Junit Tests den von Menschen geschriebenen Tests in Bezug auf Codierungsstandards sehr ähneln.\\
+In einer Arbeit wird die Wirksamkeit von LLM bei der Erstellung von Unit Tests untersucht (\cite{Ouédraogo2024}). Unit Tests sind ein Framework zur Entwicklung Softwaretests. Dabei kommen die Autoren zu dem Schluss, dass sich die mit LLM erzeugten JUnit Tests, mit den von Menschen geschriebenen Tests in Bezug auf Codierungsstandards sehr ähneln.\\
 \\
-Um das Thema des des automatischen GUI Testings beschäftigt sich eine weitere Arbeit (\cite{Liu2024}).
-Dabei sehen sie einen großen Fortschritt im Bereich des automatischen GUI Testing, kommen jedoch zu der Erkenntnis, dass von LLM erzeugte Tests noch eine geringe Aktivitätsabdeckung aufweisen.\\
+Mit dem Thema des automatischen Benutzeroberflächen (GUI)-Testings beschäftigt sich eine weitere Arbeit (\cite{Liu2024}). Dabei sehen sie einen großen Fortschritt im Bereich des automatischen GUI-Testing, kommen jedoch zu der Erkenntnis, dass von LLM erzeugte Tests noch eine geringe Aktivitätsabdeckung aufweisen. Dies bedeutet, dass nur ein geringer Teil der möglichen Benutzeraktionen und Interaktionen mit der GUI abgedeckt sind. Dadurch kann mit diesen Tests nicht gewährleistet werden, dass alle Funktionen ordnungsgemäß und nach Vorgabe funktionieren.\\
 \\
 Wie bei allen neuen Technologien ist es essenziell, sich auch der damit verbundenen Risiken bewusst zu sein. Ein Nachteil der KI ist zum Beispiel das Phänomen der Halluzination. Dieser Begriff beschreibt das Phänomen, dass eine KI Antwort, nicht mit den gegebenen Input übereinstimmt und faktisch nicht richtig ist (\cite{Siebert2024}).\\
 \\
-Ebenfalls ist der Umgang mit Daten nicht sicher. Ein mögliches Problem sind unternehmensinterne und auch persönliche Daten. Es gibt keine Transparenz darüber, wie diese behandelt werden, wenn sie einem LLM zur Verfügung gestellt werden(\cite{Möllers2024}). Persönliche Daten könnten missbraucht werden und LLM könnten mit unternehmensinternen Daten antrainiert werden, welche die Konkurrenz dann nutzen könnte. Daher stellt sich die Frage, ob es sinnvoller ist, ein eigenes Modell anzutrainieren, um die Sicherheit und Kontrolle über die Daten zu gewährleisten. Eine empfohlene Maßnahme für dieses Risiko ist die Anonymisierung persönlicher und sensibler Daten, bevor man diese der LLM zur Verfügung stellt.\\
+Ebenfalls ist der Umgang mit Daten nicht sicher. Ein mögliches Problem sind unternehmensinterne und auch persönliche Daten. Es gibt keine Transparenz darüber, wie diese behandelt werden, wenn sie einem LLM zur Verfügung gestellt werden (\cite{Möllers2024}). Persönliche Daten könnten missbraucht werden und LLM könnten mit unternehmensinternen Daten antrainiert werden, welche die Konkurrenz dann nutzen könnte. Daher stellt sich die Frage, ob es sinnvoller ist, ein eigenes Modell anzutrainieren, um die Sicherheit und Kontrolle über die Daten zu gewährleisten. Eine empfohlene Maßnahme für dieses Risiko ist die Anonymisierung persönlicher und sensibler Daten, bevor man diese der LLM zur Verfügung stellt.\\
 \\
-Da die im letzten Absatz beschriebene Lösung mit Zeit und Aufwand verbunden ist, bieten sich andere Methoden an und Modelle, welche Retrieval Augmented Generation (RAG) verwenden können, können sich gut für die Aufgabe der Testfallgenerierung eignen. Die Technik RAG beschreibt den Vorgang, dass das Wissen, welches das LLM benötigt, nicht aus dem Prompt - der Eingabe - kommen muss (\cite{Honroth2024}). Informationen aus Dateien, die dem LLM zur Verfügung gestellt werden, können ebenfalls verwendet werden.
+Da die im letzten Absatz beschriebene Lösung mit Zeit und Aufwand verbunden ist, bieten sich andere Methoden an und Modelle, welche Retrieval Augmented Generation (RAG) verwenden können, können sich gut für die Aufgabe der Testfallgenerierung eignen. Die Technik RAG beschreibt den Vorgang, dass das Wissen, welches von der LLM benötigt wird, nicht aus dem Prompt - der Eingabe - kommen muss (\cite{Honroth2024}). Informationen aus Dateien, die dem LLM zur Verfügung gestellt werden, können ebenfalls verwendet werden.
 % section motivation (end)
 
 \section{Forschungsfrage} % (fold)
 \label{sec:forschungsfrage}
-Folgende Forschungsfrage soll untersucht werden und dient als Grundlage zur Durchführung der Arbeit. Sie ist dabei aus der Motivation entstanden.\\
+Die folgende Forschungsfrage, die aus der zugrunde liegenden Motivation abgeleitet wurde, bildet die Grundlage für die Durchführung der Arbeit.\\
 \\
-1. Ist es möglich, dass Large Language Models dazu in der Lage sind, aus Anforderungsspezifikationen Anforderungstestfälle zu erzeugen, welche eine höhere Testqualität und Testabdeckung aufweisen, als manuell erstellte Testfälle, die aus den gleichen Anforderungsspezifikationen erstellt werden?\\
+\textbf{Ist es möglich, dass Large Language Models dazu in der Lage sind, aus Anforderungsspezifikationen Anforderungstestfälle zu erzeugen, welche eine höhere Testqualität und Testabdeckung aufweisen, als manuell erstellte Testfälle, die aus den gleichen Anforderungsspezifikationen erstellt werden?}  Um diese Frage zu beantworten, wird eine Metrik entwickelt, anhand derer, die von der LLM erstellten Testfälle, ausgewertet werden kann.
 % section forschungsfrage (end)
-\newpage
 
-\noindent
 \section{Ziel der Arbeit} % (fold)
 \label{sec:zielDerArbeit}
 Ziel der Arbeit ist es, die Grundlagen und Anwendungsmöglichkeiten und -verfahren zu erforschen, durchzuführen und zu evaluieren.\\
-Diese Bachelorarbeit soll ein Konzept und eine Vorgehensweise entwickeln, die sich für den Einsatz von KI für die Generierung von Anforderungstestfällen aus der KI zur Verfügung gestellten Anforderungsspezifikationen eignet. Diese stützt sich dabei auf bereits bestehender Vorgehensweisen und Modelle. Durch die theoretische und praktische Aufarbeitung, Erprobung und Verbesserung bestehender Vorgehensweisen und Modellen soll sie dabei ein Beitrag sein, die Effizienz und Qualität der mit Hilfe von KI erstellten Testfälle zu verbessern.
+Diese Bachelorarbeit soll ein Konzept und eine Vorgehensweise entwickeln, die sich für den Einsatz von KI für die Generierung von Anforderungstestfällen aus der KI zur Verfügung gestellten Anforderungsspezifikationen eignet. Diese stützt sich dabei auf bereits bestehender Vorgehensweisen und Modelle. Durch die theoretische und praktische Aufarbeitung, Erprobung und Verbesserung bestehender Vorgehensweisen und Modellen soll sie dabei einen Beitrag leisten, die Effizienz und Qualität der mit Hilfe von KI erstellten Testfälle zu verbessern.
 % section zielDerArbeit (end)
 
 \section{Vorgehensweise} % (fold)
 \label{sec:vorgehensweise}
-Der Plan der vorliegenden Arbeit gestaltet sich wie folgt: Zuerst wird eine Literatur-
-recherche durchgeführt. Dabei liegt der Fokus auf das Finden von bereits vorhandener
-Vorgehensweisen und Modellen im Bezug auf Textgenerierung im Allgemeinen und Test-
-fallgenerierung im Besonderen. Es ist ebenfalls notwendig, sich über Begriffe und Tech-
-niken, welche während der Umsetzung der Arbeit notwendig sind, tiefer zu ergründen. 
-Wichtig ist dabei zu ergründen, wie ein Testfall und eine Anforderungsspezifikation aufgebaut sind, welche Merkmale und welche Kriterien sie erfüllen müssen. Es muss erforscht werden, was eine KI ist, wie Modelle - LLM - aufgebaut sind und welche sich zur Testfallgenerierung eignen. Das Ermitteln geeigneter Prompting Methoden wie der Methode RAG ist ebenfalls erforderlich. Das Ziel ist dabei, die Untersuchung und Entdeckung bereits vorhandener Anwendungsmöglichkeiten, Vorgehensweisen und Modellen zur KI gesteuerten Testfallgenerierung.\\
+Der Plan der vorliegenden Arbeit gestaltet sich wie folgt: Zunächst wird eine Literaturrecherche durchgeführt. Dabei liegt der Fokus auf das Finden von bereits vorhandener Vorgehensweisen und Modellen im Bezug auf Textgenerierung im Allgemeinen und Testfallgenerierung im Besonderen. Es ist ebenfalls notwendig, sich über Begriffe und Techniken, welche während der Umsetzung der Arbeit notwendig sind, tiefer zu ergründen. Wichtig ist dabei eine festgelegte Struktur zu finden oder zu definieren, wie ein Testfall und eine Anforderungsspezifikation aufgebaut sind, welche Merkmale und welche Kriterien sie erfüllen müssen. Es muss erforscht werden, was eine KI ist, wie Modelle - LLM - aufgebaut sind und welche sich zur Testfallgenerierung eignen. Das Ermitteln geeigneter Prompting Methoden wie der Methode RAG ist ebenfalls erforderlich. Das Ziel ist dabei, die Untersuchung und Entdeckung bereits vorhandener Anwendungsmöglichkeiten, Vorgehensweisen und Modellen zur KI gesteuerten Testfallgenerierung.\\
 \\
 Nachdem passende Modelle und Vorgehen ermittelt wurden und passende Testdaten, welche sich in Anforderungsspezifikationen und aus diesen manuell erstellte Anforderungstestfälle gliedern, beginnt die praktische Umsetzung der Arbeit. Dabei liegt die Durchführung und Dokumentation der von der KI erstellten Anforderungstestfälle im Vordergrund.\\
 \\
-Zum Schluss werden die von der KI erstellten Anforderungstestfälle mit manuell erstellten Anforderungstestfälle verglichen und auf ihr Abschneiden im Bezug auf Testqualität und Testabdeckung ermittelt. Die Ergebnisse werden analysiert und hinsichtlich Aufwand, Durchführbarkeit und Richtigkeit ausgewertet. Dabei wird für die Auswertung Metriken verwendet, die in Kapitel 4 Methodik näher erläutert werden. Nachdem die Ergebnisse ausgewertet werden, gibt es eine Einordnung der Ergebnisse und eine Diskussion über mögliche zukünftige Entwicklungen in dem Bereich KI generierte Testfallerstellung.
+Zum Schluss werden die von der KI erstellten Anforderungstestfälle mit manuell erstellten Anforderungstestfällen verglichen und auf ihr Ergebnis im Bezug auf Testqualität und Testabdeckung ermittelt. Die Ergebnisse werden analysiert und hinsichtlich Aufwand, Durchführbarkeit und Richtigkeit ausgewertet. Dabei werden für die Auswertung Metriken verwendet, die in Kapitel 4 Methodik näher erläutert werden. Anschließend werden die Ergebnisse ausgewertet.
 % section vorgehensweise (end)
 % chapter einleitung (end)
 
@@ -177,7 +168,7 @@ Diese Arbeit behandelt das Thema KI, deshalb ist es essentiell hier einen allgem
 
 \subsection{Allgemein} % fold
 \label{sec:allgemein}
-Der Begriff KI beziehungsweise im Englischen AI beschreibt ein Teilgebiet der Informatik. Dabei gibt es zwei Arten von KI. Erstens die schwache KI, welche auch als enge KI bezeichnet wird. Diese Art der KI kann nur einzelne und beschränkte Aufgaben lösen. Der Begriff KI wurde bereits im Jahr 1956 als Konzept vorgeschlagen. Seitdem entwickelte sie sich immer weiter. Im Jahr 1997 verliert der damalige Schachweltmeister Garry Kasparov gegen den Schachcomputer Deep Blue von IBM und im Jahr 2016 besiegt der Computer AlphaGo von Google Lee Se-dol, ein Go-Meister aus Südkorea. Diese Erfolge zeigen die Entwicklung der KI, sind jedoch auf die schwache KI beschränkt (\cite{Bhatt2021}), (\cite{Hecker2018}), (\cite{Mocko2021}), (\cite{Roscher2025}) und (\cite{Zhu2021}). Als Zweites gibt es das Konzept der starken KI, auch als allgemeine KI bekannt. Folgende Grafik zeigt, wie diese ihre Umgebung wahrnimmt.
+Der Begriff KI beziehungsweise im Englischen Artificial Intelligence (AI) beschreibt ein Teilgebiet der Informatik. Dabei gibt es zwei Arten von KI. Erstens die schwache KI, welche auch als enge KI bezeichnet wird. Diese Art der KI kann nur einzelne und beschränkte Aufgaben lösen. Der Begriff KI wurde bereits im Jahr 1956 als Konzept vorgeschlagen. Seitdem entwickelte sie sich immer weiter. Im Jahr 1997 verliert der damalige Schachweltmeister Garry Kasparov gegen den Schachcomputer Deep Blue von IBM und im Jahr 2016 besiegt der Computer AlphaGo von Google Lee Se-dol, ein Go-Meister aus Südkorea. Diese Erfolge zeigen die Entwicklung der KI, sind jedoch auf die schwache KI beschränkt (\cite{Bhatt2021}), (\cite{Hecker2018}), (\cite{Mocko2021}), (\cite{Roscher2025}) und (\cite{Zhu2021}). Als Zweites gibt es das Konzept der starken KI, auch als allgemeine KI bekannt. Folgende Grafik zeigt, wie diese ihre Umgebung wahrnimmt.
 \begin{figure} [H]
     \centering
     \includegraphics[width=0.75\linewidth]{./Bilder/Fraunhofer_KI-Umgebung.png}
@@ -200,7 +191,7 @@ Folgende Grafik zeigt anschaulich die einzelnen Teilgebiete der KI.
     \caption{Die Beziehung zwischen KI, maschinellem Lernen, neuronalen Netzen und Deep Learning (\cite{Mocko2021})}
     \label{fig:enter-label}
 \end{figure}
-\noindent KI beziehungsweise AI wird bereits in Kapitel 2.1.1 beschrieben und umfasst die anderen drei Bereiche. Die Grafik ist dabei so zu verstehen, dass der größere Kreis die jeweils kleineren Kreise umfasst, das heißt maschinelles Lernen ist ein Teil von KI, Neuronale Netze sind ein Teilgebiet von KI und von maschinellem Lernen und Deap Learning ist ein Teilgebiet von KI, von maschinellem Lernen und von Neuronalen Netzen. Im Folgenden werden nun die einzelnen Bereiche der KI erläutert.\\
+\noindent KI wird bereits in Kapitel 2.1.1 beschrieben und umfasst die anderen drei Bereiche. Die Grafik ist dabei so zu verstehen, dass der größere Kreis die jeweils kleineren Kreise umfasst, das heißt maschinelles Lernen ist ein Teil von KI, Neuronale Netze sind ein Teilgebiet von KI und von maschinellem Lernen und Deep Learning ist ein Teilgebiet von KI, von maschinellem Lernen und von Neuronalen Netzen. Im Folgenden werden nun einige wichtige Bereiche der KI erläutert.\\
 \newpage
 \noindent\textbf{\underline{Maschinelles Lernen:}}\\
 \\
@@ -221,7 +212,7 @@ Deep Learing ist ein Teilgebiet der Neuronalen Netze. Sie sind dadurch gekennzei
 \end{figure}
 \noindent Sie können dabei Millionen Neuronenschichten beinhalten und dadurch immer komplexere Aufgaben lösen.\\
 \\
-Dies ist eine kurze Abhandlung über das Thema KI(\cite{Bhatt2021}), (\cite{Hecker2018}), (\cite{Mocko2021}), (\cite{Roscher2025}) und (\cite{Zhu2021}). Weitere wichtige KI-Bereiche wie LLM, Prompting und RAG werden in den Kapiteln 2.2 LLM, 2.3 Prompting und im Kapitel 2.4 erläutert, da diese eine wichtige Rolle in dieser Arbeit spielen.
+Dies ist eine Abhandlung über das Thema KI(\cite{Bhatt2021}), (\cite{Hecker2018}), (\cite{Mocko2021}), (\cite{Roscher2025}) und (\cite{Zhu2021}). Weitere wichtige KI-Bereiche wie LLM, Prompting und RAG werden in den Kapiteln 2.2 LLM, 2.3 Prompting und im Kapitel 2.4 erläutert, da diese eine wichtige Rolle in dieser Arbeit spielen.
 %subsection bereicheDerKI (end)
 % section KI (end)
 
@@ -244,13 +235,12 @@ LLM sind große Sprachmodelle und stellen eine Kombination aus zwei Bereichen de
 
 \subsection{Entwicklungen im Bereich LLM} % fold
 \label{sec:entwicklungenImBereichLLM}
-Aufgrund des Erfolgs von LLMs, ihren Möglichkeiten und ihren vielseitigen Einsatzmöglichkeiten, sind sie sehr dynamisch und es gibt sehr viele LLMs. Neue Modelle können selbst entwickelt werden. Vorhandene Modelle können auch antrainiert werden, was als Finetuning bezeichnet wird. Ein Werk welches sich ausführlich mit dem Thema LLM erstellen und finetunen beschäftigt ist (\cite{Géron2019}). Das Erzeugen und das Finetuning von LLM benötigt jedoch Zeit, Ressourcen und eine Menge an Daten. Deshalb ist es einfacher und schneller sich bereits bestehende Modelle anzusehen, welche es bereits in großer Anzahl gibt.
-Eine bekannte Open Source Plattform und Website und Datenbank, in welcher nach LLM gesucht und in welcher diese heruntergeladen werden können ist (\cite{HuggingFace2025}). Sie bietet eine sehr große Auswahl an LLM an. Am 16.01.2025 werden 1,295,659 verschiedene Modelle angeboten, dies zeigt die enorme Vielfältigkeit und die rapide Entwicklung im Bereich LLM, in welcher im Minutentakt neue Modelle hinzukommen.\\
+Aufgrund des Erfolgs von LLMs, ihren Möglichkeiten und ihren vielseitigen Einsatzmöglichkeiten, sind sie sehr dynamisch und es gibt sehr viele LLMs. Neue Modelle können selbst entwickelt werden. Vorhandene Modelle können auch antrainiert werden, was als Finetuning bezeichnet wird. Ein Werk welches sich ausführlich mit dem Thema LLM erstellen und finetunen beschäftigt ist (\cite{Géron2019}). Das Erzeugen und das Finetuning von LLM benötigt jedoch Zeit, Ressourcen und eine Menge an Daten. Deshalb ist es effizienter und präziser, sich bereits bestehende Modelle anzusehen, welche es bereits in großer Anzahl gibt. Eine bekannte Open Source Plattform, in welcher nach LLM gesucht und in welcher diese heruntergeladen werden können ist die Website (\cite{HuggingFace2025}). Sie bietet eine sehr große Auswahl an LLM an. Am 16.01.2025 werden 1,295,659 verschiedene Modelle angeboten, dies zeigt die enorme Vielfältigkeit und die rapide Entwicklung im Bereich LLM, in welcher im Minutentakt neue Modelle hinzukommen.\\
 % section EntwicklungenImBereichLLM (end)
 
 \section{Prompting} % (fold)
 \label{sec:prompting}
-Die Eingabe bzw. der Prompt ist ein wesentlicher Bestandteil, zum Nutzen von KI. Deshalb ist es sehr wichtig diesen Begriff und die Vorgehensweisen, welche in dieser Arbeit getätigt werden zu erklären.
+Die Eingabe bzw. der Prompt ist ein wesentlicher Bestandteil, zum Nutzen von KI. Deshalb ist es sehr wichtig diesen Begriff und die Vorgehensweise, nach welcher in dieser Arbeit vorgegangen wird, zu erklären.
 
 \subsection{Definition Prompting} % fold
 \label{sec:definitionPrompting}
@@ -263,12 +253,12 @@ Der englischen Begriff Prompting beziehungsweise Prompt kann als Eingabeaufforde
     \label{fig:enter-label}
 \end{figure}
 
-\noindent Prompts können dabei einfache Sprachaufforderungen sein wie anhand des in der Grafik gezeigten Beispiels, jedoch auch komplexer sein und für vielseitige Aufgaben unterschiedlich genutzt werden (\cite{Gu2023}) und (\cite{Liu2023}). Dabei gibt es den Begriff Prompt Engineering und verschiedene Prompt Techniken, welche in Kapitel 2.3.2 erklärt werden.
+\noindent Prompts können dabei einfache Sprachaufforderungen sein wie anhand des in der Grafik gezeigten Beispiels. Jedoch können diese auch komplexer sein und für vielseitige Aufgaben unterschiedlich genutzt werden (\cite{Gu2023}) und (\cite{Liu2023}). Dabei gibt es den Begriff Prompt Engineering und verschiedene Prompt Techniken, welche in Kapitel 2.3.2 erklärt werden.
 % section definitionPrompting (end)
 
 \subsection{Prompt Engineering und Prompt Techniken} % fold
 \label{sec:promptEngineeringUndPromptTechniken}
-Unter dem Begriff Prompt Engineering versteht man, das gezielte nutzen von Prompts um bessere Ergebnisse zu erhalten. Dabei wird systematisch vorgegangen um ohne das Finetuning von LLM, konkretere und verbesserte Lösungen von diesen zu erhalten. Es gibt sehr viele Prompt Techniken. Eine Prompt Technik, welche sich flexibel an unterschiedlichste Aufgaben anpassen kann ist das sogenannte Soft Prompting. In diesem werden Parameter, welche lernen können, direkt in die Eingabekektoren des Modells eingebettet. Dadurch müssen die Prompts nicht als Text eingegeben werden (\cite{Gu2023}) und (\cite{Liu2023}). Es gibt noch viele weitere Prompt Techniken deren Aufzählung und Erklärung zu ausführlich sind. Wichtig ist zu verstehen das Prompting sehr flexibel ist und es viele Möglichkeiten gibt. Diese sind für diese Arbeit nicht relevant, da für diese Arbeit eine spezielle Technik verwendet wird, welche in Kapitel 2.3 RAG erklärt wird.
+Unter dem Begriff Prompt Engineering versteht man, das gezielte nutzen von Prompts um bessere Ergebnisse zu erhalten. Dabei wird systematisch vorgegangen um ohne das Finetuning von LLM, konkretere und verbesserte Lösungen von diesen zu erhalten. Es gibt sehr viele Prompt Techniken. Eine Prompt Technik, welche sich flexibel an unterschiedlichste Aufgaben anpassen kann ist das sogenannte Soft Prompting. In diesem werden Parameter, welche lernen können, direkt in die Eingabevektoren des Modells eingebettet. Dadurch müssen die Prompts nicht als Text eingegeben werden (\cite{Gu2023}) und (\cite{Liu2023}). Es gibt noch viele weitere Prompt Techniken deren Aufzählung und Erklärung zu ausführlich sind. Wichtig ist zu verstehen das Prompting sehr flexibel ist und es viele Möglichkeiten gibt. Diese sind für diese Arbeit nicht relevant, da für diese Arbeit eine spezielle Technik verwendet wird, welche in Kapitel 2.3 RAG erklärt wird.
 % section promptEngineeringUndPromptTechniken (end)
 % section prompting (end)
 
@@ -286,7 +276,7 @@ RAG ist eine Technik, in welcher einem LLM Dokumente zur Verfügung gestellt wer
     \caption{Wie funktioniert Retrieval Augmented Generation (RAG) im Detail (\cite{Honroth2024})}
     \label{fig:enter-label}
 \end{figure}
-\noindent Nun werden die einzelnen Schritte von RAG erklärt (\cite{Gao2024}), (\cite{Honroth2024}), (\cite{Lewis2021}), (\cite{Miesle2023}), (\cite{Salemi2024}), (\cite{Schmid2024}) und (\cite{Wu2024}):\\
+\noindent Im Folgenden werden die einzelnen Schritte von RAG erklärt (\cite{Gao2024}), (\cite{Honroth2024}), (\cite{Lewis2021}), (\cite{Miesle2023}), (\cite{Salemi2024}), (\cite{Schmid2024}) und (\cite{Wu2024}):\\
 \\
 \textbf{\underline{Indexierung:}}\\
 \\
@@ -328,7 +318,7 @@ In dieser Arbeit werden Testfälle mit Hilfe von LLM erzeugt. Deshalb ist es wic
 
 \subsection{Aufbau eines Testfalls} % fold
 \label{sec:aufbauEinesTestfalls}
-Ein Testfall besitzt eine ID, einen Namen, eine Beschreibung, Vorbedingungen welche erfüllt sein müssen, damit der Testfall durchgeführt werden kann, Ziele die erreicht werden sollen (\cite{IsoIecIeee2024}). Folgende Grafik zeigt ein Testfalldesign für eine SAP Applikation:
+Ein Testfall besitzt einen Identifier, einen Namen, eine Beschreibung, Vorbedingungen welche erfüllt sein müssen, damit der Testfall durchgeführt werden kann und Ziele die erreicht werden sollen (\cite{IsoIecIeee2024}). Folgende Grafik zeigt ein Testfalldesign für eine SAP Applikation:
 
 \begin{figure} [H]
     \centering
@@ -336,17 +326,17 @@ Ein Testfall besitzt eine ID, einen Namen, eine Beschreibung, Vorbedingungen wel
     \caption{Testfall im SAP Solution Manager (\cite{Enderli2019})}
     \label{fig:enter-label}
 \end{figure}
-\noindent Der Testfall gliedert sich in Schritten, welche eine Beschreibung und ein erwartetes Ergebnis besitzen. In den Schritten wird somit überprüft, ob die Anwendung die Anforderungen erfüllt und somit das erwartete Ergebnis eintrifft. Testfälle können dabei positiv, als auch negativ sein. Bei negativen Testfällen wird überprüft ob das erwartete Ergebnis, wie erwartet nicht eintrifft, da die Voraussetzungen nicht erfüllt sind. In dieser Arbeit wird von der KI erwartet, dass es wenn es ein Testfall schreibt, diesen Aufbau einhält. Wenn sie es nicht macht, wird dies als negativ bewertet.
+\noindent Der Testfall gliedert sich in Schritten, welche eine Beschreibung und ein erwartetes Ergebnis besitzen. In den Schritten wird somit überprüft, ob die Anwendung die Anforderungen erfüllt und somit das erwartete Ergebnis eintrifft. Testfälle können dabei positiv, als auch negativ sein. Bei negativen Testfällen wird überprüft, ob das erwartete Ergebnis, nicht eintrifft, da die Voraussetzungen nicht erfüllt sind. In dieser Arbeit wird von der KI erwartet, dass es wenn sie ein Testfall schreibt, diesen Aufbau einhält. Ein von der KI generierten Testfall, welcher nicht diese Struktur aufweist, wird als negativ bewertet.
 % section aufbauEinesTestfall (end)
 % section testfall (end)
 
 \section{Anforderungsspezifikation} % (fold)
 \label{sec:anforderungsspezifikation}
-Eine Anforderungsspezifikation  ist das Fundament, aus welcher Testfälle erstellt werden. Ein Testfall überprüft ob die Anforderungen aus dieser Spezifikation erfüllt werden.
+Eine Anforderungsspezifikation  ist das Fundament, aus welchem Testfälle erstellt werden. Ein Testfall überprüft, ob die Anforderungen aus dieser Spezifikation erfüllt werden.
 
 \subsection{Definition Anforderungsspezifikation} % fold
 \label{sec:definitionAnforderungsspezifikation}
-Eine Anforderungsspezifikation ist ein Dokument, welches alle Anforderungen beziehungsweise Requirements enthält, welche das System erfüllen muss und dessen Erfüllbarkeit und nicht Erfüllbarkeit mit Testfällen abgedeckt und getestet werden. Da sie der Grund für die Testfälle sind, müssen Anforderungsspezifikationen vollständig, präzise und in sich konsistent sein. Anforderungsspezifikationen enthalten System- und Benutzeranforderungen. Systemanforderungen beschreiben dabei die Benutzeranforderungen genau, wobei die Benutzeranforderungen funktionale und nicht funktionale Requirements besitzen. Folgende Grafik veranschaulicht anhand eines Beispiels, den Unterschied zwischen funktionalen und nicht funktionalen Requirements:
+Eine Anforderungsspezifikation ist ein Dokument, welches alle Anforderungen, beziehungsweise im Englischen als Requirements bezeichnet, enthält, welche das System erfüllen muss und dessen Erfüllbarkeit und nicht Erfüllbarkeit mit Testfällen abgedeckt und getestet werden. Da sie der Grund für die Testfälle sind, müssen Anforderungsspezifikationen vollständig, präzise und in sich konsistent sein. Anforderungsspezifikationen enthalten System- und Benutzeranforderungen. Systemanforderungen beschreiben dabei die Benutzeranforderungen genau, wobei die Benutzeranforderungen funktionale und nicht funktionale Requirements besitzen. Folgende Grafik veranschaulicht anhand eines Beispiels, den Unterschied zwischen funktionalen und nicht funktionalen Requirements:
 
 \begin{figure}[H]
     \centering
@@ -354,7 +344,7 @@ Eine Anforderungsspezifikation ist ein Dokument, welches alle Anforderungen bezi
     \caption{Eigenschaften von funktionalen vs nichtfunktionalen Requirements (\cite{JamaSoftware2024})}
     \label{fig:enter-label}
 \end{figure}
-\noindent Nicht funktionale Reuqirements beschreiben zum Beispiel Sicherheit, Wartung und Systemanforderungen. In dieser Arbeit geht es um funktionale Requirements, diese legen fest, was wie das System funktioniert und was passiert, wenn etwas im Positiven als auch wenn etwas im Negativen passiert. Den Unterschied erkennt man gut an der Grafik. Während die funktionellen Requirements festlegen, dass das Auto schnell sein und eine rote Farbe besitzen muss, legt die nicht funktionalen Requirements exakt fest, welche Geschwindigkeit das Auto erreichen und welchen genauen Rotton dieses besitzen muss. Funktionale Requirements dienen als Grundlage für die Testfallgenerierung durch die LLM in dieser Arbeit (\cite{Aysolmaz2018}), (\cite{Barmi2011}), (\cite{JamaSoftware2024}), (\cite{Mustafa2021}) und (\cite{Visure2024}).
+\noindent Nicht funktionale Reuqirements beschreiben zum Beispiel Sicherheit, Wartung und Systemanforderungen. In dieser Arbeit geht es um funktionale Requirements, diese legen fest, was wie das System funktioniert und was passiert, wenn etwas im Positiven als auch wenn etwas im Negativen passiert. Der Unterschied ist gut an der Grafik zu erkennen. Während die funktionellen Requirements festlegen, dass das Auto schnell sein und eine rote Farbe besitzen muss, legt die nicht funktionalen Requirements exakt fest, welche Geschwindigkeit das Auto erreichen und welchen genauen Rotton dieses besitzen muss. Funktionale Requirements dienen als Grundlage für die Testfallgenerierung durch die LLM in dieser Arbeit (\cite{Aysolmaz2018}), (\cite{Barmi2011}), (\cite{JamaSoftware2024}), (\cite{Mustafa2021}) und (\cite{Visure2024}).
 % section definitionAnforderungsspezifikation (end)
 
 \subsection{Bedeutung der Anforderungsspezifikation für die Testfallgenerierung} % fold
