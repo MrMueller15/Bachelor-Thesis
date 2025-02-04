@@ -124,10 +124,6 @@ In dieser Arbeit stehen KI-Sprachmodelle im Vordergrund. Diese sogenannten Large
 \\
 Ein Testfall hat eine Struktur, welche definierten Regeln entspricht und in der Softwareentwicklung, aber auch allgemein in fast allen beruflichen und wissenschaftlichen Bereichen wird getestet. Somit ist die Testfallgenerierung durch KI nahezu universell einsetzbar. Es gibt bereits KI-Tools und Arbeiten, welche sich mit dem Thema, mit Hilfe von KI erzeugte Testfälle, beschäftigt haben. Zu nennen sind dabei die Werke von. Vorteile von KI generierten Testfällen sind dabei eine gesteigerte Qualität und Kosten und Zeiteinsparungen. (\cite{Bozic2022}; \cite{WeingartzSuleymanov2024})\\
 \\
-In einer Arbeit wird die Wirksamkeit von LLM bei der Erstellung von Unit Tests untersucht. Unit Tests sind ein Framework zur Entwicklung Softwaretests. Dabei kommen \textcite{Ouédraogo2024} zu dem Schluss, dass sich die mit LLM erzeugten JUnit Tests, mit den von Menschen geschriebenen Tests in Bezug auf Codierungsstandards ähneln. (\cite{Ouédraogo2024})\\
-\\
-Mit dem Thema des automatischen Benutzeroberflächen (GUI)-Testings beschäftigt sich eine weitere Arbeit. Dabei sehen sie einen großen Fortschritt im Bereich des automatischen GUI-Testing, kommen jedoch zu der Erkenntnis, dass von LLM erzeugte Tests noch eine geringe Aktivitätsabdeckung aufweisen. Dies bedeutet, dass nur ein geringer Teil der möglichen Benutzeraktionen und Interaktionen mit der GUI abgedeckt sind. Dadurch kann mit diesen Tests nicht gewährleistet werden, dass alle Funktionen ordnungsgemäß und nach Vorgabe funktionieren. (\cite{Liu2024})\\
-\\
 Wie bei allen neuen Technologien ist es essenziell, sich auch der damit verbundenen Risiken bewusst zu sein. Ein Nachteil der KI ist zum Beispiel das Phänomen der Halluzination. Dieser Begriff beschreibt das Phänomen, dass eine KI Antwort, nicht mit den gegebenen Input übereinstimmt und faktisch nicht richtig ist. (\cite{Siebert2024})\\
 \\
 Ebenfalls ist der Umgang mit Daten nicht sicher. Ein mögliches Problem sind unternehmensinterne und auch persönliche Daten. Es gibt keine Transparenz darüber, wie diese behandelt werden, wenn sie einem LLM zur Verfügung gestellt werden. Persönliche Daten könnten missbraucht werden und LLM könnten mit unternehmensinternen Daten antrainiert werden, welche die Konkurrenz dann nutzen könnte. Daher stellt sich die Frage, ob es sinnvoller ist, ein eigenes Modell anzutrainieren, um die Sicherheit und Kontrolle über die Daten zu gewährleisten. Eine empfohlene Maßnahme für dieses Risiko ist die Anonymisierung persönlicher und sensibler Daten, bevor man diese der LLM zur Verfügung stellt. (\cite{Möllers2024})\\
@@ -335,23 +331,11 @@ Eine Anforderungsspezifikation  ist das Fundament, aus welchem Testfälle erstel
 \subsection{Bedeutung der Anforderungsspezifikation für die Testfallgenerierung} % fold
 \label{sec:bedeutungDerAnforderungsspezifikationFürDieTestfallgenerierung}
 In vielen Softwareprojekten werden Testfälle durch Requirements erzeugt. Anforderungsspezifikationen dienen als Grundlage für die Testfallgenerierung durch ChatGPT-4 von \textcite{OpenAI2025} in dieser Arbeit. Sie werden ChatGPT-4 per RAG übermittelt und per Prompt dazu aufgerufen, Testfälle zu generieren, welche diese Requirements in Positiv- und Negativfällen abdecken. Dies ist essenziell für diese Arbeit, da es ohne Requirements nicht möglich ist, die von ChatGPT-4 generierten Testfälle, auszuwerten. Mit ihrer Hilfe kann nun jedoch präzise festgestellt werden, wie diese im Bereich Vollständigkeit, Qualität und Fehlerhäufigkeit vorkommen. (\cite{Aysolmaz2018}; \cite{Barmi2011}; \cite{JamaSoftware2024}; \cite{Mustafa2021}; \cite{Visure2024})\\
-\\
-\textbf{\underline{Vollständigkeit:}}\\
-\\
-Werden alle Requirements, welche ChatGPT-4 übergeben werden, im positiven wie im negativen vollständig abgedeckt? Wenn Nein, wie viele werden ausgelassen?\\
-\\
-\textbf{\underline{Qualität:}}\\
-\\
-Werden alle Requirements präzise wiedergegeben und vollständig getestet, oder gibt es Rechtschreibfehler oder eine falsche Anordnung der Reihenfolge, oder werden Requirements aufgeteilt und falsch dargestellt?\\
-\\
-\textbf{\underline{Fehlerhäufigkeit:}}\\
-\\
-Wie viele Testschritte enthalten Informationen, welche sich nicht in der mitgegebenen Anforderungsspezifikation befinden und welche sind komplett frei erfunden und weisen keinen Zusammenhang mit dem System auf? So kann die Anzahl der Halluzinationen bestimmt und gezählt werden. (\cite{Aysolmaz2018}; \cite{Barmi2011}; \cite{JamaSoftware2024}; \cite{Mustafa2021}; \cite{Visure2024})
 % section bedeutungDerAnforderungsspezifikationFürDieTestfallgenerierung (end)
 
 \chapter{Related Work und aktuelle Forschung} % (fold)
 \label{sec:relatedWorkUndAktuelleForschung}
-Zum Thema KI im Allgemeinen und besonders im Hinblick auf Sprachmodelle zur Textgenerierung gibt es bereits viele wissenschaftliche Arbeiten. Auf diese wird in diesem Kapitel näher eingegangen. (\cite{Iqbal2022}; \cite{Yuan2021}; \cite{Khan2024}; \cite{Bhandari2024}; \cite{Gu2024}; (\cite{Chen2024}; \cite{Wang2024})\\
+Zum Thema KI im Allgemeinen und besonders im Hinblick auf Sprachmodelle zur Textgenerierung gibt es bereits viele wissenschaftliche Arbeiten. Auf diese wird in diesem Kapitel näher eingegangen. (\cite{Iqbal2022}; \cite{Yuan2021}; \cite{Khan2024}; \cite{Bhandari2024}; \cite{Ouédraogo2024}; \cite{Gu2024}; \cite{Liu2024}; (\cite{Chen2024}; \cite{Wang2024})\\
 \\
 Für den Einstieg zu dem Thema eignet sich ein wissenschaftliches Paper, welches einen Überblick bietet \textcite{Iqbal2022}. Dieses Paper stellt viele Deep Learning Modelle vor, die für die Generierung von Text verwendet wurden. Dabei werden die verschiedenen Modelle zusammengefasst und das Paper ermöglicht einen detaillierten Überblick über die Vergangenheit, Gegenwart und Zukunft von Textgenerierungsmodellen im Deep Learning. \textcite{Iqbal2022} gehen davon aus, dass in Zukunft immer bessere Modelle entwickelt werden und dass die Forschung im Bereich der Texterzeugung weiter vorangetrieben wird. Das Paper macht jedoch auch deutlich, dass Modelle bei längeren Texten die natürliche Sprache noch nicht vollständig begriffen haben. (\cite{Iqbal2022})\\
 \\
@@ -361,7 +345,12 @@ Ziel einer dieser Arbeiten ist es, einen Überblick über die Rolle von KI bei d
 \\
 Eine weitere Arbeit beschäftigt sich mit dem Potenzial der Anpassung von LLMs für den Bereich des Chip Testens \textcite{Bhandari2024}. Dabei sind funktionale Tests, die sich auf Testbenches stützen, wichtig für das Chipdesign. Es wird Feedback in die LLM eingegeben, um so die Testbench Generierung zu verbessern. Dies findet iterativ statt, um die Testabdeckung zu verbessern. \textcite{Bhandari2024} nennen als Herausforderungen die Wiederholung der Antworten und die Feinabstimmung des LLM mit dem Umfang der Arbeit. Die Wertung der Testbenches in Bezug auf die Abdeckung gestaltet sich als nicht einfach. Trotzdem kommen sie zum Schluss, dass durch das Feedback die Testbenches besser verstanden werden. Ein entscheidender Faktor für die Qualität der Ausgabe ist dabei der Prompt. (\cite{Bhandari2024})\\
 \\
-Weitere Werke beschäftigen sich mit dem Einsatz von KI bei der Erstellung von Unit Tests. \textcite{Gu2024} nennen drei mögliche Probleme bei der Erzeugung von Testfällen. Ein unzureichender Kontext, fehlende Test- und Abdeckungsinformationen und das Problem, dass LLM sich in Wiederholungsschleifen befinden können. Als Lösung bieten sie das Tool TestART an, welches eine Erfolgsquote von 78,55\% aufweist. In einer weiteren Arbeit wird ein Tool namens ChatUniTest vorgestellt, welches ebenfalls die Qualität von durch KI erzeugte Unit Tests verbessern soll. (\cite{Chen2024})\\
+In einer Arbeit wird die Wirksamkeit von LLM bei der Erstellung von Unit Tests untersucht. Unit Tests sind ein Framework zur Entwicklung Softwaretests. Dabei kommen \textcite{Ouédraogo2024} zu dem Schluss, dass sich die mit LLM erzeugten JUnit Tests, mit den von Menschen geschriebenen Tests in Bezug auf Codierungsstandards ähneln. (\cite{Ouédraogo2024})\\
+\\
+Die Autoren \textcite{Gu2024}, welche sich in ihrer Arbeit ebenfalls mit dem Einsatz von KI bei der Erstellung von Unit Tests beschäftigen, nennen drei mögliche Probleme bei der Erzeugung von Testfällen.
+Ein unzureichender Kontext, fehlende Test- und Abdeckungsinformationen und das Problem, dass LLM sich in Wiederholungsschleifen befinden können. Als Lösung bieten sie das Tool TestART an, welches eine Erfolgsquote von 78,55\% aufweist. In einer weiteren Arbeit wird ein Tool namens ChatUniTest vorgestellt, welches ebenfalls die Qualität von durch KI erzeugte Unit Tests verbessern soll. (\cite{Gu2024})\\
+\\
+Mit dem Thema des automatischen Benutzeroberflächen (GUI)-Testings beschäftigt sich eine weitere Arbeit. Dabei sehen sie einen großen Fortschritt im Bereich des automatischen GUI-Testing, kommen jedoch zu der Erkenntnis, dass von LLM erzeugte Tests noch eine geringe Aktivitätsabdeckung aufweisen. Dies bedeutet, dass nur ein geringer Teil der möglichen Benutzeraktionen und Interaktionen mit der GUI abgedeckt sind. Dadurch kann mit diesen Tests nicht gewährleistet werden, dass alle Funktionen ordnungsgemäß und nach Vorgabe funktionieren. (\cite{Liu2024})\\
 \\
 In einem Werk von \textcite{Wang2024} wirft Fragen im Bereich der Qualität und Korrektheit der aus Sprachmodellen generierte Code auf. Die Autoren
 \textcite{Wang2024}  gehen davon aus, dass sie Fehler im Code aufspüren können, indem sie Inkonsistenzen finden. Sie kommen zu dem Ergebnis, dass sie in der Lage sind, 75\% der von GPT-4 generierten fehlerhaften Programme zu erkennen, wobei sie eine Falsch Positiv Rate von 8,6\% haben. \textcite{Wang2024} kommen zu der Erkenntnis, dass Entwickler möglicherweise nur eine kleine Teilmenge des LLM generierten Codes untersuchen müssen, um die meisten Fehler zu finden. Die in der Arbeit vorgestellte Methodik dient als Inspiration, wie diese Arbeit aufgebaut ist. (\cite{Wang2024})
@@ -429,7 +418,19 @@ TODO Prompt zeigen und Methoden erklären
 Der Output der KI wird mit folgenden Qualitätskriterien bewertet:\\
 \\
 Philipp Mayring (Qualitative Inhaltsanalye, Mayring Methode) 
-TODO Qualitätskriterien finden, definieren und erläutern
+TODO Qualitätskriterien finden, definieren und erläutern\\
+\\
+\textbf{\underline{Vollständigkeit:}}\\
+\\
+Werden alle Requirements, welche ChatGPT-4 übergeben werden, im positiven wie im negativen vollständig abgedeckt? Wenn Nein, wie viele werden ausgelassen?\\
+\\
+\textbf{\underline{Qualität:}}\\
+\\
+Werden alle Requirements präzise wiedergegeben und vollständig getestet, oder gibt es Rechtschreibfehler oder eine falsche Anordnung der Reihenfolge, oder werden Requirements aufgeteilt und falsch dargestellt?\\
+\\
+\textbf{\underline{Fehlerhäufigkeit:}}\\
+\\
+Wie viele Testschritte enthalten Informationen, welche sich nicht in der mitgegebenen Anforderungsspezifikation befinden und welche sind komplett frei erfunden und weisen keinen Zusammenhang mit dem System auf? So kann die Anzahl der Halluzinationen bestimmt und gezählt werden. (\cite{Aysolmaz2018}; \cite{Barmi2011}; \cite{JamaSoftware2024}; \cite{Mustafa2021}; \cite{Visure2024})
 % section qualitätskriterien (end)
 % chapter methodik (end)
 
