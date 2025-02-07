@@ -135,9 +135,11 @@ Da die im letzten Absatz beschriebene Lösung mit Zeit und Aufwand verbunden ist
 \label{sec:forschungsfrage}
 Die folgende Forschungsfrage, die aus der zugrunde liegenden Motivation abgeleitet wurde, bildet die Grundlage für die Durchführung der Arbeit.\\
 \\
-\textbf{Ist es möglich, dass ChatGPT-4 dazu in der Lage ist, aus Anforderungsspezifikationen Anforderungstestfälle zu erzeugen, welche eine höhere Testqualität und Testabdeckung aufweisen, als manuell erstellte Testfälle, die aus den gleichen Anforderungsspezifikationen erstellt werden?}  Um diese Frage zu beantworten, wird eine Metrik entwickelt, anhand derer, die von ChatGPT-4 von erstellten Testfälle, ausgewertet werden kann. (\cite{OpenAI2025})
+\textbf{Ist es möglich, dass das LLM ChatGPT-4 von \textcite{OpenAI2025} dazu in der Lage ist, aus Anforderungsspezifikationen Anforderungstestfälle zu erzeugen, welche eine höhere Testqualität und Testabdeckung aufweisen, als manuell erstellte Testfälle, die aus den gleichen Anforderungsspezifikationen erstellt werden?}\\  
+\\
+Diese Frage zielt darauf ab, herauszufinden, wie gut eine frei verfügbare LLM wie ChatGPT-4 von \textcite{OpenAI2025} in der Lage ist, Testfälle zu generieren. Können diese Testfälle mit manuell erstellten Testfällen mithalten und können somit Entwickler und Unternehmen wertvolle Zeit und Ressourcen sparen, wenn die KI redundante Aufgaben wie das Erstellen und Anpassen von Anwendungstestfällen übernehmen kann und die Ergebnisse nur überprüft werden müssen. Um diese Frage zu beantworten, wird eine Metrik entwickelt, anhand derer, die von ChatGPT-4 von \textcite{OpenAI2025} erstellten Testfälle, ausgewertet werden kann.
 % section forschungsfrage (end)
-
+\newpage
 \section{Ziel der Arbeit} % (fold)
 \label{sec:zielDerArbeit}
 Ziel der Arbeit ist es, die Grundlagen und Anwendungsmöglichkeiten und -verfahren zu erforschen, durchzuführen und zu evaluieren.\\
@@ -146,9 +148,9 @@ Diese Bachelorarbeit soll eine Vorgehensweise entwickeln, die sich für den Eins
 
 \section{Vorgehensweise} % (fold)
 \label{sec:vorgehensweise}
-Der Plan der vorliegenden Arbeit gestaltet sich wie folgt: Zunächst wird eine Literaturrecherche durchgeführt. Dabei liegt der Fokus auf dem Finden von bereits vorhandener Vorgehensweisen und Modellen im Bezug auf Textgenerierung im Allgemeinen und Testfallgenerierung im Besonderen. Es ist ebenfalls notwendig, sich über Begriffe und Techniken, welche während der Umsetzung der Arbeit notwendig sind, tiefer zu ergründen. Wichtig ist dabei eine festgelegte Struktur zu finden oder zu definieren, wie ein Testfall und eine Anforderungsspezifikation aufgebaut sind, welche Merkmale und welche Kriterien sie erfüllen müssen. Es wird recherchiert, was eine KI ist, wie Modelle - LLM - aufgebaut sind und warum sich diese für die Testfallgenerierung eignen. Das Ermitteln geeigneter Prompting Methoden wie der Methode RAG ist ebenfalls erforderlich. Das Ziel ist dabei, die Untersuchung und Entdeckung bereits vorhandener Anwendungsmöglichkeiten, Vorgehensweisen und Modellen zur LLM gesteuerten Testfallgenerierung.\\
+Das Vorgehen in der vorliegenden Arbeit erfolgt in mehreren Abschnitten. Zunächst wird eine Literaturrecherche durchgeführt. Dabei liegt der Fokus auf dem Finden von bereits vorhandener Vorgehensweisen und Modellen im Bezug auf Textgenerierung im Allgemeinen und Testfallgenerierung im Besonderen. Es ist ebenfalls notwendig, sich über Begriffe und Techniken, welche während der Umsetzung der Arbeit notwendig sind, tiefer zu ergründen. Wichtig ist dabei eine festgelegte Struktur zu finden oder zu definieren, wie ein Testfall und eine Anforderungsspezifikation aufgebaut sind, welche Merkmale und welche Kriterien sie erfüllen müssen. Es wird recherchiert, was eine KI und was ein LLM ist und welches LLM sich für die für die Testfallgenerierung eignet. Das Ermitteln geeigneter Prompting Methoden sowie der Methode RAG ist ebenfalls erforderlich. Das Ziel ist dabei, die Untersuchung und Entdeckung bereits vorhandener Anwendungsmöglichkeiten, Vorgehensweisen und Modellen zur LLM gesteuerten Testfallgenerierung, anhand derer die Testfallgenerierung in dieser Arbeit ausgeführt werden kann.\\
 \\
-Nachdem passende Modelle und Vorgehen ermittelt wurden und passende Testdaten, welche sich in Anforderungsspezifikationen und aus diesen manuell erstellte Anforderungstestfälle gliedern, beginnt die praktische Umsetzung der Arbeit. Dabei liegt die Durchführung und Dokumentation der von dem LLM erstellten Anforderungstestfälle im Vordergrund.\\
+Nachdem das passende Modell und das Vorgehen ermittelt wurden, sowie passende Testdaten, welche sich in Anforderungsspezifikationen und aus diesen manuell erstellte Anforderungstestfälle gliedern, gefunden wurden, beginnt die praktische Umsetzung der Arbeit. Dabei liegt die Durchführung und Dokumentation der von dem LLM erstellten Anforderungstestfälle im Vordergrund.\\
 \\
 Zum Schluss werden die von dem LLM erstellten Anforderungstestfälle mit manuell erstellten Anforderungstestfällen verglichen und auf ihr Ergebnis im Bezug auf Testqualität und Testabdeckung ermittelt. Die Ergebnisse werden analysiert und hinsichtlich Aufwand, Durchführbarkeit und Richtigkeit ausgewertet. Dabei werden für die Auswertung Metriken verwendet, die in Kapitel \ref{sec:methodik} näher erläutert werden. Anschließend werden die Ergebnisse ausgewertet.
 % section vorgehensweise (end)
@@ -165,8 +167,8 @@ In dieser Arbeit wird mit Hilfe von KI, Anforderungstestfälle erzeugt. Da KI ei
 \subsection{Allgemein} % fold
 \label{sec:allgemein}
 Der Begriff KI beziehungsweise im Englischen Artificial Intelligence (AI) beschreibt ein Teilgebiet der Informatik. Dabei gibt es zwei Typen von KI. Erstens die schwache KI, welche auch als enge KI bezeichnet wird. Diese Art der KI kann nur einzelne und beschränkte Aufgaben lösen. Der Begriff KI wurde bereits im Jahr 1956 als Konzept vorgeschlagen. Seitdem entwickelte sie sich immer weiter. Im Jahr 1997 verliert der damalige Schachweltmeister Garry Kasparov gegen den Schachcomputer Deep Blue von IBM und im Jahr 2016 besiegt der Computer AlphaGo von Google Lee Se-dol, ein Go-Meister aus Südkorea. Diese Erfolge zeigen die Entwicklung der KI, sind jedoch auf die schwache KI beschränkt. (\cite{Hecker2018})\\
-\\
-Als Zweites gibt es das Konzept der starken KI, auch als allgemeine KI bekannt. Folgende Grafik zeigt, wie diese ihre Umgebung wahrnimmt.
+\newpage
+\noindent Als Zweites gibt es das Konzept der starken KI, welche auch als allgemeine KI bekannt. Folgende Grafik zeigt, wie eine starke KI ihre Umgebung wahrnimmt.
 \begin{figure} [H]
     \centering
     \includegraphics[width=0.75\linewidth]{./Bilder/Fraunhofer_KI-Umgebung.png}
@@ -177,6 +179,7 @@ Als Zweites gibt es das Konzept der starken KI, auch als allgemeine KI bekannt. 
 \\
 \textcite{Hecker2018} nennt noch eine dritte Form der KI, die sogenannte Superintelligenz, diese wird es jedoch in nächster Zeit nicht geben und somit wird in dieser Arbeit nicht auf diese eingegangen. 
 %subsection allgemein (end)
+\newpage
 
 \subsection{Bereiche der KI} % fold
 \label{sec:bereicheDerKI}
@@ -192,8 +195,9 @@ Folgende Grafik zeigt anschaulich die einzelnen Teilgebiete der KI.
 \noindent KI wird bereits in Kapitel \ref{sec:KI}  beschrieben und umfasst andere Bereiche. Die Grafik ist dabei so zu verstehen, dass der größere Kreis die jeweils kleineren Kreise umfasst, das heißt maschinelles Lernen ist ein Teil von KI, Neuronale Netze sind ein Teilgebiet von KI und von maschinellem Lernen und Deep Learning ist ein Teilgebiet von KI, von maschinellem Lernen und von Neuronalen Netzen. (\cite{Bhatt2021}; \cite{Zhu2021})\\
 \\
 Im Folgenden werden nun einige wichtige Bereiche der KI, aufsteigend vom kleinsten zum größten Teilbereich erläutert.\\
-\\
-\textbf{\underline{Deep Learning:}}\\
+\newpage
+
+\noindent\textbf{\underline{Deep Learning:}}\\
 \\
 Deep Learing ist ein Teilgebiet der Neuronalen Netze. Sie sind dadurch gekennzeichnet, dass sie ein Hidden Layer besitzen, welches aus mehr als einer Neuronenschicht besteht (\cite{Bhatt2021}); (\cite{Zhu2021}). Folgende Grafik zeigt anschaulich ein Neuronales Netz und ein Deep Learning Netz.
 \begin{figure} [H]
@@ -239,7 +243,10 @@ Aufgrund des Erfolgs von LLMs, ihren Möglichkeiten und ihren vielseitigen Einsa
 
 \section{Prompting} % (fold)
 \label{sec:prompting}
-Die Eingabe bzw. der Prompt ist ein wesentlicher Bestandteil, zum Nutzen von KI. Jede Eingabe ist ein Prompt und die Qualität des Prompts kann über die Qualität der Antwort, welche das LLM liefert entscheiden. Deshalb ist es wichtig diesen Begriff und die Vorgehensweise, nach welcher in dieser Arbeit vorgegangen wird, zu erklären. Der englischen Begriff Prompting beziehungsweise Prompt kann als Eingabeaufforderung übersetzt und verstanden werden. Mit Hilfe eines Prompts kann der Nutzer der LLM eine Aufgabe oder eine Mitteilung liefern, welche diese verarbeiten und dann lösen kann. Prompting ist das entscheidende Schlüsselelement um mit LLM zu interagieren. Folgendes Beispiel zeigt ein Prompt und die Antwort der LLM, in diesem Fall von ChatGPT-4 von \textcite{OpenAI2025}:
+Die Eingabe bzw. der Prompt ist ein wesentlicher Bestandteil, zum Nutzen von KI. Jede Eingabe ist ein Prompt und die Qualität des Prompts kann über die Qualität der Antwort, welche das LLM liefert entscheiden. Deshalb ist es wichtig diesen Begriff und die Vorgehensweise, nach welcher in dieser Arbeit vorgegangen wird, zu erklären. Der englischen Begriff Prompting beziehungsweise Prompt kann als Eingabeaufforderung übersetzt und verstanden werden. Mit Hilfe eines Prompts kann der Nutzer der LLM eine Aufgabe oder eine Mitteilung liefern, welche diese verarbeiten und dann lösen kann. Prompting ist das entscheidende Schlüsselelement um mit LLM zu interagieren.\\
+\newpage
+
+\noindent Folgendes Beispiel zeigt ein Prompt und die Antwort der LLM, in diesem Fall von ChatGPT-4 von \textcite{OpenAI2025}:
 
 \begin{figure} [H]
     \centering
@@ -249,6 +256,7 @@ Die Eingabe bzw. der Prompt ist ein wesentlicher Bestandteil, zum Nutzen von KI.
 \end{figure}
 
 \noindent Prompts können dabei einfache Sprachaufforderungen sein wie anhand des in der Grafik gezeigten Beispiels. Jedoch können diese auch komplexer sein und für vielseitige Aufgaben unterschiedlich genutzt werden. Dabei gibt es den Begriff Prompt Engineering und verschiedene Prompt Techniken, welche in Kapitel \ref{sec:promptEngineeringUndPromptTechniken} erklärt werden. (\cite{Gu2023}; \cite{Liu2023})
+\newpage
 
 \subsection{Prompt Engineering und Prompt Techniken} % fold
 \label{sec:promptEngineeringUndPromptTechniken}
@@ -259,8 +267,8 @@ Unter dem Begriff Prompt Engineering versteht man, das gezielte Nutzen von Promp
 \section{Retrieval Augmented Generation (RAG)} % (fold)
 \label{sec:rag}
 Bereits in Kapitel \ref{sec:motivation} wird RAG erwähnt. Die Technik RAG steht für Retrieval Augmented Generation und ermöglicht es, einem LLM Dokumente zur Verfügung zu stellen, in welcher sich Wissen befindet. In dieser Arbeit kann dem LLM per RAG eine Anforderungsspezifikation zur Verfügung gestellt werden, in welcher die Anforderungen zu finden sind, aus welchen das LLM die Anforderungstestfälle generieren soll. Deshalb ist RAG ist für diese Arbeit von besonderer Wichtigkeit. RAG ist eine Technik, in welcher einem LLM Dokumente zur Verfügung gestellt werden. Dabei werden die in den Dokumenten enthaltenen Informationen für das LLM nutzbar gemacht. Die Dokumente und Anfragen werden dabei in kleine Abschnitte, welche als Chunks bezeichnet werden, aufgeteilt. RAG lässt sich dabei in vielen LLM anwenden und optimiert diese, ohne dass diese mit viel Aufwand trainiert werden müssen. (\cite{Gao2024}; \cite{Wu2024})\\
-\\
-Folgende Grafik zeigt anschaulich, wie RAG funktioniert:
+\newpage
+\noindent Folgende Grafik zeigt anschaulich, wie RAG funktioniert:
 
 \begin{figure} [H]
     \centering
@@ -280,9 +288,9 @@ Die Benutzereingabe erfolgt als Prompt in natürlicher Sprache, welche sich auf 
 \\
 \textbf{\underline{3. Retrieval:}}\\
 \\
-Nachdem die Maschine die Eingabe erhalten hat und diese ebenfalls vektorisiert hat, wird mit der Methode des nächsten Nachbarn, wird die höchste Ähnlichkeit zwischen der Eingabe und der in der Vektordatenbank gespeicherten Chunks priorisiert.\\
-\\
-\textbf{\underline{4. Augmentation:}}\\
+Nachdem die Maschine die Eingabe erhalten hat und diese ebenfalls vektorisiert hat, wird mit der Methode des nächsten Nachbarn, die höchste Ähnlichkeit zwischen der Eingabe und der in der Vektordatenbank gespeicherten Chunks priorisiert.\\
+\newpage
+\noindent\textbf{\underline{4. Augmentation:}}\\
 \\
 Der LLM wird diese Kombination aus Prompt des Benutzers und der Kontext zu Verfügung gestellt.\\
 \\
@@ -290,7 +298,7 @@ Der LLM wird diese Kombination aus Prompt des Benutzers und der Kontext zu Verf�
 \\
 Es wird nun eine Antwort generiert, welches die erhaltenen Informationen und das Training des jeweiligen LLM kombiniert.\\
 \\
-Wissenschaftliche Werke kommen zu dem Schluss, dass durch RAG LLM bessere Erlebnisse liefern können. Ergebnisse, welche RAG benutzen, zeichnen sich bei ihrer Performance aus und sind spezifischer und faktenreicher als Ergebnisse die nur von der LLM, ohne RAG erzeugt wurden. (\cite{Gao2024}; \cite{Lewis2021}; \cite{Salemi2024})
+RAG ist vielfältig einsetzbar und eignet sich in vielen Bereichen. Die Autoren \parencite{Gao2024, Lewis2021, Salemi2024} kommen zu dem Schluss, dass durch RAG LLMs bessere Erlebnisse liefern können. Ergebnisse, welche RAG benutzen, zeichnen sich bei ihrer Performance aus und sind spezifischer und faktenreicher als Ergebnisse die nur von der LLM, ohne RAG erzeugt wurden. (\cite{Gao2024}; \cite{Lewis2021}; \cite{Salemi2024})
 
 \subsection{Einsatzmöglichkeiten von RAG} % fold
 \label{sec:einsatzmöglichkeitenVonRAG}
@@ -303,6 +311,7 @@ RAG spielt in dieser Arbeit eine entscheidende Rolle. Mithilfe von RAG kann der 
 Es ist entscheidend zu definieren, was ein Testfall ist, welche Grundlagen und Definitionen für dessen Aufbau gegeben sind. Ohne dieses Wissen ist es unmöglich eine Metrik für die Auswertung und Qualität der generierten Testfälle zu definieren. Somit ist es ohne dieses Kapitel unmöglich die von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle auszuwerten und die Forschungsfrage zu beantworten.\\
 \\
 In dieser Arbeit werden Testfälle mit Hilfe von der LLM ChatGPT-4 von \textcite{OpenAI2025} erzeugt. Deshalb ist es wichtig zu beschreiben, was ein Testfall ist, wie er aufgebaut ist und welche Merkmal diese besitzen. Ein Testfall, ist wie bereits der Name sagt, ein Testszenario, in welchem getestet wird, ob die Anwendung die Funktionalitäten so erfüllt, wie sie erwartet werden. Für Testfälle gibt es eine internationale und standardisierte Definition und ein Regelwerk von \textcite{IsoIecIeee2024}. Eine Übersicht, welche die Testbegrifflichkeiten genau erläutert findet sich in dem \textcite{Istqb2017}. Dieser Standardglossar beschreibt dabei sämtliche Begrifflichkeiten in Englisch und ihrer offiziellen deutschen Übersetzung.
+\newpage
 
 \subsection{Aufbau eines Testfalls} % fold
 \label{sec:aufbauEinesTestfalls}
@@ -314,9 +323,10 @@ Ein Testfall besitzt einen Identifier, einen Namen, eine Beschreibung, Vorbeding
     \caption{Die Grafik von \textcite{Enderli2019} zeigt einen Testfall im SAP Solution Manager}
     \label{fig:enter-label}
 \end{figure}
-\noindent Der Testfall gliedert sich in Schritten, welche eine Beschreibung und ein erwartetes Ergebnis besitzen. In den Schritten wird somit überprüft, ob die Anwendung die Anforderungen erfüllt und somit das erwartete Ergebnis eintrifft. Testfälle können dabei positiv, als auch negativ sein. Bei negativen Testfällen wird überprüft, ob das erwartete Ergebnis, nicht eintrifft, da die Voraussetzungen nicht erfüllt sind. In dieser Arbeit wird von der KI erwartet, dass es wenn sie ein Testfall schreibt, diesen Aufbau einhält. Ein von der KI generierten Testfall, welcher nicht diese Struktur aufweist, wird als negativ bewertet. (\cite{IsoIecIeee2024}; \cite{Istqb2017})
+\noindent Der Testfall gliedert sich in Schritten, welche eine Beschreibung und ein erwartetes Ergebnis besitzen. In den Schritten wird somit überprüft, ob die Anwendung die Anforderungen erfüllt und somit das erwartete Ergebnis eintrifft. Testfälle können dabei positiv, als auch negativ sein. Bei negativen Testfällen wird überprüft, ob das erwartete Ergebnis, nicht eintrifft, da die Voraussetzungen nicht erfüllt sind. (\cite{IsoIecIeee2024}; \cite{Istqb2017})
 % section aufbauEinesTestfall (end)
 % section testfall (end)
+\newpage
 
 \section{Anforderungsspezifikation} % (fold)
 \label{sec:anforderungsspezifikation}
@@ -329,6 +339,7 @@ Eine Anforderungsspezifikation  ist das Fundament, aus welchem Testfälle erstel
     \label{fig:enter-label}
 \end{figure}
 \noindent Nicht funktionale Reuqirements beschreiben laut \textcite{Visure2024} zum Beispiel die Bereiche Sicherheit, Wartung und Kriterien an das System. In dieser Arbeit geht es um funktionale Requirements. Diese legen fest, was wie das System funktioniert und was passiert, wenn etwas im Positiven als auch wenn etwas im Negativen passiert. Der Unterschied ist gut an der Grafik von \textcite{JamaSoftware2024} zu erkennen. Während die funktionellen Requirements festlegen, dass das Auto schnell sein und eine rote Farbe besitzen muss, legen die nicht funktionalen Requirements exakt fest, welche Geschwindigkeit das Auto erreichen und welchen genauen Rotton dieses besitzen muss. Funktionale Requirements dienen als Grundlage für die Testfallgenerierung durch ChatGPT-4 von \textcite{OpenAI2025} in dieser Arbeit. (\cite{Aysolmaz2018}; \cite{Barmi2011}; \cite{Mustafa2021})
+\newpage
 
 \subsection{Bedeutung der Anforderungsspezifikation für die Testfallgenerierung} % fold
 \label{sec:bedeutungDerAnforderungsspezifikationFürDieTestfallgenerierung}
@@ -337,25 +348,36 @@ In vielen Softwareprojekten werden Testfälle durch Requirements erzeugt. Anford
 
 \chapter{Related Work und aktuelle Forschung} % (fold)
 \label{sec:relatedWorkUndAktuelleForschung}
-Zum Thema KI im Allgemeinen und besonders im Hinblick auf Sprachmodelle zur Textgenerierung gibt es bereits viele wissenschaftliche Arbeiten. Auf diese wird in diesem Kapitel näher eingegangen. (\cite{Iqbal2022}; \cite{Yuan2021}; \cite{Khan2024}; \cite{Bhandari2024}; \cite{Ouédraogo2024}; \cite{Gu2024}; \cite{Liu2024}; (\cite{Chen2024}; \cite{Wang2024})\\
+In dieser Arbeit wird die LLM ChatGPT-4 von \textcite{OpenAI2025} verwendet, um Anforderungstestfälle zu generieren. Diese Arbeit benutzt somit ein Sprachmodell zur Textgenerierung, da Testfälle in Form eines Textes erstellt werden. Für das Vorgehen bei der Erstellung von Testfällen und für das Aufstellen von Kriterien für die Auswertung der Testfälle in Kapitel \ref{sec:qualitätskriterien} ist es wichtig, wissenschaftliche Arbeiten im Bereich der Textgenerierung und Testfallgenerierung mit Hilfe von LLMs, zu berücksichtigen. In diesem Kapitel werden Arbeiten welche sich mit diesen Bereichen beschäftigen erläutert und deren Ergebnisse eingeordnet.\\
 \\
-Für den Einstieg zu dem Thema eignet sich ein wissenschaftliches Paper, welches einen Überblick bietet \textcite{Iqbal2022}. Dieses Paper stellt viele Deep Learning Modelle vor, die für die Generierung von Text verwendet wurden. Dabei werden die verschiedenen Modelle zusammengefasst und das Paper ermöglicht einen detaillierten Überblick über die Vergangenheit, Gegenwart und Zukunft von Textgenerierungsmodellen im Deep Learning. \textcite{Iqbal2022} gehen davon aus, dass in Zukunft immer bessere Modelle entwickelt werden und dass die Forschung im Bereich der Texterzeugung weiter vorangetrieben wird. Das Paper macht jedoch auch deutlich, dass Modelle bei längeren Texten die natürliche Sprache noch nicht vollständig begriffen haben. (\cite{Iqbal2022})\\
+Für den Einstieg zu dem Thema eignet sich ein wissenschaftliches Paper von \textcite{Iqbal2022}, welches einen Überblick im Bereich Textgenerierung, bietet. Dieses Paper stellt viele Deep Learning Modelle vor, die für die Generierung von Text verwendet wurden. Dabei werden die verschiedenen Modelle zusammengefasst und das Paper ermöglicht einen detaillierten Überblick über die Vergangenheit, Gegenwart und Zukunft von Textgenerierungsmodellen im Deep Learning. Die Autoren \textcite{Iqbal2022} gehen davon aus, dass in Zukunft immer bessere Modelle entwickelt werden und dass die Forschung im Bereich der Texterzeugung weiter vorangetrieben wird. Das Paper macht jedoch auch deutlich, dass Modelle bei längeren Texten die natürliche Sprache noch nicht vollständig begriffen haben. (\cite{Iqbal2022})\\
+\\
+Diese möglichen Einschränkungen ist für diese Arbeit nicht relevant, da in dieser Arbeit für die Testfallgenerierung keine großen Texte weder für den Input an ChatGPT-4 von \textcite{OpenAI2025}, noch als Output verwendet wird. Es ist trotzdem wichtig, diese Erkenntnis zu berücksichtigen, wenn es darum geht die Prompts zu schreiben und der KI die Anforderungsspezifikation zu übermitteln.\\
 \\
 Nicht nur die Textgenerierung durch KI ist wichtig, sondern auch die Auswertung des generierten Textes. \textcite{Yuan2021} stellten sich die Frage, wie man die generierten Texte nach Flüssigkeit, Genauigkeit und Effektivität beurteilen kann. Dafür entwickelten sie eine Metrik: Der sogenannte „BARTSCORE“ bewertet flexibel und unüberwacht aus unterschiedlichen Blickwinkeln. Unter anderem betrachtet er Informativität, Geläufigkeit oder Faktizität der generierten Texte. \textcite{Yuan2021} kommen zum Schluss, dass ihr Modell in 16 von 22 Settings besser abgeschnitten hat als andere gut bewertete Metriken. (\cite{Yuan2021})\\
 \\
-Ziel einer dieser Arbeiten ist es, einen Überblick über die Rolle von KI bei der Automatisierung von Softwaretests zu geben. \textcite{Khan2024} stellen die These auf, dass das Ziel der automatisierten Softwaretesterstellung mit KI möglich sein könnte. Im Werk werden zum Schluss entscheidende Schwierigkeiten, Probleme und Voraussetzungen vorgestellt. Am Ende bekräftigen \textcite{Khan2024} jedoch ihre These, dass das Testen von Software mit einer Reihe von Automatisierungsgadgets möglich sein könnte. (\cite{Khan2024})\\
+Diese Erkenntnis zeigt, wie wichtig es für die Auswertung der Arbeit ist, eine gute Metrik aufzustellen, welche die Qualität des generierten Textes auswertet.\\
+\newpage
+
+\noindent Das Werk von \textcite{Wang2024} wirft Fragen im Bereich der Qualität und Korrektheit der aus Sprachmodellen generierte Code auf. Die Autoren \textcite{Wang2024}  gehen davon aus, dass sie Fehler im Code aufspüren können, indem sie Inkonsistenzen finden. Sie kommen zu dem Ergebnis, dass sie in der Lage sind, 75\% der von GPT-4 generierten fehlerhaften Programme zu erkennen, wobei sie eine Falsch Positiv Rate von 8,6\% haben. \textcite{Wang2024} kommen zu der Erkenntnis, dass Entwickler möglicherweise nur eine kleine Teilmenge des LLM generierten Codes untersuchen müssen, um die meisten Fehler zu finden. Die in der Arbeit vorgestellte Methodik dient als Inspiration, wie diese Arbeit aufgebaut ist. (\cite{Wang2024})\\
 \\
-Eine weitere Arbeit beschäftigt sich mit dem Potenzial der Anpassung von LLMs für den Bereich des Chip Testens \textcite{Bhandari2024}. Dabei sind funktionale Tests, die sich auf Testbenches stützen, wichtig für das Chipdesign. Es wird Feedback in die LLM eingegeben, um so die Testbench Generierung zu verbessern. Dies findet iterativ statt, um die Testabdeckung zu verbessern. \textcite{Bhandari2024} nennen als Herausforderungen die Wiederholung der Antworten und die Feinabstimmung des LLM mit dem Umfang der Arbeit. Die Wertung der Testbenches in Bezug auf die Abdeckung gestaltet sich als nicht einfach. Trotzdem kommen sie zum Schluss, dass durch das Feedback die Testbenches besser verstanden werden. Ein entscheidender Faktor für die Qualität der Ausgabe ist dabei der Prompt. (\cite{Bhandari2024})\\
+Dieses Werk stellt gute und nachvollziehbare Kriterien auf, anhand die Autoren \textcite{Wang2024}, die Qualität des von der KI generierten Codes messen und auswerten können. Diese Kriterien dienen als eine Grundlage, Kriterien für das Messen der Qualität der von ChatGPT-4 von \textcite{OpenAI2025} erstellten Testfälle in Kapitel \ref{sec:qualitätskriterien} aufzustellen.\\
 \\
-In einer Arbeit wird die Wirksamkeit von LLM bei der Erstellung von Unit Tests untersucht. Unit Tests sind ein Framework zur Entwicklung Softwaretests. Dabei kommen \textcite{Ouédraogo2024} zu dem Schluss, dass sich die mit LLM erzeugten JUnit Tests, mit den von Menschen geschriebenen Tests in Bezug auf Codierungsstandards ähneln. (\cite{Ouédraogo2024})\\
+Im Bereich des Testens gibt es unterschiedliche Bereiche, für diese Arbeit ist es relevant herauszufinden, ob bereits KI oder LLMs im Bereich des Testens und zur Testfallerstellung eingesetzt werden. Folgende Arbeiten zeigen den Einsatz von KI oder LLMs im Bereich des Testens. \\
 \\
-Die Autoren \textcite{Gu2024}, welche sich in ihrer Arbeit ebenfalls mit dem Einsatz von KI bei der Erstellung von Unit Tests beschäftigen, nennen drei mögliche Probleme bei der Erzeugung von Testfällen.
+Das Ziel der Arbeit von \textcite{Khan2024} ist es, einen Überblick über die Rolle von KI bei der Automatisierung von Softwaretests zu geben. Dabei stellen die Autoren \textcite{Khan2024} die These auf, dass das Ziel der automatisierten Softwaretesterstellung mit KI möglich sein könnte. Im Werk werden zum Schluss entscheidende Schwierigkeiten, Probleme und Voraussetzungen vorgestellt. Am Ende bekräftigen \textcite{Khan2024} jedoch ihre These, dass das Testen von Software mit einer Reihe von Automatisierungsgadgets möglich sein könnte. (\cite{Khan2024})\\
+\\
+Die Autoren \textcite{Bhandari2024} beschäftigen sich mit den Einsatz und dem Potential von LLMs im Bereich des Chip-Testing. Dabei sind funktionale Tests, die sich auf Testbenches stützen, wichtig für das Chipdesign. Es wird Feedback in die LLM eingegeben, um so die Testbench Generierung zu verbessern. Dies findet iterativ statt, um die Testabdeckung zu verbessern. \textcite{Bhandari2024} nennen als Herausforderungen die Wiederholung der Antworten und die Feinabstimmung des LLM mit dem Umfang der Arbeit. Die Wertung der Testbenches in Bezug auf die Abdeckung gestaltet sich als nicht einfach. Trotzdem kommen sie zum Schluss, dass durch das Feedback die Testbenches besser verstanden werden. Ein entscheidender Faktor für die Qualität der Ausgabe ist dabei der Prompt. (\cite{Bhandari2024})\\
+\\
+In der Arbeit von \textcite{Ouédraogo2024} wird die Wirksamkeit von LLM bei der Erstellung von Unit Tests untersucht. Unit Tests sind ein Framework zur Entwicklung Softwaretests. Dabei kommen \textcite{Ouédraogo2024} zu dem Schluss, dass sich die mit LLM erzeugten JUnit Tests, mit den von Menschen geschriebenen Tests in Bezug auf Codierungsstandards ähneln. (\cite{Ouédraogo2024})\\
+\newpage
+
+\noindent Die Autoren \textcite{Gu2024}, welche sich in ihrer Arbeit ebenfalls mit dem Einsatz von KI bei der Erstellung von Unit Tests beschäftigen, nennen drei mögliche Probleme bei der Erzeugung von Testfällen.
 Ein unzureichender Kontext, fehlende Test- und Abdeckungsinformationen und das Problem, dass LLM sich in Wiederholungsschleifen befinden können. Als Lösung bieten sie das Tool TestART an, welches eine Erfolgsquote von 78,55\% aufweist. In einer weiteren Arbeit wird ein Tool namens ChatUniTest vorgestellt, welches ebenfalls die Qualität von durch KI erzeugte Unit Tests verbessern soll. (\cite{Gu2024})\\
 \\
 Mit dem Thema des automatischen Benutzeroberflächen (GUI)-Testings beschäftigt sich eine weitere Arbeit. Dabei sehen sie einen großen Fortschritt im Bereich des automatischen GUI-Testing, kommen jedoch zu der Erkenntnis, dass von LLM erzeugte Tests noch eine geringe Aktivitätsabdeckung aufweisen. Dies bedeutet, dass nur ein geringer Teil der möglichen Benutzeraktionen und Interaktionen mit der GUI abgedeckt sind. Dadurch kann mit diesen Tests nicht gewährleistet werden, dass alle Funktionen ordnungsgemäß und nach Vorgabe funktionieren. (\cite{Liu2024})\\
 \\
-In einem Werk von \textcite{Wang2024} wirft Fragen im Bereich der Qualität und Korrektheit der aus Sprachmodellen generierte Code auf. Die Autoren
-\textcite{Wang2024}  gehen davon aus, dass sie Fehler im Code aufspüren können, indem sie Inkonsistenzen finden. Sie kommen zu dem Ergebnis, dass sie in der Lage sind, 75\% der von GPT-4 generierten fehlerhaften Programme zu erkennen, wobei sie eine Falsch Positiv Rate von 8,6\% haben. \textcite{Wang2024} kommen zu der Erkenntnis, dass Entwickler möglicherweise nur eine kleine Teilmenge des LLM generierten Codes untersuchen müssen, um die meisten Fehler zu finden. Die in der Arbeit vorgestellte Methodik dient als Inspiration, wie diese Arbeit aufgebaut ist. (\cite{Wang2024})
+Diese Werke zeigen, dass KI und LLMs bereits in verschiedenen Testbereichen eingesetzt werden. Dabei handelt es sich um die Bereiche der Softwaretests, des Chip-Testing, der Unit Tests und des GUI-Testing. Dies zeigt, dass es möglich ist, dass LLM wie ChatGPT-4 von \textcite{OpenAI2025}, in der Lage ist, Anwendungstestfälle zu generieren, welche eine bessere Qualität besitzen, als manuell erstelle Anwendungstestfälle.
 % chapter relatedWorkUndAktuelleForschung (end)
 
 \chapter{Methodik TODO Vorläufig muss überarbeitet werden!!!!} % (fold)
@@ -419,18 +441,33 @@ TODO Prompt zeigen und Methoden erklären
 \label{sec:qualitätskriterien}
 Der Output der KI wird mit folgenden Qualitätskriterien bewertet:\\
 \\
-Philipp Mayring (Qualitative Inhaltsanalye, Mayring Methode) 
 TODO Qualitätskriterien finden, definieren und erläutern\\
 \\
-\textbf{\underline{Vollständigkeit:}}\\
+\textbf{\underline{1. Testfallstruktur:}}\\
+\\
+In Kapitel \ref{sec:testfall} wird die Testfallstruktur nach \textcite{IsoIecIeee2024} beschrieben. Ein Testfall nach \textcite{IsoIecIeee2024} besitzt folgende Merkmale: Ein Identifier, einen Namen, eine Beschreibung, Vorbedingungen und Ziele. Dabei testet der Testfall einen Ablauf, welcher sich in Schritten gliedert. In dieser Arbeit wird von ChatGPT-4 von \textcite{OpenAI2025} erwartet, dass es wenn es einen Testfall generiert, es diesen Aufbau einhält. Der Grund ist folgender, für viele Entwickler und Unternehmen ist es wichtig, dass Standards eingehalten werden. Ein Testfall welcher vom Aufbau her diesen Standard nicht erfüllt ist nicht brauchbar und muss somit auch negativ bewertet werden. Bei der Auswertung wird überprüft und gemessen, ob ChatGPT-4 von \textcite{OpenAI2025} standardmäßig die Testfallstruktur von \textcite{IsoIecIeee2024} benutzt. Das Kriterium Testfallstruktur ist das Ausschlusskriterium für diese Arbeit und die Auswertung der Testfälle, erst wenn die generierten Testfälle diesen Aufbau besitzen, können diese für weitere Qualitätskriterien ausgewertet werden. Deshalb wird überprüft und gemessen wie viele der von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle diese Testfallstruktur ganz oder teilweise besitzen. Dieser Wert hat drei Kategorien, welche in folgender Tabelle abgebildet sind:\\
+\\
+\textbf{Testfallstruktur:}
+\begin{table}[H]
+\begin{tabular}{|l|l|l|l|}
+\hline
+               & 1. Positiv & 2. Neutral & 3. Negativ  \\ \hline
+Einstufung  & 0 Merkmale fehlen       & 1 Merkmal fehlt        & $2 \geq Merkmale fehlen$        \\ \hline
+
+\end{tabular}
+\end{table}
+
+\noindent Falls ein großer Teil der Testfälle in der 3. Kategorie Negativ landet, muss die Forschungsfrage negativ beantwortet werden. Das Qualitätskriterium Testfallstruktur wird in Prozent gemessen. Dieser Fall tritt ein wenn mindestens XYZ \% aller Testfälle in der 3. Kategorie landen, da man ab dann von einem erheblichen Teil an nicht brauchbaren Testfällen spricht.\\
+\\
+\textbf{\underline{2. Vollständigkeit:}}\\
 \\
 Werden alle Requirements, welche ChatGPT-4 übergeben werden, im positiven wie im negativen vollständig abgedeckt? Wenn Nein, wie viele werden ausgelassen?\\
 \\
-\textbf{\underline{Qualität:}}\\
+\textbf{\underline{3. Qualität:}}\\
 \\
 Werden alle Requirements präzise wiedergegeben und vollständig getestet, oder gibt es Rechtschreibfehler oder eine falsche Anordnung der Reihenfolge, oder werden Requirements aufgeteilt und falsch dargestellt?\\
 \\
-\textbf{\underline{Fehlerhäufigkeit:}}\\
+\textbf{\underline{4. Fehlerhäufigkeit:}}\\
 \\
 Wie viele Testschritte enthalten Informationen, welche sich nicht in der mitgegebenen Anforderungsspezifikation befinden und welche sind komplett frei erfunden und weisen keinen Zusammenhang mit dem System auf? So kann die Anzahl der Halluzinationen bestimmt und gezählt werden. (\cite{Aysolmaz2018}; \cite{Barmi2011}; \cite{Mustafa2021})
 % section qualitätskriterien (end)
@@ -443,13 +480,15 @@ In Kapitel \ref{sec:ergebnisse} werden die Ergebnisse der von der KI erstellten 
 \section{Vorliegende Ergebnisse} % (fold)
 \label{sec:vorliegendeErgebnisse}
 Dies sind die Ergebnisse der KI
-TODO Ergebnisse zeigen
+TODO Ergebnisse zeigen\\
+\\\textbf{\underline{1. Testfallstruktur:}}\\
 % section vorliegendeErgebnisse (end)
 
 \section{Auswertung der Ergebnisse} % (fold)
 \label{sec:auswertungDerErgebnisse}
 Die von der KI generierten Testfälle schneiden wie folgt ab:
-TODO Ergebnisse auswerten und beschreiben
+TODO Ergebnisse auswerten und beschreiben\\
+\\\textbf{\underline{1. Testfallstruktur:}}\\
 % section auswertungDerErgebnisse (end)
 
 \section{Diskussion} % (fold)
