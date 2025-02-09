@@ -246,7 +246,7 @@ Aufgrund des Erfolgs von LLMs, ihren Möglichkeiten und ihren vielseitigen Einsa
 Die Eingabe bzw. der Prompt ist ein wesentlicher Bestandteil, zum Nutzen von KI. Jede Eingabe ist ein Prompt und die Qualität des Prompts kann über die Qualität der Antwort, welche das LLM liefert entscheiden. Deshalb ist es wichtig diesen Begriff und die Vorgehensweise, nach welcher in dieser Arbeit vorgegangen wird, zu erklären. Der englischen Begriff Prompting beziehungsweise Prompt kann als Eingabeaufforderung übersetzt und verstanden werden. Mit Hilfe eines Prompts kann der Nutzer der LLM eine Aufgabe oder eine Mitteilung liefern, welche diese verarbeiten und dann lösen kann. Prompting ist das entscheidende Schlüsselelement um mit LLM zu interagieren.\\
 \newpage
 
-\noindent Folgendes Beispiel zeigt ein Prompt und die Antwort der LLM, in diesem Fall von ChatGPT-4 von \textcite{OpenAI2025}, welches vom Autor dieser Arbeit erstellt wurde:
+\noindent Folgender Screenshot zeigt einen Prompt und die Antwort der LLM, in diesem Fall von ChatGPT-4 von \textcite{OpenAI2025}, welcher vom Autor dieser Arbeit erstellt wurde:
 
 \begin{figure} [H]
     \centering
@@ -359,20 +359,22 @@ Nicht nur die Textgenerierung durch KI ist wichtig, sondern auch die Auswertung 
 Diese Erkenntnis zeigt, wie wichtig es für die Auswertung der Arbeit ist, eine gute Metrik aufzustellen, welche die Qualität des generierten Textes auswertet.\\
 \newpage
 
-\noindent Das Werk von \textcite{Wang2024} wirft Fragen im Bereich der Qualität und Korrektheit der aus Sprachmodellen generierte Code auf. Die Autoren \textcite{Wang2024}  gehen davon aus, dass sie Fehler im Code aufspüren können, indem sie Inkonsistenzen finden. Sie kommen zu dem Ergebnis, dass sie in der Lage sind, 75\% der von GPT-4 generierten fehlerhaften Programme zu erkennen, wobei sie eine Falsch Positiv Rate von 8,6\% haben. \textcite{Wang2024} kommen zu der Erkenntnis, dass Entwickler möglicherweise nur eine kleine Teilmenge des LLM generierten Codes untersuchen müssen, um die meisten Fehler zu finden. Die in der Arbeit vorgestellte Methodik dient als Inspiration, wie diese Arbeit aufgebaut ist. (\cite{Wang2024})\\
+\noindent Im Bereich des Testing gibt es bereits viele Metriken und Qualitätskriterien um die Qualität von Testfällen zu messen. Das Werk von \textcite{Tran2025} untersucht dabei die wichtigsten Qualitätskriterien aus der Anwendersicht, da es sehr viele Qualitätskriterien gibt.  Die Autoren \textcite{Tran2025} kommen dabei zu dem Schluss, dass die Qualitätskriterien Fault Detection (Deutsch: Fehlererkennung), Maintainability (Deutsch: Wartbarkeit), Reliability (Deutsch: Zuverlässigkeit) und Usability (Deutsch: Benutzerfreundlichkeit), die wichtigsten Kriterien für Testfälle sind. Der Stellenwert der Qualitätskriterien ist dabei jedoch abhängig vom Kontext der Tests. Diese Erkenntnis ist eine wichtige Grundlage um in Kapitel \ref{sec:qualitätskriterien} Qualitätskriterien aufzustellen um die von ChatGPT-4 von \textcite{OpenAI2025} erstellten Testfälle auszuwerten. (\cite{Tran2025})\\
+\\
+Das Werk von \textcite{Wang2024} wirft Fragen im Bereich der Qualität und Korrektheit der aus Sprachmodellen generierte Code auf. Die Autoren \textcite{Wang2024}  gehen davon aus, dass sie Fehler im Code aufspüren können, indem sie Inkonsistenzen finden. Sie kommen zu dem Ergebnis, dass sie in der Lage sind, 75\% der von GPT-4 generierten fehlerhaften Programme zu erkennen, wobei sie eine Falsch Positiv Rate von 8,6\% haben. \textcite{Wang2024} kommen zu der Erkenntnis, dass Entwickler möglicherweise nur eine kleine Teilmenge des LLM generierten Codes untersuchen müssen, um die meisten Fehler zu finden. Die in der Arbeit vorgestellte Methodik dient als Inspiration, wie die von \textcite{Tran2025} genannten Qualitätskriterien in Kapitel \ref{sec:qualitätskriterien} ausgewertet werden. (\cite{Wang2024})\\
 \\
 Dieses Werk stellt gute und nachvollziehbare Kriterien auf, anhand die Autoren \textcite{Wang2024}, die Qualität des von der KI generierten Codes messen und auswerten können. Diese Kriterien dienen als eine Grundlage, Kriterien für das Messen der Qualität der von ChatGPT-4 von \textcite{OpenAI2025} erstellten Testfälle in Kapitel \ref{sec:qualitätskriterien} aufzustellen.\\
 \\
 Im Bereich des Testens gibt es unterschiedliche Bereiche, für diese Arbeit ist es relevant herauszufinden, ob bereits KI oder LLMs im Bereich des Testens und zur Testfallerstellung eingesetzt werden. Folgende Arbeiten zeigen den Einsatz von KI oder LLMs im Bereich des Testens. \\
 \\
 Das Ziel der Arbeit von \textcite{Khan2024} ist es, einen Überblick über die Rolle von KI bei der Automatisierung von Softwaretests zu geben. Dabei stellen die Autoren \textcite{Khan2024} die These auf, dass das Ziel der automatisierten Softwaretesterstellung mit KI möglich sein könnte. Im Werk werden zum Schluss entscheidende Schwierigkeiten, Probleme und Voraussetzungen vorgestellt. Am Ende bekräftigen \textcite{Khan2024} jedoch ihre These, dass das Testen von Software mit einer Reihe von Automatisierungsgadgets möglich sein könnte. (\cite{Khan2024})\\
-\\
-Die Autoren \textcite{Bhandari2024} beschäftigen sich mit den Einsatz und dem Potential von LLMs im Bereich des Chip-Testing. Dabei sind funktionale Tests, die sich auf Testbenches stützen, wichtig für das Chipdesign. Es wird Feedback in die LLM eingegeben, um so die Testbench Generierung zu verbessern. Dies findet iterativ statt, um die Testabdeckung zu verbessern. \textcite{Bhandari2024} nennen als Herausforderungen die Wiederholung der Antworten und die Feinabstimmung des LLM mit dem Umfang der Arbeit. Die Wertung der Testbenches in Bezug auf die Abdeckung gestaltet sich als nicht einfach. Trotzdem kommen sie zum Schluss, dass durch das Feedback die Testbenches besser verstanden werden. Ein entscheidender Faktor für die Qualität der Ausgabe ist dabei der Prompt. (\cite{Bhandari2024})\\
-\\
-In der Arbeit von \textcite{Ouédraogo2024} wird die Wirksamkeit von LLM bei der Erstellung von Unit Tests untersucht. Unit Tests sind ein Framework zur Entwicklung Softwaretests. Dabei kommen \textcite{Ouédraogo2024} zu dem Schluss, dass sich die mit LLM erzeugten JUnit Tests, mit den von Menschen geschriebenen Tests in Bezug auf Codierungsstandards ähneln. (\cite{Ouédraogo2024})\\
 \newpage
 
-\noindent Die Autoren \textcite{Gu2024}, welche sich in ihrer Arbeit ebenfalls mit dem Einsatz von KI bei der Erstellung von Unit Tests beschäftigen, nennen drei mögliche Probleme bei der Erzeugung von Testfällen.
+\noindent Die Autoren \textcite{Bhandari2024} beschäftigen sich mit den Einsatz und dem Potential von LLMs im Bereich des Chip-Testing. Dabei sind funktionale Tests, die sich auf Testbenches stützen, wichtig für das Chipdesign. Es wird Feedback in die LLM eingegeben, um so die Testbench Generierung zu verbessern. Dies findet iterativ statt, um die Testabdeckung zu verbessern. \textcite{Bhandari2024} nennen als Herausforderungen die Wiederholung der Antworten und die Feinabstimmung des LLM mit dem Umfang der Arbeit. Die Wertung der Testbenches in Bezug auf die Abdeckung gestaltet sich als nicht einfach. Trotzdem kommen sie zum Schluss, dass durch das Feedback die Testbenches besser verstanden werden. Ein entscheidender Faktor für die Qualität der Ausgabe ist dabei der Prompt. (\cite{Bhandari2024})\\
+\\
+In der Arbeit von \textcite{Ouédraogo2024} wird die Wirksamkeit von LLM bei der Erstellung von Unit Tests untersucht. Unit Tests sind ein Framework zur Entwicklung Softwaretests. Dabei kommen \textcite{Ouédraogo2024} zu dem Schluss, dass sich die mit LLM erzeugten JUnit Tests, mit den von Menschen geschriebenen Tests in Bezug auf Codierungsstandards ähneln. (\cite{Ouédraogo2024})\\
+\\
+Die Autoren \textcite{Gu2024}, welche sich in ihrer Arbeit ebenfalls mit dem Einsatz von KI bei der Erstellung von Unit Tests beschäftigen, nennen drei mögliche Probleme bei der Erzeugung von Testfällen.
 Ein unzureichender Kontext, fehlende Test- und Abdeckungsinformationen und das Problem, dass LLM sich in Wiederholungsschleifen befinden können. Als Lösung bieten sie das Tool TestART an, welches eine Erfolgsquote von 78,55\% aufweist. In einer weiteren Arbeit wird ein Tool namens ChatUniTest vorgestellt, welches ebenfalls die Qualität von durch KI erzeugte Unit Tests verbessern soll. (\cite{Gu2024})\\
 \\
 Mit dem Thema des automatischen Benutzeroberflächen (GUI)-Testings beschäftigt sich eine weitere Arbeit. Dabei sehen sie einen großen Fortschritt im Bereich des automatischen GUI-Testing, kommen jedoch zu der Erkenntnis, dass von LLM erzeugte Tests noch eine geringe Aktivitätsabdeckung aufweisen. Dies bedeutet, dass nur ein geringer Teil der möglichen Benutzeraktionen und Interaktionen mit der GUI abgedeckt sind. Dadurch kann mit diesen Tests nicht gewährleistet werden, dass alle Funktionen ordnungsgemäß und nach Vorgabe funktionieren. (\cite{Liu2024})\\
@@ -429,16 +431,14 @@ TODO Prompt zeigen und Methoden erklären
 
 \section{Qualitätskriterien} % (fold)
 \label{sec:qualitätskriterien}
-Der Output der KI wird mit folgenden Qualitätskriterien bewertet:\\
+Im Bereich des Testens gibt es viele Metriken und Qualitätskriterien, anhand derer gemessen werden kann, wie gut ein Testfall ist. Dabei spielt es für die Auswertung keine Rolle, ob der Testfall manuell oder mit Hilfe einer LLM wie ChatGPT-4 von \textcite{OpenAI2025} erstellt wird. Anhand dieser hier dargestellten Qualitätskriterien werden die von ChatGPT-4 von \textcite{OpenAI2025}, ausgewertet und nach ihrer Qualität gemessen.\\
 \\
-TODO Qualitätskriterien finden, definieren und erläutern\\
-\\
-Für die Auswertung der von der KI erstellten Testfällen und den Vergleich zwischen ihnen und den manuell erstellten Testfällen dient das Werk von (\cite{Wang2024}) als Inspiration. Für die Evaluation der erstellten Testfälle gibt es eine Metrik mit vier Kategorien:\\
+(((Für die Auswertung der von der KI erstellten Testfällen und den Vergleich zwischen ihnen und den manuell erstellten Testfällen dient das Werk von (\cite{Wang2024}) als Inspiration. Für die Evaluation der erstellten Testfälle gibt es eine Metrik mit vier Kategorien:\\
 \\
 True Positives (TP)\\
 False Positives (FP)\\
 True Negatives (TN)\\ 
-False Negatives (FN)\\
+False Negatives (FN)\\)))))
 \\
 \textbf{\underline{1. Testfallstruktur:}}\\
 \\
@@ -456,7 +456,25 @@ Einstufung  & 0 Merkmale fehlen       & 1 Merkmal fehlt        & $2 \geq Merkmal
 
 \noindent Falls ein großer Teil der Testfälle in der 3. Kategorie Negativ landet, muss die Forschungsfrage negativ beantwortet werden. Das Qualitätskriterium Testfallstruktur wird in Prozent gemessen. Dieser Fall tritt ein wenn mindestens XYZ \% aller Testfälle in der 3. Kategorie landen, da man ab dann von einem erheblichen Teil an nicht brauchbaren Testfällen spricht.\\
 \\
-\textbf{\underline{2. Vollständigkeit:}}\\
+In Kapitel \ref{sec:relatedWorkUndAktuelleForschung} steht, dass die Autoren \textcite{Tran2025} zu der Erkentniss kommen, dass die vier Qualitätskriterien 
+Fault Detection (Deutsch: Fehlererkennung), Maintainability (Deutsch: Wartbarkeit), Reliability (Deutsch: Zuverlässigkeit) und Usability (Deutsch: Benutzerfreundlichkeit), im Bereich Testfall, die wichtigsten Kriterien sind.
+Die Grafik von \textcite{Tran2025} zeigt dabei wie die einzelnen Qualitätskriterien abschneiden:
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=1\linewidth]{./Bilder/Tran et al_Qualitätskriterien.png}
+    \caption{Die Grafik von \textcite{Tran2025} zeigt wie die einzelnen Qualitätskriterien von den Teilnehmern ihrer Befragung, in ihrer Wichtigkeit erachtet werden}
+    \label{fig:enter-label}
+\end{figure}
+\noindent Deshalb wird in dieser Arbeit die Testfälle, welche im ersten Qualitätskriterium Testfallstruktur in der 1. Kategorie Positiv liegen, an Hand dieser vier weiteren Qualitätskriterien gemessen.\\
+\\\textbf{\underline{2. Fault Detection (Deutsch: Fehlererkennung)}}\\
+\\
+\textbf{\underline{3. Maintainability (Deutsch: Wartbarkeit)}}\\
+\\
+\textbf{\underline{4. Reliability (Deutsch: Zuverlässigkeit)}}\\
+\\
+\textbf{\underline{5. Usability (Deutsch: Benutzerfreundlichkeit)}}\\
+\\
+(((((\textbf{\underline{2. Vollständigkeit:}}\\
 \\
 Werden alle Requirements, welche ChatGPT-4 von \textcite{OpenAI2025} übergeben werden, im positiven wie im negativen vollständig abgedeckt? Wenn Nein, wie viele werden ausgelassen?\\
 \\
@@ -466,7 +484,8 @@ Werden alle Requirements präzise wiedergegeben und vollständig getestet, oder 
 \\
 \textbf{\underline{4. Fehlerhäufigkeit:}}\\
 \\
-Wie viele Testschritte enthalten Informationen, welche sich nicht in der mitgegebenen Anforderungsspezifikation befinden und welche sind komplett frei erfunden und weisen keinen Zusammenhang mit dem System auf? So kann die Anzahl der Halluzinationen bestimmt und gezählt werden. (\cite{Aysolmaz2018}; \cite{Barmi2011}; \cite{Mustafa2021})
+Wie viele Testschritte enthalten Informationen, welche sich nicht in der mitgegebenen Anforderungsspezifikation befinden und welche sind komplett frei erfunden und weisen keinen Zusammenhang mit dem System auf? So kann die Anzahl der Halluzinationen bestimmt und gezählt werden. (\cite{Aysolmaz2018}; \cite{Barmi2011}; \cite{Mustafa2021})\\
+)))
 % section qualitätskriterien (end)
 % chapter methodik (end)
 
@@ -479,6 +498,14 @@ In Kapitel \ref{sec:ergebnisse} werden die Ergebnisse der von der KI erstellten 
 Dies sind die Ergebnisse der KI
 TODO Ergebnisse zeigen\\
 \\\textbf{\underline{1. Testfallstruktur:}}\\
+\\
+\textbf{\underline{2. Fault Detection (Deutsch: Fehlererkennung)}}\\
+\\
+\textbf{\underline{3. Maintainability (Deutsch: Wartbarkeit)}}\\
+\\
+\textbf{\underline{4. Reliability (Deutsch: Zuverlässigkeit)}}\\
+\\
+\textbf{\underline{5. Usability (Deutsch: Benutzerfreundlichkeit)}}\\
 % section vorliegendeErgebnisse (end)
 
 \section{Auswertung der Ergebnisse} % (fold)
@@ -486,6 +513,14 @@ TODO Ergebnisse zeigen\\
 Die von der KI generierten Testfälle schneiden wie folgt ab:
 TODO Ergebnisse auswerten und beschreiben\\
 \\\textbf{\underline{1. Testfallstruktur:}}\\
+\\
+\textbf{\underline{2. Fault Detection (Deutsch: Fehlererkennung)}}\\
+\\
+\textbf{\underline{3. Maintainability (Deutsch: Wartbarkeit)}}\\
+\\
+\textbf{\underline{4. Reliability (Deutsch: Zuverlässigkeit)}}\\
+\\
+\textbf{\underline{5. Usability (Deutsch: Benutzerfreundlichkeit)}}\\
 % section auswertungDerErgebnisse (end)
 
 \section{Diskussion} % (fold)
