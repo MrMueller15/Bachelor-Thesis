@@ -436,13 +436,6 @@ TODO Prompt zeigen und Methoden erklären
 \label{sec:qualitätskriterien}
 Im Bereich des Testens gibt es viele Metriken und Qualitätskriterien, anhand derer gemessen werden kann, wie gut ein Testfall ist. Dabei spielt es für die Auswertung keine Rolle, ob der Testfall manuell oder mit Hilfe einer LLM wie ChatGPT-4 von \textcite{OpenAI2025} erstellt wird. Anhand dieser hier dargestellten Qualitätskriterien werden die von ChatGPT-4 von \textcite{OpenAI2025}, ausgewertet und nach ihrer Qualität gemessen.\\
 \\
-(((Für die Auswertung der von der KI erstellten Testfällen und den Vergleich zwischen ihnen und den manuell erstellten Testfällen dient das Werk von (\cite{Wang2024}) als Inspiration. Für die Evaluation der erstellten Testfälle gibt es eine Metrik mit vier Kategorien:\\
-\\
-True Positives (TP)\\
-False Positives (FP)\\
-True Negatives (TN)\\ 
-False Negatives (FN)\\)))))
-\\
 \textbf{\underline{1. Testfallstruktur:}}\\
 \\
 In Kapitel \ref{sec:testfall} wird die Testfallstruktur nach \textcite{IsoIecIeee2024} beschrieben. Ein Testfall nach \textcite{IsoIecIeee2024} besitzt folgende Merkmale: Ein Identifier, einen Namen, eine Beschreibung, Vorbedingungen und Ziele. Dabei testet der Testfall einen Ablauf, welcher sich in Schritten gliedert. In dieser Arbeit wird von ChatGPT-4 von \textcite{OpenAI2025} erwartet, dass es wenn es einen Testfall generiert, es diesen Aufbau einhält. Der Grund ist folgender, für viele Entwickler und Unternehmen ist es wichtig, dass Standards eingehalten werden. Ein Testfall welcher vom Aufbau her diesen Standard nicht erfüllt ist nicht brauchbar und muss somit auch negativ bewertet werden. Bei der Auswertung wird überprüft und gemessen, ob ChatGPT-4 von \textcite{OpenAI2025} standardmäßig die Testfallstruktur von \textcite{IsoIecIeee2024} benutzt. Das Kriterium Testfallstruktur ist das Ausschlusskriterium für diese Arbeit und die Auswertung der Testfälle, erst wenn die generierten Testfälle diesen Aufbau besitzen, können diese für weitere Qualitätskriterien ausgewertet werden. Deshalb wird überprüft und gemessen wie viele der von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle diese Testfallstruktur ganz oder teilweise besitzen. Dieser Wert hat drei Kategorien, welche in folgender Tabelle abgebildet sind:\\
