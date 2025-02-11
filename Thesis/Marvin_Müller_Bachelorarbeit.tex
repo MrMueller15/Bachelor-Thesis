@@ -410,23 +410,24 @@ Dieser Abschnitt beschreibt das verwendete LLM, welche Eigenschaften es besitzt 
 
 \section{Testdaten} % (fold)
 \label{sec:testdaten}
-Die Testdaten welche für die Durchführung der Testfälle verwendet werden, werden in diesem Abschnitt erläutert. Als Grundlage zur Erstellung von Testfällen dienen Anforderungsspezifikationen. Um die Qualität der von ChatGPT-4 von \textcite{OpenAI2025} messen zu können, ist es essentiell, dass es manuelle Testfälle gibt, welche bereits erstellt wurden. Dadurch können die von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle eingeordnet und auf ihre Richtigkeit und Relevanz bewertet werden, in dem man sie mit den manuellen Testfällen vergleicht. Für diese Arbeit werden für die Gewinnung von Testdaten, Open Source Projekte von GitHub verwendet, welche Anforderungsspezifikationen und manuelle Testfälle beinhalten. Dabei haben die Autoren \parencite{obaidsajjad-SQA-Engineer2024, Pavankumar21github2022, subramaniyan022023} ebenfalls Open Source Webseiten getestet, sodass sie in dieser Arbeit gezeigt werden können. Der Autor \textcite{obaidsajjad-SQA-Engineer2024} testet dabei die Website \textcite{OrangeHRM2025}. Die Autoren \parencite{Pavankumar21github2022, subramaniyan022023} testen dabei die Website \textcite{OpenCart2025}.
-Wichtig ist dabei, dass man sowohl Anforderungsspezifikationen als auch manuell erstellte Testfälle, die aus diesen Anforderungsspezifikationen erstellt wurden, findet.\\
-\begin{figure} [h!]
+Als Grundlage zur Erstellung von Testfällen dienen Anforderungsspezifikationen. Um die Qualität der von ChatGPT-4 von \textcite{OpenAI2025} messen zu können, ist es essentiell, dass es manuelle Testfälle gibt, welche bereits erstellt wurden. Dadurch können die von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle eingeordnet und auf ihre Richtigkeit und Relevanz bewertet werden, in dem sie mit den manuellen Testfällen vergleicht werden. Für diese Arbeit werden für die Gewinnung von Testdaten, Open Source Projekte von GitHub verwendet, welche Anforderungsspezifikationen und manuelle Testfälle beinhalten. Dabei haben die Autoren \parencite{obaidsajjad-SQA-Engineer2024, Pavankumar21github2022, subramaniyan022023} ebenfalls Open Source Webseiten getestet, sodass sie in dieser Arbeit gezeigt werden können. Der Autor \textcite{obaidsajjad-SQA-Engineer2024} testet dabei die Website \textcite{OrangeHRM2025}. Die Autoren \parencite{Pavankumar21github2022, subramaniyan022023} testen dabei die Website \textcite{OpenCart2025}. Folgende Grafik einer Anforderungsspezifikation von \textcite{Pavankumar21github2022} zeigt die Anforderungen, welche bei \textcite{OpenCart2025} bei der Erstellung eines Accounts erfolgen müssen.\\
+\begin{figure} [H]
     \centering
-    \includegraphics[width=1\linewidth]{./Bilder/Testspezifikationen.png}
-    \caption{Eine Anforderungsspezifikation mit Informationen und Anweisungsschritten}
+    \includegraphics[width=1\linewidth]{Bilder/Pavankumar21github_Anforderungsspezifikation.png}
+    \caption{Eine von \textcite{Pavankumar21github2022} erstellte Anforderungsspezifikation, welcher die Anforderungen für die Erstellung eines Accounts in \textcite{OpenCart2025} vorgibt}
+    \label{fig:enter-label}
 \end{figure}
-\\
-Nur so können diese Testfälle mit den KI generierten Testfällen valide verglichen und ausgewertet werden. Eine Quelle für Daten sind Opensource Projekte auf Github, welche öffentlich einsehbar und nutzbar sind.\\
-\newpage
-\noindent Eine Anforderungsspezifikation enthält dabei Informationen und Anweisungsschritte, aus denen dann ChatGPT-4 von \textcite{OpenAI2025} einen geeigneten Testfall generieren soll.\\
-\begin{figure} [h!]
+\noindent Spezifikationen wie diese, werden ChatGPT-4 von \textcite{OpenAI2025} zur Verfügung gestellt.
+
+\noindent generierten Testfälle können nur bewertet werden, wenn es manuelle Testfälle gibt, die die gleichen Funktionen und Anforderungen abdecken. Diese sind ebenfalls in den GitHub Projekten zu finden. Folgende Grafik zeigt einen Testfall die von \textcite{Pavankumar21github2022} erstellt wurden ist und welcher die Erstellung eines Accounts in \textcite{OpenCart2025} testen.
+\begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{./Bilder/Testfälle.png}
-    \caption{Aus der Anforderungsspezifikation erzeugten manuelle Testfälle}
+    \includegraphics[width=1\linewidth]{Bilder/Pavankumar21github_Testfall.png}
+    \caption{Ein von \textcite{Pavankumar21github2022} erstellter Testfall, welcher die Erstellung eines Accounts in \textcite{OpenCart2025} anhand der oben gezeigten Anforderungsspezifikation, testet}
+    \label{fig:enter-label}
 \end{figure}
-\\
+
+\noindent Mit Hilfe dieser Anforderungsspezifikation und von Screenshots der jeweiligen Webseite, generiert ChatGPT-4 von \textcite{OpenAI2025} Testfälle. Wie dieser Vorgang genau abläuft wird in Kapitel \ref{sec:promptUndVerwendeteMethoden} erläutert. Diese generierten Testfälle werden in Kapitel \ref{sec:auswertungsmetriken} mit Hilfe der manuellen Testfälle auf ihre Richtigkeit überprüft und gemessen.
 % section testdaten (end)
 
 \section{Prompt und verwendete Methoden} % (fold)
