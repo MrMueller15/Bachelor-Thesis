@@ -366,6 +366,9 @@ Im Bereich des Testens gibt es bereits viele Metriken und Qualitätskriterien um
 Dieses Werk stellt gute und nachvollziehbare Kriterien auf, anhand die Autoren \textcite{Wang2024}, die Qualität des von der KI generierten Codes messen und auswerten können. Diese Kriterien dienen als eine Grundlage, Kriterien für das Messen der Qualität der von ChatGPT-4 von \textcite{OpenAI2025} erstellten Testfälle in Kapitel \ref{sec:qualitätskriterien} aufzustellen.\\
 \\
 Die Werke von \parencite{Nirpals2011, Lazić2013} liefern einen Überblick über vorhandene Metriken im Bereich des Testens. Zu den von \textcite{Wang2024} genannten vier Qualitäskriterien  Fault Detection (Deutsch: Fehlererkennung), Maintainability (Deutsch: Wartbarkeit), Reliability (Deutsch: Zuverlässigkeit) und Usability (Deutsch: Benutzerfreundlichkeit), liefern \parencite{Nirpals2011, Lazić2013} ebenfalls Metriken. Die Autoren der beiden Werke \parencite{Nirpals2011, Lazić2013} kommen zu dem Schluss, dass Metriken wichtig für das Testen sind. Diese Metriken werden in Kapitel \ref{sec:qualitätskriterien} verwendet, um die von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle, auszuwerten. Die genauen Metriken, welche für die einzelnen Qualitätskriterien in dieser Arbeit verwendet werden, werden in Kapitel \ref{sec:qualitätskriterien} genannt und erläutert. (\cite{Nirpals2011}; \cite{Lazić2013})\\
+\\
+Die Autoren \textcite{Li2024} erforschen das Thema Halluzinationen im Bereich der LLM. Das Ziel ist es, Halluzinationen zu erkennen und die Anzahl der Halluzinationen zu reduzieren. Dabei kommen \textcite{Li2024} zu dem Schluss, dass die Anzahl der Halluzinationen durch gezieltes Training und RAG, verringert werden, jedoch nicht vollständig eliminert werden kann. Da in dieser Arbeit, dass LLM ChatGPT-4 von \textcite{OpenAI2025} verwendet wird, ist es wichtig, dass Phänomen der Halluzination zu untersuchen. Die von \textcite{Li2024} aufgestellte Methodik zur Messung der Halluzinationsrate (HR), wird in dieser Arbeit in Kapitel \ref{sec:qualitätskriterien} verwendet.
+(\cite{Li2024})
 \newpage
 
 \noindent Im Bereich des Testens gibt es unterschiedliche Bereiche, für diese Arbeit ist es relevant herauszufinden, ob bereits KI oder LLMs im Bereich des Testens und zur Testfallerstellung eingesetzt werden. Folgende Arbeiten zeigen den Einsatz von KI oder LLMs im Bereich des Testens. \\
@@ -442,15 +445,19 @@ In Kapitel \ref{sec:testfall} wird die Testfallstruktur nach \textcite{IsoIecIee
 \\
 \textbf{Testfallstruktur:}
 \begin{table}[H]
+\begin{center}
 \begin{tabular}{|l|l|l|l|}
 \hline
                & 1. Positiv & 2. Neutral & 3. Negativ  \\ \hline
 Einstufung  & 0 Merkmale fehlen       & 1 Merkmal fehlt        & $2 \geq Merkmale fehlen$        \\ \hline
 
 \end{tabular}
+\end{center}
 \end{table}
 
 \noindent Falls ein großer Teil der Testfälle in der 3. Kategorie Negativ landet, muss die Forschungsfrage negativ beantwortet werden. Das Qualitätskriterium Testfallstruktur wird in Prozent gemessen. Dieser Fall tritt ein wenn mindestens XYZ \% aller Testfälle in der 3. Kategorie landen, da man ab dann von einem erheblichen Teil an nicht brauchbaren Testfällen spricht.\\
+\\
+\textbf{\underline{Vier Qualitätskriterien nach \textcite{Tran2025}}}\\
 \\
 In Kapitel \ref{sec:relatedWorkUndAktuelleForschung} steht, dass die Autoren \textcite{Tran2025} zu der Erkentniss kommen, dass die vier Qualitätskriterien 
 Fault Detection (Deutsch: Fehlererkennung), Maintainability (Deutsch: Wartbarkeit), Reliability (Deutsch: Zuverlässigkeit) und Usability (Deutsch: Benutzerfreundlichkeit), im Bereich Testfall, die wichtigsten Kriterien sind.
@@ -470,18 +477,36 @@ Die Grafik von \textcite{Tran2025} zeigt dabei wie die einzelnen Qualitätskrite
 \\
 \textbf{\underline{5. Usability (Deutsch: Benutzerfreundlichkeit)}}\\
 \\
-(((((\textbf{\underline{2. Vollständigkeit:}}\\
+\textbf{\underline{Problem der Halluzination}}\\
 \\
-Werden alle Requirements, welche ChatGPT-4 von \textcite{OpenAI2025} übergeben werden, im positiven wie im negativen vollständig abgedeckt? Wenn Nein, wie viele werden ausgelassen?\\
+In Kapitel \ref{sec:motivation} steht, dass \textcite{Siebert2024} den Begriff Halluzination als Phänomen beschreibt, bei dem eine KI Antwort nicht mit den gegebenen Informationen übereinstimmt und sich Antworten ausdenkt, die faktisch nicht richtig sind. Da in dieser Arbeit die Testfälle von ChatGPT-4 von \textcite{OpenAI2025} generiert werden, ist ein weiteres Kriterium für deren Auswertung wichtig. Die Autoren \textcite{Li2024} stellen eine Metrik auf, um die Anzahl der Halluzinationen zu messen, die Halluzinationsrate (HR). Diese misst die Anzahl der Halluzinationen im Verhältnis zu der Gesamtantwort. In dieser Arbeit wird diese Metrik, für den Anwendungszweck, der Testfälle, modifiziert verwendet.\\
 \\
-\textbf{\underline{3. Qualität:}}\\
+\textbf{\underline{6. Halluzinationsrate (HR):}}\\
 \\
-Werden alle Requirements präzise wiedergegeben und vollständig getestet, oder gibt es Rechtschreibfehler oder eine falsche Anordnung der Reihenfolge, oder werden Requirements aufgeteilt und falsch dargestellt?\\
+Mit dem Qualitätskriterium Halluzinationsrate (HR) wird in dieser Arbeit, an \textcite{Li2024} angelehnt, das Verhältnis der Anzahl der Halluzinationen pro Testfall und der Gesamtzahl an Testschritten des Testfalls gemessen.
+\begin{equation*}
+    HR = \frac{H}{T} \times 100\%
+\end{equation*}
+
+\noindent Dabei sind:
+\begin{itemize}
+    \item $H$ Anzahl der erkannten Halluzinationen in den generierten Testfällen,
+    \item $T$ die Gesamtanzahl der generierten Testfälle.
+\end{itemize}
+Durch diese Metrik kann der Anteil der Halluzinationen pro Testfall in Prozent \% gemessen werden. Eine Halluzination wird gemessen, wenn in einem Testschritt falsche Begriffe oder Schritte vorkommen, oder Funktionen testen, die weder in der Anforderungsspezifikation, dem manuellen Testfall oder auf der Website zu finden sind. Die Halluzinationsrate hat drei Kategorien, welche in folgender Tabelle abgebildet sind\\
 \\
-\textbf{\underline{4. Fehlerhäufigkeit:}}\\
-\\
-Wie viele Testschritte enthalten Informationen, welche sich nicht in der mitgegebenen Anforderungsspezifikation befinden und welche sind komplett frei erfunden und weisen keinen Zusammenhang mit dem System auf? So kann die Anzahl der Halluzinationen bestimmt und gezählt werden. (\cite{Aysolmaz2018}; \cite{Barmi2011}; \cite{Mustafa2021})\\
-)))
+\textbf{Halluzinationsrate:} 
+\begin{table}[H]
+ \begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+               & 1. Positiv & 2. Neutral & 3. Negativ  \\ \hline
+Anteil H in \%  & 0 - 10 \%       & 11-20\%        & 20 \% <        \\ \hline
+
+\end{tabular}
+\end{center}
+\end{table}
+\noindent Es wird eingeordnet wie viel Prozent \% der Testfälle in welcher der drei Kategorien landen. Anschließend wird der Mittelwert berechnet um die Gesamtrate aller Testfälle zu ermitteln.
 % section qualitätskriterien (end)
 % chapter methodik (end)
 
