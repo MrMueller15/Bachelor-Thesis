@@ -367,7 +367,7 @@ Dieses Werk stellt gute und nachvollziehbare Kriterien auf, anhand die Autoren \
 \\
 Die Werke von \parencite{Nirpals2011, Lazić2013} liefern einen Überblick über vorhandene Metriken im Bereich des Testens. Zu den von \textcite{Wang2024} genannten vier Qualitäskriterien  Fault Detection (Deutsch: Fehlererkennung), Maintainability (Deutsch: Wartbarkeit), Reliability (Deutsch: Zuverlässigkeit) und Usability (Deutsch: Benutzerfreundlichkeit), liefern \parencite{Nirpals2011, Lazić2013} ebenfalls Metriken. Die Autoren der beiden Werke \parencite{Nirpals2011, Lazić2013} kommen zu dem Schluss, dass Metriken wichtig für das Testen sind. Diese Metriken werden in Kapitel \ref{sec:qualitätskriterien} verwendet, um die von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle, auszuwerten. Die genauen Metriken, welche für die einzelnen Qualitätskriterien in dieser Arbeit verwendet werden, werden in Kapitel \ref{sec:qualitätskriterien} genannt und erläutert. (\cite{Nirpals2011}; \cite{Lazić2013})\\
 \\
-Die Autoren \textcite{Li2024} erforschen das Thema Halluzinationen im Bereich der LLM. Das Ziel ist es, Halluzinationen zu erkennen und die Anzahl der Halluzinationen zu reduzieren. Dabei kommen \textcite{Li2024} zu dem Schluss, dass die Anzahl der Halluzinationen durch gezieltes Training und RAG, verringert werden, jedoch nicht vollständig eliminert werden kann. Da in dieser Arbeit, dass LLM ChatGPT-4 von \textcite{OpenAI2025} verwendet wird, ist es wichtig, dass Phänomen der Halluzination zu untersuchen. Die von \textcite{Li2024} aufgestellte Methodik zur Messung der Halluzinationsrate (HR), wird in dieser Arbeit in Kapitel \ref{sec:qualitätskriterien} verwendet.
+Die Autoren \textcite{Li2024} erforschen das Thema Halluzinationen im Bereich der LLM. Das Ziel ist es, Halluzinationen zu erkennen und die Anzahl der Halluzinationen zu reduzieren. Dabei kommen \textcite{Li2024} zu dem Schluss, dass die Anzahl der Halluzinationen durch gezieltes Training und RAG, verringert werden, jedoch nicht vollständig eliminert werden kann. Da in dieser Arbeit, dass LLM ChatGPT-4 von \textcite{OpenAI2025} verwendet wird, ist es wichtig, dass Phänomen der Halluzination zu untersuchen. Die von \textcite{Li2024} aufgestellte Methodik zur Messung der Halluzinationsrate (HR), wird in dieser Arbeit in Kapitel \ref{sec:ausschlusskriterien} verwendet.
 (\cite{Li2024})
 \newpage
 
@@ -435,21 +435,24 @@ Der Plan der vorliegenden Arbeit gestaltet sich wie folgt: Zuerst wird eine.
 TODO Prompt zeigen und Methoden erklären
 % section promptUndVerwendeteMethoden (end)
 
-\section{Qualitätskriterien} % (fold)
-\label{sec:qualitätskriterien}
-Im Bereich des Testens gibt es viele Metriken und Qualitätskriterien, anhand derer gemessen werden kann, wie gut ein Testfall ist. Dabei spielt es für die Auswertung keine Rolle, ob der Testfall manuell oder mit Hilfe einer LLM wie ChatGPT-4 von \textcite{OpenAI2025} erstellt wird. Anhand dieser hier dargestellten Qualitätskriterien werden die von ChatGPT-4 von \textcite{OpenAI2025}, ausgewertet und nach ihrer Qualität gemessen.\\
+\section{Auswertungsmetriken} % (fold)
+\label{sec:auswertungsmetriken}
+Im Bereich des Testens gibt es viele Metriken und Qualitätskriterien, anhand derer gemessen werden kann, wie gut ein Testfall ist. Dabei spielt es für die Auswertung keine Rolle, ob der Testfall manuell oder mit Hilfe einer LLM wie ChatGPT-4 von \textcite{OpenAI2025} erstellt wird. Anhand dieser hier dargestellten Qualitätskriterien werden die von ChatGPT-4 von \textcite{OpenAI2025}, ausgewertet und nach ihrer Qualität gemessen. In dieser Arbeit gibt es zwei Arten von Metriken, zum einen die Ausschlusskriterien, Kriterien, welche die von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle erfüllen müssen um bewertet zu werden und zum anderen die Qualitätskriterien, anhand derer diese mit manuellen Testfällen, die die gleichen Anforderungen abdecken, bewertet werden.
+\subsection{Ausschlusskriterien} % fold
+\label{sec:ausschlusskriterien}
+In dieser Arbeit gibt es zwei Ausschlusskriterien, die Testfallstruktur und die Halluzinationsrate (HR). Die von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle müssen beide erfüllen, damit sie mit den Qualitätskrierien bewertet werden können.\\
 \\
-\textbf{\underline{1. Testfallstruktur:}}\\
+\textbf{\underline{1.1 Testfallstruktur:}}\\
 \\
-In Kapitel \ref{sec:testfall} wird die Testfallstruktur nach \textcite{IsoIecIeee2024} beschrieben. Ein Testfall nach \textcite{IsoIecIeee2024} besitzt folgende Merkmale: Ein Identifier, einen Namen, eine Beschreibung, Vorbedingungen und Ziele. Dabei testet der Testfall einen Ablauf, welcher sich in Schritten gliedert. In dieser Arbeit wird von ChatGPT-4 von \textcite{OpenAI2025} erwartet, dass es wenn es einen Testfall generiert, es diesen Aufbau einhält. Der Grund ist folgender, für viele Entwickler und Unternehmen ist es wichtig, dass Standards eingehalten werden. Ein Testfall welcher vom Aufbau her diesen Standard nicht erfüllt ist nicht brauchbar und muss somit auch negativ bewertet werden. Bei der Auswertung wird überprüft und gemessen, ob ChatGPT-4 von \textcite{OpenAI2025} standardmäßig die Testfallstruktur von \textcite{IsoIecIeee2024} benutzt. Das Kriterium Testfallstruktur ist das Ausschlusskriterium für diese Arbeit und die Auswertung der Testfälle, erst wenn die generierten Testfälle diesen Aufbau besitzen, können diese für weitere Qualitätskriterien ausgewertet werden. Deshalb wird überprüft und gemessen wie viele der von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle diese Testfallstruktur ganz oder teilweise besitzen. Dieser Wert hat drei Kategorien, welche in folgender Tabelle abgebildet sind:\\
+In Kapitel \ref{sec:testfall} wird die Testfallstruktur nach \textcite{IsoIecIeee2024} beschrieben. Ein Testfall nach \textcite{IsoIecIeee2024} besitzt folgende Merkmale: Ein Identifier, einen Namen, eine Beschreibung, Vorbedingungen und Ziele. Dabei testet der Testfall einen Ablauf, welcher sich in Schritten gliedert. In dieser Arbeit wird von ChatGPT-4 von \textcite{OpenAI2025} erwartet, dass es wenn es einen Testfall generiert, es diesen Aufbau einhält. Der Grund ist folgender, für viele Entwickler und Unternehmen ist es wichtig, dass Standards eingehalten werden. Ein Testfall welcher vom Aufbau her diesen Standard nicht erfüllt ist nicht brauchbar und muss somit auch negativ bewertet werden. Bei der Auswertung wird überprüft und gemessen, ob ChatGPT-4 von \textcite{OpenAI2025} standardmäßig die Testfallstruktur von \textcite{IsoIecIeee2024} benutzt. Das Kriterium Testfallstruktur ist das Ausschlusskriterium für diese Arbeit und die Auswertung der Testfälle, erst wenn die generierten Testfälle diesen Aufbau besitzen, können diese für weitere Qualitätskriterien ausgewertet werden. Deshalb wird überprüft und gemessen wie viele der von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle diese Testfallstruktur ganz oder teilweise besitzen. Dieser Wert hat zwei Kategorien, welche in folgender Tabelle abgebildet sind:\\
 \\
 \textbf{Testfallstruktur:}
 \begin{table}[H]
 \begin{center}
-\begin{tabular}{|l|l|l|l|}
+\begin{tabular}{|l|l|l|}
 \hline
-               & 1. Positiv & 2. Neutral & 3. Negativ  \\ \hline
-Einstufung  & 0 Merkmale fehlen       & 1 Merkmal fehlt        & $2 \geq Merkmale fehlen$        \\ \hline
+               & 1. Positiv & 2. Negativ  \\ \hline
+Einstufung  & 0 Merkmale fehlen       & $1 \geq Merkmale fehlen$     \\ \hline
 
 \end{tabular}
 \end{center}
@@ -457,31 +460,11 @@ Einstufung  & 0 Merkmale fehlen       & 1 Merkmal fehlt        & $2 \geq Merkmal
 
 \noindent Falls ein großer Teil der Testfälle in der 3. Kategorie Negativ landet, muss die Forschungsfrage negativ beantwortet werden. Das Qualitätskriterium Testfallstruktur wird in Prozent gemessen. Dieser Fall tritt ein wenn mindestens XYZ \% aller Testfälle in der 3. Kategorie landen, da man ab dann von einem erheblichen Teil an nicht brauchbaren Testfällen spricht.\\
 \\
-\textbf{\underline{Vier Qualitätskriterien nach \textcite{Tran2025}}}\\
-\\
-In Kapitel \ref{sec:relatedWorkUndAktuelleForschung} steht, dass die Autoren \textcite{Tran2025} zu der Erkentniss kommen, dass die vier Qualitätskriterien 
-Fault Detection (Deutsch: Fehlererkennung), Maintainability (Deutsch: Wartbarkeit), Reliability (Deutsch: Zuverlässigkeit) und Usability (Deutsch: Benutzerfreundlichkeit), im Bereich Testfall, die wichtigsten Kriterien sind.
-Die Grafik von \textcite{Tran2025} zeigt dabei wie die einzelnen Qualitätskriterien abschneiden:
-\begin{figure} [H]
-    \centering
-    \includegraphics[width=1\linewidth]{./Bilder/Tran et al_Qualitätskriterien.png}
-    \caption{Die Grafik von \textcite{Tran2025} zeigt wie die einzelnen Qualitätskriterien von den Teilnehmern ihrer Befragung, in ihrer Wichtigkeit erachtet werden}
-    \label{fig:enter-label}
-\end{figure}
-\noindent Deshalb wird in dieser Arbeit die Testfälle, welche im ersten Qualitätskriterium Testfallstruktur in der 1. Kategorie Positiv liegen, an Hand dieser vier weiteren Qualitätskriterien gemessen. Dabei werden wie in Kapitel \ref{sec:relatedWorkUndAktuelleForschung} beschrieben, für die unten stehenden Qualitätskriterien Metriken verwendet, welche in den Werken von \parencite{Nirpals2011, Lazić2013} stehen.\\
-\\\textbf{\underline{2. Fault Detection (Deutsch: Fehlererkennung)}}\\
-\\
-\textbf{\underline{3. Maintainability (Deutsch: Wartbarkeit)}}\\
-\\
-\textbf{\underline{4. Reliability (Deutsch: Zuverlässigkeit)}}\\
-\\
-\textbf{\underline{5. Usability (Deutsch: Benutzerfreundlichkeit)}}\\
-\\
 \textbf{\underline{Problem der Halluzination}}\\
 \\
 In Kapitel \ref{sec:motivation} steht, dass \textcite{Siebert2024} den Begriff Halluzination als Phänomen beschreibt, bei dem eine KI Antwort nicht mit den gegebenen Informationen übereinstimmt und sich Antworten ausdenkt, die faktisch nicht richtig sind. Da in dieser Arbeit die Testfälle von ChatGPT-4 von \textcite{OpenAI2025} generiert werden, ist ein weiteres Kriterium für deren Auswertung wichtig. Die Autoren \textcite{Li2024} stellen eine Metrik auf, um die Anzahl der Halluzinationen zu messen, die Halluzinationsrate (HR). Diese misst die Anzahl der Halluzinationen im Verhältnis zu der Gesamtantwort. In dieser Arbeit wird diese Metrik, für den Anwendungszweck, der Testfälle, modifiziert verwendet.\\
 \\
-\textbf{\underline{6. Halluzinationsrate (HR):}}\\
+\textbf{\underline{1.2 Halluzinationsrate (HR):}}\\
 \\
 Mit dem Qualitätskriterium Halluzinationsrate (HR) wird in dieser Arbeit, an \textcite{Li2024} angelehnt, das Verhältnis der Anzahl der Halluzinationen pro Testfall und der Gesamtzahl an Testschritten des Testfalls gemessen.
 \begin{equation*}
@@ -490,8 +473,8 @@ Mit dem Qualitätskriterium Halluzinationsrate (HR) wird in dieser Arbeit, an \t
 
 \noindent Dabei sind:
 \begin{itemize}
-    \item $H$ Anzahl der erkannten Halluzinationen in den generierten Testfällen,
-    \item $T$ die Gesamtanzahl der generierten Testfälle.
+    \item $H$ Anzahl der Halluzinationen Testschritte pro Testfall,
+    \item $T$ die Gesamtanzahl der generierten Testschritte pro Testfall.
 \end{itemize}
 Durch diese Metrik kann der Anteil der Halluzinationen pro Testfall in Prozent \% gemessen werden. Eine Halluzination wird gemessen, wenn in einem Testschritt falsche Begriffe oder Schritte vorkommen, oder Funktionen testen, die weder in der Anforderungsspezifikation, dem manuellen Testfall oder auf der Website zu finden sind. Die Halluzinationsrate hat drei Kategorien, welche in folgender Tabelle abgebildet sind\\
 \\
@@ -507,7 +490,34 @@ Anteil H in \%  & 0 - 10 \%       & 11-20\%        & 20 \% <        \\ \hline
 \end{center}
 \end{table}
 \noindent Es wird eingeordnet wie viel Prozent \% der Testfälle in welcher der drei Kategorien landen. Anschließend wird der Mittelwert berechnet um die Gesamtrate aller Testfälle zu ermitteln.
-% section qualitätskriterien (end)
+%subsection ausschlusskriterien (end)
+
+\subsection{Qualitätskriterien} % fold
+\label{sec:qualitätskriterien}
+In dieser Arbeit gibt es vier Qualitätskriterien nach \textcite{Tran2025}. Diese werden verwendet, um die von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle, welche die Ausschlusskriterien erfüllen, mit den manuell erstellten Testfälle zu vergleichen.\\
+\\
+\textbf{\underline{Vier Qualitätskriterien nach \textcite{Tran2025}}}\\
+\\
+In Kapitel \ref{sec:relatedWorkUndAktuelleForschung} steht, dass die Autoren \textcite{Tran2025} zu der Erkentniss kommen, dass die vier Qualitätskriterien 
+Fault Detection (Deutsch: Fehlererkennung), Maintainability (Deutsch: Wartbarkeit), Reliability (Deutsch: Zuverlässigkeit) und Usability (Deutsch: Benutzerfreundlichkeit), im Bereich Testfall, die wichtigsten Kriterien sind.
+Die Grafik von \textcite{Tran2025} zeigt dabei wie die einzelnen Qualitätskriterien abschneiden:
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=1\linewidth]{./Bilder/Tran et al_Qualitätskriterien.png}
+    \caption{Die Grafik von \textcite{Tran2025} zeigt wie die einzelnen Qualitätskriterien von den Teilnehmern ihrer Befragung, in ihrer Wichtigkeit erachtet werden}
+    \label{fig:enter-label}
+\end{figure}
+\noindent Deshalb wird in dieser Arbeit die Testfälle, welche im ersten Qualitätskriterium Testfallstruktur in der 1. Kategorie Positiv liegen, an Hand dieser vier weiteren Qualitätskriterien gemessen. Dabei werden wie in Kapitel \ref{sec:relatedWorkUndAktuelleForschung} beschrieben, für die unten stehenden Qualitätskriterien Metriken verwendet, welche in den Werken von \parencite{Nirpals2011, Lazić2013} stehen.\\
+\\
+\textbf{\underline{2.1 Fault Detection (Deutsch: Fehlererkennung)}}\\
+\\
+\textbf{\underline{2.2 Maintainability (Deutsch: Wartbarkeit)}}\\
+\\
+\textbf{\underline{2.3 Reliability (Deutsch: Zuverlässigkeit)}}\\
+\\
+\textbf{\underline{2.4 Usability (Deutsch: Benutzerfreundlichkeit)}}
+%subsection qualitätskriterien (end)
+% section auswertungsmetriken (end)
 % chapter methodik (end)
 
 \chapter{Ergebnisse} % (fold)
@@ -519,34 +529,36 @@ Alle Testdaten, die Anforderungsspezifikationen, die manuellen sowie die von Cha
 \label{sec:vorliegendeErgebnisse}
 Dies sind die Ergebnisse der KI
 TODO Ergebnisse zeigen\\
-\\\textbf{\underline{1. Testfallstruktur:}}\\
 \\
-\textbf{\underline{2. Fault Detection (Deutsch: Fehlererkennung)}}\\
+\textbf{\underline{1.1 Testfallstruktur:}}\\
 \\
-\textbf{\underline{3. Maintainability (Deutsch: Wartbarkeit)}}\\
+\textbf{\underline{1.2 Halluzinationsrate (HR)}}\\
 \\
-\textbf{\underline{4. Reliability (Deutsch: Zuverlässigkeit)}}\\
+\textbf{\underline{2.1 Fault Detection (Deutsch: Fehlererkennung)}}\\
 \\
-\textbf{\underline{5. Usability (Deutsch: Benutzerfreundlichkeit)}}\\
+\textbf{\underline{2.2 Maintainability (Deutsch: Wartbarkeit)}}\\
 \\
-\textbf{\underline{6. Halluzinationsrate (HR)}}
+\textbf{\underline{2.3 Reliability (Deutsch: Zuverlässigkeit)}}\\
+\\
+\textbf{\underline{2.4 Usability (Deutsch: Benutzerfreundlichkeit)}}
 % section vorliegendeErgebnisse (end)
 
 \section{Auswertung der Ergebnisse} % (fold)
 \label{sec:auswertungDerErgebnisse}
 Die von der KI generierten Testfälle schneiden wie folgt ab:
 TODO Ergebnisse auswerten und beschreiben\\
-\\\textbf{\underline{1. Testfallstruktur:}}\\
 \\
-\textbf{\underline{2. Fault Detection (Deutsch: Fehlererkennung)}}\\
+\textbf{\underline{1.1 Testfallstruktur:}}\\
 \\
-\textbf{\underline{3. Maintainability (Deutsch: Wartbarkeit)}}\\
+\textbf{\underline{1.2 Halluzinationsrate (HR)}}\\
 \\
-\textbf{\underline{4. Reliability (Deutsch: Zuverlässigkeit)}}\\
+\textbf{\underline{2.1 Fault Detection (Deutsch: Fehlererkennung)}}\\
 \\
-\textbf{\underline{5. Usability (Deutsch: Benutzerfreundlichkeit)}}\\
+\textbf{\underline{2.2 Maintainability (Deutsch: Wartbarkeit)}}\\
 \\
-\textbf{\underline{6. Halluzinationsrate (HR)}}
+\textbf{\underline{2.3 Reliability (Deutsch: Zuverlässigkeit)}}\\
+\\
+\textbf{\underline{2.4 Usability (Deutsch: Benutzerfreundlichkeit)}}
 % section auswertungDerErgebnisse (end)
 
 \section{Diskussion} % (fold)
