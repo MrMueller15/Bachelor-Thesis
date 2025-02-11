@@ -410,8 +410,8 @@ Dieser Abschnitt beschreibt das verwendete LLM, welche Eigenschaften es besitzt 
 
 \section{Testdaten} % (fold)
 \label{sec:testdaten}
-Die Testdaten welche für die Durchführung der Testfälle verwendet werden, werden in diesem Abschnitt erläutert.
-Als Grundlage zur Erstellung von Testfällen dienen Anforderungsspezifikationen. Wichtig ist dabei, dass man sowohl Anforderungsspezifikationen als auch manuell erstellte Testfälle, die aus diesen Anforderungsspezifikationen erstellt wurden, findet.\\
+Die Testdaten welche für die Durchführung der Testfälle verwendet werden, werden in diesem Abschnitt erläutert. Als Grundlage zur Erstellung von Testfällen dienen Anforderungsspezifikationen. Um die Qualität der von ChatGPT-4 von \textcite{OpenAI2025} messen zu können, ist es essentiell, dass es manuelle Testfälle gibt, welche bereits erstellt wurden. Dadurch können die von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle eingeordnet und auf ihre Richtigkeit und Relevanz bewertet werden, in dem man sie mit den manuellen Testfällen vergleicht. Für diese Arbeit werden für die Gewinnung von Testdaten, Open Source Projekte von GitHub verwendet, welche Anforderungsspezifikationen und manuelle Testfälle beinhalten. Dabei haben die Autoren \parencite{obaidsajjad-SQA-Engineer2024, Pavankumar21github2022, subramaniyan022023} ebenfalls Open Source Webseiten getestet, sodass sie in dieser Arbeit gezeigt werden können. Der Autor \textcite{obaidsajjad-SQA-Engineer2024} testet dabei die Website \textcite{OrangeHRM2025}. Die Autoren \parencite{Pavankumar21github2022, subramaniyan022023} testen dabei die Website \textcite{OpenCart2025}.
+Wichtig ist dabei, dass man sowohl Anforderungsspezifikationen als auch manuell erstellte Testfälle, die aus diesen Anforderungsspezifikationen erstellt wurden, findet.\\
 \begin{figure} [h!]
     \centering
     \includegraphics[width=1\linewidth]{./Bilder/Testspezifikationen.png}
@@ -513,6 +513,7 @@ Anteil H in \%  & 0 - 10 \%       & 11-20\%        & 20 \% <        \\ \hline
 \chapter{Ergebnisse} % (fold)
 \label{sec:ergebnisse}
 In Kapitel \ref{sec:ergebnisse} werden die Ergebnisse der von der KI erstellten Anforderungstestfälle dokumentiert, beschrieben und eingeordnet.
+Alle Testdaten, die Anforderungsspezifikationen, die manuellen sowie die von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle und die Auswertungstabellen, finden sich im GitHub Projekt von \textcite{Müller2025} dem Autor dieser Arbeit.
 
 \section{Vorliegende Ergebnisse} % (fold)
 \label{sec:vorliegendeErgebnisse}
@@ -527,6 +528,8 @@ TODO Ergebnisse zeigen\\
 \textbf{\underline{4. Reliability (Deutsch: Zuverlässigkeit)}}\\
 \\
 \textbf{\underline{5. Usability (Deutsch: Benutzerfreundlichkeit)}}\\
+\\
+\textbf{\underline{6. Halluzinationsrate (HR)}}
 % section vorliegendeErgebnisse (end)
 
 \section{Auswertung der Ergebnisse} % (fold)
@@ -542,6 +545,8 @@ TODO Ergebnisse auswerten und beschreiben\\
 \textbf{\underline{4. Reliability (Deutsch: Zuverlässigkeit)}}\\
 \\
 \textbf{\underline{5. Usability (Deutsch: Benutzerfreundlichkeit)}}\\
+\\
+\textbf{\underline{6. Halluzinationsrate (HR)}}
 % section auswertungDerErgebnisse (end)
 
 \section{Diskussion} % (fold)
