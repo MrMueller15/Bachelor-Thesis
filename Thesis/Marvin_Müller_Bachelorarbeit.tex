@@ -438,14 +438,22 @@ TODO Prompt zeigen und Methoden erklären
 
 \section{Auswertungsmetriken} % (fold)
 \label{sec:auswertungsmetriken}
-Im Bereich des Testens gibt es viele Metriken und Qualitätskriterien, anhand derer gemessen werden kann, wie gut ein Testfall ist. Dabei spielt es für die Auswertung keine Rolle, ob der Testfall manuell oder mit Hilfe einer LLM wie ChatGPT-4 von \textcite{OpenAI2025} erstellt wird. Anhand dieser hier dargestellten Qualitätskriterien werden die von ChatGPT-4 von \textcite{OpenAI2025}, ausgewertet und nach ihrer Qualität gemessen. In dieser Arbeit gibt es zwei Arten von Metriken, zum einen die Ausschlusskriterien, Kriterien, welche die von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle erfüllen müssen um bewertet zu werden und zum anderen die Qualitätskriterien, anhand derer diese mit manuellen Testfällen, die die gleichen Anforderungen abdecken, bewertet werden.
+Im Bereich des Testens gibt es viele Metriken und Qualitätskriterien, anhand derer gemessen werden kann, wie gut ein Testfall ist. Dabei spielt es für die Auswertung keine Rolle, ob der Testfall manuell oder mit Hilfe einer LLM wie ChatGPT-4 von \textcite{OpenAI2025} erstellt wird. Anhand dieser hier dargestellten Ausschluss- und Qualitätskriterien werden die von ChatGPT-4 von \textcite{OpenAI2025} erstellten Testfälle, ausgewertet und nach ihrer Qualität gemessen. In dieser Arbeit gibt es zwei Arten von Metriken, zum einen die Ausschlusskriterien, Kriterien, welche die von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle erfüllen müssen um bewertet zu werden und zum anderen die Qualitätskriterien, anhand derer diese mit manuellen Testfällen, die die gleichen Anforderungen abdecken, bewertet werden.
 \subsection{Ausschlusskriterien} % fold
 \label{sec:ausschlusskriterien}
-In dieser Arbeit gibt es zwei Ausschlusskriterien, die Testfallstruktur und die Halluzinationsrate (HR). Die von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle müssen beide erfüllen, damit sie mit den Qualitätskrierien bewertet werden können.\\
+In dieser Arbeit gibt es zwei Ausschlusskriterien, die Testfallstruktur und die Kohärenzrate (KR). Die von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle müssen beide erfüllen, damit sie mit den Qualitätskriterien bewertet werden können.\\
 \\
 \textbf{\underline{1.1 Testfallstruktur:}}\\
 \\
-In Kapitel \ref{sec:testfall} wird die Testfallstruktur nach \textcite{IsoIecIeee2024} beschrieben. Ein Testfall nach \textcite{IsoIecIeee2024} besitzt folgende Merkmale: Ein Identifier, einen Namen, eine Beschreibung, Vorbedingungen und Ziele. Dabei testet der Testfall einen Ablauf, welcher sich in Schritten gliedert. In dieser Arbeit wird von ChatGPT-4 von \textcite{OpenAI2025} erwartet, dass es wenn es einen Testfall generiert, es diesen Aufbau einhält. Der Grund ist folgender, für viele Entwickler und Unternehmen ist es wichtig, dass Standards eingehalten werden. Ein Testfall welcher vom Aufbau her diesen Standard nicht erfüllt ist nicht brauchbar und muss somit auch negativ bewertet werden. Bei der Auswertung wird überprüft und gemessen, ob ChatGPT-4 von \textcite{OpenAI2025} standardmäßig die Testfallstruktur von \textcite{IsoIecIeee2024} benutzt. Das Kriterium Testfallstruktur ist das Ausschlusskriterium für diese Arbeit und die Auswertung der Testfälle, erst wenn die generierten Testfälle diesen Aufbau besitzen, können diese für weitere Qualitätskriterien ausgewertet werden. Deshalb wird überprüft und gemessen wie viele der von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle diese Testfallstruktur ganz oder teilweise besitzen. Dieser Wert hat zwei Kategorien, welche in folgender Tabelle abgebildet sind:\\
+In Kapitel \ref{sec:testfall} wird die Testfallstruktur nach \textcite{IsoIecIeee2024} beschrieben. Ein Testfall nach \textcite{IsoIecIeee2024} besitzt folgende Merkmale: Ein Identifier, einen Namen, eine Beschreibung, Vorbedingungen und Ziele. Dabei testet der Testfall einen Ablauf, welcher sich in Schritten gliedert. In dieser Arbeit wird von ChatGPT-4 von \textcite{OpenAI2025} erwartet, dass es wenn es einen Testfall generiert, es diesen Aufbau einhält. Der Grund ist folgender, für viele Entwickler und Unternehmen ist es wichtig, dass Standards eingehalten werden. Ein Testfall welcher vom Aufbau her diesen Standard nicht erfüllt ist nicht brauchbar und muss somit auch negativ bewertet werden. Folgendes Beispiel zeigt, einen Testfall, welcher die Anforderungen aus der in Kapitel \ref{sec:testdaten} gezeigten Anforderungsspezifikation testen soll, welcher nicht die Testfallstruktur erfüllt und somit nicht weiter berücksichtigt wird, da er unbrauchbar ist.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Bilder/OpenAI_Schlechte Testfallstruktur.png}
+    \caption{Ein von ChatGPT-4 von \textcite{OpenAI2025} erstellter Testfall, welcher nicht der Testfallstruktur entspricht}
+    \label{fig:enter-label}
+\end{figure}
+
+\noindent Bei der Auswertung wird überprüft und gemessen, ob ChatGPT-4 von \textcite{OpenAI2025} standardmäßig die Testfallstruktur von \textcite{IsoIecIeee2024} benutzt. Das Kriterium Testfallstruktur ist das Ausschlusskriterium für diese Arbeit und die Auswertung der Testfälle, erst wenn die generierten Testfälle diesen Aufbau besitzen, können diese für weitere Qualitätskriterien ausgewertet werden. Deshalb wird überprüft und gemessen wie viele der von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle diese Testfallstruktur ganz oder teilweise besitzen. Dieser Wert hat zwei Kategorien, welche in folgender Tabelle abgebildet sind:\\
 \\
 \textbf{Testfallstruktur:}
 \begin{table}[H]
@@ -459,38 +467,55 @@ Einstufung  & 0 Merkmale fehlen       & $1 \geq Merkmale fehlen$     \\ \hline
 \end{center}
 \end{table}
 
-\noindent Falls ein großer Teil der Testfälle in der 3. Kategorie Negativ landet, muss die Forschungsfrage negativ beantwortet werden. Das Qualitätskriterium Testfallstruktur wird in Prozent gemessen. Dieser Fall tritt ein wenn mindestens XYZ \% aller Testfälle in der 3. Kategorie landen, da man ab dann von einem erheblichen Teil an nicht brauchbaren Testfällen spricht.\\
+\noindent Am Ende wird angegeben wie viel Prozent der Testfälle in der Positiven oder in der Negativen Kategorie eingeordnet werden.\\
 \\
-\textbf{\underline{Problem der Halluzination}}\\
+\textbf{\underline{Problem der Kohärenz}}\\
 \\
-In Kapitel \ref{sec:motivation} steht, dass \textcite{Siebert2024} den Begriff Halluzination als Phänomen beschreibt, bei dem eine KI Antwort nicht mit den gegebenen Informationen übereinstimmt und sich Antworten ausdenkt, die faktisch nicht richtig sind. Da in dieser Arbeit die Testfälle von ChatGPT-4 von \textcite{OpenAI2025} generiert werden, ist ein weiteres Kriterium für deren Auswertung wichtig. Die Autoren \textcite{Li2024} stellen eine Metrik auf, um die Anzahl der Halluzinationen zu messen, die Halluzinationsrate (HR). Diese misst die Anzahl der Halluzinationen im Verhältnis zu der Gesamtantwort. In dieser Arbeit wird diese Metrik, für den Anwendungszweck, der Testfälle, modifiziert verwendet.\\
+Die Testfallstruktur ist wichtig, jedoch nicht der einzige wichtige Punkt für die Anforderung an einen Testfall. Die Logik und der Zusammenhang muss ebenfalls stimmen. Die Testschritte müssen logisch aufgebaut sein und in der richtigen Reihenfolge stehen. So kann ein Nutzer sich nicht von einer Anwendung abmelden, wenn er sich nicht vorher angemeldet hat. Ein Testfall muss somit als ersten Testschritt Anmeldung besitzen, bevor dieser den Testschritt Abmeldung hat. Folgendes Beispiel zeigt einen von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfall, welcher zwar die richtige Teststruktur besitzt und somit das erste Ausschlusskriterium erfüllt, aber die Testschritte nicht logisch und nicht in der richtigen Reihenfolge sind.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Bilder/OpenAI_Keine Kohärenz.jpg}
+    \caption{Ein von ChatGPT-4 von \textcite{OpenAI2025} erstellter Testfall, welcher nicht kohärente Testschritte besitzt.}
+    \label{fig:enter-label}
+\end{figure}
+\noindent Der erste Testschritt sollte "Öffne die Checkout-Seite" sein, dieser Testschritt ist jedoch in diesem Beispiel der fünfte Testschritt. Deshalb ist dieser Testfall unbrauchbar, da dieser nicht die Logik der Anforderungsspezifikation erfüllt. Ein weiteres Problem für die Kohärenz ist das Problem der Halluzination. In Kapitel \ref{sec:motivation} steht, dass \textcite{Siebert2024} den Begriff Halluzination als Phänomen beschreibt, bei dem eine KI Antwort nicht mit den gegebenen Informationen übereinstimmt und sich Antworten ausdenkt, die faktisch nicht richtig sind. Da in dieser Arbeit die Testfälle von ChatGPT-4 von \textcite{OpenAI2025} generiert werden, ist ein weiteres Kriterium für deren Auswertung wichtig. Die Autoren \textcite{Li2024} stellen eine Metrik auf, um die Anzahl der Halluzinationen zu messen, die Halluzinationsrate (HR). Diese misst die Anzahl der Halluzinationen im Verhältnis zu der Gesamtantwort. In dieser Arbeit wird diese Metrik, für den Anwendungszweck, der Testfälle, modifiziert verwendet, die sogenannte Kohärenzrate (KR)\\
 \\
-\textbf{\underline{1.2 Halluzinationsrate (HR):}}\\
+\textbf{\underline{1.2 Kohärenzrate (KR):}}\\
 \\
-Mit dem Qualitätskriterium Halluzinationsrate (HR) wird in dieser Arbeit, an \textcite{Li2024} angelehnt, das Verhältnis der Anzahl der Halluzinationen pro Testfall und der Gesamtzahl an Testschritten des Testfalls gemessen.
+Mit dem Qualitätskriterium Kohärenzrate (KR) wird in dieser Arbeit, an \textcite{Li2024} angelehnt, das Verhältnis der Anzahl der kohärenten Testschritte pro Testfall und der Gesamtzahl an Testschritten des Testfalls gemessen. Ein kohärenter Testschritt steht in der richtigen logischen Reihenfolge, ist keine Halluzination und besitzt seine Informationen aus der Anforderungsspezifikation, oder dem Screenshot aus der Webseite. Statt wie \textcite{Li2024} den negativen Anteil zu messen, wird mit dieser Vorgehensweise der positive Anteil gemessen.
 \begin{equation*}
-    HR = \frac{H}{T} \times 100\%
+    KR = \frac{KT}{T} \times 100\%
 \end{equation*}
 
 \noindent Dabei sind:
 \begin{itemize}
-    \item $H$ Anzahl der Halluzinationen Testschritte pro Testfall,
+    \item $KT$ Anzahl der kohärenten Testschritte pro Testfall,
     \item $T$ die Gesamtanzahl der generierten Testschritte pro Testfall.
 \end{itemize}
-Durch diese Metrik kann der Anteil der Halluzinationen pro Testfall in Prozent \% gemessen werden. Eine Halluzination wird gemessen, wenn in einem Testschritt falsche Begriffe oder Schritte vorkommen, oder Funktionen testen, die weder in der Anforderungsspezifikation, dem manuellen Testfall oder auf der Website zu finden sind. Die Halluzinationsrate hat drei Kategorien, welche in folgender Tabelle abgebildet sind\\
+Durch diese Metrik kann der Anteil der kohärenten Testschritte pro Testfall in Prozent \% gemessen werden. Um die Kohärenz der Testschritt zu zu bestimmen, werden die von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle mit den vorhandenen manuellen Testfällen verglichen. 
+
+Ein Testschritt ist nicht kohärent, wenn in einem Testschritt falsche Begriffe oder Schritte vorkommen, oder dieser Funktionen testet, die weder in der Anforderungsspezifikation, dem manuellen Testfall oder auf der Website zu finden sind. Ein Testschritt welcher in der falschen logischen Reihenfolge steht, ist ebenfalls nicht kohärent. Die Kohärenzrate hat zwei Kategorien, welche in folgender Tabelle abgebildet sind\\
 \\
-\textbf{Halluzinationsrate:} 
+\textbf{Kohärenzrate:} 
 \begin{table}[H]
  \begin{center}
-\begin{tabular}{|l|l|l|l|}
+\begin{tabular}{|l|l|l|}
 \hline
-               & 1. Positiv & 2. Neutral & 3. Negativ  \\ \hline
-Anteil H in \%  & 0 - 10 \%       & 11-20\%        & 20 \% <        \\ \hline
+               & 1. Positiv & 2. Negativ  \\ \hline
+Anteil KT in \%  & 100 \% & 100 \% <        \\ \hline
 
 \end{tabular}
 \end{center}
 \end{table}
-\noindent Es wird eingeordnet wie viel Prozent \% der Testfälle in welcher der drei Kategorien landen. Anschließend wird der Mittelwert berechnet um die Gesamtrate aller Testfälle zu ermitteln.
+\noindent Es wird eingeordnet wie viel Prozent \% der Testfälle in welcher der zwei Kategorien eingeordnet werden. Anschließend wird der Mittelwert berechnet um die Gesamtrate aller Testfälle zu ermitteln. Von einem Testfall wird erwartet, dass er sich in der 1. Kategorie befindet. Folgendes Beispiel zeigt einen von ChatGPT-4 von \textcite{OpenAI2025} erstellten Testfall, welcher sowohl die richtige Testfallstruktur, als auch nur kohärente Testschritte aufweist.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Bilder/OpenAI_Testfall welcher die Ausschlusskriterien erfüllt.jpg}
+    \caption{Ein von ChatGPT-4 von \textcite{OpenAI2025} erstellter Testfall, welcher der Testfallstruktur entspricht und kohärente Testschritte besitzt}
+    \label{fig:enter-label}
+\end{figure}
+
+\noindent Nur wenn ein Testfall die richtige Teststruktur und kohärente Testschritte besitzt, ist es sinnvoll deren Qualität mit der Qualität von manuell erstellten Testfällen, zu vergleichen.
 %subsection ausschlusskriterien (end)
 
 \subsection{Qualitätskriterien} % fold
@@ -533,7 +558,7 @@ TODO Ergebnisse zeigen\\
 \\
 \textbf{\underline{1.1 Testfallstruktur:}}\\
 \\
-\textbf{\underline{1.2 Halluzinationsrate (HR)}}\\
+\textbf{\underline{1.2 Kohärenzrate (KR)}}\\
 \\
 \textbf{\underline{2.1 Fault Detection (Deutsch: Fehlererkennung)}}\\
 \\
@@ -551,7 +576,7 @@ TODO Ergebnisse auswerten und beschreiben\\
 \\
 \textbf{\underline{1.1 Testfallstruktur:}}\\
 \\
-\textbf{\underline{1.2 Halluzinationsrate (HR)}}\\
+\textbf{\underline{1.2 Kohärenzrate (KR)}}\\
 \\
 \textbf{\underline{2.1 Fault Detection (Deutsch: Fehlererkennung)}}\\
 \\
