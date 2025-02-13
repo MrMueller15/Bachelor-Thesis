@@ -432,8 +432,9 @@ Als Grundlage zur Erstellung von Testfällen dienen Anforderungsspezifikationen.
 
 \section{Prompt und verwendete Methoden} % (fold)
 \label{sec:promptUndVerwendeteMethoden}
-Der Plan der vorliegenden Arbeit gestaltet sich wie folgt: Zuerst wird eine.
-TODO Prompt zeigen und Methoden erklären
+In diesem Kapitel werden das Vorgehen und der Prompt beschrieben, wie in dieser Arbeit Testfälle durch ChatGPT-4 von \textcite{OpenAI2025} generiert werden. Zu erst wird wie in Kapitel \ref{sec:verwendetesLLM} gezeigt, die Erinnerungsfunktion aktiviert, damit sich ChatGPT-4 von \textcite{OpenAI2025} an die Informationen erinnern kann, welche ihm mitgegeben werden. Anschließend werden ChatGPT-4 von \textcite{OpenAI2025} Screenshots von der jeweiligen Website übergeben, da wie in Kapitel \ref{sec:verwendetesLLM} beschrieben ChatGPT-4 von \textcite{OpenAI2025} Bilder erkennen und einordnen kann, erhält es somit die Informationen, was auf der Website passiert und welche Funktionen oder Seiten geöffnet werden, wenn eine Anforderung ausgeführt wird. Dadurch erhält es die Informationen darüber, wie die Seite richtig funktioniert und kann somit diese im positiven und im negativen Fall testen. Danach wird ChatGPT-4 von \textcite{OpenAI2025} die jeweilige Anforderungsspezifikation für die Testfälle als PDF übergeben. Die Anforderungsspezifikation sieht dabei so aus, wie sie in Kapitel \ref{sec:testdaten} beschrieben werden. Durch die in Kapitel \ref{sec:rag} beschrieben Methode RAG kann es dadurch die Informationen besser bearbeiten. Anschließend wird ein Prompt übergeben welcher, in folgender Grafik gezeigt wird.\\
+\\
+Nach dieser Eingabe erstellt ChatGPT-4 von \textcite{OpenAI2025} die jeweiligen Testfälle, pro Anforderung. Diese Testfälle werden per Screenshot gespeichert und sind im GitHub Projekt von \textcite{Müller2025} gespeichert. Anschließend werden diese mit den manuell erstellten Testfällen, wie in Kapitel \ref{sec:testdaten} erläutert auf ihre Korrektheit überprüft. Anschließend werden diese ausgewertet. Die Metriken zu der Auswertung der generierten Testfälle findet sich in Kapitel \ref{sec:auswertungsmetriken}.
 % section promptUndVerwendeteMethoden (end)
 
 \section{Auswertungsmetriken} % (fold)
@@ -492,9 +493,7 @@ Mit dem Qualitätskriterium Kohärenzrate (KR) wird in dieser Arbeit, an \textci
     \item $KT$ Anzahl der kohärenten Testschritte pro Testfall,
     \item $T$ die Gesamtanzahl der generierten Testschritte pro Testfall.
 \end{itemize}
-Durch diese Metrik kann der Anteil der kohärenten Testschritte pro Testfall in Prozent \% gemessen werden. Um die Kohärenz der Testschritt zu zu bestimmen, werden die von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle mit den vorhandenen manuellen Testfällen verglichen. 
-
-Ein Testschritt ist nicht kohärent, wenn in einem Testschritt falsche Begriffe oder Schritte vorkommen, oder dieser Funktionen testet, die weder in der Anforderungsspezifikation, dem manuellen Testfall oder auf der Website zu finden sind. Ein Testschritt welcher in der falschen logischen Reihenfolge steht, ist ebenfalls nicht kohärent. Die Kohärenzrate hat zwei Kategorien, welche in folgender Tabelle abgebildet sind\\
+Durch diese Metrik kann der Anteil der kohärenten Testschritte pro Testfall in Prozent \% gemessen werden. Um die Kohärenz der Testschritt zu zu bestimmen, werden die von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle mit den vorhandenen manuellen Testfällen verglichen. Ein Testschritt ist nicht kohärent, wenn in einem Testschritt falsche Begriffe oder Schritte vorkommen, oder dieser Funktionen testet, die weder in der Anforderungsspezifikation, dem manuellen Testfall oder auf der Website zu finden sind. Ein Testschritt welcher in der falschen logischen Reihenfolge steht, ist ebenfalls nicht kohärent. Die Kohärenzrate hat zwei Kategorien, welche in folgender Tabelle abgebildet sind\\
 \\
 \textbf{Kohärenzrate:} 
 \begin{table}[H]
