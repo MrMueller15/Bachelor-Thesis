@@ -365,7 +365,7 @@ Im Bereich des Testens gibt es bereits viele Metriken und Qualitätskriterien, u
 \\
 Dieses Werk stellt gute und nachvollziehbare Kriterien auf, womit die Autoren \textcite{Wang2024} die Qualität des von der KI generierten Codes messen und auswerten können. Diese Kriterien dienen als eine Grundlage, Kriterien für das Messen der Qualität der von ChatGPT-4 von \textcite{OpenAI2025} erstellten Testfälle in Kapitel \ref{sec:qualitätskriterien} aufzustellen.\\
 \\
-Die Werke von \parencite{Nirpals2011, Lazić2013} liefern einen Überblick über vorhandene Metriken im Bereich des Testens. Zu den von \textcite{Wang2024} genannten vier Qualitätskriterien  Fault Detection (Deutsch: Fehlererkennung), Maintainability (Deutsch: Wartbarkeit), Reliability (Deutsch: Zuverlässigkeit) und Usability (Deutsch: Benutzerfreundlichkeit) liefern \parencite{Nirpals2011, Lazić2013} ebenfalls Metriken. Die Autoren der beiden Werke \parencite{Nirpals2011, Lazić2013} kommen zu dem Schluss, dass Metriken wichtig für das Testen sind. Diese Metriken werden in Kapitel \ref{sec:qualitätskriterien} verwendet, um die von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle auszuwerten. Die genauen Metriken, welche für die einzelnen Qualitätskriterien in dieser Arbeit verwendet werden, werden in Kapitel \ref{sec:qualitätskriterien} genannt und erläutert. (\cite{Nirpals2011}; \cite{Lazić2013})\\
+Die Werke von \parencite{Nirpals2011, Lazić2013} liefern einen Überblick über vorhandene Metriken im Bereich des Testens. Zu den von \textcite{Tran2025} genannten vier Qualitätskriterien  Fault Detection (Deutsch: Fehlererkennung), Maintainability (Deutsch: Wartbarkeit), Reliability (Deutsch: Zuverlässigkeit) und Usability (Deutsch: Benutzerfreundlichkeit) liefern \parencite{Nirpals2011, Lazić2013} ebenfalls Metriken. Die Autoren der beiden Werke \parencite{Nirpals2011, Lazić2013} kommen zu dem Schluss, dass Metriken wichtig für das Testen sind. Diese Metriken werden in Kapitel \ref{sec:qualitätskriterien} verwendet, um die von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle auszuwerten. Die genauen Metriken, welche für die einzelnen Qualitätskriterien in dieser Arbeit verwendet werden, werden in Kapitel \ref{sec:qualitätskriterien} genannt und erläutert. (\cite{Nirpals2011}; \cite{Lazić2013})\\
 \\
 Die Autoren \textcite{Li2024} erforschen das Thema Halluzinationen im Bereich der LLM. Das Ziel ist es, Halluzinationen zu erkennen und die Anzahl der Halluzinationen zu reduzieren. Dabei kommen \textcite{Li2024} zu dem Schluss, dass die Anzahl der Halluzinationen durch gezieltes Training und RAG verringert werden, jedoch nicht vollständig eliminiert werden kann. Da in dieser Arbeit, dass LLM ChatGPT-4 von \textcite{OpenAI2025} verwendet wird, ist es wichtig, das Phänomen der Halluzination zu untersuchen. Die von \textcite{Li2024} aufgestellte Methodik zur Messung der Halluzinationsrate (HR) wird in dieser Arbeit in Kapitel \ref{sec:ausschlusskriterien} in modifizierter Form verwendet.
 (\cite{Li2024})
@@ -432,10 +432,20 @@ Als Grundlage zur Erstellung von Testfällen dienen Anforderungsspezifikationen.
 
 \section{Prompt und verwendete Methoden} % (fold)
 \label{sec:promptUndVerwendeteMethoden}
-In diesem Kapitel werden das Vorgehen und der Prompt beschrieben, wie in dieser Arbeit Testfälle durch ChatGPT-4 von \textcite{OpenAI2025} generiert werden. Zu erst wird wie in Kapitel \ref{sec:verwendetesLLM} gezeigt, die Erinnerungsfunktion aktiviert, damit sich ChatGPT-4 von \textcite{OpenAI2025} an die Informationen erinnern kann, welche ihm mitgegeben werden. Anschließend werden ChatGPT-4 von \textcite{OpenAI2025} Screenshots von der jeweiligen Website übergeben, da wie in Kapitel \ref{sec:verwendetesLLM} beschrieben ChatGPT-4 von \textcite{OpenAI2025} Bilder erkennen und einordnen kann, erhält es somit die Informationen, was auf der Website passiert und welche Funktionen oder Seiten geöffnet werden, wenn eine Anforderung ausgeführt wird. Dadurch erhält es die Informationen darüber, wie die Seite richtig funktioniert und kann somit diese im positiven und im negativen Fall testen. Danach wird ChatGPT-4 von \textcite{OpenAI2025} die jeweilige Anforderungsspezifikation für die Testfälle als PDF übergeben. Die Anforderungsspezifikation sieht dabei so aus, wie sie in Kapitel \ref{sec:testdaten} beschrieben werden. Durch die in Kapitel \ref{sec:rag} beschrieben Methode RAG kann es dadurch die Informationen besser bearbeiten. Anschließend wird ein Prompt übergeben welcher, in folgender Grafik gezeigt wird.\\
+In diesem Kapitel werden das Vorgehen und der Prompt beschrieben, wie in dieser Arbeit Testfälle durch ChatGPT-4 von \textcite{OpenAI2025} generiert werden. Zu erst wird wie in Kapitel \ref{sec:verwendetesLLM} gezeigt, die Erinnerungsfunktion aktiviert, damit sich ChatGPT-4 von \textcite{OpenAI2025} an die Informationen erinnern kann, welche ihm mitgegeben werden. Anschließend werden ChatGPT-4 von \textcite{OpenAI2025} Screenshots von der jeweiligen Website übergeben, da wie in Kapitel \ref{sec:verwendetesLLM} beschrieben ChatGPT-4 von \textcite{OpenAI2025} Bilder erkennen und einordnen kann, erhält es somit die Informationen, was auf der Website passiert und welche Funktionen oder Seiten geöffnet werden, wenn eine Anforderung ausgeführt wird. Dadurch erhält es die Informationen darüber, wie die Seite richtig funktioniert und kann somit diese im positiven und im negativen Fall testen. Danach wird ChatGPT-4 von \textcite{OpenAI2025} die jeweilige Anforderungsspezifikation für die Testfälle als PDF übergeben. Die Anforderungsspezifikation sieht dabei so aus, wie sie in Kapitel \ref{sec:testdaten} beschrieben werden. Durch die in Kapitel \ref{sec:rag} beschrieben Methode RAG kann es dadurch die Informationen besser bearbeiten.\\
+\newpage
+\noindent Anschließend wird ein Prompt übergeben welcher, in folgender Grafik gezeigt wird.
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=1\linewidth]{Bilder/OpenAI_Prompt.png}
+    \caption{Ein von \textcite{Müller2025}, dem Autor dieser Arbeit erstellter Screenshot, welcher den Prompt an ChatGPT-4 von \textcite{OpenAI2025} zeigt}
+    \label{fig:enter-label}
+\end{figure}
+\noindent Der Prompt ist dabei so geschrieben, dass ChatGPT-4 von \textcite{OpenAI2025} Schritt für Schritt weis, welche Aufgaben es erfüllen soll. Er soll dabei die Informationen aus der Anforderungsspezifikation und aus den Screenshots benutzen und dabei die Struktur aus \parencite{IsoIecIeee2024, Istqb2017} erfüllen. Dies ist für Kapitel \ref{sec:ausschlusskriterien} wichtig, da somit die Ausschlusskriterien bereits im Prompt definiert sind und ChatGPT-4 von \textcite{OpenAI2025} diese erfüllen soll.\\
 \\
 Nach dieser Eingabe erstellt ChatGPT-4 von \textcite{OpenAI2025} die jeweiligen Testfälle pro Anforderung. Diese Testfälle werden per Screenshot gespeichert und sind im GitHub-Projekt von \textcite{Müller2025} gespeichert. Anschließend werden diese mit den manuell erstellten Testfällen, wie in Kapitel \ref{sec:testdaten} erläutert, auf ihre Korrektheit überprüft. Anschließend werden diese ausgewertet. Die Metriken zu der Auswertung der generierten Testfälle findet sich in Kapitel \ref{sec:auswertungsmetriken}.
 % section promptUndVerwendeteMethoden (end)
+\newpage
 
 \section{Auswertungsmetriken} % (fold)
 \label{sec:auswertungsmetriken}
@@ -468,7 +478,7 @@ Einstufung  & 0 Merkmale fehlen       & $1 \geq Merkmale fehlen$     \\ \hline
 \end{center}
 \end{table}
 
-\noindent Am Ende wird angegeben, wie viel Prozent der Testfälle in der positiven oder in der negativen Kategorie eingeordnet werden.\\
+\noindent Am Ende wird angegeben, wie viel Prozent der Testfälle in der positiven oder in der negativen Kategorie eingeordnet werden. Testfälle welche in der 2. Kategorie, werden nicht weiter ausgewertet, da diese nicht brauchbar sind.\\
 \\
 \textbf{\underline{Problem der Kohärenz}}\\
 \\
