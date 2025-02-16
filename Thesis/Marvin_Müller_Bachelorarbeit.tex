@@ -359,13 +359,15 @@ Nicht nur die Textgenerierung durch KI ist wichtig, sondern auch die Auswertung 
 Diese Erkenntnis zeigt, wie wichtig es für die Auswertung der Arbeit ist, eine gute Metrik aufzustellen, welche die Qualität des generierten Textes und damit die Qualität der generierten Testfälle auswertet.\\
 \newpage
 
-\noindent Das Werk von \textcite{Wang2024} wirft Fragen im Bereich der Qualität und Korrektheit der aus Sprachmodellen generierte Code auf. Die Autoren \textcite{Wang2024}  gehen davon aus, dass sie Fehler im Code aufspüren können, indem sie Inkonsistenzen finden. Sie kommen zu dem Ergebnis, dass sie in der Lage sind, 75 \% der von GPT-4 generierten fehlerhaften Programme zu erkennen, wobei sie eine Falsch Positiv Rate von 8,6 \% haben. \textcite{Wang2024} kommen zu der Erkenntnis, dass Entwickler möglicherweise nur eine kleine Teilmenge des LLM generierten Codes untersuchen müssen, um die meisten Fehler zu finden. Dieses Werk zeigt, dass es Methoden und Metriken gibt um Code auszuwerten. Nun ist es wichtig, Werke zu finden, welche im Bereich des Testens Qualitätskriterien und Metriken besitzen. (\cite{Wang2024})\\
+\noindent Die Werke von \parencite{Nirpals2011, Lazić2013} liefern einen Überblick über vorhandene Metriken im Bereich des Testens. Die Autoren der beiden Werke \parencite{Nirpals2011, Lazić2013} kommen zu dem Schluss, dass Metriken wichtig für das Testen sind. (\cite{Nirpals2011}; \cite{Lazić2013})\\
 \\
-Im Bereich des Testens gibt es bereits viele Metriken und Qualitätskriterien, um die Qualität von Testfällen zu messen. Das Werk von \textcite{Tran2025} untersucht dabei die wichtigsten Qualitätskriterien aus der Anwendersicht, da es sehr viele Qualitätskriterien gibt.  Die Autoren \textcite{Tran2025} kommen dabei zu dem Schluss, dass die Qualitätskriterien Fault Detection (Deutsch: Fehlererkennung), Maintainability (Deutsch: Wartbarkeit), Reliability (Deutsch: Zuverlässigkeit) und Usability (Deutsch: Benutzerfreundlichkeit), die wichtigsten Kriterien für Testfälle sind. Der Stellenwert der Qualitätskriterien ist dabei jedoch abhängig vom Kontext der Tests. Diese Erkenntnis ist eine wichtige Grundlage, um in Kapitel \ref{sec:qualitätskriterien} Qualitätskriterien aufzustellen, um die von ChatGPT-4 von \textcite{OpenAI2025} erstellten Testfälle auszuwerten. (\cite{Tran2025})\\
+Diese Werke zeigen, dass es im Bereich des Testens viele Metriken und Kriterien gibt, anhand derer die Qualität von Testfällen ausgewertet werden können. Da in dieser Arbeit wenig Mittel zur Verfügung stehen, ist es wichtig, sich auf wichtige Kriterien zu beschränken.\\
 \\
-Dieses Werk stellt gute und nachvollziehbare Kriterien auf, womit die Autoren \textcite{Wang2024} die Qualität des von der KI generierten Codes messen und auswerten können. Diese Kriterien dienen als eine Grundlage, Kriterien für das Messen der Qualität der von ChatGPT-4 von \textcite{OpenAI2025} erstellten Testfälle in Kapitel \ref{sec:qualitätskriterien} aufzustellen.\\
+Das Werk von \textcite{Tran2025} untersucht die wichtigsten Qualitätskriterien aus der Anwendersicht, da es sehr viele Qualitätskriterien gibt.  Die Autoren \textcite{Tran2025} kommen dabei zu dem Schluss, dass die Qualitätskriterien Fault Detection (Deutsch: Fehlererkennung), Maintainability (Deutsch: Wartbarkeit), Reliability (Deutsch: Zuverlässigkeit) und Usability (Deutsch: Benutzerfreundlichkeit), die wichtigsten Kriterien für Testfälle sind. Der Stellenwert der Qualitätskriterien ist dabei jedoch abhängig vom Kontext der Tests. Diese Erkenntnis ist eine wichtige Grundlage, um die von ChatGPT-4 von \textcite{OpenAI2025} erstellten Testfälle auszuwerten. (\cite{Tran2025})\\
 \\
-Die Werke von \parencite{Nirpals2011, Lazić2013} liefern einen Überblick über vorhandene Metriken im Bereich des Testens. Zu den von \textcite{Tran2025} genannten vier Qualitätskriterien  Fault Detection (Deutsch: Fehlererkennung), Maintainability (Deutsch: Wartbarkeit), Reliability (Deutsch: Zuverlässigkeit) und Usability (Deutsch: Benutzerfreundlichkeit) liefern \parencite{Nirpals2011, Lazić2013} ebenfalls Metriken. Die Autoren der beiden Werke \parencite{Nirpals2011, Lazić2013} kommen zu dem Schluss, dass Metriken wichtig für das Testen sind. Diese Metriken werden in Kapitel \ref{sec:qualitätskriterien} verwendet, um die von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle auszuwerten. Die genauen Metriken, welche für die einzelnen Qualitätskriterien in dieser Arbeit verwendet werden, werden in Kapitel \ref{sec:qualitätskriterien} genannt und erläutert. (\cite{Nirpals2011}; \cite{Lazić2013})\\
+Das Werk von \textcite{Wang2024} wirft Fragen im Bereich der Qualität und Korrektheit der von LLM generierten Code auf. Die Autoren \textcite{Wang2024}  gehen davon aus, dass sie Fehler im Code aufspüren können, indem sie Inkonsistenzen finden. Sie kommen zu dem Ergebnis, dass sie in der Lage sind, 75 \% der von GPT-4 generierten fehlerhaften Programme zu erkennen, wobei sie eine Falsch Positiv Rate von 8,6 \% haben. \textcite{Wang2024} kommen zu der Erkenntnis, dass Entwickler möglicherweise nur eine kleine Teilmenge des LLM generierten Codes untersuchen müssen, um die meisten Fehler zu finden. Dieses Werk stellt Metriken auf, um Accuracy (Deutsch: Genauigkeit), Precision (Deutsch: Präzision), Recall (Deutsch: Abdeckungsgrad) und False Positive Rate (Deutsch: Falsch-Positiv-Rate) von LLM generierten Code auszuwerten. Diese Metrik ist wichtig, um die von \textcite{Tran2025} aufgestellten Qualitätskriterien auswerten zu können. (\cite{Wang2024})\\
+\\
+Die Metriken von \textcite{Wang2024} dienen als eine Grundlage, um die von \textcite{Tran2025} aufgestellten Qualitätskriterien für das Messen der Qualität der von ChatGPT-4 von \textcite{OpenAI2025} erstellten Testfälle in zu messen. In Kapitel \ref{sec:methodik} wird erläutert, wie diese Metriken aufgebaut sind.\\
 \\
 Die Autoren \textcite{Li2024} erforschen das Thema Halluzinationen im Bereich der LLM. Das Ziel ist es, Halluzinationen zu erkennen und die Anzahl der Halluzinationen zu reduzieren. Dabei kommen \textcite{Li2024} zu dem Schluss, dass die Anzahl der Halluzinationen durch gezieltes Training und RAG verringert werden, jedoch nicht vollständig eliminiert werden kann. Da in dieser Arbeit, dass LLM ChatGPT-4 von \textcite{OpenAI2025} verwendet wird, ist es wichtig, das Phänomen der Halluzination zu untersuchen. Die von \textcite{Li2024} aufgestellte Methodik zur Messung der Halluzinationsrate (HR) wird in dieser Arbeit in Kapitel \ref{sec:ausschlusskriterien} in modifizierter Form verwendet.
 (\cite{Li2024})
@@ -557,17 +559,30 @@ Anteil KT in \%  & 100 \% & 100 \% <        \\ \hline
 \noindent Nur wenn ein Testfall die richtige Teststruktur und kohärente Testschritte besitzt, ist es sinnvoll, deren Qualität mit der Qualität von manuell erstellten Testfällen zu vergleichen.
 %subsection ausschlusskriterien (end)
 
+\subsection{Qualitätsmetriken} % fold
+\label{sec:qualitätsmetriken}
+In dieser Arbeit gibt es vier Qualitätsmetriken nach \textcite{Wang2024}. Diese werden verwendet, um die Qualität von durch ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle, welche die Ausschlusskriterien erfüllen, zu bewerten. Die von \textcite{Wang2024} erstellten, Qualitätsmetriken können zusammen mit den Ausschlusskriterien, die vier Qualitätskriterien nach \textcite{Tran2025} auswerten.\\
+\\
+\textbf{\underline{2.1 Accuracy (Deutsch: Genauigkeit)}}\\
+\\
+\textbf{\underline{2.2 Precision (Deutsch: Präzision)}}\\
+\\
+\textbf{\underline{2.3 Recall (Deutsch: Abdeckungsgrad)}}\\
+\\
+\textbf{\underline{2.4 False Positive Rate (Deutsch: Falsch-Positiv-Rate)}}
+%subsection qualitätsmetriken (end)
+
 \subsection{Qualitätskriterien} % fold
 \label{sec:qualitätskriterien}
 In dieser Arbeit gibt es vier Qualitätskriterien nach \textcite{Tran2025}. Diese werden verwendet, um die von ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle, welche die Ausschlusskriterien erfüllen, mit den manuell erstellten Testfälle zu vergleichen.\\
 \\
-\textbf{\underline{2.1 Fault Detection (Deutsch: Fehlererkennung)}}\\
+\textbf{\underline{1. Fault Detection (Deutsch: Fehlererkennung)}}\\
 \\
-\textbf{\underline{2.2 Maintainability (Deutsch: Wartbarkeit)}}\\
+\textbf{\underline{2. Maintainability (Deutsch: Wartbarkeit)}}\\
 \\
-\textbf{\underline{2.3 Reliability (Deutsch: Zuverlässigkeit)}}\\
+\textbf{\underline{3. Reliability (Deutsch: Zuverlässigkeit)}}\\
 \\
-\textbf{\underline{2.4 Usability (Deutsch: Benutzerfreundlichkeit)}}
+\textbf{\underline{4. Usability (Deutsch: Benutzerfreundlichkeit)}}
 %subsection qualitätskriterien (end)
 % section auswertungsmetriken (end)
 % chapter methodik (end)
