@@ -367,7 +367,7 @@ Diese Werke zeigen, dass es im Bereich des Testens viele Metriken und Kriterien 
 \\
 Das Werk von \textcite{Tran2025} untersucht die wichtigsten Qualitätskriterien aus der Anwendersicht, da es sehr viele Qualitätskriterien gibt.  Die Autoren \textcite{Tran2025} kommen dabei zu dem Schluss, dass die Qualitätskriterien Fault Detection (Deutsch: Fehlererkennung), Maintainability (Deutsch: Wartbarkeit), Reliability (Deutsch: Zuverlässigkeit) und Usability (Deutsch: Benutzerfreundlichkeit), die wichtigsten Kriterien für Testfälle sind. Der Stellenwert der Qualitätskriterien ist dabei jedoch abhängig vom Kontext der Tests. Diese Erkenntnis ist eine wichtige Grundlage, um die von ChatGPT-4 von \textcite{OpenAI2025} erstellten Testfälle auszuwerten. (\cite{Tran2025})\\
 \\
-Das Werk von \textcite{Wang2024} wirft Fragen im Bereich der Qualität und Korrektheit der von LLM generierten Code auf. Die Autoren \textcite{Wang2024}  gehen davon aus, dass sie Fehler im Code aufspüren können, indem sie Inkonsistenzen finden. Sie kommen zu dem Ergebnis, dass sie in der Lage sind, 75 \% der von GPT-4 generierten fehlerhaften Programme zu erkennen, wobei sie eine Falsch Positiv Rate von 8,6 \% haben. \textcite{Wang2024} kommen zu der Erkenntnis, dass Entwickler möglicherweise nur eine kleine Teilmenge des LLM generierten Codes untersuchen müssen, um die meisten Fehler zu finden. Dieses Werk stellt Metriken auf, um Accuracy (Deutsch: Genauigkeit), Precision (Deutsch: Präzision), Recall (Deutsch: Abdeckungsgrad) und False Positive Rate (Deutsch: Falsch-Positiv-Rate) von LLM generierten Code auszuwerten. Diese Metrik ist wichtig, um die von \textcite{Tran2025} aufgestellten Qualitätskriterien auswerten zu können. (\cite{Wang2024})\\
+Das Werk von \textcite{Wang2024} wirft Fragen im Bereich der Qualität und Korrektheit der von LLM generierten Code auf. Die Autoren \textcite{Wang2024}  gehen davon aus, dass sie Fehler im Code aufspüren können, indem sie Inkonsistenzen finden. Sie kommen zu dem Ergebnis, dass sie in der Lage sind, 75 \% der von GPT-4 generierten fehlerhaften Programme zu erkennen, wobei sie eine Falsch Positiv Rate von 8,6 \% haben. \textcite{Wang2024} kommen zu der Erkenntnis, dass Entwickler möglicherweise nur eine kleine Teilmenge des LLM generierten Codes untersuchen müssen, um die meisten Fehler zu finden. Dieses Werk stellt Metriken auf, um Accuracy (Deutsch: Genauigkeit), Precision (Deutsch: Präzision), Recall (Deutsch: Sensitivität) und False Positive Rate (Deutsch: Falsch-Positiv-Rate) von LLM generierten Code auszuwerten. Diese Metrik ist wichtig, um die von \textcite{Tran2025} aufgestellten Qualitätskriterien auswerten zu können. (\cite{Wang2024})\\
 \\
 Die Metriken von \textcite{Wang2024} dienen als eine Grundlage, um die von \textcite{Tran2025} aufgestellten Qualitätskriterien für das Messen der Qualität der von ChatGPT-4 von \textcite{OpenAI2025} erstellten Testfälle in zu messen. In Kapitel \ref{sec:methodik} wird erläutert, wie diese Metriken aufgebaut sind.\\
 \\
@@ -563,16 +563,49 @@ Anteil KT in \%  & 100 \% & 100 \% <        \\ \hline
 
 \subsection{Qualitätsmetriken} % fold
 \label{sec:qualitätsmetriken}
-In dieser Arbeit gibt es vier Qualitätsmetriken nach \textcite{Wang2024}. Diese werden verwendet, um die Qualität von durch ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle, welche die Ausschlusskriterien erfüllen, zu bewerten. Die von \textcite{Wang2024} erstellten, Qualitätsmetriken können zusammen mit den Ausschlusskriterien, die vier Qualitätskriterien nach \textcite{Tran2025} auswerten.\\
+In dieser Arbeit gibt es vier Qualitätsmetriken nach \textcite{Wang2024}. Diese werden für diese Arbeit modifiziert verwendet, um die Qualität von durch ChatGPT-4 von \textcite{OpenAI2025} generierten Testfälle, welche die Ausschlusskriterien erfüllen, nach \textcite{Tran2025} zu bewerten. Für die Bestimmung der vier Qualitätsmetriken nach \textcite{Wang2024} werden die vier Werte definiert:
+\begin{itemize}
+    \item \textbf{True Positive (TP)}: Ein falscher Testschritt wurde korrekt als falsch erkannt.
+    \item \textbf{False Positive (FP)}: Ein richtiger Testschritt wurde als falsch eingeordnet.
+    \item \textbf{True Negative (TN)}: Ein richtiger Testschritt wurde als richtig erkannt.
+    \item \textbf{False Negative (FN)}: Ein falscher Testschritt wurde  als richtig eingeordnet.
+\end{itemize}
+Diese Werte werden ermittelt, in dem ChatGPT-4 von \textcite{OpenAI2025} dazu aufgefordert wird, einen positiven und einen negativen Testfall und somit ein Testfallpaar zu schreiben. In dem positiven Testfall werden TN und FN und in dem negativen Testfall werden TP und FP ermittelt. Das Testfallpaar wird dann zusammen ausgewertet.
+\newpage
+
+\noindent\textbf{\underline{2.1 Accuracy (Deutsch: Genauigkeit)}}\\
 \\
-\textbf{\underline{2.1 Accuracy (Deutsch: Genauigkeit)}}\\
+Die Genauigkeit nach \textcite{Wang2024} misst den Anteil der insgesamt richtig eingeordneten Testschritte:
+\begin{equation*}
+    \text{Accuracy} = \frac{TP + TN}{TP + FP + TN + FN}
+\end{equation*}
+Die Anzahl der Testschritte misst sich dabei, indem die Anzahl der Testschritte des positiven und den mit ihm zusammenhängenden negativen Testfalls addiert werden. Die Werte werden in Kapitel \ref{sec:qualitätsmetriken} für TP, FP, TN und FN definiert. Es wird die Genauigkeit aller Testfälle als Mittelwert angegeben und ein Boxplot erstellt, um die Streuung der Genauigkeit darzustellen.\\
 \\
 \textbf{\underline{2.2 Precision (Deutsch: Präzision)}}\\
 \\
-\textbf{\underline{2.3 Recall (Deutsch: Abdeckungsgrad)}}\\
+Die Präzision nach \textcite{Wang2024} ermittelt, wie viele der als falsch eingestuften Testschritte wirklich falsch sind:
+\begin{equation*}
+    \text{Precision} = \frac{TP}{TP + FP}
+\end{equation*}
+Die Präzision des Testfallpaares wird aus dem Ergebnis des negativen Testfalls ermittelt. In Kapitel \ref{sec:qualitätsmetriken} werden TP und FP definiert. Für die negativen Testfälle wird der Mittelwert der Präzision berechnet und ein Boxplot erstellt, um deren Streuung zu zeigen.\\
 \\
-\textbf{\underline{2.4 False Positive Rate (Deutsch: Falsch-Positiv-Rate)}}
+\textbf{\underline{2.3 Recall (Deutsch: Sensitivität)}}\\
+\\
+Die Sensitivität nach \textcite{Wang2024} zeigt, wie viele der falschen Testschritte als falsch erkannt wurden:
+\begin{equation*}
+    \text{Recall} = \frac{TP}{TP + FN}
+\end{equation*}
+Die Sensitivität des Testfallpaares wird aus dem Ergebnis beider Testfälle gemessen. TP und FN werden in Kapitel \ref{sec:qualitätsmetriken} definiert. Um die Streuung der Sensitivität zu veranschaulichen, wird ein Boxplot aller Werte erstellt. Ebenso wird der Mittelwert der Sensitivität aus allen Testfallpaaren ermittelt.\\
+\\
+\textbf{\underline{2.4 False Positive Rate (Deutsch: Falsch-Positiv-Rate)}}\\
+\\
+Die Falsch-Positiv-Rate nach \textcite{Wang2024} gibt an, wie viele der als falsch gewerteten Testschritte richtig waren:
+\begin{equation*}
+    \text{False Positive Rate} = \frac{FP}{FP + TN}
+\end{equation*}
+Die Falsch-Positiv-Rate des Testfallpaares misst sich dabei aus dem Ergebnis beider Testfälle. Die Werte für FP und TN werden in Kapitel \ref{sec:qualitätsmetriken} definiert. Um diese Metrik für die Auswertung der in \ref{sec:qualitätskriterien} definierten Qualitätskriterien nutzen zu können, wird der Mittelwert der Falsch-Positiv-Rate aus allen Testfallpaare bestimmt und um die Streuung der Falsch-Positiv-Rate zu veranschaulichen, ein Boxplot erstellt.
 %subsection qualitätsmetriken (end)
+\newpage
 
 \subsection{Qualitätskriterien} % fold
 \label{sec:qualitätskriterien}
