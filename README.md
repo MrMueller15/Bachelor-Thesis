@@ -27,7 +27,7 @@ In dem Verzeichnis Thesis befinden sich die Bachelorarbeit und sowie die Quellen
 Die Thesis ist [hier](Thesis/Marvin_Müller_Bachelorarbeit.pdf) verfügbar.
 
 ## Testdaten
-In dem Ordner [Testdaten] (Testdaten) befinden sich die für diese Arbeit verwendeten Testdaten, die von ChatGPT-4 generierten Testfälle und deren Auswertung. 
+In dem Ordner [Testdaten](Testdaten) befinden sich die für diese Arbeit verwendeten Testdaten, die von ChatGPT-4 generierten Testfälle und deren Auswertung. 
 
 ## Quellen
 In dem Ordner [Quellen](Quellen) befinden sich die für diese Arbeit genutzten Quellen als PDF-Dokumente.
