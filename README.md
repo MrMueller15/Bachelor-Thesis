@@ -9,15 +9,11 @@
 ## Abstract
 Diese Bachelorarbeit erforscht den Einsatz des LLM ChatGPT-4 von OpenAI (2025)
 bei der Erstellung von Anforderungstestfällen unter Berücksichtigung ihr zur Verfügung
-gestellten Anforderungsspezifikationen. Ziel der Arbeit und der Auswertung der Ergeb-
-nisse war es herauszufinden, ob ChatGPT-4 von OpenAI (2025) dazu in der Lage ist,
-Anforderungstestfälle zu erzeugen, welche in in Bezug auf Benutzerfreundlichkeit, Feh-
-lererkennung, Wartbarkeit und Zuverlässigkeit eine hohe Qualität aufweisen und dabei
-gleichzeitig die gängige Testfallstruktur nach ISO/IEC/IEEE 29119-1:2022-01 (2022) be-
-sitzen. Außerdem sollen diese Testfälle nur logische sowie faktisch richtige Testschritte
+gestellten Anforderungsspezifikationen. Ziel der Arbeit und der Auswertung der Ergebnisse war es herauszufinden, ob ChatGPT-4 von OpenAI (2025) dazu in der Lage ist,
+Anforderungstestfälle zu erzeugen, welche in in Bezug auf Benutzerfreundlichkeit, Fehlererkennung, Wartbarkeit und Zuverlässigkeit eine hohe Qualität aufweisen und dabei
+gleichzeitig die gängige Testfallstruktur nach ISO/IEC/IEEE 29119-1:2022-01 (2022) besitzen. Außerdem sollen diese Testfälle nur logische sowie faktisch richtige Testschritte
 enthalten. Um die Korrektheit zu überprüfen wurden sie mit manuell erstellten Testfällen
-verglichen, welche aus den gleichen Anforderungsspezifikationen erstellt wurden. Intenti-
-on war es, einen Beitrag zur Verbesserung der Testfallgenerierung zu leisten.
+verglichen, welche aus den gleichen Anforderungsspezifikationen erstellt wurden. Intention war es, einen Beitrag zur Verbesserung der Testfallgenerierung zu leisten.
 Die Ergebnisse dieser Bachelorarbeit zeigen, dass
 **Stichwörter:** KI, LLM, RAG, Prompting, Testfallgenerierung
 
