@@ -15,6 +15,7 @@ gleichzeitig die gängige Testfallstruktur nach ISO/IEC/IEEE 29119-1:2022-01 (20
 enthalten. Um die Korrektheit zu überprüfen wurden sie mit manuell erstellten Testfällen
 verglichen, welche aus den gleichen Anforderungsspezifikationen erstellt wurden. Intention war es, einen Beitrag zur Verbesserung der Testfallgenerierung zu leisten.
 Die Ergebnisse dieser Bachelorarbeit zeigen, dass
+
 **Stichwörter:** KI, LLM, RAG, Prompting, Testfallgenerierung
 
 ## Thesis
