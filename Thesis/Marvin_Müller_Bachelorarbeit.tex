@@ -370,7 +370,7 @@ Diese Erkenntnis zeigt, wie wichtig es für die Auswertung der Arbeit ist, eine 
 
 \noindent\textbf{\underline{Arbeiten von \parencite{Nirpals2011, Lazić2013}:}}\\
 \\
-Die Werke von \parencite{Nirpals2011, Lazić2013} liefern einen Überblick über vorhandene Metriken im Bereich des Testens. Die Autoren der beiden Werke \parencite{Nirpals2011, Lazić2013} kommen zu dem Schluss, dass Metriken wichtig für das Testen sind. Die in beiden Werken vorkommende Metrik zur Messung des Automation Coverage dient in Kapitel \ref{sec:methodik} als Grundlage, um das Qualitätskriterium Abdeckung zu messen. (\cite{Nirpals2011}; \cite{Lazić2013})\\
+Die Werke von \parencite{Nirpals2011, Lazić2013} liefern einen Überblick über vorhandene Metriken im Bereich des Testens. Die Autoren der beiden Werke \parencite{Nirpals2011, Lazić2013} kommen zu dem Schluss, dass Metriken wichtig für das Testen sind. Die in beiden Werken vorkommende Metrik zur Messung des Automation Coverage dient in Kapitel \ref{sec:qualitätskriterien} als Grundlage, um das Qualitätskriterium Abdeckung zu messen. (\cite{Nirpals2011}; \cite{Lazić2013})\\
 \\
 Diese Werke zeigen, dass es im Bereich des Testens viele Metriken und Kriterien gibt, anhand derer die Qualität von Testfällen ausgewertet werden können. Es ist somit wichtig, klar zu beschreiben mit welchen Metriken, die Qualitätskriterien in dieser Arbeit ausgewertet werden.\\
 \\
@@ -492,7 +492,7 @@ Im Bereich des Testens gibt es viele Metriken und Qualitätskriterien, anhand de
 
 \subsection{Qualitätsmetriken} % fold
 \label{sec:qualitätsmetriken}
-In dieser Arbeit gibt es zwei Qualitätsmetriken, die Testfallstruktur und die Kohärenzrate (KR). Die von GPT-4 von \textcite{OpenAI2025} generierten Testfälle müssen beide erfüllen, damit sie mit den Qualitätskriterien bewertet werden können.\\
+In dieser Arbeit gibt es zwei Qualitätsmetriken, die Testfallstruktur und die Kohärenzrate (KR). Die von GPT-4 von \textcite{OpenAI2025} generierten Testfälle müssen beide erfüllen, damit sie für die Qualitätskriterien bewertet werden können. Der Grund ist folgender, \textcite{Tran2025} beschreiben die Qualitätskriterien. Für das Qualitätskriterium Benutzerfreundlichkeit ist es wichtig, dass die Testfälle eine einheitliche Struktur besitzen. Für das Qualitätskriterium Wartbarkeit ist es die Testfallstruktur wichtig, um die Homogenität zu messen. Die Kohärenzrate verbessert die Nachverfolgbarkeit und stellt sicher, dass es keine falschen oder nicht aufeinander aufbauende Testschritte gibt, welche gewartet werden müssen.\\
 \\
 \textbf{\underline{1.1 Testfallstruktur:}}\\
 \\
@@ -577,11 +577,23 @@ Folgendes Beispiel zeigt einen von GPT-4 von \textcite{OpenAI2025} erstellten Te
 \label{sec:qualitätskriterien}
 In dieser Arbeit gibt es vier Qualitätskriterien, die von \textcite{Tran2025} ermittelt wurden. Diese werden verwendet, um die von GPT-4 von \textcite{OpenAI2025} generierten Testfälle auszuwerten. Dabei helfen die in Kapitel \ref{sec:qualitätsmetriken} aufgestellten Kriterien und Metriken. Wie in Kapitel \ref{sec:methodik} geschrieben, stellen \textcite{Tran2025} Qualitätskriterien vor, anhand derer gute Testfälle erkannt werden können. Dabei definieren \textcite{Tran2025} diese folgend und stellen Anforderungen auf, um diese zu messen.\\
 \\
-\textbf{\underline{1. Coverage (Deutsch: Abdeckung)}}\\
+\textbf{\underline{1. Coverage (Deutsch: Abdeckung):}}\\
 \\
-TODO\\
+Das Kriterium Abdeckung wird von \textcite{Tran2025} als ein Wert beschrieben, welcher die Vollständigkeit und Effektivität sicherstellt. In dieser Arbeit wird dabei auf das Requirement Coverage von \textcite{Tran2025} bezogen. Um das Kriterium Coverage zu berechnen, wird in dieser Arbeit die Werke von \parencite{Nirpals2011, Lazić2013} verwendet. Diese verwenden die Metrik Automation Coverage, welche modifiziert verwendet wird, um die Abdeckung pro Testszenario zu berechnen.\\
 \\
-\textbf{\underline{2. Maintainability (Deutsch: Wartbarkeit)}}\\
+Die Abdeckung wird für jedes Testszenario einzeln und danach der Mittelwert berechnet. Die Streuung wird mit einem Boxplot dargestellt. Für die Abdeckung wird die folgende Formel verwendet, welche die für diese Arbeit modifizierte Formel von \parencite{Nirpals2011, Lazić2013} ist:
+\begin{equation*}
+    COV = \frac{TC_{GPT-4}}{TC_{Manual}} \times 100 \%
+\end{equation*}
+
+\noindent Dabei gilt:
+\begin{itemize}
+    \item $TC_{GPT}$ ist die Anzahl der von GPT-4 \textcite{OpenAI2025} generierten Testfälle pro Testszenario.
+    \item $TC_{Manual}$ ist die Anzahl der von \textcite{Pavankumar21github2022} manuell erstellten Testfälle desselben Testszenario, welche als Benchmark dienen.
+\end{itemize}
+Den Wert für die Abdeckung erhält man auch mithilfe der in \ref{sec:qualitätsmetriken} beschriebenen Metriken Testfallstruktur und Kohärenzrate. Pro Testszenario, zum Beispiel im Testszenario Register Account, wird GPT-4 von \textcite{OpenAI2025} dazu aufgefordert, alle möglichen Testfälle dieses Testszenarios zu generieren. Diese werden dokumentiert und ausgewertet. Für die Auswertung dienen die manuell erstellten Testfälle von \textcite{Pavankumar21github2022} als Benchmark. Die Testfälle müssen dabei die Testfallstruktur aufweisen und gleichzeitig nur Testschritte besitzen, die faktisch korrekt und aufeinander aufgebaut sind. Die Anzahl der Testfälle, die durch GPT-4 von \textcite{OpenAI2025} pro Testszenario erstellt wurden und dabei beide Qualitätsmetriken erfüllen ist der Wert $TC_{GPT}$. Die Testfälle von \textcite{Pavankumar21github2022}, welche es pro Testszenario gibt, ist der Wert für $TC_{Manual}$. Wenn GPT-4 von \textcite{OpenAI2025} 20 Testfälle, für ein Testszenario generiert hat dabei aber 10 Testfälle entweder die Testfallstruktur nicht aufweisen oder nicht korrekte Testschritte besitzen und \textcite{Pavankumar21github2022} ebenfalls 20 Testfälle für dieses Testszenario erstellt hat, ist der Wert der Abdeckung in diesem Testszenario bei 50 \%.\\
+\\
+\textbf{\underline{2. Maintainability (Deutsch: Wartbarkeit):}}\\
 \\
 Ein Kriterium, welches nach \textcite{Tran2025} einen Testfall daran misst, wie dieser sich in Bezug auf Fehlerkorrektur, Verbesserungen und Änderungen in den Anforderungen anpassen kann, ist die Wartbarkeit. Dabei spielen laut \textcite{Tran2025} die Analysefähigkeit, wie gut sie Mängel und Fehler identifizieren können, die Nachverfolgbarkeit, wie sehr der Testfall mit den Anforderungen verbunden ist und die Homogenität, die kontinuierliche Einhaltung der gleichen Struktur und Regeln, eine Rolle.\\
 \\
@@ -589,13 +601,13 @@ Die in Kapitel \ref{sec:qualitätsmetriken} stehende Qualitätsmetrik Testfallst
 \\
 Die Kohärenzrate, welche in Kapitel \ref{sec:qualitätsmetriken} aufgestellt wird und welche an \textcite{Li2024} angelehnt ist, stellt sicher, dass die von GPT-4 von \textcite{OpenAI2025} erstellten Testfälle alle Schritte aus den Anforderungen einhalten. Damit kann durch diesen Wert die Nachverfolgbarkeit bewertet werden und stellt dabei sicher, dass es keine unlogischen Testschritte gibt, die später gewartet werden müssen.\\
 \\
-\textbf{\underline{3. Reliability (Deutsch: Zuverlässigkeit)}}\\
+\textbf{\underline{3. Reliability (Deutsch: Zuverlässigkeit):}}\\
 \\
 Die Kriterien Fehlererkennung und Wartbarkeit sind wichtig, bringen jedoch nicht viel, wenn die von GPT-4 von \textcite{OpenAI2025} generierten Testfälle eine gute Fehlererkennung und Wartbarkeit nicht dauerhaft und in verschiedenen Bereichen aufrechterhalten können und somit nicht zuverlässig sind. Das Kriterium Zuverlässigkeit wird deshalb von \textcite{Tran2025} als eine Fähigkeit beschrieben, trotz unterschiedlicher Anforderungen und Bedingungen ein Leistungsniveau aufrechtzuerhalten.\\
 \\
 In dieser Arbeit werden von GPT-4 von \textcite{OpenAI2025} Testfälle mit verschiedenen Anforderungen und verschiedene Websites getestet. Wenn die in Kapitel \ref{sec:qualitätsmetriken} aufgestellte Kohärenzrate nach \textcite{Li2024} im Mittelwert hoch ist, zeigt es, dass die von GPT-4 von \textcite{OpenAI2025} erstellten Testfälle über unterschiedliche Anforderungen hinweg logisch und richtig sind.\\
 \\
-\textbf{\underline{4. Usability (Deutsch: Benutzerfreundlichkeit)}}\\
+\textbf{\underline{4. Usability (Deutsch: Benutzerfreundlichkeit):}}\\
 \\
 Benutzerfreundlichkeit misst nach \textcite{Tran2025} Testfälle daran, wie leicht diese ausgeführt, verwendet und verstanden werden können. Dabei spielen laut \textcite{Tran2025} Vollständigkeit, Lesbarkeit und Verständlichkeit eine Rolle. Das in Kapitel \ref{sec:qualitätsmetriken} aufgestellte Kriterium Testfallstruktur stellt sicher, dass die durch GPT-4 von \textcite{OpenAI2025} erstellten Testfälle die Testfallstruktur nach \textcite{IsoIecIeee2024} erfüllen. Dieses Kriterium stellt die Benutzerfreundlichkeit der Testfälle sicher, falls diese eingehalten wird, da sie dann übersichtlich und nach einem Standard aufgebaut sind.\\
 \\
