@@ -91,8 +91,7 @@ In dieser Bachelorarbeit wird aus Gründen der besseren Lesbarkeit das generisch
 
 \addchap{Abstract} % (fold)
 \label{sec:abstract}
-This bachelor thesis investigates the use of the LLM GPT-4 from \textcite{OpenAI2025} in the creation of requirement test cases, taking into account the requirement specifications provided to it. The aim of the work and the evaluation of the results is to find out whether GPT-4 is able to generate requirement test cases that are of high quality in terms of coverage, usability, maintainability and reliability and at the same time have the common test case structure according to \textcite{IsoIecIeee2024}. In addition, these test cases should only contain logical and factually correct test steps.
-In order to check the correctness, logic and coverage, they are compared with manually created test cases, which were created from the same requirement specifications and serve as a benchmark. The intention is to contribute to the improvement of test case generation.\\\
+This bachelor thesis investigates the use of the LLM GPT-4 from \textcite{OpenAI2025} in the creation of requirement test cases, taking into account the requirement specifications provided to it. The aim of the work and the evaluation of the results is to find out whether GPT-4 is able to generate requirement test cases that are of high quality coverage, factual correctness and test case structure according to \textcite{IsoIecIeee2024}. To check the coverage, factual correctness and test case structure according to \textcite{IsoIecIeee2024}, they are compared with manually created test cases, which were created from the same requirement specifications and serve as a benchmark. The intention is to contribute to the improvement of test case generation.\\\
 \\
 The results of this bachelor thesis show that
 \\
@@ -102,8 +101,8 @@ The results of this bachelor thesis show that
 
 \addchap{Zusammenfassung} % (fold)
 \label{sec:zusammenfassung}
-Diese Bachelorarbeit erforscht den Einsatz des LLM GPT-4 von \textcite{OpenAI2025} bei der Erstellung von Anforderungstestfällen unter Berücksichtigung ihr zur Verfügung gestellten Anforderungsspezifikationen. Ziel der Arbeit und der Auswertung der Ergebnisse ist es herauszufinden, ob GPT-4 dazu in der Lage ist, Anforderungstestfälle zu erzeugen, welche in in Bezug auf ihre Abdeckung, Benutzerfreundlichkeit, Wartbarkeit und Zuverlässigkeit eine hohe Qualität aufweisen und dabei gleichzeitig die gängige Testfallstruktur nach \textcite{IsoIecIeee2024} besitzen. Außerdem sollen diese Testfälle nur logische sowie faktisch richtige Testschritte enthalten.
-Um die Korrektheit, Logik und Abdeckung zu überprüfen werden sie mit manuell erstellten Testfällen verglichen, welche aus den gleichen Anforderungsspezifikationen erstellt wurden und als Benchmark dienen. Intention ist es, einen Beitrag zur Verbesserung der Testfallgenerierung zu leisten.\\
+Diese Bachelorarbeit erforscht den Einsatz des LLM GPT-4 von \textcite{OpenAI2025} bei der Erstellung von Anforderungstestfällen unter Berücksichtigung ihr zur Verfügung gestellten Anforderungsspezifikationen. Ziel der Arbeit und der Auswertung der Ergebnisse ist es herauszufinden, ob GPT-4 dazu in der Lage ist, Anforderungstestfälle zu erzeugen, welche in in Bezug auf ihre Abdeckung, Factual Correctness und Testfallstruktur nach \textcite{IsoIecIeee2024} eine hohe Qualität aufweisen. 
+Um die Abdeckung, Factual Correctness und Testfallstruktur nach \textcite{IsoIecIeee2024} zu überprüfen werden sie mit manuell erstellten Testfällen verglichen, welche aus den gleichen Anforderungsspezifikationen erstellt wurden und als Benchmark dienen. Intention ist es, einen Beitrag zur Verbesserung der Testfallgenerierung zu leisten.\\
 \\
 Die Ergebnisse dieser Bachelorarbeit zeigen, dass
 \\
@@ -139,7 +138,7 @@ Da die im letzten Absatz beschriebene Lösung mit Zeit und Aufwand verbunden ist
 \label{sec:forschungsfrage}
 Die folgende Forschungsfrage, die aus der zugrunde liegenden Motivation abgeleitet wurde, bildet die Grundlage für die Durchführung der Arbeit:\\
 \\
-\textbf{Ist es möglich, dass das LLM GPT-4 von \textcite{OpenAI2025} dazu in der Lage ist, aus Anforderungsspezifikationen Anforderungstestfälle zu erzeugen, die eine hohe Qualität in Bezug auf ihre Abdeckung, Benutzerfreundlichkeit, Wartbarkeit und Zuverlässigkeit aufweisen, während sie gleichzeitig die gängige Testfallstruktur nach \textcite{IsoIecIeee2024} besitzen und nur logische sowie faktisch richtige Testschritte enthalten?}\\  
+\textbf{Ist es möglich, dass das LLM GPT-4 von \textcite{OpenAI2025} dazu in der Lage ist, aus Anforderungsspezifikationen Anforderungstestfälle zu erzeugen, die eine hohe Qualität in Bezug auf ihre Abdeckung, Factual Correctness und Testfallstruktur nach \textcite{IsoIecIeee2024} aufweisen?}\\  
 \\
 Diese Frage zielt darauf ab, herauszufinden, wie gut ein frei verfügbares LLM wie GPT-4 in der Lage ist, Testfälle zu generieren und ob somit Nutzer wertvolle Zeit und Ressourcen sparen können, wenn die KI redundante Aufgaben wie das Erstellen von Anwendungstestfällen übernimmt. Die Ergebnisse müssen dann nur überprüft werden. Um diese Frage zu beantworten, werden Auswertungsmetriken entwickelt, anhand derer die von GPT-4 erstellten Testfälle ausgewertet werden können. Außerdem wird die gängige Testfallstruktur nach \textcite{IsoIecIeee2024} definiert und die faktische Korrektheit der Testfälle überprüft. Dabei dienen manuell erstellte Testfällen, welche aus der gleichen Anforderungsspezifikation erstellt wurden als Benchmark, also als Vergleichsmaßstab.
 % section forschungsfrage (end)
@@ -155,7 +154,7 @@ Das Vorgehen in der vorliegenden Arbeit erfolgt in mehreren Abschnitten. Zunäch
 \\
 Nachdem das Vorgehen ermittelt wurde und passende Testdaten, welche sich in Anforderungsspezifikationen und aus diesen manuell erstellte Anforderungstestfälle gliedern, gefunden wurden, beginnt die praktische Umsetzung der Arbeit. Dabei liegt die Durchführung, Dokumentation und Auswertung der von GPT-4 erstellten Anforderungstestfälle im Vordergrund.\\
 \\
-Zum Schluss werden die durch GPT-4 erstellten Anforderungstestfälle auf ihrer Abdeckung, Benutzerfreundlichkeit, Wartbarkeit und Zuverlässigkeit überprüft und eingeordnet. Die Einhaltung der definierten Testfallstruktur nach \textcite{IsoIecIeee2024} ist entscheidend. Die faktische Korrektheit spielt eine ebenso große Rolle. Sie wird überprüft, indem die von GPT-4 generierten Testfälle mit manuell erstellten Anforderungstestfällen verglichen und auf ihre Korrektheit, Logik und Abdeckung gemessen werden. Die Ergebnisse werden analysiert und hinsichtlich ihrer ihre Abdeckung, Benutzerfreundlichkeit, Wartbarkeit und Zuverlässigkeit ausgewertet. Dabei werden für die Auswertung Metriken verwendet, die in Kapitel \ref{sec:methodik} näher erläutert werden.
+Zum Schluss werden die durch GPT-4 erstellten Anforderungstestfälle auf ihre Abdeckung, Factual Correctness und Testfallstruktur nach \textcite{IsoIecIeee2024} ausgewertet. Die faktische Korrektheit wird überprüft, indem die von GPT-4 generierten Testfälle mit manuell erstellten Anforderungstestfällen verglichen und auf ihre Korrektheit eingeordnet werden. Die Ergebnisse werden analysiert und hinsichtlich ihrer Abdeckung, Factual Correctness und Testfallstruktur nach \textcite{IsoIecIeee2024} ausgewertet. Dabei werden für die Auswertung Metriken verwendet, die in Kapitel \ref{sec:methodik} näher erläutert werden.
 % section vorgehensweise (end)
 % chapter einleitung (end)
 
@@ -368,27 +367,27 @@ Diese Erkenntnis zeigt, wie wichtig es für die Auswertung der Arbeit ist, eine 
 
 \noindent\textbf{\underline{Arbeiten von \parencite{Nirpals2011, Lazić2013}:}}\\
 \\
-Die Werke von \parencite{Nirpals2011, Lazić2013} liefern einen Überblick über vorhandene Metriken im Bereich des Testens. Die Autoren der beiden Werke \parencite{Nirpals2011, Lazić2013} kommen zu dem Schluss, dass Metriken wichtig für das Testen sind. Die in beiden Werken vorkommende Metrik zur Messung des Automation Coverage dient in Kapitel \ref{sec:qualitätskriterien} als Grundlage, um das Qualitätskriterium Abdeckung zu messen. (\cite{Nirpals2011}; \cite{Lazić2013})\\
+Die Werke von \parencite{Nirpals2011, Lazić2013} liefern einen Überblick über vorhandene Metriken im Bereich des Testens. Die Autoren der beiden Werke \parencite{Nirpals2011, Lazić2013} kommen zu dem Schluss, dass Metriken wichtig für das Testen sind. Die in beiden Werken vorkommende Metrik zur Messung des Automation Coverage dient in Kapitel \ref{sec:coverage} als Grundlage, um das Qualitätskriterium Abdeckung zu messen. (\cite{Nirpals2011}; \cite{Lazić2013})\\
 \\
 Diese Werke zeigen, dass es im Bereich des Testens viele Metriken und Kriterien gibt, anhand derer die Qualität von Testfällen ausgewertet werden können. Es ist somit wichtig, klar zu beschreiben mit welchen Metriken, die Qualitätskriterien in dieser Arbeit ausgewertet werden.\\
 \\
 \textbf{\underline{Arbeit von \textcite{Tran2025}:}}\\
 \\
-Das Werk von \textcite{Tran2025} untersucht die wichtigsten Qualitätskriterien aus der Anwendersicht, da es sehr viele Qualitätskriterien gibt. Die Autoren \textcite{Tran2025} kommen dabei zu dem Schluss, dass die Qualitätskriterien Coverage (Deutsch: Abdeckung), Fault Detection (Deutsch: Fehlererkennung), Maintainability (Deutsch: Wartbarkeit), Reliability (Deutsch: Zuverlässigkeit) und Usability (Deutsch: Benutzerfreundlichkeit), die wichtigsten Kriterien für Testfälle sind. Der Stellenwert der Qualitätskriterien ist dabei jedoch abhängig vom Kontext der Tests. Diese Erkenntnis dient als Grundlage für die in Kapitel \ref{sec:qualitätskriterien} genannten Qualitätskriterien, welche aus diesem Werk von \textcite{Tran2025} stammen. Mit diesen werden die von GPT-4 erstellten Testfälle ausgewertet. (\cite{Tran2025})\\
+Das Werk von \textcite{Tran2025} untersucht die wichtigsten Qualitätskriterien aus der Anwendersicht, da es sehr viele Qualitätskriterien gibt. Die Autoren \textcite{Tran2025} kommen dabei zu dem Schluss, dass die Qualitätskriterien Coverage (Deutsch: Abdeckung), Fault Detection (Deutsch: Fehlererkennung), Maintainability (Deutsch: Wartbarkeit), Reliability (Deutsch: Zuverlässigkeit) und Usability (Deutsch: Benutzerfreundlichkeit), die wichtigsten Kriterien für Testfälle sind. Der Stellenwert der Qualitätskriterien ist dabei jedoch abhängig vom Kontext der Tests. (\cite{Tran2025})\\
 \\
 \textbf{\underline{Arbeit von \textcite{Li2024}:}}\\
 \\
-Die Autoren \textcite{Li2024} erforschen das Thema Halluzinationen im Bereich der LLM. Das Ziel ist es, Halluzinationen zu erkennen und die Anzahl der Halluzinationen zu reduzieren. Dabei kommen \textcite{Li2024} zu dem Schluss, dass die Anzahl der Halluzinationen durch gezieltes Training und RAG verringert werden, jedoch nicht vollständig eliminiert werden kann. Da in dieser Arbeit das LLM GPT-4 verwendet wird, ist es wichtig, das Phänomen der Halluzination zu untersuchen. Die von \textcite{Li2024} aufgestellte Methodik zur Messung der Halluzinationsrate (HR) wird in dieser Arbeit in Kapitel \ref{sec:qualitätsmetriken} in modifizierter Form verwendet.
+Die Autoren \textcite{Li2024} erforschen das Thema Halluzinationen im Bereich der LLM. Das Ziel ist es, Halluzinationen zu erkennen und die Anzahl der Halluzinationen zu reduzieren. Dabei kommen \textcite{Li2024} zu dem Schluss, dass die Anzahl der Halluzinationen durch gezieltes Training und RAG verringert werden, jedoch nicht vollständig eliminiert werden kann. Da in dieser Arbeit das LLM GPT-4 verwendet wird, ist es wichtig, das Phänomen der Halluzination zu beachten.
 (\cite{Li2024})\\
 \\
 Im Bereich des Testens gibt es unterschiedliche Bereiche, für diese Arbeit ist es relevant herauszufinden, ob bereits KI oder LLMs im Bereich des Testens und zur Testfallerstellung eingesetzt werden. Folgende Arbeiten zeigen den Einsatz von KI oder LLMs im Bereich des Testens.\\
-\newpage
-
-\noindent\textbf{\underline{Arbeit von \textcite{Khan2024}:}}\\
+\\
+\textbf{\underline{Arbeit von \textcite{Khan2024}:}}\\
 \\
 Das Ziel der Arbeit von \textcite{Khan2024} ist es, einen Überblick über die Rolle von KI bei der Automatisierung von Softwaretests zu geben. Dabei stellen die Autoren \textcite{Khan2024} die These auf, dass das Ziel der automatisierten Softwaretesterstellung mit KI möglich sein kann. Im Werk werden zum Schluss entscheidende Schwierigkeiten, Probleme und Voraussetzungen vorgestellt. Am Ende bekräftigen \textcite{Khan2024} jedoch ihre These, dass das Testen von Software mit einer Reihe von Automatisierungsgadgets möglich sein kann. (\cite{Khan2024})\\
-\\
-\textbf{\underline{Arbeit von \textcite{Bhandari2024}:}}\\
+\newpage
+
+\noindent\textbf{\underline{Arbeit von \textcite{Bhandari2024}:}}\\
 \\
 Die Autoren \textcite{Bhandari2024} beschäftigen sich mit den Einsatz und dem Potenzial von LLMs im Bereich des Chip-Testing. Dabei sind funktionale Tests, die sich auf Testbenches stützen, wichtig für das Chipdesign. Es wird Feedback in das LLM eingegeben, um so die Testbench-Generierung zu verbessern. Dies findet iterativ statt, um die Testabdeckung zu verbessern. \textcite{Bhandari2024} nennen als Herausforderungen die Wiederholung der Antworten und die Feinabstimmung des LLM mit dem Umfang der Arbeit. Die Wertung der Testbenches in Bezug auf die Abdeckung gestaltet sich als nicht einfach. Trotzdem kommen sie zum Schluss, dass durch das Feedback die Testbenches besser verstanden werden. Ein entscheidender Faktor für die Qualität der Ausgabe ist dabei der Prompt. (\cite{Bhandari2024})\\
 \\
@@ -399,14 +398,14 @@ In der Arbeit von \textcite{Ouédraogo2024} wird die Wirksamkeit von LLM bei der
 \textbf{\underline{Arbeit von \textcite{Gu2024}:}}\\
 \\
 Die Autoren \textcite{Gu2024}, welche sich in ihrer Arbeit ebenfalls mit dem Einsatz von KI bei der Erstellung von Unit Tests beschäftigen, nennen drei mögliche Probleme bei der Erzeugung von Testfällen.
-Ein unzureichender Kontext und fehlende Test- und Abdeckungsinformationen. Als Lösung bieten sie das Tool TestART an, welches eine Erfolgsquote von 78,55 \% aufweist. In der Arbeit von \textcite{Gu2024} wird ein Tool namens ChatUniTest vorgestellt, welches ebenfalls die Qualität von durch KI erzeugte Unit Tests verbessert. (\cite{Gu2024})
+Ein unzureichender Kontext und fehlende Test- und Abdeckungsinformationen. Als Lösung bieten sie das Tool TestART an, welches eine Erfolgsquote von 78,55 \% aufweist. In der Arbeit von \textcite{Gu2024} wird ein Tool namens ChatUniTest vorgestellt, welches ebenfalls die Qualität von durch KI erzeugte Unit Tests verbessert. (\cite{Gu2024})\\
+\\
+\textbf{\underline{Arbeit von \textcite{Liu2024}:}}\\
+\\
+Mit dem Thema des automatischen Benutzeroberflächen (GUI)-Testings beschäftigt sich die Arbeit von \textcite{Liu2024}. Dabei sehen \textcite{Liu2024} einen großen Fortschritt im Bereich des automatischen GUI-Testing, kommen jedoch zu der Erkenntnis, dass von LLM erzeugte Tests noch eine geringe Aktivitätsabdeckung aufweisen. Dies bedeutet, dass nur ein geringer Teil der möglichen Benutzeraktionen und Interaktionen mit der GUI abgedeckt ist. Dadurch kann mit diesen Tests nicht gewährleistet werden, dass alle Funktionen ordnungsgemäß und nach Vorgabe funktionieren. (\cite{Liu2024})
 \newpage
 
-\noindent\textbf{\underline{Arbeit von \textcite{Liu2024}:}}\\
-\\
-Mit dem Thema des automatischen Benutzeroberflächen (GUI)-Testings beschäftigt sich die Arbeit von \textcite{Liu2024}. Dabei sehen \textcite{Liu2024} einen großen Fortschritt im Bereich des automatischen GUI-Testing, kommen jedoch zu der Erkenntnis, dass von LLM erzeugte Tests noch eine geringe Aktivitätsabdeckung aufweisen. Dies bedeutet, dass nur ein geringer Teil der möglichen Benutzeraktionen und Interaktionen mit der GUI abgedeckt ist. Dadurch kann mit diesen Tests nicht gewährleistet werden, dass alle Funktionen ordnungsgemäß und nach Vorgabe funktionieren. (\cite{Liu2024})\\
-\\
-\textbf{\underline{Arbeit von \textcite{Kirinuki2024}:}}\\
+\noindent\textbf{\underline{Arbeit von \textcite{Kirinuki2024}:}}\\
 \\
 Die Arbeit von \textcite{Kirinuki2024} vergleicht durch GPT-4 generierte Testfälle mit manuell erstellten Testfällen. Dabei handelt es sich um Black-Box-Tests. Die Autoren \textcite{Kirinuki2024} kommen zu dem Ergebnis, dass im Aspekt der Testabdeckung, die von GPT-4 erzeugten Testfälle, gleich gut oder sogar besser abschneiden, als von Menschen erstellte Testfälle. Diese Testabdeckung wird noch erhöht, wenn ein Mensch zusammen mit GPT-4 Testfälle erstellt. (\cite{Kirinuki2024})\\
 \\
@@ -430,36 +429,22 @@ GPT-4 ist kostenlos und öffentlich nutzbar. Dies jedoch für den kostenlosen Zu
 Da GPT-4 Bilder erkennen und mit Dokumenten arbeiten kann, ist es in der Lage, die in Kapitel \ref{sec:rag} erklärte Methode RAG zu verwenden. Es kann somit Informationen aus den in Kapitel \ref{sec:testdaten} beschriebenen Anforderungsspezifikationen ziehen und dabei die Webseite und ihr Verhalten in Form von Screenshots erkennen und damit arbeiten. Außerdem besitzt GPT-4 eine Erinnerungsfunktion, mit welcher es auf wichtige Anmerkungen und Informationen, die für alle Testszenarien hinweg relevant sind, aus vorherigen Prompts zurückgreifen kann.
 \newpage
 
-\noindent Folgende Grafik zeigt die Erinnerungsfunktion, welche GPT-4 besitzt und welche in den Einstellungen zu finden ist.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{./Bilder/OpenAI_Erinnerungsfunktion GPT-4.png}
-    \caption{Die Erinnerungsfunktion von GPT-4 in den Einstellungen}
-    \label{fig:enter-label}
-\end{figure}
-
 \noindent Es muss nicht mit viel Aufwand, Zeit und Ressourcen antrainiert oder ein eigenes Modell entwickelt werden. GPT-4 ist in vielen Sprachen nutzbar und kann so von Nutzern weltweit verwendet werden.\\
 \\
 Genauere Informationen, wie GPT-4 gegenüber anderen GPT-Modellen wie zum Beispiel GPT-3.5 abschneidet, findet sich auf der offiziellen Website von \textcite{OpenAI2025}. In Kapitel \ref{sec:relatedWorkUndAktuelleForschung} steht, dass die Autoren \textcite{Kirinuki2024} GPT-4 benutzen um Black-Box-Tests zu erzeugen und dass diese im Bereich der Testabdeckung, gleich gut oder sogar besser sind als von Menschen erstellte Testfälle. Diese Erkenntnisse zeigen, dass GPT-4 sich als LLM für diese Arbeit eignet, da es die zwei Bedingungen erfüllt und bereits in einem ähnlichen Bereich von \textcite{Kirinuki2024} eingesetzt wurde.\\
 \\
 Mit einem Prompt kann GPT-4 nun Testfälle erzeugen. Wie die Testdaten aussehen, wie der Prompt aussieht und nach welchen Kriterien die Ergebnisse eingeordnet und ausgewertet werden, wird in Kapitel \ref{sec:testdaten}, Kapitel \ref{sec:promptUndVerwendeteMethoden} und Kapitel \ref{sec:qualitätskriterien} beschrieben.
 % section verwendetesLLM (end)
-\newpage
 
 \section{Testdaten} % (fold)
 \label{sec:testdaten}
-Als Grundlage zur Erstellung von Testfällen dienen Anforderungsspezifikationen. Um die Korrektheit, Logik und Abdeckung der von GPT-4 von \textcite{OpenAI2025} generierten Testfälle messen zu können, ist es essenziell, dass es manuelle Testfälle gibt, welche bereits aus den gleichen Anforderungsspezifikationen erstellt wurden, aus denen GPT-4 Testfälle erzeugt hat. Dadurch können die von GPT-4 generierten Testfälle in Bezug auf ihre Abdeckung, Benutzerfreundlichkeit, Wartbarkeit und Zuverlässigkeit bewertet werden. Für diese Arbeit wird für die Gewinnung von Testdaten, das Open Source Projekt von \textcite{Pavankumar21github2022} auf GitHub verwendet, welches Anforderungsspezifikationen und manuelle Testfälle beinhaltet. Folgende Grafik einer Anforderungsspezifikation von \textcite{Pavankumar21github2022} zeigt die Anforderungen, welche bei \textcite{OpenCart2025} bei der Erstellung eines Accounts erfolgen müssen.\\
-\begin{figure} [H]
-    \centering
-    \includegraphics[width=1\linewidth]{Bilder/Pavankumar21github_Anforderungsspezifikation.png}
-    \caption{Eine Anforderungsspezifikation von \textcite{Pavankumar21github2022}, welche die Anforderungen das Testszenario Register in \textcite{OpenCart2025} vorgibt}
-    \label{fig:enter-label}
-\end{figure}
-\noindent Dabei hat der Autor \textcite{Pavankumar21github2022} die Open Source Plattform \textcite{OpenCart2025} getestet. Es ist wichtig, dass sowohl die Testdaten als auch die Website frei verfügbar sind und somit in dieser Arbeit verwendet werden können. Die Open Source Onlineshop Plattform \textcite{OpenCart2025} besitzt viele Funktionen und Anwendungen, welche \textcite{Pavankumar21github2022} in 31 verschiedenen Testszenarien mit insgesamt 507 Testfällen testet. Damit eignen sich das Projekt und die Webseite zur Erstellung von Anwendungstestfällen und als Benchmark, um diese auszuwerten. Spezifikationen wie diese werden GPT-4 zur Verfügung gestellt. 
+Als Grundlage zur Erstellung von Testfällen dienen Anforderungsspezifikationen. Um die Korrektheit, Logik und Abdeckung der von GPT-4 von \textcite{OpenAI2025} generierten Testfälle messen zu können, ist es essenziell, dass es manuelle Testfälle gibt, welche bereits aus den gleichen Anforderungsspezifikationen erstellt wurden, aus denen GPT-4 Testfälle erzeugt hat. Dadurch können die von GPT-4 generierten Testfälle in Bezug auf ihre Abdeckung, Factual Correctness und Testfallstruktur nach \textcite{IsoIecIeee2024} bewertet werden. Für diese Arbeit wird für die Gewinnung von Testdaten, das Open Source Projekt von \textcite{Pavankumar21github2022} auf GitHub verwendet, welches Anforderungsspezifikationen und manuelle Testfälle beinhaltet.\\
+\\
+Es ist wichtig, dass sowohl die Testdaten als auch die Website frei verfügbar sind und somit in dieser Arbeit verwendet werden können. Die Open Source Onlineshop Plattform \textcite{OpenCart2025} besitzt viele Funktionen und Anwendungen, welche \textcite{Pavankumar21github2022} in 31 verschiedenen Testszenarien mit insgesamt 507 Testfällen testet. Damit eignen sich das Projekt und die Webseite zur Erstellung von Anwendungstestfällen und als Benchmark, um diese auszuwerten. Spezifikationen wie diese werden GPT-4 zur Verfügung gestellt. 
+Die generierten Testfälle können nun mit den manuellen Testfällen, die die gleichen Funktionen und Anforderungen abdecken, auf ihre Korrektheit, Logik und Abdeckung verglichen werden.
 \newpage
 
-\noindent Die generierten Testfälle können nun mit den manuellen Testfällen, die die gleichen Funktionen und Anforderungen abdecken, auf ihre Korrektheit, Logik und Abdeckung verglichen werden. Folgende Grafik zeigt einen Testfall, welcher von \textcite{Pavankumar21github2022} erstellt wurde und welcher die Erstellung eines Accounts in \textcite{OpenCart2025} testet.
+\noindent Folgende Grafik zeigt einen Testfall, welcher von \textcite{Pavankumar21github2022} erstellt wurde und welcher die Erstellung eines Accounts in \textcite{OpenCart2025} testet.
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Bilder/Pavankumar21github_Testfall.png}
@@ -467,36 +452,32 @@ Als Grundlage zur Erstellung von Testfällen dienen Anforderungsspezifikationen.
     \label{fig:enter-label}
 \end{figure}
 
-\noindent Wie in der Grafik zu erkennen ist, verwendet \textcite{Pavankumar21github2022} die Testfallstruktur nach \textcite{IsoIecIeee2024}. Diese Testfallstruktur nach \textcite{IsoIecIeee2024} ist wie in Kapitel \ref{sec:qualitätsmetriken} beschrieben, eine Voraussetzung, welche die von GPT-4 erstellten Testfälle erfüllen müssen. Dabei sind die Testschritte von \textcite{Pavankumar21github2022} in sich logisch, bauen aufeinander auf und stimmen mit den Informationen auf der \textcite{OpenCart2025} Webseite überein. Sie dienen deshalb als Benchmark für die von GPT-4 erstellten Testfällen. Zu bedenken ist jedoch, dass das Projekt von \textcite{Pavankumar21github2022} aus dem Jahr 2022 ist. Es könnte somit eine neue Version von \textcite{OpenCart2025} geben. Falls Testschritte abweichen, muss diese Abweichung auch mit den Informationen auf \textcite{OpenCart2025} überprüft werden. Das Projekt erfüllt somit die genannten Voraussetzungen und liefert gleichzeitig eine große Zahl an Testdaten, um sie mit den durch GPT-4 generierten Testfälle zu vergleichen. Obwohl in dieser Arbeit nur ein Projekt als Referenz verwendet wird, bietet es mit 31 Testszenarien eine breite Abdeckung, um so zu fundierten Ergebnissen zu kommen. Mithilfe dieser Anforderungsspezifikationen und von Testszenario relevante Screenshots, generiert GPT-4 Testfälle. Wie dieser Vorgang genau abläuft, wird in Kapitel \ref{sec:promptUndVerwendeteMethoden} erläutert. Diese generierten Testfälle werden in Kapitel \ref{sec:qualitätssmetrikenUndKriterien} mithilfe der manuellen Testfälle auf ihre Korrektheit, Logik und Abdeckung überprüft und gemessen. Die manuellen Testfälle von \textcite{Pavankumar21github2022} dienen dabei als Benchmark.
+\noindent Wie in der Grafik zu erkennen ist, verwendet \textcite{Pavankumar21github2022} die Testfallstruktur nach \textcite{IsoIecIeee2024}. Diese Testfallstruktur nach \textcite{IsoIecIeee2024} ist wie in Kapitel \ref{sec:testfallstruktur} beschrieben, eine Voraussetzung, welche die von GPT-4 erstellten Testfälle erfüllen müssen. Dabei sind die Testschritte von \textcite{Pavankumar21github2022} in sich logisch, bauen aufeinander auf und stimmen mit den Informationen auf der \textcite{OpenCart2025} Webseite überein. Sie dienen deshalb als Benchmark für die von GPT-4 erstellten Testfällen. Zu bedenken ist jedoch, dass das Projekt von \textcite{Pavankumar21github2022} aus dem Jahr 2022 ist. Es könnte somit eine neue Version von \textcite{OpenCart2025} geben. Falls Testschritte abweichen, muss diese Abweichung auch mit den Informationen auf \textcite{OpenCart2025} überprüft werden. Das Projekt erfüllt somit die genannten Voraussetzungen und liefert gleichzeitig eine große Zahl an Testdaten, um sie mit den durch GPT-4 generierten Testfälle zu vergleichen. Obwohl in dieser Arbeit nur ein Projekt als Referenz verwendet wird, bietet es mit 31 Testszenarien eine breite Abdeckung, um so zu fundierten Ergebnissen zu kommen. Mithilfe dieser Anforderungsspezifikationen und von Testszenario relevante Screenshots, generiert GPT-4 Testfälle. Wie dieser Vorgang genau abläuft, wird in Kapitel \ref{sec:promptUndVerwendeteMethoden} erläutert. Diese generierten Testfälle werden in Kapitel \ref{sec:qualitätskriterien} mithilfe der manuellen Testfälle auf ihre Korrektheit, Logik und Abdeckung überprüft und gemessen. Die manuellen Testfälle von \textcite{Pavankumar21github2022} dienen dabei als Benchmark.
 % section testdaten (end)
+\newpage
 
 \section{Prompt und verwendete Methoden} % (fold)
 \label{sec:promptUndVerwendeteMethoden}
-In diesem Kapitel wird beschrieben, wie in dieser Arbeit Testfälle durch GPT-4 von \textcite{OpenAI2025} generiert werden. Zuerst wird wie in Kapitel \ref{sec:verwendetesLLM} gezeigt, die Erinnerungsfunktion aktiviert, damit GPT-4 auf Informationen zurückgreifen kann, welche ihm bereits in anderen Prompts mitgegeben wurden. Anschließend werden GPT-4 Screenshots von dem jeweiligen Testszenario von der \textcite{OpenCart2025} Webseite übergeben. Dadurch erhält es die Informationen darüber, wie die Seite funktioniert und reagiert und kann somit diese testen. Danach wird GPT-4 die jeweilige Anforderungsspezifikation als PDF-Datei übergeben. Durch die in Kapitel \ref{sec:rag} beschrieben Methode RAG kann es dadurch die Informationen besser bearbeiten. Anschließend wird ein Prompt übergeben, welcher in folgender Grafik gezeigt wird.
+In diesem Kapitel wird beschrieben, wie in dieser Arbeit Testfälle durch GPT-4 von \textcite{OpenAI2025} generiert werden. Zuerst wird die Erinnerungsfunktion aktiviert, damit GPT-4 auf Informationen zurückgreifen kann, welche ihm bereits in anderen Prompts mitgegeben wurden. Anschließend werden GPT-4 Screenshots von dem jeweiligen Testszenario von der \textcite{OpenCart2025} Webseite übergeben. Dadurch erhält es die Informationen darüber, wie die Seite funktioniert und reagiert und kann somit diese testen. Danach wird GPT-4 die jeweilige Anforderungsspezifikation als PDF-Datei übergeben. Durch die in Kapitel \ref{sec:rag} beschrieben Methode RAG kann es dadurch die Informationen besser bearbeiten. Anschließend wird ein Prompt übergeben, welcher in folgender Grafik gezeigt wird.
 \begin{figure} [H]
     \centering
     \includegraphics[width=1\linewidth]{Bilder/OpenAI_Prompt.png}
     \caption{Ein Prompt an GPT-4}
     \label{fig:enter-label}
 \end{figure}
-\noindent GPT-4 wird dazu aufgefordert alle Funktionen pro Testszenario, von denen es 31 Stück gibt, als jeweils einzelnen Testfall zu generieren. Es soll dabei nur Informationen aus der Anforderungsspezifikation und aus den Screenshots benutzen und dabei die Struktur aus \textcite{IsoIecIeee2024} erfüllen. Dies ist für Kapitel \ref{sec:qualitätsmetriken} wichtig, da somit die Qualitätsmetriken bereits im Prompt definiert sind und GPT-4 diese erfüllen soll. Nach dem ersten Prompt wird noch einmal gefragt, ob es eine Funktion vergessen hat. Die Testfälle werden dann dokumentiert. Anschließend werden diese mit den manuell erstellten Testfällen, wie in Kapitel \ref{sec:testdaten} erläutert, auf ihre Korrektheit, Logik und Abdeckung überprüft. Anschließend werden diese ausgewertet. Die Metriken zu der Auswertung der generierten Testfälle finden sich in Kapitel \ref{sec:qualitätssmetrikenUndKriterien}.
+\noindent GPT-4 wird dazu aufgefordert alle Funktionen pro Testszenario, von denen es 31 Stück gibt, als jeweils einzelnen Testfall zu generieren. Es soll dabei nur Informationen aus der Anforderungsspezifikation und aus den Screenshots benutzen und dabei die Struktur aus \textcite{IsoIecIeee2024} erfüllen. Dies ist wichtig, da somit die Qualitätskriterien bereits im Prompt definiert sind und GPT-4 diese erfüllen soll. Nach dem ersten Prompt wird noch einmal gefragt, ob es eine Funktion vergessen hat. Die Testfälle werden dann dokumentiert. Anschließend werden diese mit den manuell erstellten Testfällen, wie in Kapitel \ref{sec:testdaten} erläutert, auf ihre Korrektheit, Logik und Abdeckung überprüft. Anschließend werden diese ausgewertet. Die Metriken zu der Auswertung der generierten Testfälle finden sich in Kapitel \ref{sec:qualitätskriterien}.
 % section promptUndVerwendeteMethoden (end)
 \newpage
 
-\section{Qualitätsmetriken und -kriterien} % (fold)
-\label{sec:qualitätssmetrikenUndKriterien}
-Im Bereich des Testens gibt es viele Metriken und Qualitätskriterien, anhand derer gemessen werden kann, wie gut ein Testfall ist. Dabei spielt es für die Auswertung keine Rolle, ob der Testfall manuell oder mithilfe eines LLM wie GPT-4 von \textcite{OpenAI2025} erstellt wird. Anhand dieser hier dargestellten Qualitätsmetriken und -kriterien werden die von GPT-4 erstellten Testfälle ausgewertet und nach ihrer Qualität in Bezug auf Korrektheit, Logik und Abdeckung gemessen. Dabei dienen die in Kapitel \ref{sec:testdaten} beschriebenen manuellen Testfälle von \textcite{Pavankumar21github2022} als Benchmark, um die durch GPT-4 generierten Testfälle auf die hier genannten Qualitätsmerkmale zu vergleichen. In dieser Arbeit gibt es Qualitätsmetriken, mit denen die Qualität der von GPT-4 erstellten Testfälle gemessen werden. Anhand der Messwerte können die Qualitätskriterien nach \textcite{Tran2025} bewertet werden. Diese sind Coverage (Deutsch: Abdeckung), Fault Detection (Deutsch: Fehlererkennung), Maintainability (Deutsch: Wartbarkeit), Reliability (Deutsch: Zuverlässigkeit) und Usability (Deutsch: Benutzerfreundlichkeit). Da in dieser Arbeit Anforderungstestfälle generiert werden und nicht nach Fehlern im System oder im Code gesucht wird, spielt das Kriterium Fault Detection in dieser Arbeit keine Rolle. Im Folgenden werden die Qualitätsmetriken aufgestellt, um die durch GPT-4 erstellten Testfälle auszuwerten. Danach werden die Qualitätskriterien nach \textcite{Tran2025} erklärt und es wird beschrieben, wie sie anhand der Qualitätsmetriken gemessen werden.
+\section{Qualitätskriterien} % (fold)
+\label{sec:qualitätskriterien}
+Im Bereich des Testens gibt es viele Metriken und Qualitätskriterien, anhand derer gemessen werden kann, wie gut ein Testfall ist. Dabei spielt es für die Auswertung keine Rolle, ob der Testfall manuell oder mithilfe eines LLM wie GPT-4 von \textcite{OpenAI2025} erstellt wird. Anhand dieser hier dargestellten Qualitätskriterien werden die von GPT-4 erstellten Testfälle ausgewertet und nach ihrer Qualität in Bezug auf Korrektheit, Logik und Abdeckung gemessen. Dabei dienen die in Kapitel \ref{sec:testdaten} beschriebenen manuellen Testfälle von \textcite{Pavankumar21github2022} als Benchmark, um die durch GPT-4 generierten Testfälle auf die hier genannten Qualitätsmerkmale zu vergleichen. In dieser Arbeit gibt es Qualitätskriterien, mit denen die Qualität der von GPT-4 erstellten Testfälle gemessen werden. Im Folgenden werden die Qualitätskriterien aufgestellt, um die durch GPT-4 erstellten Testfälle auszuwerten.
 
-\subsection{Qualitätsmetriken} % fold
-\label{sec:qualitätsmetriken}
-In dieser Arbeit gibt es zwei Qualitätsmetriken, die Testfallstruktur und die Kohärenzrate (KR). Die von GPT-4 von \textcite{OpenAI2025} generierten Testfälle müssen beide erfüllen. Diese beiden Qualitätsmetriken sind wichtig, um die in Kapitel \ref{sec:qualitätskriterien} beschriebenen Qualitätskriterien zu messen.\\
+\subsection{Testfallstruktur} % fold
+\label{sec:testfallstruktur}
+In Kapitel \ref{sec:testfall} wird die Testfallstruktur nach \textcite{IsoIecIeee2024} beschrieben. Ein Testfall nach \textcite{IsoIecIeee2024} besitzt folgende Merkmale: Ein Identifier, einen Namen, eine Beschreibung, Vorbedingungen und Ziele. Dabei testet der Testfall einen Ablauf, welcher sich in Schritten gliedert. In dieser Arbeit wird von GPT-4 erwartet, dass es, wenn es einen Testfall generiert, diesen Aufbau einhält. Der Grund ist folgender: Für viele Entwickler und Unternehmen ist es wichtig, dass Standards eingehalten werden. Ein Testfall, welcher vom Aufbau her diesen Standard nicht erfüllt, ist nicht brauchbar und muss somit auch negativ bewertet werden.\\
 \\
-\textbf{\underline{1.1 Testfallstruktur:}}\\
-\\
-In Kapitel \ref{sec:testfall} wird die Testfallstruktur nach \textcite{IsoIecIeee2024} beschrieben. Ein Testfall nach \textcite{IsoIecIeee2024} besitzt folgende Merkmale: Ein Identifier, einen Namen, eine Beschreibung, Vorbedingungen und Ziele. Dabei testet der Testfall einen Ablauf, welcher sich in Schritten gliedert. In dieser Arbeit wird von GPT-4 erwartet, dass es, wenn es einen Testfall generiert, diesen Aufbau einhält. Der Grund ist folgender: Für viele Entwickler und Unternehmen ist es wichtig, dass Standards eingehalten werden. Ein Testfall, welcher vom Aufbau her diesen Standard nicht erfüllt, ist nicht brauchbar und muss somit auch negativ bewertet werden. 
-\newpage
-
-\noindent Folgendes Beispiel zeigt einen Testfall, welcher die Anforderungen aus der in Kapitel \ref{sec:testdaten} gezeigten Anforderungsspezifikation testen soll, welcher nicht die Testfallstruktur erfüllt und somit nicht weiter berücksichtigt wird, da er unbrauchbar ist.
+Folgendes Beispiel zeigt einen Testfall, welcher die Anforderungen aus der in Kapitel \ref{sec:testdaten} gezeigten Anforderungsspezifikation testen soll, welcher nicht die Testfallstruktur erfüllt und somit nicht weiter berücksichtigt wird, da er unbrauchbar ist.
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Bilder/OpenAI_Schlechte Testfallstruktur.png}
@@ -520,74 +501,78 @@ Einstufung  & 0 Merkmale fehlen       & $1 \geq \text{Merkmale fehlen}$     \\ \
 \end{center}
 \end{table}
 
-\noindent Die Testfälle werden von \textcite{Müller2025} dem Autor dieser Arbeit pro Testszenario ausgewertet. Am Ende wird angegeben, wie viel Prozent der Testfälle in der positiven oder in der negativen Kategorie pro Testszenario eingeordnet werden. Dies misst sich, in dem die Anzahl der in der ersten Kategorie eingeordneten Testfälle pro Testszenario mit der Gesamtzahl der Testfälle pro Testszenario dividiert werden. Zum Beispiel, wenn es in einem Testszenario 8 positiv und 2 negativ eingestufte Testfälle gibt, sind die Testfälle in diesem Testszenario zu 80 \% positiv. Dies wird Pro Testszenario durchgeführt und am Ende wird der Mittelwert aller Testszenarien bestimmt. Um die Streuung zu bestimmen, wird ein Boxplot erstellt.
+\noindent Die Testfälle werden von \textcite{Müller2025} dem Autor dieser Arbeit pro Testszenario ausgewertet. Am Ende wird angegeben, wie viel Prozent der Testfälle in der positiven oder in der negativen Kategorie pro Testszenario eingeordnet werden. Dies misst sich, in dem die Anzahl der in der ersten Kategorie eingeordneten Testfälle pro Testszenario mit der Gesamtzahl der Testfälle pro Testszenario dividiert werden. Zum Beispiel, wenn es in einem Testszenario 8 positiv und 2 negativ eingestufte Testfälle gibt, sind die Testfälle in diesem Testszenario zu 80 \% positiv. Dies wird pro Testszenario durchgeführt und am Ende wird der Mittelwert aller Testszenarien bestimmt. Um die Streuung zu bestimmen, wird ein Boxplot erstellt.
+%subsection testfallstruktur (end)
+
+\subsection{Factual Correctness} % fold
+\label{sec:factualCorrectness}
+Die Testschritte eines Testfalls müssen stimmig sein und den Prozess in der richtigen Reihenfolge wiedergeben, wie er auf der Webseite \textcite{OpenCart2025} abläuft. So kann ein Nutzer sich nicht von einer Anwendung abmelden, wenn er sich nicht vorher angemeldet hat. Ein Testfall muss somit als ersten Testschritt Anmeldung besitzen, bevor dieser den Testschritt Abmeldung hat. Deshalb ist dieser Testfall unbrauchbar, da dieser nicht die Logik der Anforderungsspezifikation erfüllt. Um die Logik und die Korrektheit der generierten Testfälle bestimmen zu können, werden die manuell erstellten Testfälle von \textcite{Pavankumar21github2022} als Benchmark genutzt. Diese werden pro Testszenario mit den generierten Testfällen verglichen.\\
+\\
+Ein weiteres Problem für die Factual Correctness ist das Problem der Halluzination. In Kapitel \ref{sec:motivation} steht, dass \textcite{Siebert2024} den Begriff Halluzination als Phänomen beschreibt, bei dem eine KI-Antwort nicht mit den gegebenen Informationen übereinstimmt und die KI sich Antworten ausdenkt, die faktisch nicht richtig sind.\\
+\\
+Mit dem Qualitätskriterium Factual Correctness von \textcite{Ragas2025} wird in dieser Arbeit der Wert der faktisch korrekten Testschritte pro Testfall und der Gesamtzahl an Testschritten des Testfalls gemessen. Ein faktisch korrekter Testschritt steht in der richtigen Reihenfolge, ist keine Halluzination und besitzt seine Informationen nur aus der Anforderungsspezifikation oder dem Screenshot aus der Webseite.\\
 \newpage
 
-\noindent\textbf{\underline{Problem der Kohärenz}}\\
-\\
-Die Testfallstruktur ist wichtig, jedoch nicht der einzige wichtige Punkt für die Anforderung an einen Testfall. Die Logik und der Zusammenhang müssen ebenfalls stimmen. Die Testschritte müssen stimmig sein und den Prozess in der richtigen Reihenfolge wiedergeben, wie er auf der Webseite \textcite{OpenCart2025} abläuft. So kann ein Nutzer sich nicht von einer Anwendung abmelden, wenn er sich nicht vorher angemeldet hat. Ein Testfall muss somit als ersten Testschritt Anmeldung besitzen, bevor dieser den Testschritt Abmeldung hat.\\
-\\
-Um die Logik und die Korrektheit der generierten Testfälle bestimmen zu können, werden die manuell erstellten Testfälle von \textcite{Pavankumar21github2022} als Benchmark genutzt. Diese werden pro Testszenario mit den generierten Testfällen verglichen. Folgendes Beispiel zeigt einen von GPT-4 generierten Testfall, welcher zwar die richtige Teststruktur besitzt und somit die erste Qualitätsmetrik erfüllt, aber die Testschritte nicht logisch und nicht in der richtigen Reihenfolge sind.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{Bilder/OpenAI_Keine Kohärenz.jpg}
-    \caption{Ein von GPT-4 erstellter Testfall, welcher nicht kohärente Testschritte besitzt.}
-    \label{fig:enter-label}
-\end{figure}
-\noindent Der erste Testschritt sollte "`Öffne die Checkout-Seite"' sein, dieser Testschritt ist jedoch in diesem Beispiel der fünfte Testschritt.\\
-\\
-Deshalb ist dieser Testfall unbrauchbar, da dieser nicht die Logik der Anforderungsspezifikation erfüllt. Ein weiteres Problem für die Kohärenz ist das Problem der Halluzination. In Kapitel \ref{sec:motivation} steht, dass \textcite{Siebert2024} den Begriff Halluzination als Phänomen beschreibt, bei dem eine KI-Antwort nicht mit den gegebenen Informationen übereinstimmt und die KI sich Antworten ausdenkt, die faktisch nicht richtig sind.
-\newpage
-
-\noindent Da in dieser Arbeit die Testfälle von GPT-4 generiert werden, ist ein weiteres Kriterium für deren Auswertung wichtig. Die Autoren \textcite{Li2024} stellen eine Metrik auf, um die Anzahl der Halluzinationen zu messen, die Halluzinationsrate (HR). Diese misst die Anzahl der Halluzinationen im Verhältnis zu der Gesamtantwort. Beispiele für eine Halluzination sind, dass GPT-4 in einem Testszenario Funktionen testet, die es auf der Webseite \textcite{OpenCart2025} nicht gibt oder einem Button einen falschen Namen gibt. In dieser Arbeit wird diese Metrik für den Anwendungszweck der Testfälle verwendet. Diese ist von dem Autor dieser Arbeit angepasst worden und wird als Kohärenzrate (KR) bezeichnet.\\
-\\
-\textbf{\underline{1.2 Kohärenzrate (KR):}}\\
-\\
-Mit dem Qualitätskriterium Kohärenzrate (KR) wird in dieser Arbeit an \textcite{Li2024} angelehnt, das Verhältnis der Anzahl der kohärenten Testschritte pro Testfall und der Gesamtzahl an Testschritten des Testfalls gemessen. Ein kohärenter Testschritt steht in der richtigen Reihenfolge, ist keine Halluzination und besitzt seine Informationen nur aus der Anforderungsspezifikation oder dem Screenshot aus der Webseite. Statt wie \textcite{Li2024} den negativen Anteil zu messen, wird mit dieser Vorgehensweise der positive Anteil gemessen.
-\begin{equation*}
-    KR = \frac{KT}{T} \times 100 \%
-\end{equation*}
-
-\noindent Dabei sind:
+\noindent Nach \textcite{Ragas2025} misst sich die Factual Correctness folgendermaßen:
 \begin{itemize}
-    \item $KT$ Anzahl der kohärenten Testschritte pro Testfall,
-    \item $T$ die Gesamtanzahl der generierten Testschritte pro Testfall.
+    \item \textbf{Precision} (\(P\)): Der Anteil der generierten Testfälle, die als korrekt eingestuft wurden und tatsächlich korrekt sind.
+    \begin{equation*}
+    P = \frac{\text{True Positives (TP)}}{\text{True Positives (TP)} + \text{False Positives (FP)}}
+    \end{equation*}
+    \item \textbf{Recall} (\(R\)): Der Anteil der tatsächlich korrekten Testfälle, die von der KI erkannt wurden.
+    \begin{equation*}
+    R = \frac{\text{True Positives (TP)}}{\text{True Positives (TP)} + \text{False Negatives (FN)}}
+    \end{equation*}
+    \item \textbf{F1} (\(F1\)): Mit dem F1 Wert lässt sich die Factual Correctness bestimmen. Die Werte liegen zwischen 0 und 1 und je näher der Wert an 1 geht, desto mehr Factual Correctness besitzt dieser Testschritt.
+    \begin{equation*}
+    F1 = \frac {2 \times \text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
+\end{equation*}
 \end{itemize}
-Durch diese Metrik kann der Anteil der kohärenten Testschritte pro Testfall in Prozent \% gemessen werden. Um die Kohärenz der Testschritte zu bestimmen, werden die von GPT-4 generierten Testfälle mit den von \textcite{Pavankumar21github2022} erstellten Testfällen verglichen. Diese sind die Benchmark. So kann pro Testszenario überprüft werden, ob GPT-4 Testschritte weglässt oder in einem Testschritt falsche Begriffe oder Schritte vorkommen oder es Funktionen testet, die weder in der Anforderungsspezifikation oder auf der Website zu finden sind. Ein Testschritt, welcher in der falschen logischen Reihenfolge steht, ist ebenfalls nicht kohärent. Aus diesem Grund ist es für diese Arbeit essenziell, die von \textcite{Pavankumar21github2022} erstellten Testfälle zu haben, da ohne sie keine Aussage über die Kohärenz der von GPT-4 getroffen werden kann. Die Kohärenzrate hat zwei Kategorien, welche in folgender Tabelle abgebildet sind.\\
+
+\noindent Dabei sind in dieser Arbeit an \textcite{Ragas2025} angelehnt:
+\begin{itemize}
+    \item \text{True Positive (TP)} Anzahl faktisch korrekten Testschritte pro Testfall,
+    \item \text{False Positive (FP)} Anzahl faktisch nicht korrekten Testschritte pro Testfall, d.h. Testschritte welche sich nicht in der Anforderungsspezifikation oder den Screenshots des Testszenario befinden,
+    \item \text{False Negative (FN)} die Anzahl der Testschritte, welche sich entweder in der Anforderungsspezifikation oder den Screenshots des Testszenario, jedoch nicht in dem von GPT-4 generierten Testfall befinden.
+\end{itemize}
+Durch diese Metrik kann der Anteil der faktisch korrekten Testschritte pro Testfall in Prozent \% gemessen werden. Um die Factual Correctness der Testschritte zu bestimmen, werden die von GPT-4 generierten Testfälle mit den von \textcite{Pavankumar21github2022} erstellten Testfällen verglichen. Diese sind die Benchmark. So kann pro Testszenario überprüft werden, ob GPT-4 Testschritte weglässt oder in einem Testschritt falsche Begriffe oder Schritte vorkommen oder es Funktionen testet, die weder in der Anforderungsspezifikation oder auf der Website zu finden sind. Ein Testschritt, welcher in der falschen logischen Reihenfolge steht, ist ebenfalls nicht faktisch korrekt. Aus diesem Grund ist es für diese Arbeit essenziell, die von \textcite{Pavankumar21github2022} erstellten Testfälle zu haben, da ohne sie keine Aussage über die Factual Correctness der von GPT-4 getroffen werden kann. Die Testschritte werden folgendermaßen eingeordnet:\\
 \\
-\textbf{Kohärenzrate:} 
+\textbf{Factual Correctness:} 
 \begin{table}[H]
  \begin{center}
 \begin{tabular}{|l|l|l|}
 \hline
                & 1. Positiv & 2. Negativ  \\ \hline
-Anteil KT in \%  & 100 \% & 100 \% <        \\ \hline
+F1-Wert  & 1 & 1 <        \\ \hline
 
 \end{tabular}
 \end{center}
 \end{table}
-\noindent Es wird eingeordnet, wie viel Prozent der Testfälle, in welcher der zwei Kategorien eingeordnet werden. Anschließend wird der Mittelwert berechnet, um die Gesamtrate aller Testfälle zu ermitteln. Von einem Testfall wird erwartet, dass er sich in der 1. Kategorie befindet.\\
+\noindent Es wird eingeordnet, wie viel Prozent der Testfälle, in welcher der zwei Kategorien eingeordnet werden. 
+\newpage
+
+\noindent Anschließend wird der Mittelwert berechnet, um die Gesamtrate aller Testfälle zu ermitteln. Von einem Testfall wird erwartet, dass er sich in der 1. Kategorie befindet.\\
 \\
-Folgendes Beispiel zeigt einen von GPT-4 erstellten Testfall, welcher sowohl die richtige Testfallstruktur als auch nur kohärente Testschritte aufweist.
+Folgendes Beispiel zeigt einen von GPT-4 erstellten Testfall, welcher sowohl die richtige Testfallstruktur als auch nur faktisch korrekte Testschritte aufweist.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{Bilder/OpenAI_Testfall welcher die Qualitätsmetriken erfüllt.jpg}
-    \caption{Ein von GPT-4 erstellter Testfall, welcher der Testfallstruktur entspricht und kohärente Testschritte besitzt}
+    \includegraphics[width=1\linewidth]{Bilder/OpenAI_Testfall welcher die Qualitätskriterien erfüllt.jpg}
+    \caption{Ein von GPT-4 erstellter Testfall, welcher der Testfallstruktur entspricht und nur faktisch korrekte Testschritte besitzt}
     \label{fig:enter-label}
 \end{figure}
 
-\noindent Nur wenn ein Testfall die richtige Teststruktur und kohärente Testschritte besitzt, ist es sinnvoll, ihn auf seine Qualität in Bezug auf Abdeckung, Benutzerfreundlichkeit, Wartbarkeit und Zuverlässigkeit auszuwerten. Außerdem können die Qualitätskriterien ohne die beiden Qualitätsmetriken nicht bewertet werden. In Kapitel \ref{sec:qualitätskriterien} steht, welche Rolle diese dabei spielen.
-%subsection qualitätsmetriken (end)
+\noindent Nur wenn ein Testfall die richtige Teststruktur und faktisch korrekte Testschritte besitzt, ist es sinnvoll, ihn auf seine Qualität in Bezug auf die Abdeckung auszuwerten.
+%subsection factualCorrectness (end)
 
-\subsection{Qualitätskriterien} % fold
-\label{sec:qualitätskriterien}
-In dieser Arbeit gibt es vier Qualitätskriterien, welche \textcite{Tran2025} in ihrem Werk, ermittelt haben. Diese werden verwendet, um die von GPT-4 von \textcite{OpenAI2025} generierten Testfälle auszuwerten. Dabei helfen die in Kapitel \ref{sec:qualitätsmetriken} aufgestellten Kriterien und Metriken. Wie in Kapitel \ref{sec:methodik} geschrieben, stellen \textcite{Tran2025} Qualitätskriterien vor, anhand derer gute Testfälle erkannt werden können. Dabei definieren \textcite{Tran2025} diese folgend und stellen Anforderungen auf, um diese zu messen:\\
+\subsection{Coverage (Deutsch: Abdeckung)} % fold
+\label{sec:coverage}
+
+Um das Kriterium Coverage zu berechnen, werden in dieser Arbeit die Werke von \parencite{Nirpals2011, Lazić2013} verwendet. Diese verwenden die Metrik Automation Coverage, welche modifiziert verwendet wird, um die Abdeckung pro Testszenario zu berechnen.\\
 \\
-\textbf{\underline{1. Coverage (Deutsch: Abdeckung):}}\\
-\\
-Das Kriterium Abdeckung wird von \textcite{Tran2025} als ein Wert beschrieben, welcher die Vollständigkeit und Effektivität sicherstellt. In dieser Arbeit wird dabei auf das Requirement Coverage von \textcite{Tran2025} bezogen. Um das Kriterium Coverage zu berechnen, werden in dieser Arbeit die Werke von \parencite{Nirpals2011, Lazić2013} verwendet. Diese verwenden die Metrik Automation Coverage, welche modifiziert verwendet wird, um die Abdeckung pro Testszenario zu berechnen.\\
-\\
-Die Abdeckung wird für jedes Testszenario einzeln und danach der Mittelwert berechnet. Die Streuung wird mit einem Boxplot dargestellt. Für die Abdeckung wird die folgende Formel verwendet, welche die für diese Arbeit modifizierte Formel von \parencite{Nirpals2011, Lazić2013} ist:
+Die Abdeckung wird für jedes Testszenario einzeln und danach der Mittelwert berechnet. Die Streuung wird mit einem Boxplot dargestellt.
+\newpage
+
+\noindent Für die Abdeckung wird die folgende Formel verwendet, welche die für diese Arbeit modifizierte Formel von \parencite{Nirpals2011, Lazić2013} ist:
 \begin{equation*}
     COV = \frac{TC_{GPT-4}}{TC_{Manual}} \times 100 \%
 \end{equation*}
@@ -597,34 +582,10 @@ Die Abdeckung wird für jedes Testszenario einzeln und danach der Mittelwert ber
     \item $TC_{GPT}$ ist die Anzahl der von GPT-4 generierten Testfälle pro Testszenario.
     \item $TC_{Manual}$ ist die Anzahl der von \textcite{Pavankumar21github2022} manuell erstellten Testfälle desselben Testszenario, welche als Benchmark dienen.
 \end{itemize}
-Den Wert für die Abdeckung misst sich mithilfe der in \ref{sec:qualitätsmetriken} beschriebenen Metriken Testfallstruktur und Kohärenzrate. Pro Testszenario, zum Beispiel im Testszenario Register Account, wird GPT-4 dazu aufgefordert, alle möglichen Testfälle dieses Testszenarios zu generieren. Diese werden dokumentiert und ausgewertet. Für die Auswertung dienen die manuell erstellten Testfälle von \textcite{Pavankumar21github2022} als Benchmark. Die Testfälle müssen dabei die Testfallstruktur aufweisen und gleichzeitig nur Testschritte besitzen, die faktisch korrekt und aufeinander aufgebaut sind. Die Anzahl der Testfälle, die durch GPT-4 pro Testszenario erstellt wurden und dabei beide Qualitätsmetriken erfüllen ist der Wert $TC_{GPT}$. Die Testfälle von \textcite{Pavankumar21github2022}, welche es pro Testszenario gibt, ist der Wert für $TC_{Manual}$. Wenn GPT-4 20 Testfälle für ein Testszenario generiert hat, dabei aber 10 Testfälle entweder die Testfallstruktur nicht aufweisen oder nicht korrekte Testschritte besitzen und \textcite{Pavankumar21github2022} ebenfalls 20 Testfälle für dieses Testszenario erstellt hat, ist der Wert der Abdeckung in diesem Testszenario bei 50 \%.\\
+Den Wert für die Abdeckung misst sich mithilfe der Metriken Testfallstruktur und Factual Correctness. Pro Testszenario, zum Beispiel im Testszenario Register Account, wird GPT-4 dazu aufgefordert, alle möglichen Testfälle dieses Testszenarios zu generieren. Diese werden dokumentiert und ausgewertet. Für die Auswertung dienen die manuell erstellten Testfälle von \textcite{Pavankumar21github2022} als Benchmark. Die Testfälle müssen dabei die Testfallstruktur aufweisen und gleichzeitig nur Testschritte besitzen, die faktisch korrekt und aufeinander aufgebaut sind. Die Anzahl der Testfälle, die durch GPT-4 pro Testszenario erstellt wurden und dabei beide Qualitätskriterien erfüllen ist der Wert $TC_{GPT}$. Die Testfälle von \textcite{Pavankumar21github2022}, welche es pro Testszenario gibt, ist der Wert für $TC_{Manual}$. Wenn GPT-4 20 Testfälle für ein Testszenario generiert hat, dabei aber 10 Testfälle entweder die Testfallstruktur nicht aufweisen oder nicht korrekte Testschritte besitzen und \textcite{Pavankumar21github2022} ebenfalls 20 Testfälle für dieses Testszenario erstellt hat, ist der Wert der Abdeckung in diesem Testszenario bei 50 \%.\\
 \\
-\textbf{\underline{2. Maintainability (Deutsch: Wartbarkeit):}}\\
-\\
-Ein Kriterium, welches nach \textcite{Tran2025} einen Testfall daran misst, wie dieser sich in Bezug auf Verbesserungen und Änderungen in den Anforderungen anpassen kann, ist die Wartbarkeit. Dabei spielen laut \textcite{Tran2025} die Nachverfolgbarkeit, wie sehr der Testfall mit den Anforderungen verbunden ist und die Homogenität, die kontinuierliche Einhaltung der gleichen Struktur und Regeln, eine Rolle.\\
-\\
-Die in Kapitel \ref{sec:qualitätsmetriken} stehende Qualitätsmetrik Testfallstruktur, welche sicherstellt, dass die Testfallstruktur nach \textcite{IsoIecIeee2024} eingehalten wird, eignet sich gut, um die Homogenität zu messen. Es wird so sichergestellt, dass die von GPT-4 erstellten Testfälle nach der gleichen Struktur und Regeln erstellt werden.\\
-\\
-Die Kohärenzrate, welche in Kapitel \ref{sec:qualitätsmetriken} aufgestellt wird und welche an \textcite{Li2024} angelehnt ist, stellt sicher, dass die von GPT-4 erstellten Testfälle alle Schritte aus den Anforderungen einhalten. Damit kann durch diesen Wert die Nachverfolgbarkeit bewertet werden und stellt dabei sicher, dass es keine unlogischen Testschritte gibt, die später gewartet werden müssen.\\
-\newpage
-
-\noindent Die Höhe der Testfallstruktur und die Kohärenzrate in den einzelnen Testszenarien zeigt somit die Wartbarkeit der Testfälle, welche mit GPT-4 erstellt werden. Haben diese die gleiche Struktur und nur richtige Schritte, kann GPT-4 auf Änderungen gut reagieren und neue Testfälle in der gleichen Form generieren.\\
-\\
-\textbf{\underline{3. Reliability (Deutsch: Zuverlässigkeit):}}\\
-\\
-Die Kriterien Abdeckung und Wartbarkeit sind wichtig, bringen jedoch nicht viel, wenn die von GPT-4 generierten Testfälle eine gute Abdeckung und Wartbarkeit nicht dauerhaft und in verschiedenen Bereichen aufrechterhalten können und somit nicht zuverlässig sind. Das Kriterium Zuverlässigkeit wird von \textcite{Tran2025} als eine Fähigkeit beschrieben, trotz unterschiedlicher Anforderungen und Bedingungen ein Leistungsniveau aufrechtzuerhalten.\\
-\\
-In dieser Arbeit werden von GPT-4 Testfälle in 31 verschiedenen Testszenarien getestet. Wenn die in Kapitel \ref{sec:qualitätsmetriken} aufgestellten Qualitätsmetriken Testfallstruktur und Kohärenzrate nach \textcite{Li2024} im Mittelwert hoch sind, zeigt es, dass die von GPT-4 erstellten Testfälle über unterschiedliche Anforderungen hinweg, richtig aufgebaut, logisch und richtig sind. Das Qualitätskriterium Abdeckung spielt ebenfalls eine große Rolle. Diese wird ebenfalls über die Testszenarien hinweg ausgewertet. Dazu werden die Werte pro Testszenario in einer Tabelle dokumentiert und ein Boxplot erstellt, um die Streuung zu messen.\\
-\\
-\textbf{\underline{4. Usability (Deutsch: Benutzerfreundlichkeit):}}\\
-\\
-Benutzerfreundlichkeit misst nach \textcite{Tran2025} Testfälle daran, wie leicht diese ausgeführt, verwendet und verstanden werden können. Dabei spielen laut \textcite{Tran2025} Vollständigkeit, Lesbarkeit und Verständlichkeit eine Rolle. Die in Kapitel \ref{sec:qualitätsmetriken} aufgestellte Qualitätsmetrik Testfallstruktur stellt sicher, dass die durch GPT-4 erstellten Testfälle die Testfallstruktur nach \textcite{IsoIecIeee2024} erfüllen.\\
-\\
-Diese Qualitätsmetrik stellt die Benutzerfreundlichkeit der Testfälle sicher, da diese übersichtlich und nach einem Standard aufgebaut sind, wenn sie diese Qualitätsmetrik einhalten. Dabei wird der Wert pro Testszenario gemessen und am Ende werden die Werte aller Testszenarien mit dem Mittelwert berechnet. So kann der Prozentsatz aus allen Testszenarien bestimmt werden. Es wird ein Boxplot erstellt, um die Streuung zu messen. Wenn es GPT-4 gelingt, in kürzester Zeit und immer nach dem gleichen in Kapitel \ref{sec:promptUndVerwendeteMethoden} beschriebenen Vorgehen und Prompt die Testfallstruktur über sämtliche Testszenarien hinweg in einem hohen Maße einzuhalten, zeugt dies von einer großen Benutzerfreundlichkeit.\\
-\\
-Anhand dieser Qualitätskriterien von \textcite{Tran2025} werden die durch GPT-4 erstellten Testfälle in Kapitel \ref{sec:ergebnisse} ausgewertet und diskutiert. In Kapitel \ref{sec:fazitUndAusblick} werden diese Ergebnisse eingeordnet.
-% subsection qualitätskriterien (end)
-% section qualitätssmetrikenUndKriterien (end)
+% subsection coverage (end)
+% section qualitätskriterien (end)
 % chapter methodik (end)
 
 \chapter{Ergebnisse} % (fold)
@@ -637,13 +598,11 @@ Alle Testdaten, die Anforderungsspezifikationen, die manuellen sowie die von GPT
 Dies sind die Ergebnisse der KI
 TODO Ergebnisse zeigen\\
 \\
-\textbf{\underline{1. Coverage (Deutsch: Abdeckung)}}\\
+\textbf{\underline{1. Testfallstruktur}}\\
 \\
-\textbf{\underline{2. Maintainability (Deutsch: Wartbarkeit)}}\\
+\textbf{\underline{2. Factual Correctness}}\\
 \\
-\textbf{\underline{3. Reliability (Deutsch: Zuverlässigkeit)}}\\
-\\
-\textbf{\underline{4. Usability (Deutsch: Benutzerfreundlichkeit)}}
+\textbf{\underline{3. Coverage (Deutsch: Abdeckung)}}\\
 % section vorliegendeErgebnisse (end)
 
 \section{Auswertung der Ergebnisse} % (fold)
@@ -651,13 +610,11 @@ TODO Ergebnisse zeigen\\
 Die von der KI generierten Testfälle schneiden wie folgt ab:
 TODO Ergebnisse auswerten und beschreiben\\
 \\
-\textbf{\underline{1. Coverage (Deutsch: Abdeckung)}}\\
+\textbf{\underline{1. Testfallstruktur}}\\
 \\
-\textbf{\underline{2. Maintainability (Deutsch: Wartbarkeit)}}\\
+\textbf{\underline{2. Factual Correctness}}\\
 \\
-\textbf{\underline{3. Reliability (Deutsch: Zuverlässigkeit)}}\\
-\\
-\textbf{\underline{4. Usability (Deutsch: Benutzerfreundlichkeit)}}
+\textbf{\underline{3. Coverage (Deutsch: Abdeckung)}}\\
 % section auswertungDerErgebnisse (end)
 
 \section{Diskussion} % (fold)
