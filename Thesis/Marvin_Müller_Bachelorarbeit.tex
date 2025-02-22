@@ -610,19 +610,60 @@ Dieser Vergleich zeigt anschaulich, wie wichtig die Einhaltung der drei Qualitä
 
 \chapter{Ergebnisse} % (fold)
 \label{sec:ergebnisse}
-In Kapitel \ref{sec:ergebnisse} werden die Ergebnisse der von der KI erstellten Anforderungstestfälle dokumentiert, beschrieben und eingeordnet.
-Alle Testdaten, die Anforderungsspezifikationen, die manuellen sowie die von GPT-4 von \textcite{OpenAI2025} generierten Testfälle und die Auswertungstabellen finden sich im GitHub-Projekt von \textcite{Müller2025} dem Autor dieser Arbeit.
+In Kapitel \ref{sec:ergebnisse} werden die Ergebnisse der von der GPT-4 von \textcite{OpenAI2025} erstellten Anforderungstestfälle dokumentiert, beschrieben und eingeordnet.
+Alle Testdaten, die Anforderungsspezifikationen, die manuellen sowie die von GPT-4 von \textcite{OpenAI2025} generierten Testfälle und die Auswertungstabellen finden sich im GitHub-Projekt von \textcite{Müller2025}.
 
 \section{Vorliegende Ergebnisse} % (fold)
 \label{sec:vorliegendeErgebnisse}
-Dies sind die Ergebnisse der KI
-TODO Ergebnisse zeigen\\
+Im Folgenden werden die Ergebnisse, welche die von GPT-4 von \textcite{OpenAI2025} erstellten Testfälle in Bezug auf die in Kapitel \ref{sec:qualitätskriterien} aufgestellten Qualitätskriterien erreicht haben präsentiert.\\
 \\
 \textbf{\underline{1. Testfallstruktur}}\\
 \\
-\textbf{\underline{2. Factual Correctness}}\\
+Folgende Tabelle zeigt das Abschneiden der von GPT-4 erstellten Testfälle in Bezug auf das Qualitätskriterium Testfallstruktur:\\
 \\
-\textbf{\underline{3. Coverage (Deutsch: Abdeckung)}}\\
+\textbf{Testfallstruktur:} 
+\begin{table}[H]
+ \begin{center}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+              Testszenario: & Anzahl Testfälle & 1. Positiv & 2. Negativ  & Positiv in \%\\ \hline
+Register  & 20 & 20 & 0 & 100 \%       \\ \hline
+
+\end{tabular}
+\end{center}
+\end{table}
+
+\noindent\textbf{\underline{2. Factual Correctness}}\\
+\\
+Folgende Tabelle zeigt das Abschneiden der von GPT-4 erstellten Testfälle in Bezug auf das Qualitätskriterium Factual Correctness:\\
+\\
+\textbf{Factual Correctness:} 
+\begin{table}[H]
+ \begin{center}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+              Testszenario: & Anzahl Testfälle & 1. Positiv & 2. Negativ  & Positiv in \%\\ \hline
+Register  & 20 & 17 & 3 & 85 \%       \\ \hline
+
+\end{tabular}
+\end{center}
+\end{table}
+
+\noindent\textbf{\underline{3. Coverage (Deutsch: Abdeckung)}}\\
+\\
+Folgende Tabelle zeigt das Abschneiden der von GPT-4 erstellten Testfälle in Bezug auf das Qualitätskriterium Abdeckung. Dabei werden nur die Testfälle gezählt, welche sowohl im Qualitätskriterium Testfallstruktur, als auch im Qualitätskriterium Factual Correctness im positiven Bereich liegen. Diese werden mit der Anazhl der von \textcite{Pavankumar21github2022} erstellten Testfälle verglichen:\\
+\\
+\textbf{Abdeckung:} 
+\begin{table}[H]
+ \begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+              Testszenario: & Anzahl manuelle Testfälle & Anzahl GPT-4 Testfälle & Abdeckung in \%\\ \hline
+Register  & 27 & 17 & 63 \%       \\ \hline
+
+\end{tabular}
+\end{center}
+\end{table}
 % section vorliegendeErgebnisse (end)
 
 \section{Auswertung der Ergebnisse} % (fold)
