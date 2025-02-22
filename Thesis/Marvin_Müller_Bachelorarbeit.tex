@@ -424,14 +424,14 @@ In Kapitel \ref{sec:grundlagenUndHintergrund} werden Methoden zur Testfallgeneri
     \item Das LLM muss Retrieval-Augmented Generation (RAG) verwenden und in der Lage sein, Bilder zu erkennen, um effiziente Testfälle aus den Anforderungsspezifikationen zu generieren.
 \end{itemize}
 Für diese Arbeit wird GPT-4 von \textcite{OpenAI2025} verwendet, da es diese Punkte erfüllt. 
-GPT-4 ist kostenlos und öffentlich nutzbar. Die Nutzung jedoch für den kostenlosen Zugang nur eingeschränkt. Die uneingeschränkte Version kostet am 08.02.2025 20 US-Dollar im Monat. Wie \textcite{Backlinko2025} berichtet, hatte ChatGPT von \textcite{OpenAI2025} im Januar 2025 nach eigenen Angaben über 300 Millionen Nutzer. Nutzer können es mit einer grafischen Benutzeroberfläche nutzen und es als Werkzeug zur Testfallgenerierung benutzen.\\
+GPT-4 ist kostenlos und öffentlich nutzbar. Die Nutzung jedoch für den kostenlosen Zugang nur eingeschränkt. Die uneingeschränkte Version kostet am 08.02.2025 20 US-Dollar im Monat. Wie \textcite{Backlinko2025} berichtet, hatte ChatGPT von \textcite{OpenAI2025} im Januar 2025 nach eigenen Angaben über 300 Millionen Nutzer. Somit ist GPT-4 ein bekanntes LLM. Nutzer können es mit einer grafischen Benutzeroberfläche nutzen und es als Werkzeug zur Testfallgenerierung benutzen.\\
 \\
 Da GPT-4 Bilder erkennen und mit Dokumenten arbeiten kann, ist es in der Lage, die in Kapitel \ref{sec:rag} erklärte Methode RAG zu verwenden. Es kann somit Informationen aus den in Kapitel \ref{sec:testdaten} beschriebenen Anforderungsspezifikationen ziehen und dabei die Webseite und ihr Verhalten in Form von Screenshots erkennen und damit arbeiten. Außerdem besitzt GPT-4 eine Erinnerungsfunktion, mit welcher es auf wichtige Anmerkungen und Informationen, aus vorherigen Prompts zurückgreifen kann.
 \newpage
 
 \noindent Es muss nicht mit viel Aufwand, Zeit und Ressourcen antrainiert oder ein eigenes Modell entwickelt werden. GPT-4 ist in vielen Sprachen nutzbar und kann so von Nutzern weltweit verwendet werden.\\
 \\
-Genauere Informationen, wie GPT-4 gegenüber anderen GPT-Modellen wie zum Beispiel GPT-3.5 abschneidet, findet sich auf der offiziellen Website von \textcite{OpenAI2025}. In Kapitel \ref{sec:relatedWorkUndAktuelleForschung} wird aufgezeigt, dass die Autoren \textcite{Kirinuki2024} GPT-4 benutzen um Black-Box-Tests zu erzeugen und dass diese im Bereich der Testabdeckung, eine gleich gute oder sogar bessere Abdeckungsrate erreichen, als von Menschen erstellte Testfälle. Diese Erkenntnisse zeigen, dass GPT-4 sich als LLM für diese Arbeit eignet, da es die zwei Bedingungen erfüllt und bereits in einem ähnlichen Bereich von \textcite{Kirinuki2024} eingesetzt wurde.\\
+In Kapitel \ref{sec:relatedWorkUndAktuelleForschung} wird aufgezeigt, dass die Autoren \textcite{Kirinuki2024} GPT-4 benutzen um Black-Box-Tests zu erzeugen und dass diese im Bereich der Testabdeckung, eine gleich gute oder sogar bessere Abdeckungsrate erreichen, als von Menschen erstellte Testfälle. Diese Erkenntnisse zeigen, dass GPT-4 sich als LLM für diese Arbeit eignet, da es die zwei Bedingungen erfüllt und bereits in einem ähnlichen Bereich von \textcite{Kirinuki2024} eingesetzt wurde.\\
 \\
 Mit einem Prompt kann GPT-4 nun Testfälle erzeugen. Wie die Testdaten aufgebaut sind, welcher der Prompt benutzt wird und nach welchen Kriterien die Ergebnisse eingeordnet und ausgewertet werden, wird in Kapitel \ref{sec:testdaten}, Kapitel \ref{sec:promptUndVerwendeteMethoden} und Kapitel \ref{sec:qualitätskriterien} beschrieben.
 % section verwendetesLLM (end)
@@ -501,7 +501,7 @@ Einstufung  & 0 Merkmale fehlen       & $1 \geq \text{Merkmale fehlen}$     \\ \
 \end{center}
 \end{table}
 
-\noindent Die Testfälle werden pro Testszenario ausgewertet. Am Ende wird angegeben, wie viel Prozent der Testfälle in der positiven oder in der negativen Kategorie pro Testszenario eingeordnet werden. Dies misst sich, in dem die Anzahl der in der ersten Kategorie eingeordneten Testfälle pro Testszenario mit der Gesamtzahl der Testfälle pro Testszenario dividiert werden. Zum Beispiel, wenn es in einem Testszenario acht positiv und zwei negativ eingestufte Testfälle gibt, sind die Testfälle in diesem Testszenario zu 80 \% positiv. Dies wird pro Testszenario durchgeführt und am Ende wird der Mittelwert aller Testszenarien bestimmt. Um die Streuung zu bestimmen, wird ein Boxplot erstellt.
+\noindent Die Testfälle werden pro Testszenario ausgewertet. Am Ende wird angegeben, wie viel Prozent der Testfälle in der positiven oder in der negativen Kategorie pro Testszenario eingeordnet werden. Dies misst sich, in dem die Anzahl der in der ersten Kategorie eingeordneten Testfälle pro Testszenario mit der Gesamtzahl der Testfälle pro Testszenario dividiert werden. Zum Beispiel, wenn es in einem Testszenario acht positiv und zwei negativ eingestufte Testfälle gibt, sind die Testfälle in diesem Testszenario zu 80 \% positiv. Dies wird pro Testszenario durchgeführt und am Ende wird der Mittelwert aller Testszenarien bestimmt. Um die Streuung zu bestimmen, wird ein Boxplot erstellt. Da es Ausreißer bei den Werten, je nach Testszenario geben kann.
 %subsection testfallstruktur (end)
 
 \subsection{Factual Correctness} % fold
@@ -628,6 +628,7 @@ Folgende Tabelle zeigt das Abschneiden der von GPT-4 erstellten Testfälle in Be
 \hline
               Testszenario: & Anzahl Testfälle & 1. Positiv & 2. Negativ  & Positiv in \%\\ \hline
 Register  & 20 & 20 & 0 & 100 \%       \\ \hline
+Login  & 22 & 22 & 0 & 100 \%       \\ \hline
 
 \end{tabular}
 \end{center}
@@ -644,6 +645,7 @@ Folgende Tabelle zeigt das Abschneiden der von GPT-4 erstellten Testfälle in Be
 \hline
               Testszenario: & Anzahl Testfälle & 1. Positiv & 2. Negativ  & Positiv in \%\\ \hline
 Register  & 20 & 17 & 3 & 85 \%       \\ \hline
+Login  & 22 & 19 & 3 & 86,3 \%       \\ \hline
 
 \end{tabular}
 \end{center}
@@ -660,6 +662,7 @@ Folgende Tabelle zeigt das Abschneiden der von GPT-4 erstellten Testfälle in Be
 \hline
               Testszenario: & Anzahl manuelle Testfälle & Anzahl GPT-4 Testfälle & Abdeckung in \%\\ \hline
 Register  & 27 & 17 & 63 \%       \\ \hline
+Login  & 23 & 19 &  83,6 \%       \\ \hline
 
 \end{tabular}
 \end{center}
