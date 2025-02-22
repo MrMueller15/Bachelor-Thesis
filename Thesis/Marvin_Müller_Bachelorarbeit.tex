@@ -465,7 +465,7 @@ In diesem Kapitel wird beschrieben, wie in dieser Arbeit Testfälle durch GPT-4 
     \caption{Ein Prompt an GPT-4}
     \label{fig:enter-label}
 \end{figure}
-\noindent GPT-4 wird dazu aufgefordert alle Funktionen pro Testszenario, von denen es 31 Stück gibt, als jeweils einzelnen Testfall zu generieren. Es soll dabei nur Informationen aus der Anforderungsspezifikation und aus den Screenshots benutzen und dabei die Struktur aus \textcite{IsoIecIeee2024} erfüllen. Dies ist wichtig, da somit die Qualitätskriterien bereits im Prompt definiert sind und GPT-4 diese erfüllen soll. Nach dem ersten Prompt wird noch einmal gefragt, ob es eine Funktion vergessen hat. Die Testfälle werden dann dokumentiert. Anschließend werden diese mit den manuell erstellten Testfällen, wie in Kapitel \ref{sec:testdaten} erläutert und auf ihre Korrektheit, Logik und Abdeckung überprüft. Anschließend werden diese ausgewertet. Die Metriken zu der Auswertung der generierten Testfälle finden sich in Kapitel \ref{sec:qualitätskriterien}.
+\noindent GPT-4 wird dazu aufgefordert alle Funktionen pro Testszenario, von denen es 31 Stück gibt, als jeweils einzelnen Testfall zu generieren. Es soll dabei nur Informationen aus der Anforderungsspezifikation und aus den Screenshots benutzen und dabei die Struktur aus \textcite{IsoIecIeee2024} erfüllen. Dies ist wichtig, da somit die Qualitätskriterien bereits im Prompt definiert sind und GPT-4 diese erfüllen soll. Nach dieser Aufforderung wird noch einmal gefragt, ob GPT-4 alle Funktionen oder wichtige Testfälle berücksichtigt hat. Die Testfälle werden dann dokumentiert. Anschließend werden diese mit den manuell erstellten Testfällen, wie in Kapitel \ref{sec:testdaten} erläutert und auf ihre Korrektheit, Logik und Abdeckung überprüft. Anschließend werden diese ausgewertet. Die Metriken zu der Auswertung der generierten Testfälle finden sich in Kapitel \ref{sec:qualitätskriterien}.
 % section promptUndVerwendeteMethoden (end)
 \newpage
 
@@ -531,11 +531,11 @@ Mit dem Qualitätskriterium Factual Correctness von \textcite{Ragas2025} wird in
 
 \noindent Dabei sind in dieser Arbeit an \textcite{Ragas2025} angelehnt:
 \begin{itemize}
-    \item \text{True Positive (TP)} Anzahl faktisch korrekten Testschritte pro Testfall,
-    \item \text{False Positive (FP)} Anzahl faktisch nicht korrekten Testschritte pro Testfall, d.h. Testschritte welche sich nicht in der Anforderungsspezifikation oder den Screenshots des Testszenario befinden,
+    \item \text{True Positive (TP)} Anzahl faktisch korrekter Testschritte pro Testfall,
+    \item \text{False Positive (FP)} Anzahl faktisch nicht korrekter Testschritte pro Testfall, d.h. Testschritte welche sich nicht in der Anforderungsspezifikation oder den Screenshots des Testszenario befinden,
     \item \text{False Negative (FN)} die Anzahl der Testschritte, welche sich entweder in der Anforderungsspezifikation oder den Screenshots des Testszenario, jedoch nicht in dem von GPT-4 generierten Testfall befinden.
 \end{itemize}
-Durch diese Metrik kann der Anteil der faktisch korrekten Testschritte pro Testfall in Prozent \% gemessen werden. Um die Factual Correctness der Testschritte zu bestimmen, werden die von GPT-4 generierten Testfälle mit den von \textcite{Pavankumar21github2022} erstellten Testfällen verglichen. Diese sind die Benchmark. So kann pro Testszenario überprüft werden, ob GPT-4 Testschritte außer Acht lässt oder in einem Testschritt falsche Begriffe oder Schritte vorkommen oder es Funktionen testet, die weder in der Anforderungsspezifikation oder auf der Website zu finden sind. Ein Testschritt, welcher in der falschen logischen Reihenfolge steht, ist ebenfalls nicht faktisch korrekt. Aus diesem Grund ist es für diese Arbeit essenziell, die von \textcite{Pavankumar21github2022} erstellten Testfälle zu haben, da ohne sie keine Aussage über die Factual Correctness der von GPT-4 getroffen werden kann. Die Testschritte werden folgendermaßen eingeordnet:\\
+Durch diese Metrik kann der Anteil der faktisch korrekten Testschritte pro Testfall in Prozent gemessen werden. Um die Factual Correctness der Testschritte zu bestimmen, werden die von GPT-4 generierten Testfälle mit den von \textcite{Pavankumar21github2022} erstellten Testfällen verglichen. Diese sind die Benchmark. So kann pro Testszenario überprüft werden, ob GPT-4 Testschritte außer Acht lässt oder in einem Testschritt falsche Begriffe oder Schritte vorkommen oder es Funktionen testet, die weder in der Anforderungsspezifikation oder auf der Website zu finden sind. Ein Testschritt, welcher in der falschen logischen Reihenfolge steht, ist ebenfalls nicht faktisch korrekt. Aus diesem Grund ist es für diese Arbeit essenziell, die von \textcite{Pavankumar21github2022} erstellten Testfälle zu haben, da ohne sie keine Aussage über die Factual Correctness der von GPT-4 getroffen werden kann. Die Testschritte werden folgendermaßen eingeordnet:\\
 \\
 \textbf{Factual Correctness:} 
 \begin{table}[H]
@@ -584,6 +584,26 @@ Die Abdeckung wird für jedes Testszenario einzeln und danach der Mittelwert ber
 \end{itemize}
 Den Wert für die Abdeckung misst sich mithilfe der Metriken Testfallstruktur und Factual Correctness. Pro Testszenario, zum Beispiel im Testszenario Register Account, wird GPT-4 dazu aufgefordert, alle möglichen Testfälle dieses Testszenarios zu generieren. Diese werden dokumentiert und ausgewertet. Für die Auswertung dienen die manuell erstellten Testfälle von \textcite{Pavankumar21github2022} als Benchmark. Die Testfälle müssen dabei die Testfallstruktur aufweisen und gleichzeitig nur Testschritte besitzen, die faktisch korrekt und aufeinander aufgebaut sind. Die Anzahl der Testfälle, die durch GPT-4 pro Testszenario erstellt wurden und dabei beide Qualitätskriterien erfüllen ist der Wert $TC_{GPT}$. Die Testfälle von \textcite{Pavankumar21github2022}, welche es pro Testszenario gibt, ist der Wert für $TC_{Manual}$. Wenn GPT-4 20 Testfälle für ein Testszenario generiert hat, dabei aber zehn Testfälle entweder die Testfallstruktur nicht aufweisen oder nicht korrekte Testschritte besitzen und \textcite{Pavankumar21github2022} ebenfalls 20 Testfälle für dieses Testszenario erstellt hat, ist der Wert der Abdeckung in diesem Testszenario bei 50 \%.\\
 \\
+Die Testdaten, werden von GPT-4 in eine Excel Datei generiert und dann nach den drei oben genannten Qualitätskriterien ausgewertet. In \ref{sec:ergebnisse} finden sich die Ergebnisse. Wie die Ergebnisse einzuordnen sind und welche Schlüsse daraus gezogen werden, findet sich in Kapitel \ref{sec:fazitUndAusblick}.
+\newpage
+
+\noindent Um die Auswertung der Ergebnisse und die Bedeutung der drei Qualitätskriterien zu verdeutlichen hilft folgende Tabelle:
+Sie zeigt einen Testfall mit einer negativen Testfallstruktur, einen mit einer Factual Correctness unter dem Wert von eins und einen Testfall, welcher eine positive Testfallstruktur aufweist und dabei eine Factual Correctness im Wert von eins besitzt:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Bilder/OpenAI_Testfallvergleich.png}
+    \caption{Vergleich dreier Testfälle, die eine unterschiedliche Qualität der Qualitätskriterien aufweisen.}
+    \label{fig:enter-label}
+\end{figure}
+
+\noindent Der erste Testfall besitzt zwar eine Factual Correctness, jedoch eine negative Testfallstruktur. Da dieser keine ID besitzt ist es schwierig diesen wiederzufinden. Auch wird nicht klar was der Ziel dieses Testfalles ist, da es kein Erwartetes Ergebnis gibt. Weil die Struktur fehlt, gilt dieser nicht als ein Testfall um die Abdeckung zu berechnen.\\
+\\
+Der zweite Testfall besitzt im Gegensatz dazu, eine gute Testfallstruktur. Allerdings ist die Factual Correctness nicht ausreichend. Im Testszenario Register, testet dieser den Button \glqq Order\grqq, welchen es in diesem Testszenario nicht gibt. Es handelt sich um eine Halluzination. Außerdem ist die Reihenfolge, bis auf den ersten Testschritt, nicht richtig. Da die Factual Correctness nicht bei eins ist, wird dieser Testfall ebenfalls nicht berücksichtigt um die Abdeckung zu berechnen.\\
+\\
+Im Gegensatz zu dem ersten und zweiten Testfall, besitzt der dritte Testfall sowohl eine positive Testfallstruktur, als auch eine Factual Correctness von 1. Dadurch wird dieser Testfall für die Berechnung der Abdeckung berücksichtigt. Wenn in diesem Beispiel \textcite{Pavankumar21github2022} drei Testfälle geschrieben hat, wäre die Abdeckung der von GPT-4 generierten Testfälle bei 1/3. Da zwei der drei Testfälle nicht berücksichtigt wurden.\\
+\\
+Dieser Vergleich zeigt anschaulich, wie wichtig die Einhaltung der drei Qualitätskriterien ist und wie diese ausgewertet werden.
+
 % subsection coverage (end)
 % section qualitätskriterien (end)
 % chapter methodik (end)
