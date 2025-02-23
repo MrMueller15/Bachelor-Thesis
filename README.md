@@ -7,9 +7,9 @@
 - [Quellen](#quellen)
 
 ## Abstract
-Diese Bachelorarbeit erforscht den Einsatz des LLM GPT-4 von OpenAI (2025) bei der
+Diese Bachelorarbeit erforscht den Einsatz des LLM GPT-4o von OpenAI (2025) bei der
 Erstellung von Anforderungstestfällen unter Berücksichtigung ihr zur Verfügung gestellten Anforderungsspezifikationen. Ziel der Arbeit und der Auswertung der Ergebnisse ist
-es herauszufinden, ob GPT-4 dazu in der Lage ist, Anforderungstestfälle zu erzeugen,
+es herauszufinden, ob GPT-4o dazu in der Lage ist, Anforderungstestfälle zu erzeugen,
 welche in in Bezug auf ihre Abdeckung, Factual Correctness und Testfallstruktur nach
 ISO/IEC/IEEE 29119-1:2022-01 (2022) eine hohe Qualität aufweisen. Um die Abdeckung,
 Factual Correctness und Testfallstruktur nach ISO/IEC/IEEE 29119-1:2022-01 (2022) zu
@@ -29,7 +29,7 @@ In dem Verzeichnis Thesis befinden sich die Bachelorarbeit und sowie die Quellen
 Die Thesis ist [hier](Thesis/Marvin_Müller_Bachelorarbeit.pdf) verfügbar.
 
 ## Testdaten
-In dem Ordner [Testdaten](Testdaten) befinden sich die für diese Arbeit verwendeten Testdaten, die von GPT-4 generierten Testfälle und deren Auswertung. 
+In dem Ordner [Testdaten](Testdaten) befinden sich die für diese Arbeit verwendeten Testdaten, die von GPT-4o generierten Testfälle und deren Auswertung. 
 
 ## Quellen
 In dem Ordner [Quellen](Quellen) befinden sich die für diese Arbeit genutzten Quellen als PDF-Dokumente.
