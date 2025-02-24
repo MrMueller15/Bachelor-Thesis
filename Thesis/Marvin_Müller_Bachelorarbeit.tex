@@ -163,11 +163,11 @@ Zum Schluss werden die durch GPT-4o erstellten Anforderungstestfälle auf ihre A
 
 \chapter{Grundlagen und Hintergrund} % (fold)
 \label{sec:grundlagenUndHintergrund}
-Das Kapitel \ref{sec:grundlagenUndHintergrund} Grundlagen und Hintergrund widmet sich den wissenschaftlichen Grundlagen und klärt über Begriffe und Methoden auf, die für das Verstehen und das Durchführen der Arbeit essenziell sind. In diesem Kapitel wird erst der Begriff KI erklärt, welche wichtigen Teilbereiche es gibt. Anschließend wird der Begriff LLM erläutert, da das LLM GPT-4o von \textcite{OpenAI2025} für das Erstellen der Testfälle verwendet wird. Danach werden Prompting und RAG beschrieben. Wichtig ist ebenfalls zu klären, wie ein Testfall aufgebaut und was eine Anforderungsspezifikation ist, um die von GPT-4o erstellten Anforderungstestfälle auswerten zu können.
+Das Kapitel \ref{sec:grundlagenUndHintergrund} Grundlagen und Hintergrund widmet sich den wissenschaftlichen Grundlagen und klärt über Begriffe und Methoden auf, die für das Verstehen und das Durchführen der Arbeit essenziell sind. In diesem Kapitel wird erst der Begriff KI erklärt und danach erläutert, welche Teilbereiche es von dieser gibt. Anschließend wird der Begriff LLM erläutert, da das LLM GPT-4o von \textcite{OpenAI2025} für das Erstellen der Testfälle verwendet wird. Danach werden Prompting und RAG beschrieben. Wichtig ist ebenfalls zu klären, wie ein Testfall aufgebaut und was eine Anforderungsspezifikation ist, um die von GPT-4o erstellten Anforderungstestfälle nach dem in Kapitel \ref{sec:testfallstruktur} aufgestellten Qualitätskriterium \glqq Testfallstruktur\grqq{} auswerten zu können.
 
 \section{KI} % (fold)
 \label{sec:KI}
-In dieser Arbeit wird KI für die Generierung von Anforderungstestfälle verwendet. Da KI ein weitverbreiteter Begriff ist und es viele Unterbereiche der KI gibt, ist es wichtig, dass hier erst ein grober Überblick über den Begriff KI verschafft wird. Danach werden einzelne Unterbereiche der KI vorgestellt und kurz beschrieben.
+In dieser Arbeit wird KI für die Generierung von Anforderungstestfällen verwendet. Da KI ein weitverbreiteter Begriff ist und es viele Unterbereiche der KI gibt, ist es wichtig, dass hier erst ein grober Überblick über den Begriff KI verschafft wird. Danach werden einzelne Unterbereiche der KI vorgestellt und kurz beschrieben.
 
 \subsection{Allgemein} % fold
 \label{sec:allgemein}
@@ -180,7 +180,7 @@ Der Begriff KI beziehungsweise im Englischen Artificial Intelligence (AI) beschr
     \caption{Die Grafik von \textcite{Hecker2018} zeigt die Interaktion eines KI-Systems mit seiner Umwelt}
     \label{fig:enter-label}
 \end{figure}
-\noindent Das Konzept hinter dieser KI besteht darin, dass Maschinen Fähigkeiten verwenden beziehungsweise imitieren können, die menschlich sind. Laut \textcite{Hecker2018} bilden sie kognitive Fähigkeiten ab. Es scheint dabei, dass die Maschinen sich selbst und ihre Umgebung wahrnehmen und interpretieren können. Ihre Wahrnehmung und ihre Interpretation speist sich dabei auf Daten, Fakten, konkreten Modellen und Regeln, welche ihr nächstes Handeln bestimmen. Während des Nutzens lernen die Maschinen dabei kontinuierlich weiter, so als würden sie ein Gedächtnis besitzen. (\cite{Bhatt2021}; \cite{Zhu2021})\\
+\noindent Das Konzept hinter dieser KI besteht darin, dass Maschinen Fähigkeiten verwenden beziehungsweise imitieren können, die menschlich sind. Laut \textcite{Hecker2018} bilden sie kognitive Fähigkeiten ab. Es scheint dabei, dass die Maschinen sich selbst und ihre Umgebung wahrnehmen und interpretieren können. Ihre Wahrnehmung und ihre Interpretation beruht sich dabei auf Daten, Fakten, konkreten Modellen und Regeln, welche ihr nächstes Handeln bestimmen. Während des Nutzens lernen die Maschinen dabei kontinuierlich weiter, so als würden sie ein Gedächtnis besitzen. (\cite{Bhatt2021}; \cite{Zhu2021})\\
 \\
 \textcite{Hecker2018} nennt noch eine dritte Form der KI, die sogenannte Superintelligenz, diese wird es jedoch laut \textcite{Hecker2018} in nächster Zeit nicht geben und somit wird in dieser Arbeit nicht auf diese eingegangen. 
 %subsection allgemein (end)
@@ -197,14 +197,14 @@ Folgende Grafik zeigt anschaulich die einzelnen Teilgebiete der KI.
     \caption{Die Grafik von \textcite{Mocko2021} zeigt die Beziehung zwischen KI, maschinellem Lernen, neuronalen Netzen und Deep Learning}
     \label{fig:enter-label}
 \end{figure}
-\noindent KI wird bereits in Kapitel \ref{sec:KI}  beschrieben und umfasst andere Bereiche. Die Grafik ist dabei so zu verstehen, dass der größere Kreis die jeweils kleineren Kreise umfasst, das heißt maschinelles Lernen ist ein Teil von KI, Neuronale Netze sind ein Teilgebiet von KI und von maschinellem Lernen und Deep Learning ist ein Teilgebiet von KI, von maschinellem Lernen und von Neuronalen Netzen. (\cite{Bhatt2021}; \cite{Zhu2021})\\
+\noindent KI wird bereits in Kapitel \ref{sec:KI}  beschrieben und umfasst andere Bereiche. Die Grafik ist dabei so zu verstehen, dass der größere Kreis die jeweils kleineren Kreise umfasst, das heißt maschinelles Lernen ist ein Teil von KI, neuronale Netze sind ein Teilgebiet von KI und von maschinellem Lernen und Deep Learning ist ein Teilgebiet von KI, von maschinellem Lernen und von Neuronalen Netzen. (\cite{Bhatt2021}; \cite{Zhu2021})\\
 \\
 Im Folgenden werden nun einige wichtige Bereiche der KI aufsteigend vom kleinsten zum größten Teilbereich erläutert.\\
 \newpage
 
 \noindent\textbf{\underline{Deep Learning:}}\\
 \\
-Deep Learing ist ein Teilgebiet der Neuronalen Netze. Sie sind dadurch gekennzeichnet, dass sie ein Hidden Layer besitzen, welches aus mehr als einer Neuronenschicht besteht. In diesem werden die Informationen neu gewichtet (\cite{Bhatt2021}); (\cite{Zhu2021}). Folgende Grafik zeigt anschaulich ein Neuronales Netz und ein Deep Learning Netz.
+Deep Learing ist ein Teilgebiet der neuronalen Netze. Sie sind dadurch gekennzeichnet, dass sie ein Hidden Layer besitzen, welches aus mehr als einer Neuronenschicht besteht. In diesem werden die Informationen neu gewichtet (\cite{Bhatt2021}); (\cite{Zhu2021}). Folgende Grafik zeigt anschaulich ein Neuronales Netz und ein Deep Learning Netz.
 \begin{figure} [H]
     \centering
     \includegraphics[width=0.75\linewidth]{./Bilder/Dymatrix_Deep_Learning_Networks.jpeg}
@@ -221,7 +221,7 @@ Bei neuronalen Netzen handelt es sich um ein Teilgebiet des maschinellen Lernens
 \\
 \textbf{\underline{Maschinelles Lernen:}}\\
 \\
-Maschinelles Lernen auf Englisch Machine Learning ist ein Teilgebiet der KI. Es beschreibt das Verfahren, in welchem Maschinen durch das Wiederholen von Aufgaben lernen. Dabei gibt es Algorithmen, welche mit Daten gefüttert werden und der Lernprozess ist eine Schleife, in welcher dieser wiederholt wird. Dadurch lernt die Maschine die Aufgabe zu lösen. Dies geschieht, in dem die Maschine Feedback erhält und so lernt, wie sie die Aufgabe richtig löst. Es wird dabei kein Lösungsweg vorgegeben wie bei herkömmlichen Algorithmen, sondern die Maschine lernt durch Versuch und Irrtum beziehungsweise auf Englisch durch Trial and Error. (\cite{Bhatt2021}; \cite{Zhu2021})
+Maschinelles Lernen, auf Englisch Machine Learning, ist ein Teilgebiet der KI. Es beschreibt das Verfahren, in welchem Maschinen durch das Wiederholen von Aufgaben lernen. Dabei gibt es Algorithmen, welche mit Daten gefüttert werden und der Lernprozess ist eine Schleife, in welcher diese Algorithmen wiederholt werden. Dadurch lernt die Maschine die Aufgabe zu lösen. Dies geschieht, in dem die Maschine Feedback erhält und so lernt, wie sie die Aufgabe richtig löst. Es wird dabei kein Lösungsweg vorgegeben wie bei herkömmlichen Algorithmen, sondern die Maschine lernt durch Versuch und Irrtum auf Englisch Trial and Error. (\cite{Bhatt2021}; \cite{Zhu2021})
 %subsection bereicheDerKI (end)
 % section KI (end)
 
@@ -231,7 +231,7 @@ In dieser Arbeit wird das LLM GPT-4o von \textcite{OpenAI2025} verwendet, um Tes
 \\
 Diese LLMs stellen eine Kombination aus zwei Bereichen der KI dar. Sie sind ein Teilgebiet von Natural Language Processing (NLP). Dieser Prozess beschreibt die Möglichkeit der Verarbeitung natürlicher Sprache. Dabei wird dieser mithilfe der Trainingsmöglichkeit, welche Deep Learning bietet, kombiniert. (\cite{Chang2023}; \cite{Kaddour2023}; \cite{Naveed2024})\\
 \\
-Folgende Grafik zeigt anschaulich, in welchem Gebiet LLM innerhalb der KI angesiedelt sind:
+Folgende Grafik zeigt anschaulich, in welchem Gebiet LLM innerhalb der KI angesiedelt ist:
 
 \begin{figure} [H]
     \centering
@@ -243,7 +243,7 @@ Folgende Grafik zeigt anschaulich, in welchem Gebiet LLM innerhalb der KI angesi
 
 \subsection{Entwicklungen im Bereich LLM} % fold
 \label{sec:entwicklungenImBereichLLM}
-Aufgrund des Erfolgs von LLMs, ihren Möglichkeiten und ihren vielseitigen Einsatzmöglichkeiten sind sie dynamisch und es gibt viele LLMs. Neue Modelle können selbst entwickelt werden. Vorhandene Modelle können auch antrainiert werden, was als Finetuning bezeichnet wird. Ein Werk, welches sich ausführlich mit dem Thema LLM erstellen und finetunen beschäftigt ist \textcite{Géron2019}. Das Erzeugen und das Finetuning von LLM benötigt jedoch Zeit, Ressourcen und eine Menge an Daten. (\cite{Géron2019})\\
+Aufgrund des Erfolgs von LLMs, ihren Möglichkeiten und ihren vielseitigen Einsatzmöglichkeiten sind sie dynamisch und es gibt viele LLMs. Neue Modelle können selbst entwickelt werden. Vorhandene Modelle können auch antrainiert werden, was als Finetuning bezeichnet wird. Ein Werk, welches sich ausführlich mit dem Thema LLM erstellen und finetunen beschäftigt, ist \textcite{Géron2019}. Das Erzeugen und das Finetuning von LLM benötigt jedoch Zeit, Ressourcen und eine Menge an Daten. (\cite{Géron2019})\\
 \\
 Deshalb ist es effizienter und präziser, sich bereits bestehende Modelle anzusehen, welche es bereits in großer Anzahl gibt. Eine bekannte Open Source Plattform, in welcher nach LLM gesucht und diese heruntergeladen werden können, ist die Website \textcite{HuggingFace2025}. Sie bietet eine große Auswahl von LLM an. Während am 16.01.2025 auf ihr 1.295.659 verschiedene Modelle angeboten wurden, wurden etwas mehr als zwei Wochen später am 04.02.2025, bereits 1.378.895 verschiedene Modelle angeboten. Dies zeigt die enorme Vielfältigkeit und die rapide Entwicklung im Bereich LLM, in welcher im Minutentakt neue Modelle hinzukommen.\\
 % section EntwicklungenImBereichLLM (end)
@@ -267,7 +267,7 @@ Die Eingabe bzw. der Prompt ist ein wesentlicher Bestandteil zum Nutzen von KI. 
 
 \subsection{Prompt Engineering und Prompt-Techniken} % fold
 \label{sec:promptEngineeringUndPromptTechniken}
-Unter dem Begriff Prompt Engineering wird das das gezielte Nutzen von Prompts, um bessere Ergebnisse zu erhalten, verstanden. Dabei wird systematisch vorgegangen, um ohne das Finetuning von LLM konkretere und verbesserte Lösungen von diesen zu erhalten. Es gibt viele Prompt-Techniken. Eine Prompt-Technik, welche sich flexibel an unterschiedlichste Aufgaben anpassen kann, ist das sogenannte Soft Prompting. In diesem werden Parameter, welche lernen können, direkt in die Eingabevektoren des Modells eingebettet. Dadurch müssen die Prompts nicht als Text eingegeben werden. Es gibt noch viele weitere Prompt-Techniken deren Aufzählung und Erklärung zu ausführlich sind. Wichtig ist zu verstehen, dass Prompting flexibel ist und es viele Möglichkeiten gibt. Diese sind für diese Arbeit nicht relevant, da für diese Arbeit eine spezielle Technik verwendet wird, welche in Kapitel \ref{sec:rag} erklärt wird. (\cite{Gu2023}; \cite{Liu2023})
+Unter dem Begriff Prompt Engineering wird das gezielte Nutzen von Prompts, um bessere Ergebnisse zu erhalten, verstanden. Dabei wird systematisch vorgegangen, um ohne das Finetuning von LLM konkretere und verbesserte Lösungen von diesen zu erhalten. Es gibt viele Prompt-Techniken. Eine Prompt-Technik, welche sich flexibel an unterschiedlichste Aufgaben anpassen kann, ist das sogenannte Soft Prompting. In diesem werden Parameter, welche lernen können, direkt in die Eingabevektoren des Modells eingebettet. Dadurch müssen die Prompts nicht als Text eingegeben werden. Es gibt noch viele weitere Prompt-Techniken deren Aufzählung und Erklärung zu ausführlich sind. Wichtig ist zu verstehen, dass Prompting flexibel ist und es viele Möglichkeiten gibt. Diese sind für diese Arbeit nicht relevant, da für diese Arbeit eine spezielle Technik verwendet wird, welche in Kapitel \ref{sec:rag} erklärt wird. (\cite{Gu2023}; \cite{Liu2023})
 % section promptEngineeringUndPromptTechniken (end)
 % section prompting (end)
 
@@ -287,7 +287,7 @@ Bereits in Kapitel \ref{sec:motivation} wird RAG erwähnt. Sie ermöglicht es, e
 \\
 \textbf{\underline{1. Indexierung:}}\\
 \\
-Die Indexierung beschreibt den Prozess, wie die Daten aus einem Dokument in kürzere Abschnitte den Chunks aufgeteilt werden, um die Daten für das LLM verwertbar zu machen. Die Chunks werden maschinenlesbar gemacht und in einer Vektordatenbank gespeichert, aus welcher sie nun für das LLM zugreifbar sind. Sie werden vektorisiert.\\
+Die Indexierung beschreibt den Prozess, wie die Daten aus einem Dokument in kürzere Abschnitte, den Chunks, aufgeteilt werden, um die Daten für das LLM verwertbar zu machen. Die Chunks werden maschinenlesbar gemacht und in einer Vektordatenbank gespeichert, aus welcher sie nun für das LLM zugreifbar sind. Sie werden vektorisiert.\\
 \\
 \textbf{\underline{2. Benutzereingabe:}}\\
 \\
@@ -299,7 +299,7 @@ Nachdem die Maschine die Eingabe erhalten hat und diese ebenfalls vektorisiert h
 \newpage
 \noindent\textbf{\underline{4. Augmentation:}}\\
 \\
-Das LLM wird diese Kombination aus Prompt des Benutzers und der Kontext zu Verfügung gestellt.\\
+Das LLM wird diese Kombination aus Prompt des Benutzers und dem Kontext zu Verfügung gestellt.\\
 \\
 \textbf{\underline{5. Generation:}}\\
 \\
@@ -367,7 +367,7 @@ Es ist wichtig, diese Erkenntnis zu berücksichtigen, wenn es darum geht, die Pr
 \\
 \textbf{\underline{Arbeit von \textcite{Yuan2021}:}}\\
 \\
-Nicht nur die Textgenerierung durch KI ist wichtig, sondern auch die Auswertung des generierten Textes. \textcite{Yuan2021} stellten sich die Frage, wie die generierten Texte nach Flüssigkeit, Genauigkeit und Effektivität beurteilt werden können. Dafür entwickelten sie eine Metrik: Der sogenannte „BARTSCORE“ bewertet flexibel und unüberwacht aus unterschiedlichen Blickwinkeln. Unter anderem betrachtet er Informativität, Geläufigkeit oder Faktizität der generierten Texte. \textcite{Yuan2021} kommen zum Schluss, dass ihr Modell in 16 von 22 Settings besser abgeschnitten hat als andere gut bewertete Metriken. (\cite{Yuan2021})\\
+Nicht nur die Textgenerierung durch KI ist wichtig, sondern auch die Auswertung des generierten Textes. \textcite{Yuan2021} stellten sich die Frage, wie die generierten Texte nach Flüssigkeit, Genauigkeit und Effektivität beurteilt werden können. Dafür entwickelten sie eine Metrik: Der sogenannte „BARTSCORE“ bewertet flexibel und unüberwacht aus unterschiedlichen Blickwinkeln. Unter anderem betrachtet er Informativität, Geläufigkeit oder Faktizität der generierten Texte. \textcite{Yuan2021} kommen zu dem Ergebnis, dass ihr Modell in 16 von 22 Settings besser abgeschnitten hat als andere gut bewertete Metriken. (\cite{Yuan2021})\\
 \\
 Diese Erkenntnis zeigt, wie wichtig es für die Auswertung der Arbeit ist, eine gute Metrik aufzustellen, welche die Qualität des generierten Textes und damit die Qualität der generierten Testfälle auswertet.\\
 \newpage
@@ -490,7 +490,7 @@ Folgendes Beispiel zeigt einen Testfall, welcher die Anforderungen aus der in Ka
     \label{fig:enter-label}
 \end{figure}
 
-\noindent Bei der Auswertung wird überprüft und gemessen, ob GPT-4o standardmäßig die Testfallstruktur von \textcite{IsoIecIeee2024} benutzt. Die Metrik Testfallstruktur ist entscheidend für diese Arbeit und die Auswertung der Testfälle. Erst wenn die generierten Testfälle diesen Aufbau besitzen, können diese für weitere Qualitätskriterien ausgewertet werden. Deshalb wird überprüft und gemessen, wie viele der von GPT-4o generierten Testfälle diese Testfallstruktur ganz oder teilweise besitzen.
+\noindent Bei der Auswertung wird überprüft und gemessen, ob GPT-4o standardmäßig die Testfallstruktur von \textcite{IsoIecIeee2024} benutzt. Das Qualitätskriterium Testfallstruktur ist entscheidend für diese Arbeit und die Auswertung der Testfälle. Erst wenn die generierten Testfälle diesen Aufbau besitzen, können diese für weitere Qualitätskriterien ausgewertet werden. Deshalb wird überprüft und gemessen, wie viele der von GPT-4o generierten Testfälle diese Testfallstruktur ganz oder teilweise besitzen.
 \newpage
 
 \noindent Der Wert Testfallstruktur hat zwei Kategorien, welche in folgender Tabelle abgebildet sind:\\
@@ -576,7 +576,7 @@ Folgendes Beispiel zeigt einen von GPT-4o erstellten Testfall, welcher sowohl di
 
 Um das Kriterium Coverage zu berechnen, werden in dieser Arbeit die Werke von \parencite{Nirpals2011, Lazić2013} verwendet. Diese verwenden die Metrik Automation Coverage, welche modifiziert verwendet wird, um die Abdeckung pro Testszenario zu berechnen.\\
 \\
-Die Abdeckung wird für jedes Testszenario einzeln und danach der Mittelwert berechnet. Die Streuung wird mit einem Boxplot dargestellt.
+Die Abdeckung wird für jedes Testszenario einzeln bewertet und danach wird der Mittelwert aus allen Testfällen berechnet. Die Streuung wird mit einem Boxplot dargestellt.
 \newpage
 
 \noindent Für die Abdeckung wird die folgende Formel verwendet, welche die für diese Arbeit modifizierte Formel von \parencite{Nirpals2011, Lazić2013} ist:
@@ -603,7 +603,7 @@ Sie zeigt einen Testfall mit einer negativen Testfallstruktur, einen mit einer F
     \label{fig:enter-label}
 \end{figure}
 
-\noindent Der erste Testfall besitzt zwar eine Factual Correctness, jedoch eine negative Testfallstruktur. Da dieser keine ID besitzt, ist es schwierig diesen wiederzufinden. Auch wird nicht klar, was der Ziel dieses Testfalles ist, da es kein Erwartetes Ergebnis gibt. Weil die Struktur fehlt, gilt dieser nicht als ein Testfall, um die Abdeckung zu berechnen.\\
+\noindent Der erste Testfall besitzt zwar eine Factual Correctness, jedoch eine negative Testfallstruktur. Da dieser keine ID besitzt, ist es schwierig diesen wiederzufinden. Auch wird nicht klar, was das Ziel dieses Testfalles ist, da es kein erwartetes Ergebnis gibt. Weil die Struktur fehlt, gilt dieser nicht als ein Testfall, um die Abdeckung zu berechnen.\\
 \\
 Der zweite Testfall besitzt im Gegensatz dazu eine gute Testfallstruktur. Allerdings ist die Factual Correctness nicht ausreichend. Im Testszenario Register testet dieser den Button \glqq Order\grqq, welchen es in diesem Testszenario nicht gibt. Es handelt sich um eine Halluzination. Außerdem ist die Reihenfolge, bis auf den ersten Testschritt, nicht richtig. Da die Factual Correctness nicht bei eins ist, wird dieser Testfall ebenfalls nicht berücksichtigt, um die Abdeckung zu berechnen.\\
 \\
@@ -641,7 +641,7 @@ Forgot \newline Password  & 22 & 22 & 0 & 100 \%       \\ \hline
 Add to Cart  & 9 & 9 & 0 & 100 \%       \\ \hline
 My Account  & 11 & 11 & 0 & 100 \%       \\ \hline
 My Account \newline Information  & 10 & 10 & 0 &  100 \%       \\ \hline
-  &  &  &  &  \%       \\ \hline
+Change \newline Password  & 10 & 10 & 0 & 100 \%       \\ \hline
   &  &  &  &  \%       \\ \hline
 Currencies & 3 & 3 & 0 & 100 \% \\ \hline
 
@@ -666,7 +666,7 @@ Forgot \newline Password  & 22 & 17 & 5 & 77,3 \%       \\ \hline
 Add to Cart  & 9 & 8 & 1 & 88,9 \%       \\ \hline
 My Account  & 11 & 6 & 5 & 54,5 \%       \\ \hline
 My Account \newline Information  & 10 & 8 & 2 & 80 \%       \\ \hline
-  &  &  &  &  \%       \\ \hline
+Change \newline Password  & 10 & 7 & 3 & 70 \%       \\ \hline
   &  &  &  &  \%       \\ \hline
 Currencies & 3 & 3 & 0 & 100 \% \\ \hline
 
@@ -691,7 +691,7 @@ Forgot \newline Password  & 25 & 17 &  68 \%       \\ \hline
 Add to Cart  & 9 & 8 & 88,9 \%       \\ \hline
 My Account  & 10 & 6 & 60 \%       \\ \hline
 My Account \newline Information & 13 & 8 & 61,5 \%       \\ \hline
-  &  &  & \%       \\ \hline
+Change \newline Password  & 13 & 7 & 53,8 \%       \\ \hline
   &  &  & \%       \\ \hline
 Currencies & 3 & 3 & 100 \% \\ \hline
 
