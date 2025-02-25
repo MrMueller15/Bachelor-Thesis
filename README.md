@@ -11,10 +11,12 @@ Diese Bachelorarbeit erforscht den Einsatz des LLM GPT-4o von OpenAI (2025) bei 
 Erstellung von Anforderungstestfällen unter Berücksichtigung ihr zur Verfügung gestellten Anforderungsspezifikationen. Ziel der Arbeit und der Auswertung der Ergebnisse ist
 es herauszufinden, ob GPT-4o dazu in der Lage ist, Anforderungstestfälle zu erzeugen,
 welche in in Bezug auf ihre Abdeckung, Factual Correctness und Testfallstruktur nach
-ISO/IEC/IEEE 29119-1:2022-01 (2022) eine hohe Qualität aufweisen. Um die Abdeckung,
-Factual Correctness und Testfallstruktur nach ISO/IEC/IEEE 29119-1:2022-01 (2022) zu
-überprüfen werden sie mit manuell erstellten Testfällen verglichen, welche aus den gleichen Anforderungsspezifikationen erstellt wurden und als Benchmark dienen. Intention
-ist es, einen Beitrag zur Verbesserung der Testfallgenerierung zu leisten.
+ISO/IEC/IEEE 29119-1:2022-01 (2022) eine hohe Qualität aufweisen. Dazu wurden für
+zehn unterschiedliche Testszenarien insgesamt 128 Testfälle generiert. Um die Factual
+Correctness zu überprüfen, werden diese mit den Informationen auf der OpenCart (2025)
+Webseite überprüft. Manuell erstellte Testfälle von Pavankumar21github (2022), welche
+die gleichen Testszenarien testen, dienen als Benchmark zur Abdeckung.
+
 Die Ergebnisse dieser Bachelorarbeit zeigen, dass
 
 **Stichwörter:** KI, LLM, RAG, Prompting, Testfallgenerierung
