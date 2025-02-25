@@ -7,21 +7,24 @@
 - [Quellen](#quellen)
 
 ## Abstract
-Diese Bachelorarbeit erforscht den Einsatz des LLM GPT-4o von OpenAI (2025) bei der
-Erstellung von Anforderungstestfällen unter Berücksichtigung ihr zur Verfügung gestellten Anforderungsspezifikationen. Ziel der Arbeit und der Auswertung der Ergebnisse ist
-es herauszufinden, ob GPT-4o dazu in der Lage ist, Anforderungstestfälle zu erzeugen,
-welche in in Bezug auf ihre Abdeckung, Factual Correctness und Testfallstruktur nach
-ISO/IEC/IEEE 29119-1:2022-01 (2022) eine hohe Qualität aufweisen. Dazu wurden für
-zehn unterschiedliche Testszenarien insgesamt 128 Testfälle generiert. Um die Factual
-Correctness zu überprüfen, werden diese mit den Informationen auf der OpenCart (2025)
-Webseite überprüft. Manuell erstellte Testfälle von Pavankumar21github (2022), welche
-die gleichen Testszenarien testen, dienen als Benchmark zur Abdeckung.
+Diese Bachelorarbeit erforscht den Einsatz des LLM GPT-4o von OpenAI (o. D.) bei
+der Erstellung von Anforderungstestfällen unter Berücksichtigung ihr zur Verfügung ge-
+stellten Anforderungsspezifikationen. Ziel der Arbeit und der Auswertung der Ergebnisse
+ist es herauszufinden, ob GPT-4o dazu in der Lage ist, Anforderungstestfälle zu erzeu-
+gen, welche in Bezug auf ihre Abdeckung, Factual Correctness und Testfallstruktur nach
+ISO/IEC/IEEE 29119-1:2022-01 (2022) für den praktischen Einsatz in der Testfallerstel-
+lung geeignet sind. Dazu wurden für zehn unterschiedliche Testszenarien insgesamt 128
+Testfälle generiert. Um die Factual Correctness zu überprüfen, werden diese mit den In-
+formationen auf einer Beispiels Website überprüft. Manuell erstellte Testfälle eines Open
+Source Projektes, welche die gleichen Testszenarien testen, dienen als Benchmark zur Ab-
+deckung.
 
 Dabei erzielten die von GPT-4o generierten Testfälle bei der Testfallstruktur einen Wert
-von 100 %, bei der Factuall Correctness einen Durchschnittswert von 78,1 % und bei der
-Abdeckungsrate einen Wert von 68 %. Die Ergebnisse dieser Bachelorarbeit zeigen, dass
-das der Einsatz von Künstlicher Intelligenz zur Testfallgenerierung ein großes Potenzial
-besitzt, welches in zukünftigen Werken weiter genutzt werden kann.
+von 100 %, bei der Factuall Correctness einen Durchschnittswert von 78,1 % und bei
+der Abdeckungsrate einen Wert von 68 %. Die Ergebnisse dieser Bachelorarbeit zeigen,
+dass der Einsatz von Künstlicher Intelligenz zur Testfallgenerierung ein großes Potenzial
+besitzt, die Erkenntnisse aus dieser Arbeit können in zukünftigen Werken weiter genutzt
+werden.
 
 **Stichwörter:** KI, LLM, RAG, Prompting, Testfallgenerierung
 
