@@ -140,7 +140,7 @@ Da die im letzten Absatz beschriebene Lösung mit Zeit und Aufwand verbunden ist
 \label{sec:forschungsfrage}
 Die folgende Forschungsfrage, die aus der zugrunde liegenden Motivation abgeleitet wurde, bildet die Grundlage für die Durchführung der Arbeit:\\
 \\
-\textbf{Ist es möglich, dass das LLM GPT-4o von \textcite{OpenAI2025} dazu in der Lage ist, aus Anforderungsspezifikationen Anforderungstestfälle zu erzeugen, die eine hohe Qualität in Bezug auf ihre Abdeckung, Factual Correctness und Testfallstruktur nach \textcite{IsoIecIeee2024} aufweisen?}\\  
+\textbf{Ist es möglich, dass das LLM GPT-4o von \textcite{OpenAI2025} dazu in der Lage ist, aus Anforderungsspezifikationen und Screenshots mit Website-Informationen, Anforderungstestfälle zu erzeugen, die eine hohe Qualität in Bezug auf ihre Abdeckung, Factual Correctness und Testfallstruktur nach \textcite{IsoIecIeee2024} aufweisen?}\\  
 \\
 Diese Frage zielt darauf ab, herauszufinden, wie gut ein frei verfügbares LLM wie GPT-4o in der Lage ist, Testfälle zu generieren und ob somit Nutzer wertvolle Zeit und Ressourcen sparen können, wenn die KI redundante Aufgaben wie das Erstellen von Anwendungstestfällen übernimmt. Die Ergebnisse müssen dann überprüft werden. Um diese Frage zu beantworten, werden Auswertungsmetriken entwickelt, anhand derer die von GPT-4o erstellten Testfälle ausgewertet werden können. Außerdem wird die gängige Testfallstruktur nach \textcite{IsoIecIeee2024} definiert und die faktische Korrektheit der Testfälle überprüft. Dabei dienen manuell erstellte Testfälle, welche aus der gleichen Anforderungsspezifikation erstellt wurden als Benchmark, also als Vergleichsmaßstab.
 % section forschungsfrage (end)
@@ -728,7 +728,22 @@ Es könnte somit eine neue Version von \textcite{OpenCart2025} geben. Falls Test
 
 \chapter{Fazit und Ausblick} % (fold)
 \label{sec:fazitUndAusblick}
-Über die Einordnung der Ergebnisse dieser Arbeit und mögliche Bedeutungen für die Zukunft wird in Kapitel \ref{sec:fazitUndAusblick} Fazit und Ausblick Auskunft gegeben.
+Diese vorliegende Arbeit untersuchte den Einsatz von Künstlicher Intelligenz zur Testfallgenerierung. Ziel dieser Arbeit ist es folgende Forschungsfrage zu beantworten:\\
+\\
+\textbf{Ist es möglich, dass das LLM GPT-4o von \textcite{OpenAI2025} dazu in der Lage ist, aus Anforderungsspezifikationen und Screenshots mit Website-Informationen, Anforderungstestfälle zu erzeugen, die eine hohe Qualität in Bezug auf ihre Abdeckung, Factual Correctness und Testfallstruktur nach \textcite{IsoIecIeee2024} aufweisen?}\\
+\\
+Um diese Frage zu beantworten, wurde durch GPT-4o Anwendungstestfälle generiert. Dabei wurden zehn unterschiedliche Testszenarien, mit insgesamt 128 Anwendungsfällen getestet. Diese Testfälle wurden dann ausgewertet.\\
+\\
+Aufgrund der vorliegenden Ergebnisse kommt diese Arbeit zu folgenden Schluss:\\
+\noindent Es ist möglich, dass das LLM GPT-4o Anforderungstestfälle zu erzeugen, welche eine hohe Qualität in Bezug auf ihrer Abdeckung, Factual Correctness und Testfallstruktur aufweisen. Die Qualität ist jedoch von Testszenario zu Testszenario unterschiedlich, so dass keine allgemein gültige Aussage getroffen werden kann.\\
+\\
+Die Testfallstruktur hat in allen Testszenarien hindurch, einen Wert von 100 \% erreicht. Dies zeigt, dass GPT-4o dazu in der Lage ist Testfälle zu generieren, welche die gewünschte Testfallstruktur aufweisen.\\
+\\
+Die Factual Correctness erreichte den Durchschnittswert von 78,1 \%, wobei der niedrigste Wert 54,5 \% und der höchste Wert bei 100 \% liegt. Die restlichen acht Testszenarien lagen im Bereich zwischen 70 \% und 90 \%. Dies zeigt einen konstanten hohen Wert.\\
+\\
+Die von GPT-4o erstellten Testfälle erreichten bei der Abdeckungsrate einen Durchschnittswert von 68 \%. Der niedrigste Wert eines Testszenario liegt bei 53,8 \% und der höchste Wert bei 100 \%. Im Bereich 60 \% bis 88,9 \% liegen die restlichen acht Testszenarien.\\
+\\
+Die Ergebnisse dieser Arbeit zeigen, dass der Einsatz von Künstlicher Intelligenz zur Testfallgenerierung ein großes Potential besitzt. Zukünftige Werke können dazu andere LLMs verwenden und vergleichen und andere Anwendungen testen, um Optimierungsmöglichkeiten beim Einsatz von Künstlicher Intelligenz zur Testfallgenerierung zu untersuchen.
 % chapter fazitUndAusblick (end)
 
 \printbibliography
