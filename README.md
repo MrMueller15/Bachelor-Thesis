@@ -17,7 +17,11 @@ Correctness zu überprüfen, werden diese mit den Informationen auf der OpenCart
 Webseite überprüft. Manuell erstellte Testfälle von Pavankumar21github (2022), welche
 die gleichen Testszenarien testen, dienen als Benchmark zur Abdeckung.
 
-Die Ergebnisse dieser Bachelorarbeit zeigen, dass
+Dabei erzielten die von GPT-4o generierten Testfälle bei der Testfallstruktur einen Wert
+von 100 %, bei der Factuall Correctness einen Durchschnittswert von 78,1 % und bei der
+Abdeckungsrate einen Wert von 68 %. Die Ergebnisse dieser Bachelorarbeit zeigen, dass
+das der Einsatz von Künstlicher Intelligenz zur Testfallgenerierung ein großes Potenzial
+besitzt, welches in zukünftigen Werken weiter genutzt werden kann.
 
 **Stichwörter:** KI, LLM, RAG, Prompting, Testfallgenerierung
 
