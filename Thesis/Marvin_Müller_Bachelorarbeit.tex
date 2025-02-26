@@ -165,7 +165,7 @@ Zum Schluss werden die durch GPT-4o erstellten Anforderungstestfälle auf ihre A
 
 \chapter{Grundlagen und Hintergrund} % (fold)
 \label{sec:grundlagenUndHintergrund}
-Das Kapitel \ref{sec:grundlagenUndHintergrund} Grundlagen und Hintergrund widmet sich den wissenschaftlichen Grundlagen und klärt über Begriffe und Methoden auf, die für das Verstehen und das Durchführen der Arbeit essenziell sind. In diesem Kapitel wird erst der Begriff KI erklärt und danach erläutert, welche Teilbereiche es gibt. Anschließend wird der Begriff LLM erläutert, da das LLM GPT-4o von \textcite{OpenAI2025} für das Erstellen der Testfälle verwendet wird. Danach werden Prompting und RAG beschrieben. Wichtig ist ebenfalls zu klären, wie ein Testfall aufgebaut und was eine Anforderungsspezifikation ist, um die von GPT-4o erstellten Anforderungstestfälle nach dem in Kapitel \ref{sec:testfallstruktur} aufgestellten Qualitätskriterium \glqq Testfallstruktur\grqq{} auswerten zu können.
+Das Kapitel \ref{sec:grundlagenUndHintergrund} Grundlagen und Hintergrund widmet sich den wissenschaftlichen Grundlagen und klärt über Begriffe und Methoden auf, die für das Verstehen und das Durchführen der Arbeit essenziell sind. In diesem Kapitel wird erst der Begriff KI erklärt und danach erläutert, welche Teilbereiche es gibt. Anschließend wird der Begriff LLM erläutert, da das LLM GPT-4o von \textcite{OpenAI2025} für das Erstellen der Testfälle verwendet wird. Danach werden Prompting und die Methode Retrieval Augmented Generation (RAG) beschrieben. Wichtig ist ebenfalls zu klären, wie ein Testfall aufgebaut und was eine Anforderungsspezifikation ist, um die von GPT-4o erstellten Anforderungstestfälle nach dem in Kapitel \ref{sec:testfallstruktur} aufgestellten Qualitätskriterium \glqq Testfallstruktur\grqq{} auswerten zu können.
 
 \section{KI} % (fold)
 \label{sec:KI}
@@ -182,9 +182,9 @@ Der Begriff KI beziehungsweise im Englischen Artificial Intelligence (AI) beschr
     \caption{Die Grafik von \textcite{Hecker2018} zeigt die Interaktion eines KI-Systems mit seiner Umwelt}
     \label{fig:enter-label}
 \end{figure}
-\noindent Das Konzept hinter dieser KI besteht darin, dass Maschinen Fähigkeiten verwenden, beziehungsweise imitieren, die menschlich sind. Laut \textcite{Hecker2018} bilden sie kognitive Fähigkeiten ab. Es scheint dabei, dass die Maschinen sich selbst und ihre Umgebung wahrnehmen und interpretieren können. Ihre Wahrnehmung und ihre Interpretation beruht dabei auf Daten, Fakten, konkreten Modellen und Regeln, welche ihr nächstes Handeln bestimmen. Während des Nutzens lernen die Maschinen dabei kontinuierlich weiter. (\cite{Bhatt2020}; \cite{Hecker2018}; \cite{Zhu2021})\\
+\noindent Das Konzept hinter dieser KI besteht darin, dass Maschinen Fähigkeiten verwenden, beziehungsweise imitieren, die menschlich sind. Laut \textcite{Hecker2018} bilden sie kognitive Fähigkeiten ab. Es scheint dabei, dass die Maschinen sich selbst und ihre Umgebung wahrnehmen und interpretieren können. Ihre Wahrnehmung und ihre Interpretation beruht dabei auf Daten, Fakten, konkreten Modellen und Regeln, welche ihr nächstes Handeln bestimmen. Während des Nutzens lernen die Maschinen dabei kontinuierlich weiter. (\cite{Bhatt2020}; \cite{Hecker2018})\\
 \\
-\textcite{Hecker2018} nennt noch eine dritte Form der KI, die sogenannte Superintelligenz, diese wird es jedoch laut \textcite{Hecker2018} in nächster Zeit nicht geben und somit wird in dieser Arbeit nicht auf diese weiter eingegangen.
+\textcite{Hecker2018} nennt noch eine dritte Form der KI, die sogenannte Superintelligenz, diese wird es jedoch laut \textcite{Hecker2018} in nächster Zeit nicht geben und somit wird in dieser Arbeit nicht weiter auf diese eingegangen.
 %subsection allgemein (end)
 \newpage
 
@@ -199,33 +199,34 @@ Folgende Grafik zeigt anschaulich die einzelnen Teilgebiete der KI.
     \caption{Die Grafik von \textcite{Mockoo.D.} zeigt die Beziehung zwischen KI, maschinellem Lernen, neuronalen Netzen und Deep Learning}
     \label{fig:enter-label}
 \end{figure}
-\noindent KI wird bereits in Kapitel \ref{sec:KI}  beschrieben. Die Grafik ist dabei so zu verstehen, dass der größere Kreis die jeweils kleineren Kreise umfasst, das heißt maschinelles Lernen ist ein Teil von KI, neuronale Netze sind ein Teilgebiet von KI und von maschinellem Lernen und Deep Learning ist ein Teilgebiet von KI, von maschinellem Lernen und von Neuronalen Netzen. (\cite{Bhatt2020}; \cite{Hecker2018}; \cite{Zhu2021})\\
+\noindent KI wird bereits in Kapitel \ref{sec:KI}  beschrieben. Die Grafik ist dabei so zu verstehen, dass der größere Kreis die jeweils kleineren Kreise umfasst, das heißt maschinelles Lernen ist ein Teil von KI, neuronale Netze sind ein Teilgebiet von KI und von maschinellem Lernen und Deep Learning ist ein Teilgebiet von KI, von maschinellem Lernen und von Neuronalen Netzen. (\cite{Bhatt2020}; \cite{Hecker2018})\\
 \\
-Im Folgenden werden nun einige wichtige Bereiche der KI aufsteigend vom kleinsten zum größten Teilbereich erläutert.\\
+Im Folgenden werden nun einige wichtige Bereiche der KI aufsteigend vom kleinsten zum größten Teilbereich erläutert, um einen groben Überblick über verschiedene Aspekte der KI zu erhalten.\\
 \newpage
 
 \noindent\textbf{\underline{Deep Learning:}}\\
 \\
-Deep Learing ist ein Teilgebiet der neuronalen Netze. Sie sind dadurch gekennzeichnet, dass sie einen \glqq Hidden Layer\grqq{} besitzen, welches aus mehr als einer Neuronenschicht besteht. In diesem werden die Informationen neu gewichtet (\cite{Bhatt2020}; \cite{Hecker2018}; \cite{Zhu2021}). Folgende Grafik zeigt anschaulich ein Neuronales Netz und ein Deep Learning Netz.
+Deep Learing ist ein Teilgebiet der neuronalen Netze. Sie sind dadurch gekennzeichnet, dass sie einen \glqq Hidden Layer\grqq{} besitzen, welches aus mehr als einer Neuronenschicht besteht. In diesem werden die Informationen neu gewichtet (\cite{Bhatt2020}; \cite{Hecker2018}). Folgende Grafik zeigt anschaulich ein Neuronales Netz und ein Deep Learning Netz.
 \begin{figure} [H]
     \centering
     \includegraphics[width=0.75\linewidth]{./Bilder/Dymatrix_Deep_Learning_Networks.jpeg}
     \caption{Die Grafik von \textcite{Dymatrix2018} zeigt ein einfaches Neuronales Netz und ein Deep Learning Netz}
     \label{fig:enter-label}
 \end{figure}
-\noindent Deep Learning Netze können dabei Millionen Neuronenschichten, im Hidden Layer, beinhalten und dadurch immer komplexere Aufgaben lösen. (\cite{Bhatt2020}; \cite{Hecker2018}; \cite{Zhu2021})\\
-\\
-Weitere wichtige KI-Bereiche wie LLM, Prompting und RAG werden in den Kapiteln \ref{sec:llm}, \ref{sec:prompting} und in Kapitel \ref{sec:rag} erläutert, da diese eine wichtige Rolle in dieser Arbeit spielen.\\
+\noindent Deep Learning Netzt besitzen laut \textcite{Hecker2018}, im Hidden Layer, große Anzahl an Neuronenschichten.\\
 \\
 \textbf{\underline{Neuronale Netze:}}\\
 \\
-Bei neuronalen Netzen handelt es sich um ein Teilgebiet des maschinellen Lernens. Idee der neuronalen Netze ist es, menschliche Neuronen nachzubilden und somit menschliches Denken nachzuahmen. Ein neuronales Netz besteht dabei aus Knoten, die aneinandergereiht sind. Sie haben eine Eingabeschicht, ein Hidden Layer, welches aus einer Neuronenschicht besteht und eine Ausgabeschicht, die miteinander vernetzt sind. Sie trainieren in Schleifen und Durchgängen und werden durch Wiederholung besser und schneller. (\cite{Bhatt2020}; \cite{Hecker2018}; \cite{Zhu2021})\\
+Bei neuronalen Netzen handelt es sich um ein Teilgebiet des maschinellen Lernens. Idee der neuronalen Netze ist es, menschliche Neuronen nachzubilden und somit menschliches Denken nachzuahmen. Ein neuronales Netz besteht dabei aus Knoten, die aneinandergereiht sind. Sie haben eine Eingabeschicht, ein Hidden Layer, welches aus einer Neuronenschicht besteht und eine Ausgabeschicht, die miteinander vernetzt sind. (\cite{Bhatt2020}; \cite{Hecker2018})\\
 \\
 \textbf{\underline{Maschinelles Lernen:}}\\
 \\
-Maschinelles Lernen, auf Englisch Machine Learning, ist ein Teilgebiet der KI. Es beschreibt das Verfahren, in welchem Maschinen durch das Wiederholen von Aufgaben lernen. Dabei gibt es Algorithmen, welche mit Daten antrainiert werden und der Lernprozess ist eine Schleife, in welcher diese Algorithmen wiederholt werden. Dadurch lernt die Maschine die Aufgabe zu lösen. Dies geschieht, in dem die Maschine Feedback erhält und so lernt, wie sie die Aufgabe richtig löst. Es wird dabei kein Lösungsweg vorgegeben wie bei herkömmlichen Algorithmen, sondern die Maschine lernt durch Versuch und Irrtum oder auf Englisch Trial and Error. (\cite{Bhatt2020}; \cite{Hecker2018}; \cite{Zhu2021})
+Maschinelles Lernen, auf Englisch Machine Learning, ist ein Teilgebiet der KI. Dabei gibt es Algorithmen, welche mit Daten antrainiert werden und der Lernprozess wiederholt wird. Dadurch lernt die Maschine die Aufgabe zu lösen. Dies geschieht, in dem die Maschine Feedback erhält und so lernt, wie sie die Aufgabe richtig löst. Es wird dabei kein Lösungsweg vorgegeben wie bei herkömmlichen Algorithmen. (\cite{Bhatt2020}; \cite{Hecker2018})\\
+\\
+Weitere wichtige KI-Bereiche wie LLM, Prompting und RAG werden in den Kapiteln \ref{sec:llm}, \ref{sec:prompting} und in Kapitel \ref{sec:rag} erläutert, da diese eine wichtige Rolle in dieser Arbeit spielen.\\
 %subsection bereicheDerKI (end)
 % section KI (end)
+\newpage
 
 \section{Large Language Model (LLM)} % (fold)
 \label{sec:llm}
@@ -233,7 +234,7 @@ In dieser Arbeit wird das LLM GPT-4o von \textcite{OpenAI2025} verwendet, um Tes
 \\
 Diese LLMs stellen eine Kombination aus zwei Bereichen der KI dar. Sie sind ein Teilgebiet von Natural Language Processing (NLP). Dieser Prozess beschreibt die Möglichkeit der Verarbeitung natürlicher Sprache. Dabei wird dieser mithilfe der Trainingsmöglichkeit, welche Deep Learning bietet, kombiniert. (\cite{Chang2023}; \cite{Kaddour2023}; \cite{Naveed2024})\\
 \\
-Folgende Grafik zeigt anschaulich, in welchem Gebiet LLM innerhalb der KI angesiedelt ist:
+Folgende Grafik von \textcite{Hodiak2024} zeigt anschaulich, in welchem Gebiet LLM innerhalb der KI angesiedelt ist:
 
 \begin{figure} [H]
     \centering
@@ -252,7 +253,7 @@ Deshalb ist es effizienter und präziser, sich bereits bestehende Modelle anzuse
 
 \section{Prompting} % (fold)
 \label{sec:prompting}
-Die Eingabe bzw. der Prompt ist ein wesentlicher Bestandteil zum Nutzen von KI. Jede Eingabe ist ein Prompt und die Qualität des Prompts kann über die Qualität der Antwort, welche das LLM liefert, entscheiden. Deshalb ist es wichtig, diesen Begriff und die Vorgehensweise, nach welcher in dieser Arbeit vorgegangen wird, zu erklären. Der englische Begriff Prompting beziehungsweise Prompt kann als Eingabeaufforderung übersetzt und verstanden werden. Mithilfe eines Prompts kann der Nutzer der LLM eine Aufgabe oder eine Mitteilung liefern, welche diese verarbeiten und dann lösen kann. Prompting ist ein entscheidendes Element, um mit LLM zu interagieren. (\cite{Gu2023})\\
+Die Eingabe bzw. der Prompt ist ein wesentlicher Bestandteil zum Nutzen von KI. Jede Eingabe ist ein Prompt und die Qualität des Prompts kann über die Qualität der Antwort, welche das LLM liefert, entscheiden. Deshalb ist es wichtig, diesen Begriff und die Vorgehensweise, nach welcher in dieser Arbeit vorgegangen wird, zu erklären. Der englische Begriff Prompting beziehungsweise Prompt kann als Eingabeaufforderung übersetzt und verstanden werden. Mithilfe eines Prompts kann der Nutzer der LLM eine Aufgabe oder eine Mitteilung liefern, welche diese verarbeiten und dann lösen kann. Prompting ist ein entscheidendes Element, um mit LLM zu interagieren. (\cite{Gu2023}; \cite{Liu2023})\\
 \newpage
 
 \noindent Folgender Screenshot zeigt einen Prompt und die Antwort der LLM in diesem Fall von GPT-4o von \textcite{OpenAI2025}:
@@ -275,7 +276,7 @@ Unter dem Begriff Prompt Engineering wird das gezielte Nutzen von Prompts, um be
 
 \section{Retrieval Augmented Generation (RAG)} % (fold)
 \label{sec:rag}
-Bereits in Kapitel \ref{sec:motivation} wird RAG erwähnt. Sie ermöglicht es, einem LLM Dokumente zur Verfügung zu stellen, in welchem sich Wissen befindet. In dieser Arbeit kann dem LLM per RAG eine Anforderungsspezifikation zur Verfügung gestellt werden, in welcher die Anforderungen zu finden sind, aus welchen das LLM die Anforderungstestfälle generieren soll. Deshalb ist RAG für diese Arbeit von besonderer Wichtigkeit. Dabei werden die in den Dokumenten enthaltenen Informationen für das LLM nutzbar gemacht. Die Dokumente und Anfragen werden dabei in kleine Abschnitte, welche als Chunks bezeichnet werden, aufgeteilt. RAG lässt sich dabei in vielen LLM anwenden und optimiert diese, ohne dass diese mit viel Aufwand trainiert werden müssen. (\cite{Gao2024}; \cite{Wu2024})\\
+RAG ermöglicht es, einem LLM Dokumente zur Verfügung zu stellen, in welchem sich Wissen befindet. In dieser Arbeit kann dem LLM per RAG eine Anforderungsspezifikation zur Verfügung gestellt werden, in welcher die Anforderungen zu finden sind, aus welchen das LLM die Anforderungstestfälle generieren soll. Deshalb ist RAG für diese Arbeit von besonderer Wichtigkeit. Dabei werden die in den Dokumenten enthaltenen Informationen für das LLM nutzbar gemacht. Die Dokumente und Anfragen werden dabei in kleine Abschnitte, welche als Chunks bezeichnet werden, aufgeteilt. RAG lässt sich dabei in vielen LLM anwenden und optimiert diese, ohne dass diese mit viel Aufwand trainiert werden müssen. (\cite{Gao2024}; \cite{Wu2024})\\
 \newpage
 \noindent Folgende Grafik zeigt anschaulich den Ablauf von RAG:
 
@@ -341,7 +342,9 @@ Ein Testfall besitzt eine ID, einen Namen, Vorbedingungen, welche erfüllt sein 
 
 \section{Anforderungsspezifikation} % (fold)
 \label{sec:anforderungsspezifikation}
-Eine Anforderungsspezifikation  ist das Fundament, aus dem Testfälle erstellt werden. Ein Testfall überprüft, ob die Anforderungen aus dieser Spezifikation erfüllt werden. Demnach ist eine Anforderungsspezifikation ein Dokument, welches alle Anforderungen enthält, welche das System erfüllen muss und dessen Erfüllbarkeit und nicht Erfüllbarkeit mit Testfällen abgedeckt und getestet werden. Da sie der Grund für die Testfälle sind, müssen Anforderungsspezifikationen vollständig, präzise und in sich konsistent sein. Anforderungsspezifikationen enthalten System- und Benutzeranforderungen. Systemanforderungen beschreiben dabei die Benutzeranforderungen genau, wobei die Benutzeranforderungen funktionale und nicht funktionale Anforderungen besitzen. Folgende Grafik veranschaulicht anhand eines Beispiels den Unterschied zwischen funktionalen und nicht funktionalen Anforderungen:
+Eine Anforderungsspezifikation  ist das Fundament, aus dem Testfälle erstellt werden. Ein Testfall überprüft, ob die Anforderungen aus dieser Spezifikation erfüllt werden. Demnach ist eine Anforderungsspezifikation ein Dokument, welches alle Anforderungen enthält, welche das System erfüllen muss und dessen Erfüllbarkeit und nicht Erfüllbarkeit mit Testfällen abgedeckt und getestet werden. Da sie der Grund für die Testfälle sind, müssen Anforderungsspezifikationen vollständig, präzise und in sich konsistent sein. Anforderungsspezifikationen enthalten System- und Benutzeranforderungen. Systemanforderungen beschreiben dabei die Benutzeranforderungen genau, wobei die Benutzeranforderungen funktionale und nicht funktionale Anforderungen besitzen. (\cite{Barmi2011}; \cite{Mustafa2021})\\
+\\
+Folgende Grafik veranschaulicht anhand eines Beispiels den Unterschied zwischen funktionalen und nicht funktionalen Anforderungen:
 
 \begin{figure}[H]
     \centering
@@ -396,26 +399,26 @@ Mit dem Thema des automatischen Benutzeroberflächen (GUI)-Testings beschäftigt
 Die Arbeit von \textcite{Kirinuki2024} vergleicht durch GPT-4 generierte Testfälle mit manuell erstellten Testfällen. Dabei handelt es sich um Black-Box-Tests. Die Autoren \textcite{Kirinuki2024} kommen zu dem Ergebnis, dass beim Aspekt der Testabdeckung die von GPT-4 erzeugten Testfälle gleich gute oder sogar bessere Ergebnisse erzielen als von Menschen erstellte Testfälle. Diese Testabdeckung wird laut \textcite{Kirinuki2024} noch erhöht, wenn ein Mensch zusammen mit GPT-4 Testfälle erstellt. (\cite{Kirinuki2024})
 \newpage
 
-\noindent Diese Werke zeigen, dass KI und LLMs bereits in verschiedenen Testbereichen eingesetzt werden. Dabei handelt es sich um die Bereiche der Softwaretests, des Chip-Testing, der Unit Tests, des GUI-Testing und der Black-Box-Tests. Dies zeigt, dass es möglich ist, dass LLM wie GPT-4o in der Lage ist, Anwendungstestfälle zu generieren, welche eine bessere Qualität besitzen als manuell erstelle Anwendungstestfälle.
+\noindent Diese Werke zeigen, dass KI und LLMs bereits in verschiedenen Testbereichen eingesetzt werden. Dabei handelt es sich um die Bereiche der Softwaretests, des Chip-Testing, der Unit Tests, des GUI-Testing und der Black-Box-Tests. Dies zeigt, dass es möglich ist, dass LLM wie GPT-4o in der Lage ist, Anwendungstestfälle zu generieren, welche einen praktischen Nutzen besitzen.
 % chapter relatedWorkUndAktuelleForschung (end)
 
 \chapter{Methodik} % (fold)
 \label{sec:methodik}
-Kapitel \ref{sec:methodik} zeigt die Methodik der Arbeit, es beschreibt das verwendete LLM GPT-4o von \textcite{OpenAI2025}. Anschließend werden die Testdaten erläutert. Dabei gibt es Anforderungsspezifikationen, welche GPT-4o zu Verfügung gestellt werden, um Testfälle zu generieren. Manuelle Testfälle dienen zusammen mit der getesteten Anwendung als Benchmark, um diese auf ihre Korrektheit, Logik und Abdeckung zu vergleichen. Dabei wurde nach Testdaten gesucht, die sowohl selbst Open Source sind und auch Open Source Projekte testen, damit sie frei verfügbar sind. Sie müssen Anforderungsspezifikationen und manuelle Testfälle enthalten. Dabei müssen die Testfälle die Testfallstruktur von \textcite{IsoIecIeee2024} aufweisen. Außerdem ist es wichtig, dass sie verschiedene Testszenarien abdecken, um für mehrere Anforderungen als Benchmark genutzt werden zu können. Die Prompts werden erklärt und eine Metrik aufgestellt, nach der die generierten Testfälle ausgewertet und bewertet werden.
+Kapitel \ref{sec:methodik} zeigt die Methodik der Arbeit, es beschreibt das verwendete LLM GPT-4o von \textcite{OpenAI2025}. Anschließend werden die Testdaten erläutert. Dabei gibt es Anforderungsspezifikationen, welche GPT-4o zu Verfügung gestellt werden, um Testfälle zu generieren. Manuelle Testfälle dienen zusammen mit der getesteten Anwendung als Benchmark, um diese auf ihre Korrektheit, Logik und Abdeckung zu vergleichen. Dabei wurde nach Testdaten gesucht, die sowohl selbst Open Source sind und auch Open Source Projekte testen, damit sie frei verfügbar sind. Sie müssen Anforderungsspezifikationen und manuelle Testfälle enthalten. Dabei müssen die Testfälle die Testfallstruktur von \textcite{IsoIecIeee2024} aufweisen. Außerdem ist es wichtig, dass sie verschiedene Testszenarien abdecken, um für mehrere Anforderungen als Benchmark genutzt werden zu können. Die Prompts werden erklärt und eine Metrik aufgestellt, nach der die generierten Testfälle ausgewertet und bewertet werden. In Kapitel \ref{sec:testfall} wird die Wichtigkeit der Testfallstruktur betont. Somit ist diese ein Qualitätskriterium. Da in dieser Arbeit mit GPT-4o Testfälle generiert werden, ist die Korrektheit ein wichtiges Kriterium, um die Richtigkeit der generierten Testfälle zu messen. \textcite{Li2024} beschreibt dabei das Phänomen der Halluzination. Die Testfallstruktur und die Korrektheit sind jedoch nicht die einzigen wichtigen Kriterien für das Messen der Testfälle. In ihrem Werk nennen \textcite{Tran2025} das Kritierum Coverage. Dieses ist wichtig, um zu erkennen, wie gut GPT-4o die Informationen aufnehmen und abdecken kann.
 
 \section{Verwendetes LLM} % (fold)
 \label{sec:verwendetesLLM}
-In Kapitel \ref{sec:grundlagenUndHintergrund} werden Methoden zur Testfallgenerierung genannt. Ein geeignetes LLM für die Erstellung der Testfälle in dieser Arbeit soll diese Bedienungen erfüllen:
+Ziel dieser Arbeit ist es, den praktischen Nutzen von LLM generierten Testfällen zu untersuchen. In Kapitel \ref{sec:grundlagenUndHintergrund} werden Methoden zur Testfallgenerierung genannt. Ein geeignetes LLM für die Erstellung der Testfälle in dieser Arbeit soll deshalb diese  Bedienungen erfüllen:
 \begin{itemize}
     \item Das Modell muss frei verfügbar sein oder geringe Kosten aufweisen, damit Nutzer die Erkenntnisse aus dieser Arbeit nutzen und weiterverwenden können.
     \item Das LLM muss Retrieval-Augmented Generation (RAG) verwenden und in der Lage sein Bilder zu erkennen, um effiziente Testfälle aus den Anforderungsspezifikationen zu generieren.
 \end{itemize}
-Für diese Arbeit wird GPT-4o von \textcite{OpenAI2025} verwendet, da es diese Punkte erfüllt. GPT-4o ist kostenlos und öffentlich nutzbar. Die Nutzung ist jedoch für den kostenlosen Zugang nur eingeschränkt. Die uneingeschränkte Version kostete am 08.02.2025 20 US-Dollar im Monat. Wie \textcite{Backlinko2025} berichtet, hatte ChatGPT von \textcite{OpenAI2025} im Januar 2025 nach eigenen Angaben über 300 Millionen Nutzer. Somit ist GPT-4o ein bekanntes LLM. Nutzer können es mit einer grafischen Benutzeroberfläche nutzen und es als Werkzeug zur Testfallgenerierung benutzen.\\
-\\
-Da GPT-4o Bilder erkennen und mit Dokumenten arbeiten kann, ist es in der Lage, die in Kapitel \ref{sec:rag} erklärte Methode RAG zu verwenden. Es kann somit Informationen aus den in Kapitel \ref{sec:testdaten} beschriebenen Anforderungsspezifikationen ziehen und dabei Websites und ihr Verhalten in Form von Screenshots erkennen und damit arbeiten. Außerdem besitzt GPT-4o eine Erinnerungsfunktion, mit welcher es auf wichtige Anmerkungen und Informationen aus vorherigen Prompts zurückgreifen kann.
+Für diese Arbeit wird GPT-4o von \textcite{OpenAI2025} verwendet, da es diese Punkte erfüllt. GPT-4o ist kostenlos und öffentlich nutzbar. Die Nutzung ist jedoch für den kostenlosen Zugang nur eingeschränkt. Die uneingeschränkte Version kostete am 08.02.2025 20 US-Dollar im Monat. Wie \textcite{Backlinko2025} berichtet, hatte ChatGPT von \textcite{OpenAI2025} im Januar 2025 nach eigenen Angaben über 300 Millionen Nutzer. Somit ist GPT-4o ein bekanntes LLM. Nutzer können es mit einer grafischen Benutzeroberfläche nutzen und es als Werkzeug zur Testfallgenerierung benutzen.
 \newpage
 
-\noindent Es muss nicht mit viel Aufwand, Zeit und Ressourcen antrainiert oder ein eigenes Modell entwickelt werden. GPT-4o ist in vielen Sprachen nutzbar und kann so von Nutzern weltweit verwendet werden.\\
+\noindent Da GPT-4o Bilder erkennen und mit Dokumenten arbeiten kann, ist es in der Lage, die in Kapitel \ref{sec:rag} erklärte Methode RAG zu verwenden. Es kann somit Informationen aus den in Kapitel \ref{sec:testdaten} beschriebenen Anforderungsspezifikationen ziehen und dabei Websites und ihr Verhalten in Form von Screenshots erkennen und damit arbeiten. Außerdem besitzt GPT-4o eine Erinnerungsfunktion, mit welcher es auf wichtige Anmerkungen und Informationen aus vorherigen Prompts zurückgreifen kann.\\
+\\
+Es muss nicht mit viel Aufwand, Zeit und Ressourcen antrainiert oder ein eigenes Modell entwickelt werden. GPT-4o ist in vielen Sprachen nutzbar und kann so von Nutzern weltweit verwendet werden.\\
 \\
 In Kapitel \ref{sec:relatedWorkUndAktuelleForschung} wird aufgezeigt, dass die Autoren \textcite{Kirinuki2024} GPT-4o benutzen um Black-Box-Tests zu erzeugen und dass diese im Bereich der Testabdeckung, eine gleich gute oder sogar bessere Abdeckungsrate erreichen, als von Menschen erstellte Testfälle. Diese Erkenntnisse zeigen, dass GPT-4o sich als LLM für diese Arbeit eignet, da es die zwei Bedingungen erfüllt und bereits in einem ähnlichen Bereich von \textcite{Kirinuki2024} eingesetzt wurde.\\
 \\
@@ -424,9 +427,9 @@ Mit einem Prompt kann GPT-4o nun Testfälle erzeugen. Wie die Testdaten aufgebau
 
 \section{Testdaten} % (fold)
 \label{sec:testdaten}
-Als Grundlage zur Erstellung von Testfällen dienen Anforderungsspezifikationen. Um die Korrektheit, Logik und Abdeckung der von GPT-4o von \textcite{OpenAI2025} generierten Testfälle messen zu können, ist es essenziell, dass manuelle Testfälle verfügbar sind, welche bereits aus den gleichen Anforderungsspezifikationen erstellt wurden, aus denen GPT-4o Testfälle erzeugt hat. Dadurch können die von GPT-4o generierten Testfälle in Bezug auf ihre Abdeckung, Factual Correctness und Testfallstruktur nach \textcite{IsoIecIeee2024} bewertet werden. Für diese Arbeit wird für die Gewinnung von Testdaten, das Open Source Projekt von \textcite{Pavankumar21github2022} auf GitHub verwendet, welches bereits Anforderungsspezifikationen und manuelle Testfälle beinhaltet.\\
+Als Grundlage zur Erstellung von Testfällen dienen Anforderungsspezifikationen zusammen mit Screenshots von Website-Informationen. Um Abdeckung der von GPT-4o von \textcite{OpenAI2025} generierten Testfälle messen zu können, ist es essenziell, dass manuelle Testfälle verfügbar sind, welche bereits aus den gleichen Anforderungsspezifikationen erstellt wurden und die gleiche Anwendung testet, aus denen GPT-4o Testfälle erzeugt hat. Für diese Arbeit wird für die Gewinnung von Testdaten, das Open Source Projekt von \textcite{Pavankumar21github2022} auf GitHub verwendet, welches bereits Anforderungsspezifikationen und manuelle Testfälle beinhaltet.\\
 \\
-Die Testdaten und die Website sind somit frei verfügbar und können in dieser Arbeit verwendet werden. Die Open Source Onlineshop Plattform \textcite{OpenCart2025} besitzt viele Funktionen und Anwendungen, welche \textcite{Pavankumar21github2022} in 31 verschiedenen Testszenarien mit insgesamt 507 Testfällen testet. Damit eignen sich das Projekt und die Website zur Erstellung von Anwendungstestfällen und als Benchmark, um diese auszuwerten. Spezifikationen wie diese, werden GPT-4o zur Verfügung gestellt. Die generierten Testfälle können nun mit den manuellen Testfällen, die die gleichen Funktionen und Anforderungen abdecken, auf ihre Korrektheit, Logik und Abdeckung verglichen werden.
+Die Testdaten und die Website sind somit frei verfügbar und können in dieser Arbeit verwendet werden. Die Open Source Onlineshop Plattform \textcite{OpenCart2025} besitzt viele Funktionen und Anwendungen, welche \textcite{Pavankumar21github2022} in 31 verschiedenen Testszenarien mit insgesamt 507 Testfällen testet. Dieses Projekt und diese Website dienen als Benchmark, um die von GPT-4o erstellten Testfälle auszuwerten. Spezifikationen wie diese werden GPT-4o zusammen mit Screenshots mit Website-Informationen zur Verfügung gestellt. Die generierten Testfälle können nun mithilfe der manuellen Testfälle, die die gleichen Funktionen und Anforderungen abdecken und als Benchmark dienen, auf ihre Abdeckungsrate gemessen werden.
 \newpage
 
 \noindent Folgende Grafik zeigt einen Testfall, welcher von \textcite{Pavankumar21github2022} erstellt wurde und welcher die Erstellung eines Accounts in \textcite{OpenCart2025} testet.
@@ -437,7 +440,7 @@ Die Testdaten und die Website sind somit frei verfügbar und können in dieser A
     \label{fig:enter-label}
 \end{figure}
 
-\noindent Wie in der Grafik zu erkennen ist, verwendet \textcite{Pavankumar21github2022} die Testfallstruktur nach \textcite{IsoIecIeee2024}. Diese Testfallstruktur nach \textcite{IsoIecIeee2024} ist wie in Kapitel \ref{sec:testfallstruktur} beschrieben, eine Voraussetzung, welche die von GPT-4o erstellten Testfälle erfüllen müssen. Dabei sind die Testschritte von \textcite{Pavankumar21github2022} in sich logisch, bauen aufeinander auf und stimmen mit den Informationen auf der \textcite{OpenCart2025} Website überein. Sie dienen deshalb zusammen mit den Informationen aus der \textcite{OpenCart2025} Website als Benchmark für die von GPT-4o erstellten Testfälle. Das Projekt erfüllt somit die genannten Voraussetzungen und liefert gleichzeitig eine Zahl an Testdaten, um sie mit den durch GPT-4o generierten Testfälle zu vergleichen. Obwohl in dieser Arbeit nur ein Projekt als Referenz verwendet wird, bietet es mit 31 unterschiedlichen Testszenarien genügend Material, um zu fundierten Ergebnissen zu kommen. Mithilfe dieser Anforderungsspezifikationen und mit für das Testszenario relevanten Screenshots mit Website-Informationen, generiert GPT-4o Testfälle. Wie dieser Vorgang genau im Detail vonstatten geht, wird in Kapitel \ref{sec:promptUndVerwendeteMethoden} erläutert. Diese generierten Testfälle werden in Kapitel \ref{sec:qualitätskriterien} mithilfe der manuellen Testfälle auf ihre Korrektheit, Logik und Abdeckung überprüft und gemessen. Die manuellen Testfälle von \textcite{Pavankumar21github2022} dienen dabei als Benchmark.
+\noindent Wie in der Grafik zu erkennen ist, verwendet \textcite{Pavankumar21github2022} die Testfallstruktur nach \textcite{IsoIecIeee2024}. Diese Testfallstruktur nach \textcite{IsoIecIeee2024} ist wie in Kapitel \ref{sec:testfallstruktur} beschrieben, eine Voraussetzung, welche die von GPT-4o erstellten Testfälle erfüllen müssen. Dabei sind die Testschritte von \textcite{Pavankumar21github2022} in sich logisch, bauen aufeinander auf und stimmen mit den Informationen auf der \textcite{OpenCart2025} Website überein. Sie dienen deshalb zusammen mit den Informationen aus der \textcite{OpenCart2025} Website als Benchmark für die von GPT-4o erstellten Testfälle. Das Projekt erfüllt somit die genannten Voraussetzungen und liefert gleichzeitig eine Zahl an Testdaten, um sie mit den durch GPT-4o generierten Testfälle zu vergleichen. Mithilfe dieser Anforderungsspezifikationen und mit für das Testszenario relevanten Screenshots mit Website-Informationen, generiert GPT-4o Testfälle. Wie dieser Vorgang genau im Detail vonstatten geht, wird in Kapitel \ref{sec:promptUndVerwendeteMethoden} erläutert. Diese generierten Testfälle werden in Kapitel \ref{sec:qualitätskriterien} mithilfe der manuellen Testfälle auf ihre Korrektheit, Logik und Abdeckung überprüft und gemessen. Die manuellen Testfälle von \textcite{Pavankumar21github2022} dienen dabei als Benchmark.
 % section testdaten (end)
 \newpage
 
@@ -450,13 +453,13 @@ In diesem Kapitel wird beschrieben, wie in dieser Arbeit Testfälle durch GPT-4o
     \caption{Ein Prompt an GPT-4o}
     \label{fig:enter-label}
 \end{figure}
-\noindent GPT-4o wird dazu aufgefordert alle Funktionen pro Testszenario als jeweils einzelnen Testfall zu generieren. Es soll dabei nur Informationen aus der Anforderungsspezifikation und aus den Screenshots benutzen und dabei die Struktur aus \textcite{IsoIecIeee2024} erfüllen. Um auf mögliche Fehler und Halluzinationen vorzubeugen, wird GPT-4o dazu aufgefordert, die Testfälle in Tabellenform anzuzeigen. Es kann so auf mögliche Fehler oder fehlende Testfälle hingewiesen werden die GPT-4o beheben soll. Die Testfälle werden dann in einer Excel-Tabelle dokumentiert. Anschließend werden diese ausgewertet. Die Metriken zu der Auswertung der generierten Testfälle finden sich in Kapitel \ref{sec:qualitätskriterien}. Dabei dienen die manuellen Testfälle von \textcite{Pavankumar21github2022} und Informationen auf der \textcite{OpenCart2025} Website als Referenz.
+\noindent GPT-4o wird dazu aufgefordert alle Funktionen pro Testszenario als jeweils einzelnen Testfall zu generieren. Es soll dabei nur Informationen aus der Anforderungsspezifikation und aus den Screenshots benutzen und dabei die Struktur aus \textcite{IsoIecIeee2024} erfüllen. Um auf mögliche Fehler und Halluzinationen vorzubeugen, wird GPT-4o dazu aufgefordert, die Testfälle in Tabellenform anzuzeigen. Es kann so auf mögliche Fehler oder fehlende Testfälle hingewiesen werden die GPT-4o beheben soll. Die Testfälle werden dann in einer Excel-Tabelle dokumentiert. Anschließend werden diese ausgewertet. Die Qualitätskriterien zu der Auswertung der generierten Testfälle finden sich in Kapitel \ref{sec:qualitätskriterien}. Dabei dienen die manuellen Testfälle von \textcite{Pavankumar21github2022} und Informationen auf der \textcite{OpenCart2025} Website als Referenz.
 % section promptUndVerwendeteMethoden (end)
 \newpage
 
 \section{Qualitätskriterien} % (fold)
 \label{sec:qualitätskriterien}
-Im Bereich des Testens gibt es viele Metriken und Qualitätskriterien, anhand derer gemessen werden kann, wie ein Testfall bewertet wird. Anhand dieser hier dargestellten Qualitätskriterien werden die von GPT-4o erstellten Testfälle ausgewertet und nach ihrer Qualität in Bezug auf Korrektheit, Logik und Abdeckung gemessen. Im Folgenden werden die Qualitätskriterien aufgestellt, um die durch GPT-4o erstellten Testfälle auszuwerten.
+Im Bereich des Testens gibt es viele Metriken und Qualitätskriterien, anhand derer gemessen werden kann, wie ein Testfall bewertet wird. Anhand dieser hier dargestellten Qualitätskriterien werden die von GPT-4o erstellten Testfälle ausgewertet und nach ihrer Qualität in Bezug auf Korrektheit, Logik und Abdeckung gemessen. Im Folgenden werden die Qualitätskriterien aufgestellt, um die durch GPT-4o erstellten Testfälle auszuwerten. Dabei wird die Wichtigkeit der Testfallstruktur in Kapitel \ref{sec:testfall} erläutert. Die Factual Correctness spielt aufgrund des von \textcite{Li2024} beschriebenen Phänomens der Halluzination eine wichtige Rolle. Die Abdeckungsrate ist notwendig, um den praktischen Nutzen der von GPT-4o erstellten Testfälle zu messen.
 
 \subsection{Testfallstruktur} % fold
 \label{sec:testfallstruktur}
@@ -494,7 +497,7 @@ Einstufung  & 0 Merkmale fehlen       & $1 \geq \text{Merkmale fehlen}$     \\ \
 \label{sec:factualCorrectness}
 Die Inhalte eines Testfalls müssen stimmig sein und den Prozess in der richtigen Reihenfolge wiedergeben. Einfaches Beispiel: Ein Nutzer kann sich nicht von einer Anwendung abmelden, wenn er sich nicht vorher angemeldet hat. Ein Testfall muss somit als ersten Testschritt die \glqq Anmeldung\grqq{} besitzen, bevor dieser den Testschritt der \glqq Abmeldung\grqq{} hat. Deshalb ist ein Testfall unbrauchbar, wenn dieser nicht die Logik der Anforderungsspezifikation erfüllt. Um die Logik und die Korrektheit der generierten Testfälle bestimmen zu können, werden die manuell erstellten Testfälle von \textcite{Pavankumar21github2022}, zusammen mit den Informationen auf der \textcite{OpenCart2025} Website als Benchmark genutzt. Diese werden pro Testszenario mit den generierten Testfällen auf ihre Korrektheit überprüft.\\
 \\
-Ein weiteres Problem für die Factual Correctness ist das Problem der Halluzination. In Kapitel \ref{sec:motivation} steht, dass \textcite{Siebert2024} den Begriff Halluzination als Phänomen beschreibt, bei dem eine KI-Antwort nicht mit den gegebenen Informationen übereinstimmt und die KI sich Antworten generiert, die faktisch nicht richtig sind.\\
+Ein weiteres Problem für die Factual Correctness ist das Problem der Halluzination. In Kapitel \ref{sec:motivation} steht, dass \textcite{Siebert2024} den Begriff Halluzination als Phänomen beschreibt, bei dem eine KI-Antwort nicht mit den gegebenen Informationen übereinstimmt und die KI sich Antworten generiert, die faktisch nicht richtig sind. Auch \textcite{Li2024} beschreibt dieses Phänomen.\\
 \\
 Mit dem Qualitätskriterium Factual Correctness von \textcite{Ragas2025} wird in dieser Arbeit der Wert der faktisch korrekten Testschritte pro Testfall und der Gesamtzahl an Testschritten des Testfalls gemessen. Ein faktisch korrekter Testschritt steht in der richtigen Reihenfolge, ist keine Halluzination und besitzt seine Informationen nur aus der Anforderungsspezifikation oder dem Screenshot aus der Website.\\
 \newpage
@@ -518,10 +521,10 @@ Mit dem Qualitätskriterium Factual Correctness von \textcite{Ragas2025} wird in
 \noindent Dabei sind in dieser Arbeit an \textcite{Ragas2025} angelehnt:
 \begin{itemize}
     \item \text{True Positive (TP)} Anzahl faktisch korrekter Testschritte pro Testfall,
-    \item \text{False Positive (FP)} Anzahl faktisch nicht korrekter Testschritte pro Testfall, d.h. Testschritte welche sich nicht in der Anforderungsspezifikation oder den Screenshots des Testszenario befinden,
-    \item \text{False Negative (FN)} die Anzahl der Testschritte, welche sich entweder in der Anforderungsspezifikation oder den Screenshots des Testszenario, jedoch nicht in dem von GPT-4o generierten Testfall befinden.
+    \item \text{False Positive (FP)} Anzahl faktisch nicht korrekter Testschritte pro Testfall, d.h. Testschritte welche sich nicht in der Anforderungsspezifikation oder den Screenshots der Website befinden,
+    \item \text{False Negative (FN)} die Anzahl der Testschritte, welche sich entweder in der Anforderungsspezifikation oder den Screenshots der Website, jedoch nicht in dem von GPT-4o generierten Testfall befinden.
 \end{itemize}
-Durch diese Metrik kann der Anteil der faktisch korrekten Testschritte pro Testfall in Prozent gemessen werden. Um die Factual Correctness der Testfälle zu bestimmen, werden die von GPT-4o generierten Testfälle auf \textcite{OpenCart2025} überprüft, ob die Informationen stimmen und alle Informationen pro Testschritt so auf \textcite{OpenCart2025} zu finden sind. So kann überprüft werden, ob GPT-4o Testschritte außer Acht lässt oder in einem Testschritt falsche Begriffe oder Schritte vorkommen. Auch ob es Funktionen testet, die weder in der Anforderungsspezifikation oder auf der Website zu finden sind.  Ein Testschritt, welcher in der falschen logischen Reihenfolge steht, ist ebenfalls nicht faktisch korrekt. Weist ein Testfall ein falsches oder generisches \glqq Erwartetes Ergebnis\grqq{} auf, ist er auch negativ. Die Testfälle werden folgendermaßen eingeordnet:\\
+Durch diese Metrik kann der Anteil der faktisch korrekten Testschritte pro Testfall in Prozent gemessen werden. Um die Factual Correctness der Testfälle zu bestimmen, werden die von GPT-4o generierten Testfälle auf \textcite{OpenCart2025} überprüft, ob die Informationen stimmen und alle Informationen pro Testschritt so auf der Website \textcite{OpenCart2025} zu finden sind. So kann überprüft werden, ob GPT-4o Testschritte außer Acht lässt oder in einem Testschritt falsche Begriffe oder Schritte vorkommen. Auch ob es Funktionen testet, die weder in der Anforderungsspezifikation oder auf der Website zu finden sind.  Ein Testschritt, welcher in der falschen logischen Reihenfolge steht, ist ebenfalls nicht faktisch korrekt. Weist ein Testfall ein falsches oder generisches \glqq Erwartetes Ergebnis\grqq{} auf, ist er auch negativ. Die Testfälle werden folgendermaßen eingeordnet:\\
 \\
 \textbf{Factual Correctness:} 
 \begin{table}[H]
@@ -575,10 +578,10 @@ Dies wird überprüft, in dem untersucht wird, ob die Informationen aus den Test
 \\
 Die Testfälle von \textcite{Pavankumar21github2022}, welche es pro Testszenario gibt, ist der Wert für $TC_{Manual}$. Wenn GPT-4o 20 Testfälle für ein Testszenario generiert hat, dabei aber zehn Testfälle entweder die Testfallstruktur nicht aufweisen oder nicht korrekte Testschritte besitzen und \textcite{Pavankumar21github2022} ebenfalls 20 Testfälle für dieses Testszenario erstellt hat, ist der Wert der Abdeckung in diesem Testszenario bei 50 \%.\\
 \\
-Die Testdaten, werden von GPT-4o in eine Excel Datei eingetragen und dann nach den drei oben genannten Qualitätskriterien ausgewertet. In Kapitel \ref{sec:ergebnisse} finden sich die Ergebnisse. Eine Diskussion über die Ergebnisse und welche Schlüsse daraus gezogen werden können, findet sich in Kapitel \ref{sec:diskussion}.
+Die Testdaten, werden von GPT-4o in eine Excel Datei eingetragen und dann nach den drei oben genannten Qualitätskriterien ausgewertet. In Kapitel \ref{sec:ergebnisse} finden sich die Ergebnisse. Eine Diskussion über die Ergebnisse findet sich in Kapitel \ref{sec:diskussion}.
 \newpage
 
-\noindent Um die Auswertung der Ergebnisse und die Bedeutung der drei Qualitätskriterien zu verdeutlichen hilft folgende Tabelle:
+\noindent Um die Auswertung der Ergebnisse und die Bedeutung der drei Qualitätskriterien zu verdeutlichen hilft folgende Tabelle:\\
 Sie zeigt einen Testfall mit einer negativen Testfallstruktur, einen mit einer Factual Correctness unter dem Wert von eins und einen Testfall, welcher eine positive Testfallstruktur aufweist und dabei eine Factual Correctness im Wert von eins besitzt:
 \begin{figure}[H]
     \centering
@@ -591,7 +594,7 @@ Sie zeigt einen Testfall mit einer negativen Testfallstruktur, einen mit einer F
 \\
 Der zweite Testfall besitzt im Gegensatz dazu eine als positiv eingestufte Testfallstruktur. Allerdings ist die Factual Correctness nicht ausreichend. Im Testszenario Register testet dieser den Button \glqq Order\grqq, welchen es in diesem Testszenario nicht gibt. Es handelt sich um eine Halluzination. Außerdem ist die Reihenfolge, bis auf den ersten Testschritt, nicht richtig. Da die Factual Correctness nicht bei eins ist, wird dieser Testfall ebenfalls nicht berücksichtigt, um die Abdeckung zu berechnen.\\
 \\
-Im Gegensatz zu dem ersten und zweiten Testfall besitzt der dritte Testfall sowohl eine positive Testfallstruktur als auch eine Factual Correctness von eins. Dadurch wird dieser Testfall für die Berechnung der Abdeckung berücksichtigt. Wenn in diesem Beispiel \textcite{Pavankumar21github2022} drei Testfälle geschrieben hat, wäre die Abdeckung der von GPT-4o generierten Testfälle bei 1/3. Da zwei der drei Testfälle nicht berücksichtigt wurden.\\
+Im Gegensatz zu dem ersten und zweiten Testfall besitzt der dritte Testfall sowohl eine positive Testfallstruktur als auch eine Factual Correctness von eins. Dadurch wird dieser Testfall für die Berechnung der Abdeckung berücksichtigt. Wenn in diesem Beispiel \textcite{Pavankumar21github2022} drei Testfälle geschrieben hat, wäre die Abdeckung der von GPT-4o generierten Testfälle bei 33,3 \%. Da zwei der drei Testfälle nicht berücksichtigt wurden.\\
 \\
 Dieser Vergleich zeigt anschaulich, wie wichtig die Einhaltung der drei Qualitätskriterien ist und wie diese ausgewertet werden.
 
@@ -603,7 +606,7 @@ Dieser Vergleich zeigt anschaulich, wie wichtig die Einhaltung der drei Qualitä
 \label{sec:ergebnisse}
 Im Folgenden wurden die Ergebnisse, welche die von GPT-4o generierten Testfälle in Bezug auf die in Kapitel \ref{sec:qualitätskriterien} beschriebenen Qualitätskriterien erreicht haben, in diesem Kapitel veranschaulicht. Alle Testdaten, die Anforderungsspezifikationen, die manuellen sowie die von GPT-4 generierten Testfälle und die Auswertungstabellen finden sich im GitHub-Projekt von \textcite{Müller2025}.\\
 \\
-In dieser Arbeit wurden zehn Testszenarien. Dabei wurden von GPT-4o insgesamt 128 Testfälle generiert und ausgewertet. Folgende Grafik zeigt dabei das Vorgehen der Auswertung in dem Testszenario \glqq Currencies\grqq{}:
+In dieser Arbeit wurden zehn Testszenarien getestet. Dabei wurden von GPT-4o insgesamt 128 Testfälle generiert und ausgewertet. Folgende Grafik zeigt dabei das Vorgehen der Auswertung in dem Testszenario \glqq Currencies\grqq{}:
 
 \begin{figure}[H]
     \centering
@@ -687,7 +690,7 @@ Currencies: & 3 & 3 & 0 & 100 \% \\ \hline
     \label{fig:enter-label}
 \end{figure}
 
-\noindent Anhand dieser Grafik ist zu erkennen, dass die Factual Correctness pro Testszenario Schwankungen enthält, diese jedoch nie unter 50 \% fällt.
+\noindent Anhand dieser Grafik ist zu erkennen, dass die Factual Correctness pro Testszenario Schwankungen enthält. Dies zeigt, dass es das Phänomen der Halluzination gibt und auch, dass es GPT-4o nicht immer gelingt, alle Informationen richtig einzuordnen und zu berücksichtigen. Da die Factual Correctness jedoch in keinem der Testszenarien unter dem Wert von 50 \% fällt, hat dies keine gravierende Auswirkung auf den praktischen Nutzen der generierten Testfälle.
 \newpage
 
 \noindent\textbf{\underline{3. Coverage (Deutsch: Abdeckung)}}\\
@@ -727,7 +730,8 @@ Currencies: & 3 & 3 & 100 \% \\ \hline
     \caption{Abdeckung pro Testszenario}
     \label{fig:enter-label}
 \end{figure}
-\noindent Anhand dieser Grafik ist zu erkennen, dass die Abdeckungsrate pro Testszenario Schwankungen enthält, diese jedoch nie unter 50 \% fällt.
+\noindent Anhand dieser Grafik ist zu erkennen, dass die Abdeckungsrate pro Testszenario Schwankungen enthält, diese jedoch nie unter 50 \% fällt. Dies zeigt, dass es GPT-4o nicht immer gelingt, alle Informationen einzuordnen und in der ganzen Abdeckung zu testen. Da die Abdeckungsrate jedoch in keinem der Testszenarien unter dem Wert von 50 \% fällt, hat dies keine gravierende Auswirkung auf den praktischen Nutzen der generierten Testfälle. Auffallend ist, dass obwohl das Qualitätskriterium \glqq Factual Correctness\grqq{} dabei eine Rolle spielt, wie viele Testfälle für die Abdeckung berücksichtigt werden, hat diese keine unmittelbare Auswirkung auf die Abdeckungsrate. So ist in dem Qualitätskriterium \glqq Factual Correctness\grqq{} der Wert im Testszenario \glqq Register\grqq{} mit 85 \% höher als der Wert im Testszenario \glqq Login\grqq{} mit 77,3 \%. Bei der Abdeckung erzielt \glqq Register\grqq{} jedoch mit 63 \% einen niedrigeren Wert als \glqq Login\grqq{} mit 73.9 \%.
+
 % chapter ergebnisse (end)
 
 \chapter{Diskussion} % (fold)
@@ -736,18 +740,18 @@ In dieser Arbeit wurden mit GPT-4o von \textcite{OpenAI2025} Anwendungstestfäll
 \\
 \textbf{\underline{1. Testfallstruktur:}}\\
 \\
-GPT-4o erreichte bei der Testfallstruktur einen Wert von 100 \%. Dies zeigt, dass GPT-4o dazu in der Lage ist, die Testfallstruktur nach \textcite{IsoIecIeee2024} abzubilden. Somit können die von GPT-4o generierten Testfälle dokumentiert werden. Zukünftige Werke können darauf aufbauen und die Anpassungsfähigkeit von GPT-4o an individuellen Testfallstrukturen untersuchen. Anhand der aufgestellten Methodik lässt sich analysieren, ob GPT-4o in der Lage ist, die Testfallstruktur individuell anzupassen.\\
+GPT-4o erreichte bei der Testfallstruktur einen Mittelwert von 100 \%. Dies zeigt, dass GPT-4o dazu in der Lage ist, die Testfallstruktur nach \textcite{IsoIecIeee2024} abzubilden. Somit können die von GPT-4o generierten Testfälle dokumentiert werden. Zukünftige Werke können darauf aufbauen und die Anpassungsfähigkeit von GPT-4o an individuellen Testfallstrukturen untersuchen. Anhand der aufgestellten Methodik lässt sich analysieren, ob GPT-4o in der Lage ist, die Testfallstruktur individuell anzupassen.\\
 \\
 \textbf{\underline{2. Factual Correctness:}}\\
 \\
-Die Factual Correctness erreicht den Durchschnittswert von 78,1 \%, wobei der niedrigste Wert 54,5 \% ist und der höchste Wert bei 100 \% liegt. Die restlichen acht Testszenarien liegen im Bereich zwischen 70 \% und 90 \%. Der Grund der Schwankungen kann an folgenden Gründen liegen:\\
+Die Factual Correctness erreicht den Mittelwert von 78,1 \%, wobei der niedrigste Wert 54,5 \% ist und der höchste Wert bei 100 \% liegt. Die restlichen acht Testszenarien liegen im Bereich zwischen 70 \% und 90 \%. Der Grund der Schwankungen kann an folgenden Gründen liegen:\\
 \noindent Wie \textcite{Li2024} in ihrem Werk beschreiben, gibt es das Problem der Halluzination. So könnte GPT-4o in unterschiedlichen Testszenarien unterschiedlich stark halluziniert haben. Wie \textcite{Iqbal2022} in ihrem Werk erläutern, können Sprachmodelle bei längeren Texten Schwierigkeiten bekommen, die natürliche Sprache vollständig zu begreifen. Somit könnte in diesem Fall die Komplexität des Testszenarios eine Rolle dabei spielen, wie GPT-4o das Testszenario versteht und daraus passende Testfälle generieren kann.\\
 \\
 In dieser Arbeit hat die Anzahl der Testfälle, die generiert wurden, jedoch keine ersichtliche Auswirkung auf den Wert der Factual Correctness des Testszenarios. Die Testszenarien \glqq Register\grqq{}, \glqq Login\grqq{} und \glqq Forgot Password\grqq{} mit 20 oder mehr generierten Testfällen erreichen eine höhere Positivrate als zum Beispiel die beiden Testszenarien \glqq My Account\grqq{} oder \glqq Change Password\grqq{}, welche eine geringere Anzahl an Testfällen besitzen. Die Anzahl der Testfälle allein ist nach diesen Ergebnissen nicht ausschlaggebend, wie gut GPT-4o das jeweilige Testszenario versteht.\\
 \\
 \textbf{\underline{3. Coverage (Deutsch: Abdeckung)}}\\
 \\
-Die zehn von GPT-4o erstellten Testszenarien erreichten bei der Abdeckungsrate einen Durchschnittswert von 68 \%. Der niedrigste Wert eines Testszenarios liegt bei 53,8 \% und der höchste Wert bei 100 \%. Die restlichen acht
+Die zehn von GPT-4o erstellten Testszenarien erreichten bei der Abdeckungsrate einen Mittelwert von 68 \%. Der niedrigste Wert eines Testszenarios liegt bei 53,8 \% und der höchste Wert bei 100 \%. Die restlichen acht
 Testszenarien liegen im Bereich 60 \% bis 88,9 \%.
 \newpage
 
@@ -756,7 +760,7 @@ Testszenarien liegen im Bereich 60 \% bis 88,9 \%.
 \\
 Ein weiterer Punkt, welcher berücksichtigt werden muss, ist die Benchmark. Für diese Arbeit wurden die von \textcite{Pavankumar21github2022} erstellten Testfälle als Benchmark verwendet, um die Abdeckungsrate zu bestimmen. Das Projekt von \textcite{Pavankumar21github2022} wurde im Jahr 2022 erstellt und könnte eine ältere Version von \textcite{OpenCart2025} getestet haben. Deshalb wurde bei der Auswertung der von GPT-4o erstellten Testfälle diese ebenfalls mit den Informationen auf der \textcite{OpenCart2025} Website überprüft. Das Projekt von \textcite{Pavankumar21github2022} testete jedoch unterschiedliche Testszenarien mit mehreren Testfällen, welche der in Kapitel \ref{sec:testfallstruktur} beschriebenen Testfallstruktur entsprechen. Außerdem sind diese anwendungstechnisch entsprechend logisch aufgebaut, sodass das Projekt von \textcite{Pavankumar21github2022} sich dennoch als Benchmark für die Abdeckung eignet.\\
 \\
-Durch die Auswertung der von GPT-4o generierten Testfälle werden Erkenntnisse im Bereich der Leistungsfähigkeit von GPT-4o im Bereich der Testfallgenerierung gewonnen. Während sich der Wert der Testfallstruktur bei 100 \% befindet, erzielen die von GPT-4o generierten Testfälle in den beiden anderen Qualitätskriterien nicht so hohe Werte. So erreicht die Factual Correctness einen Durchschnittswert von 78,1 \% und die Abdeckung einen Durchschnittswert von 68 \%. Somit sind zwar mehr als zwei Drittel der von GPT-4o erstellten Testfälle richtig aufgebaut, faktisch korrekt und erreichen eine hohe Abdeckung und sind damit praktisch nutzbar. Dennoch könnte jedoch die Anzahl in Zukunft noch weiter verbessert werden.
+Durch die Auswertung der von GPT-4o generierten Testfälle werden Erkenntnisse im Bereich der Leistungsfähigkeit von GPT-4o im Bereich der Testfallgenerierung gewonnen. Während sich der Wert der Testfallstruktur bei 100 \% befindet, erzielen die von GPT-4o generierten Testfälle in den beiden anderen Qualitätskriterien nicht so hohe Werte. So erreicht die Factual Correctness einen Mittelwert von 78,1 \% und die Abdeckung einen Mittelwert von 68 \%. Somit sind zwar mehr als zwei Drittel der von GPT-4o erstellten Testfälle richtig aufgebaut, faktisch korrekt und erreichen eine hohe Abdeckung und sind damit praktisch nutzbar. Dennoch könnte jedoch die Anzahl in Zukunft noch weiter verbessert werden.
 % chapter diskussion (end)
 
 \chapter{Fazit und Ausblick} % (fold)
@@ -772,9 +776,9 @@ Aufgrund der vorliegenden Ergebnisse kommt diese Arbeit zu folgenden Schluss:\\
 \\
 Die Testfallstruktur hat in allen Testszenarien hindurch einen Wert von 100 \% erreicht. Dies zeigt, dass GPT-4o dazu in der Lage ist, Testfälle zu generieren, welche die in Kapitel \ref{sec:testfall} definierte Testfallstruktur aufweisen.\\
 \\
-Bei den beiden Qualitätskriterien \glqq Factual Correctness\grqq{} und \glqq Abdeckung\grqq{} gab es jedoch Schwankungen pro Testszenario. Dennoch erreichten die von GPT-4o generierten Testfälle über alle Testszenarien hinweg einen Wert von über 50 \% in Bezug auf ihre Abdeckung und Factual Correctness. Mit einem Durchschnittswert von 78,1 \% bei der Factual Correctness und mit einer durchschnittlichen Abdeckungsrate von 68 \%, kann jedoch festgehalten werden, dass die Mehrzahl der von ChatGPT-4o generierten Testfälle faktisch korrekt sind und dabei mehr als zwei Drittel der Testfälle pro Testszenario abdecken.\\
+Bei den beiden Qualitätskriterien \glqq Factual Correctness\grqq{} und \glqq Abdeckung\grqq{} gab es jedoch Schwankungen pro Testszenario. Dennoch erreichten die von GPT-4o generierten Testfälle über alle Testszenarien hinweg einen Wert von über 50 \% in Bezug auf ihre Abdeckung und Factual Correctness. Mit einem Mittelwert von 78,1 \% bei der Factual Correctness und mit dem Mittelwert der Abdeckungsrate von 68 \%, kann jedoch festgehalten werden, dass die Mehrzahl der von ChatGPT-4o generierten Testfälle faktisch korrekt sind und dabei mehr als zwei Drittel der Testfälle pro Testszenario abdecken.\\
 \\
-Dadurch kann ein LLM wie GPT-4o für den Nutzer ein hilfreiches Werkzeug zur Erstellung von Testfällen sein, wenn dieser Anforderungsspezifikationen und Screenshots mit Website-Informationen zur Verfügung gestellt werden. Wie in Kapitel \ref{sec:promptUndVerwendeteMethoden} beschrieben, ist es jedoch wichtig, dass GPT-4o dazu aufgefordert wird, die Testfälle in Tabellenform anzeigen zu lassen, um so Halluzinationen und Fehlinterpretationen vorbeugen zu können. GPT-4o ist in der Lage, Änderungen und Anmerkungen des Nutzers einzubauen und dadurch die Testfälle zu verbessern. Die Kombination aus Nutzer und LLM spielt dabei eine wichtige Rolle. Dies deckt sich, mit den Ergebnissen welche \textcite{Kirinuki2024} erzielen konnten. In dem Werk von \textcite{Kirinuki2024} wurde die Abdeckungsrate erhöht, als der Nutzer mit GPT-4 zusammengearbeitet hat.
+Dadurch kann ein LLM wie GPT-4o für den Nutzer ein hilfreiches Werkzeug zur Erstellung von Testfällen sein, wenn dieser Anforderungsspezifikationen und Screenshots mit Website-Informationen zur Verfügung gestellt werden. Wie in Kapitel \ref{sec:promptUndVerwendeteMethoden} beschrieben, ist es jedoch wichtig, dass GPT-4o dazu aufgefordert wird, die Testfälle in Tabellenform anzeigen zu lassen, um so Halluzinationen und Fehlinterpretationen vorbeugen zu können. GPT-4o ist in der Lage, Änderungen und Anmerkungen des Nutzers einzubauen und dadurch die Testfälle zu verbessern. Die Kombination aus Nutzer und LLM spielt dabei eine wichtige Rolle. Dies deckt sich, mit den Ergebnissen welche \textcite{Kirinuki2024} erzielen konnten. In dem Werk von \textcite{Kirinuki2024} wurde die Abdeckungsrate erhöht, als die Nutzer mit GPT-4 zusammengearbeitet haben.
 \newpage
 
 \noindent Die Ergebnisse dieser Arbeit zeigen, dass der Einsatz von Künstlicher Intelligenz zur Testfallgenerierung eine praktische Bedeutung besitzt. Zukünftige Werke können dazu andere LLMs verwenden und Vergleiche ziehen und andere Anwendungen testen, um Optimierungsmöglichkeiten beim Einsatz von Künstlicher Intelligenz zur Testfallgenerierung zu untersuchen. Es ist festzuhalten, dass GPT-4o ein Werkzeug ist, das dem Nutzer bei der Erstellung von Anwendungstestfällen von Nutzen ist. Dabei muss GPT-4o nicht trainiert werden, es reicht diesem Informationen und Anforderungsspezifikationen mitzugeben und gegebenenfalls auf Unstimmigkeiten aufmerksam zu machen. Außerdem bietet diese Arbeit ein Vorgehen, wie mit GPT-4o Testfälle generiert werden können und mit welchen Qualitätskriterien diese ausgewertet werden können.
