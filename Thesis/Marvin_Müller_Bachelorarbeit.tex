@@ -351,7 +351,7 @@ Folgende Grafik von \textcite{JamaSoftwareo.D.} veranschaulicht anhand eines Bei
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{./Bilder/Jama Software_Eigenschaften von funktionalen vs. nicht funktionalen Anforderungen}
-    \caption{Die Grafik von \textcite{JamaSoftwareo.D.} zeigt die Eigenschaften von funktionalen vs. nicht funktionalen Anforderungen}
+    \caption{Die Grafik von \textcite{JamaSoftwareo.D.} zeigt die Eigenschaften von funktionalen Anforderungen verglichen mit nicht funktionalen Anforderungen}
     \label{fig:enter-label}
 \end{figure}
 \noindent Laut \textcite{Visure2024} werden Aspekte wie Kriterien an das System, Sicherheit und Wartung in den nicht funktionalen Anforderungen beschreiben. In dieser Arbeit geht es um funktionale Anforderungen. Diese legen fest, wie das System funktioniert und was passiert, wenn etwas im Positiven als auch wenn etwas im Negativen geschieht. Der Unterschied ist an der Grafik von \textcite{JamaSoftwareo.D.} zu erkennen. Während die funktionellen Anforderungen festlegen, dass das Auto schnell sein und eine rote Farbe besitzen muss, legen die nicht funktionalen Anforderungen exakt fest, welche Geschwindigkeit das Auto erreichen und welchen genauen Rotton dieses besitzen muss. (\cite{Barmi2011}; \cite{Mustafa2021})
@@ -359,7 +359,7 @@ Folgende Grafik von \textcite{JamaSoftwareo.D.} veranschaulicht anhand eines Bei
 
 \subsection{Bedeutung der Anforderungsspezifikation für die Testfallgenerierung} % fold
 \label{sec:bedeutungDerAnforderungsspezifikationFürDieTestfallgenerierung}
-Anforderungsspezifikationen dienen als Grundlage für die Testfallgenerierung durch GPT-4o von \textcite{OpenAI2025} in dieser Arbeit. Sie werden GPT-4o per RAG übermittelt und per Prompt dazu aufgerufen, Testfälle aus diesen zu generieren, welche alle Bereiche pro Testszenario abdecken. Dabei werden sie mit Screenshots der getesteten Website ergänzt. Anforderungsspezifikationen sind essenziell für diese Arbeit. Sie dienen als Grundlage zur Testfallgenerierung und die von GPT-4o generierten Testfälle werden mithilfe von manuell erstellten Testfällen auf ihre Richtigkeit überprüft. Diese dienen als Benchmark und wurden aus den gleichen Anforderungsspezifikationen erstellt, welche GPT-4o zur Verfügung gestellt werden.
+Anforderungsspezifikationen dienen als Grundlage für die Testfallgenerierung durch GPT-4o von \textcite{OpenAI2025} in dieser Arbeit. Sie werden GPT-4o per RAG übermittelt und per Prompt dazu aufgerufen, Testfälle aus diesen zu generieren, welche alle Bereiche pro Testszenario abdecken. Dabei werden sie mit Screenshots der getesteten Website ergänzt. Anforderungsspezifikationen sind essenziell für diese Arbeit. Sie dienen als Grundlage zur Testfallgenerierung und die von GPT-4o generierten Testfälle werden mithilfe von manuell erstellten Testfällen sowie den Website-Informationen auf ihre Richtigkeit überprüft. Diese dienen als Benchmark und wurden aus den gleichen Anforderungsspezifikationen erstellt, welche GPT-4o zur Verfügung gestellt werden.
 % section bedeutungDerAnforderungsspezifikationFürDieTestfallgenerierung (end)
 
 \chapter{Related Work und aktuelle Forschung} % (fold)
@@ -455,7 +455,7 @@ In diesem Kapitel wird beschrieben, wie in dieser Arbeit Testfälle durch GPT-4o
     \caption{Ein Prompt an GPT-4o}
     \label{fig:enter-label}
 \end{figure}
-\noindent GPT-4o wird dazu aufgefordert alle Funktionen pro Testszenario als jeweils einzelnen Testfall zu generieren. Es soll dabei nur Informationen aus der Anforderungsspezifikation und aus den Screenshots benutzen und dabei die Struktur aus \textcite{IsoIecIeee2024} erfüllen. Um auf mögliche Fehler und Halluzinationen vorzubeugen, wird GPT-4o dazu aufgefordert, die Testfälle in Tabellenform anzuzeigen. Es kann so auf mögliche Fehler oder fehlende Testfälle hingewiesen werden die GPT-4o beheben soll. Die Testfälle werden dann in einer Excel-Tabelle dokumentiert. Anschließend werden diese ausgewertet. Die Qualitätskriterien zu der Auswertung der generierten Testfälle finden sich in Kapitel \ref{sec:qualitätskriterien}. Dabei dienen die manuellen Testfälle von \textcite{Pavankumar21github2022} und Informationen auf der \textcite{OpenCart2025} Website als Referenz.
+\noindent GPT-4o wird dazu aufgefordert alle Funktionen pro Testszenario als jeweils einzelnen Testfall zu generieren. Es soll dabei nur Informationen aus der Anforderungsspezifikation und aus den Screenshots benutzen und dabei die Struktur aus \textcite{IsoIecIeee2024} erfüllen. Um mögliche Fehler und Halluzinationen vorzubeugen, wird GPT-4o dazu aufgefordert, die Testfälle in Tabellenform anzuzeigen. Es kann so auf mögliche Fehler oder fehlende Testfälle hingewiesen werden die GPT-4o beheben soll. Die Testfälle werden dann in einer Excel-Tabelle dokumentiert. Anschließend werden diese ausgewertet. Die Qualitätskriterien zu der Auswertung der generierten Testfälle finden sich in Kapitel \ref{sec:qualitätskriterien}. Dabei dienen die manuellen Testfälle von \textcite{Pavankumar21github2022} und Informationen auf der \textcite{OpenCart2025} Website als Referenz.
 % section promptUndVerwendeteMethoden (end)
 \newpage
 
@@ -499,12 +499,12 @@ Einstufung  & 0 Merkmale fehlen       & $1 \geq \text{Merkmale fehlen}$     \\ \
 \label{sec:factualCorrectness}
 Die Inhalte eines Testfalls müssen stimmig sein und den Prozess in der richtigen Reihenfolge wiedergeben. Einfaches Beispiel: Ein Nutzer kann sich nicht von einer Anwendung abmelden, wenn er sich nicht vorher angemeldet hat. Ein Testfall muss somit als ersten Testschritt die \glqq Anmeldung\grqq{} besitzen, bevor dieser den Testschritt der \glqq Abmeldung\grqq{} hat. Deshalb ist ein Testfall unbrauchbar, wenn dieser nicht die Logik der Anforderungsspezifikation erfüllt. Um die Logik und die Korrektheit der generierten Testfälle bestimmen zu können, werden die manuell erstellten Testfälle von \textcite{Pavankumar21github2022}, zusammen mit den Informationen auf der \textcite{OpenCart2025} Website als Benchmark genutzt. Diese werden pro Testszenario mit den generierten Testfällen auf ihre Korrektheit überprüft.\\
 \\
-Ein weiteres Problem für die Factual Correctness ist das Problem der Halluzination. In Kapitel \ref{sec:motivation} steht, dass \textcite{Siebert2024} den Begriff Halluzination als Phänomen beschreibt, bei dem eine KI-Antwort nicht mit den gegebenen Informationen übereinstimmt und die KI sich Antworten generiert, die faktisch nicht richtig sind. Auch \textcite{Li2024} beschreibt dieses Phänomen.\\
+Ein weiteres Problem für die \glqq Factual Correctness\grqq{} ist das Problem der Halluzination. In Kapitel \ref{sec:motivation} steht, dass \textcite{Siebert2024} den Begriff Halluzination als Phänomen beschreibt, bei dem eine KI-Antwort nicht mit den gegebenen Informationen übereinstimmt und die KI sich Antworten generiert, die faktisch nicht richtig sind. Auch \textcite{Li2024} beschreibt dieses Phänomen.\\
 \\
-Mit dem Qualitätskriterium Factual Correctness von \textcite{Ragas2025} wird in dieser Arbeit der Wert der faktisch korrekten Testschritte pro Testfall und der Gesamtzahl an Testschritten des Testfalls gemessen. Ein faktisch korrekter Testschritt steht in der richtigen Reihenfolge, ist keine Halluzination und besitzt seine Informationen nur aus der Anforderungsspezifikation oder dem Screenshot aus der Website.\\
+Mit dem Qualitätskriterium \glqq Factual Correctness\grqq{} von \textcite{Ragas2025} wird in dieser Arbeit der Wert der faktisch korrekten Testschritte pro Testfall und der Gesamtzahl an Testschritten des Testfalls gemessen. Ein faktisch korrekter Testschritt steht in der richtigen Reihenfolge, ist keine Halluzination und besitzt seine Informationen nur aus der Anforderungsspezifikation oder dem Screenshot aus der Website.\\
 \newpage
 
-\noindent Nach \textcite{Ragas2025} misst sich die Factual Correctness folgendermaßen:
+\noindent Nach \textcite{Ragas2025} angelehnt, misst sich die Factual Correctness in dieser Arbeit folgendermaßen:
 \begin{itemize}
     \item \textbf{Precision} (\(P\)): Der Anteil der generierten Testfälle, die als korrekt eingestuft wurden und tatsächlich korrekt sind.
     \begin{equation*}
@@ -559,7 +559,7 @@ Folgendes Beispiel zeigt einen von GPT-4o erstellten Testfall, welcher sowohl di
 \subsection{Coverage (Deutsch: Abdeckung)} % fold
 \label{sec:coverage}
 
-Um das Kriterium Coverage zu berechnen, wird die Metrik für die Automation Coverage nach \parencite{Nirpals2011, Lazić2013} verwendet. In dieser Arbeit wird jedoch nicht die Automation Coverage berechnet, sondern die Anzahl der von GPT-4o erstellten Testfälle mit der Anzahl der manuellen Testfälle pro Testszenario berechnet.\\
+Um das Kriterium Coverage zu berechnen, wird die Metrik für die \glqq Automation Coverage\grqq{} nach \parencite{Nirpals2011, Lazić2013} verwendet. In dieser Arbeit wird jedoch nicht die Automation Coverage berechnet, sondern die Anzahl der von GPT-4o erstellten Testfälle mit der Anzahl der manuellen Testfälle pro Testszenario berechnet.\\
 \\
 Die Abdeckung wird für jedes Testszenario einzeln bewertet und danach wird der Mittelwert aus allen Testfällen berechnet. Die Streuung pro Testszenario wird mit einem Säulendiagramm dargestellt.
 \newpage
@@ -571,7 +571,7 @@ Die Abdeckung wird für jedes Testszenario einzeln bewertet und danach wird der 
 
 \noindent Dabei gilt:
 \begin{itemize}
-    \item $TC_{GPT-4o}$ ist die Anzahl der von GPT-4o generierten Testfälle pro Testszenario.
+    \item $TC_{GPT-4o}$ ist die Anzahl der von GPT-4o generierten Testfälle pro Testszenario, welche in den beiden Qualitätskriterien Testfallstruktur und Factual Correctness als positiv bewertet wurden.
     \item $TC_{Manual}$ ist die Anzahl der von \textcite{Pavankumar21github2022} manuell erstellten Testfälle desselben Testszenario, welche als Benchmark dienen.
 \end{itemize}
 Den Wert für die Abdeckung misst sich mithilfe der Metriken Testfallstruktur und Factual Correctness. Pro Testszenario, zum Beispiel im Testszenario Register Account, wird GPT-4o dazu aufgefordert, alle möglichen Testfälle dieses Testszenarios zu generieren. Diese werden dokumentiert und ausgewertet. Die Testfälle von GPT-4o müssen dabei die Testfallstruktur aufweisen und gleichzeitig nur Testschritte besitzen, die faktisch korrekt und aufeinander aufgebaut sind.\\
@@ -774,7 +774,7 @@ Diese Arbeit untersucht den Einsatz von Künstlicher Intelligenz zur Testfallgen
 Um diese Frage zu beantworten, wurden von GPT-4o Anwendungstestfälle generiert. Dabei wurden zehn unterschiedliche Testszenarien mit insgesamt 128 Anwendungsfällen getestet. Diese Testfälle wurden dann anhand der in Kapitel \ref{sec:qualitätskriterien} beschriebenen Qualitätskriterien ausgewertet.\\
 \\
 Aufgrund der vorliegenden Ergebnisse kommt diese Arbeit zu folgenden Schluss:\\
-\noindent Es ist möglich, mit dem LLM GPT-4o Anforderungstestfälle zu erzeugen, welche in Bezug auf ihrer Abdeckung, Factual Correctness und Testfallstruktur nutzbar sind.\\
+\noindent Es ist möglich, mit dem LLM GPT-4o Anforderungstestfälle zu erzeugen, welche in Bezug auf ihrer Abdeckung, Factual Correctness und Testfallstruktur für den praktischen Einsatz nutzbar sind.\\
 \\
 Die Testfallstruktur hat in allen Testszenarien hindurch einen Wert von 100 \% erreicht. Dies zeigt, dass GPT-4o dazu in der Lage ist, Testfälle zu generieren, welche die in Kapitel \ref{sec:testfall} definierte Testfallstruktur aufweisen.\\
 \\
