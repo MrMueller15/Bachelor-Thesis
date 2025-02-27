@@ -125,7 +125,7 @@ Kapitel \ref{sec:einleitung} widmet sich der Darstellung der Motivation, die der
 In den vergangenen Jahren hat in dem Bereich \glqq Künstliche Intelligenz (KI)\grqq{} eine rasante Entwicklung stattgefunden. Diese hat hierbei Auswirkungen auf das private als auch auf das geschäftliche Leben. Der Artikel des Branchenverbandes der deutschen Informations- und Telekommunikationsbranche - Bitkom - stellt eine von ihm durchgeführte Studie vor:\\
 \noindent Laut dieser Studie hat sich der Anteil der deutschen Unternehmen, welche KI nutzen, von 9 \% im Jahr 2022 auf 15 \% im Jahr 2023 nahezu verdoppelt. Dabei sehen 68 \% der Befragten KI als Chance. (\cite{StreimHecker2023})\\
 \\
-In einer Pressemitteilung vom 25. November 2024 gibt das Statistische Bundesamt bekannt, dass bereits 20 \% der in Deutschland ansässigen Unternehmen KI verwenden. Dabei sind die drei häufigsten Einsatzbereiche für KI Textmining - Analyse geschriebener Sprache mit 48 \%, Spracherkennung mit 47 \% und die Erzeugung von natürlicher Sprache mit 34 \%. Dies zeigt eine rasante Steigerung der Nutzung von KI alleine in den letzten drei Jahren und es lässt sich erkennen, dass KI bereits vielfältig einsetzbar und nutzbar ist. Gerade in der Informatik und in deren Teilgebiet der Softwareentwicklung trifft dies zu. (\cite{StatistischesBundesamt2024})\\
+In einer Pressemitteilung vom 25. November 2024 gibt das Statistische Bundesamt bekannt, dass von den in Deutschland ansässigen Unternehmen bereits 20 \% KI verwenden. KI Textmining, also die Analyse geschriebener Sprache, schneidet mit 48 \% am Besten ab. Darauf folgen die Spracherkennung mit 47 \% und die Erzeugung von natürlicher Sprache mit 34 \%. Dies zeigt eine rasante Steigerung der Nutzung von KI alleine in den letzten drei Jahren und es lässt sich erkennen, dass KI bereits vielfältig einsetzbar und nutzbar ist. Gerade in der Informatik und in deren Teilgebiet der Softwareentwicklung trifft dies zu. (\cite{StatistischesBundesamt2024})\\
 \\
 In dieser Arbeit stehen KI-Sprachmodelle im Vordergrund. Diese sogenannten Large Language Models (LLM) bieten sich  dafür an, redundante und sich ähnelnde Aufgaben für den Anwender zu erledigen. LLM werden deshalb bereits in verschiedensten Bereichen der Textgenerierung verwendet. Zu nennen sind dabei Übersetzung, Texterstellung, Textzusammenfassung, Kategorisierung und Klassifizierung. (\cite{Kerner2024})\\
 \\
@@ -290,23 +290,23 @@ RAG ermöglicht es, einem LLM Dokumente zur Verfügung zu stellen, in welchem si
 \end{figure}
 \noindent Im Folgenden wird der Ablauf von RAG erklärt, dabei gibt es laut \textcite{Schmid2024} und laut \textcite{Miesle2023} fünf Schritte. In dieser Arbeit werden die Begriffe als Überschriften so verwendet, wie sie \textcite{Schmid2024} verwendet haben, da es sich um ein Werk auf Deutsch handelt und diese Arbeit ebenfalls auf Deutsch ist:\\
 \\
-\textbf{\underline{1. Indexierung:}}\\
+\textbf{\underline{1. \glqq Indexierung\grqq:}}\\
 \\
 Die Indexierung beschreibt den Prozess, wie die Daten aus einem Dokument in kürzere Abschnitte, die Chunks, aufgeteilt werden, um die Daten für das LLM verwertbar zu machen. Die Chunks werden maschinenlesbar gemacht und in einer Vektordatenbank gespeichert, aus welcher sie für das LLM zugreifbar sind. Sie werden vektorisiert.\\
 \\
-\textbf{\underline{2. Benutzereingabe:}}\\
+\textbf{\underline{2. \glqq Benutzereingabe\grqq:}}\\
 \\
 Die Benutzereingabe erfolgt als Prompt in natürlicher Sprache, welche sich auf die im Dokument befindlichen Daten bezieht.\\
 \\
-\textbf{\underline{3. Retrieval:}}\\
+\textbf{\underline{3. \glqq Retrieval\grqq:}}\\
 \\
 Nachdem die Maschine die Eingabe erhalten hat und diese ebenfalls vektorisiert hat, wird mit der Methode des nächsten Nachbarn die höchste Ähnlichkeit zwischen der Eingabe und der in der Vektordatenbank gespeicherten Chunks priorisiert.\\
 \newpage
-\noindent\textbf{\underline{4. Augmentation:}}\\
+\noindent\textbf{\underline{4. \glqq Augmentation\grqq:}}\\
 \\
 Dem LLM wird diese Kombination aus Prompt des Benutzers und dem Kontext zu Verfügung gestellt.\\
 \\
-\textbf{\underline{5. Generation:}}\\
+\textbf{\underline{5. \glqq Generation\grqq:}}\\
 \\
 Es wird eine Antwort generiert, welche sowohl die erhaltenen Informationen als auch das Training des jeweiligen LLM kombiniert.\\
 \\
@@ -344,9 +344,9 @@ Ein Testfall besitzt eine ID, einen Namen, Vorbedingungen, welche erfüllt sein 
 
 \section{Anforderungsspezifikation} % (fold)
 \label{sec:anforderungsspezifikation}
-Eine Anforderungsspezifikation  ist das Fundament, aus dem Testfälle erstellt werden. Ein Testfall überprüft, ob die Anforderungen aus dieser Spezifikation erfüllt werden. Demnach ist eine Anforderungsspezifikation ein Dokument, welches alle Anforderungen enthält, welche das System erfüllen muss und dessen Erfüllbarkeit und nicht Erfüllbarkeit mit Testfällen abgedeckt und getestet werden. Da sie der Grund für die Testfälle sind, müssen Anforderungsspezifikationen vollständig, präzise und in sich konsistent sein. Anforderungsspezifikationen enthalten System- und Benutzeranforderungen. Systemanforderungen beschreiben dabei die Benutzeranforderungen genau, wobei die Benutzeranforderungen funktionale und nicht funktionale Anforderungen besitzen. (\cite{Barmi2011}; \cite{Mustafa2021})\\
+Das Fundament, aus dem Testfälle erstellt werden ist die Anforderungsspezifikation. Ein Testfall überprüft, ob aus dieser Spezifikation die Anforderungen erfüllt werden und ob diese somit richtig funktionieren. Eine Anforderungsspezifikation kann als ein Dokument verstanden werden, welches alle Anforderungen beinhaltet. Dabei muss das System diese erfüllen. Dabei wird dessen Erfüllbarkeit und nicht Erfüllbarkeit mit Testfällen abgedeckt und getestet. Da sie der Grund für die Testfälle sind, müssen Anforderungsspezifikationen vollständig, präzise und in sich konsistent sein. Anforderungen an das System und an die Benutzer befinden sich in den Anforderungsspezifikationen. Letztere besitzen dabei funktionale und nicht funktionale Anforderungen. Diese werden in der Systemanforderung beschrieben. (\cite{Barmi2011}; \cite{Mustafa2021})\\
 \\
-Folgende Grafik veranschaulicht anhand eines Beispiels den Unterschied zwischen funktionalen und nicht funktionalen Anforderungen:
+Folgende Grafik von \textcite{JamaSoftwareo.D.} veranschaulicht anhand eines Beispiels den Unterschied zwischen den beiden Arten der Anforderungen:
 
 \begin{figure}[H]
     \centering
@@ -354,7 +354,7 @@ Folgende Grafik veranschaulicht anhand eines Beispiels den Unterschied zwischen 
     \caption{Die Grafik von \textcite{JamaSoftwareo.D.} zeigt die Eigenschaften von funktionalen vs. nicht funktionalen Anforderungen}
     \label{fig:enter-label}
 \end{figure}
-\noindent Nicht funktionale Anforderungen beschreiben laut \textcite{Visure2024} zum Beispiel die Bereiche Sicherheit, Wartung und Kriterien an das System. In dieser Arbeit geht es um funktionale Anforderungen. Diese legen fest, wie das System funktioniert und was passiert, wenn etwas im Positiven als auch wenn etwas im Negativen geschieht. Der Unterschied ist an der Grafik von \textcite{JamaSoftwareo.D.} zu erkennen. Während die funktionellen Anforderungen festlegen, dass das Auto schnell sein und eine rote Farbe besitzen muss, legen die nicht funktionalen Anforderungen exakt fest, welche Geschwindigkeit das Auto erreichen und welchen genauen Rotton dieses besitzen muss. (\cite{Barmi2011}; \cite{Mustafa2021})
+\noindent Laut \textcite{Visure2024} werden Aspekte wie Kriterien an das System, Sicherheit und Wartung in den nicht funktionalen Anforderungen beschreiben. In dieser Arbeit geht es um funktionale Anforderungen. Diese legen fest, wie das System funktioniert und was passiert, wenn etwas im Positiven als auch wenn etwas im Negativen geschieht. Der Unterschied ist an der Grafik von \textcite{JamaSoftwareo.D.} zu erkennen. Während die funktionellen Anforderungen festlegen, dass das Auto schnell sein und eine rote Farbe besitzen muss, legen die nicht funktionalen Anforderungen exakt fest, welche Geschwindigkeit das Auto erreichen und welchen genauen Rotton dieses besitzen muss. (\cite{Barmi2011}; \cite{Mustafa2021})
 \newpage
 
 \subsection{Bedeutung der Anforderungsspezifikation für die Testfallgenerierung} % fold
@@ -732,7 +732,7 @@ Currencies: & 3 & 3 & 100 \% \\ \hline
     \caption{Abdeckung pro Testszenario}
     \label{fig:enter-label}
 \end{figure}
-\noindent Anhand dieser Grafik ist zu erkennen, dass die Abdeckungsrate pro Testszenario Schwankungen enthält, diese jedoch nie unter 50 \% fällt. Dies zeigt, dass es GPT-4o nicht immer gelingt, alle Informationen einzuordnen und in der ganzen Abdeckung zu testen. Da die Abdeckungsrate jedoch in keinem der Testszenarien unter dem Wert von 50 \% fällt, hat dies keine gravierende Auswirkung auf den praktischen Nutzen der generierten Testfälle. Auffallend ist, dass obwohl das Qualitätskriterium \glqq Factual Correctness\grqq{} dabei eine Rolle spielt, wie viele Testfälle für die Abdeckung berücksichtigt werden, hat diese keine unmittelbare Auswirkung auf die Abdeckungsrate. So ist in dem Qualitätskriterium \glqq Factual Correctness\grqq{} der Wert im Testszenario \glqq Register\grqq{} mit 85 \% höher als der Wert im Testszenario \glqq Login\grqq{} mit 77,3 \%. Bei der Abdeckung erzielt \glqq Register\grqq{} jedoch mit 63 \% einen niedrigeren Wert als \glqq Login\grqq{} mit 73.9 \%.
+\noindent Anhand dieser Grafik ist zu erkennen, dass die Abdeckungsrate pro Testszenario Schwankungen enthält, diese jedoch nie unter 50 \% fällt. Dies zeigt, dass es GPT-4o nicht immer gelingt, alle Informationen einzuordnen und in der ganzen Abdeckung zu testen. Da die Abdeckungsrate jedoch in keinem der Testszenarien unter dem Wert von 50 \% fällt, hat dies keine gravierende Auswirkung auf den praktischen Nutzen der generierten Testfälle. Auffallend ist, dass obwohl das Qualitätskriterium \glqq Factual Correctness\grqq{} dabei eine Rolle spielt, wie viele Testfälle für die Abdeckung berücksichtigt werden, diese keine unmittelbare Auswirkung auf die Abdeckungsrate besitzt. So ist in dem Qualitätskriterium \glqq Factual Correctness\grqq{} der Wert im Testszenario \glqq Register\grqq{} mit 85 \% höher als der Wert im Testszenario \glqq Login\grqq{} mit 77,3 \%. Bei der Abdeckung erzielt \glqq Register\grqq{} jedoch mit 63 \% einen niedrigeren Wert als \glqq Login\grqq{} mit 73.9 \%.
 
 % chapter ergebnisse (end)
 
@@ -762,7 +762,7 @@ Testszenarien liegen im Bereich 60 \% bis 88,9 \%.
 \\
 Ein weiterer Punkt, welcher berücksichtigt werden muss, ist die Benchmark. Für diese Arbeit wurden die von \textcite{Pavankumar21github2022} erstellten Testfälle als Benchmark verwendet, um die Abdeckungsrate zu bestimmen. Das Projekt von \textcite{Pavankumar21github2022} wurde im Jahr 2022 erstellt und könnte eine ältere Version von \textcite{OpenCart2025} getestet haben. Deshalb wurde bei der Auswertung der von GPT-4o erstellten Testfälle diese ebenfalls mit den Informationen auf der \textcite{OpenCart2025} Website überprüft. Das Projekt von \textcite{Pavankumar21github2022} testete jedoch unterschiedliche Testszenarien mit mehreren Testfällen, welche der in Kapitel \ref{sec:testfallstruktur} beschriebenen Testfallstruktur entsprechen. Außerdem sind diese anwendungstechnisch entsprechend logisch aufgebaut, sodass das Projekt von \textcite{Pavankumar21github2022} sich dennoch als Benchmark für die Abdeckung eignet.\\
 \\
-Durch die Auswertung der von GPT-4o generierten Testfälle werden Erkenntnisse im Bereich der Leistungsfähigkeit von GPT-4o im Bereich der Testfallgenerierung gewonnen. Während sich der Wert der Testfallstruktur bei 100 \% befindet, erzielen die von GPT-4o generierten Testfälle in den beiden anderen Qualitätskriterien nicht so hohe Werte. So erreicht die Factual Correctness einen Mittelwert von 78,1 \% und die Abdeckung einen Mittelwert von 68 \%. Somit sind zwar mehr als zwei Drittel der von GPT-4o erstellten Testfälle richtig aufgebaut, faktisch korrekt und erreichen eine hohe Abdeckung und sind damit praktisch nutzbar. Dennoch könnte jedoch die Anzahl in Zukunft noch weiter verbessert werden.
+Durch die Auswertung der von GPT-4o generierten Testfälle werden Erkenntnisse im Bereich der Leistungsfähigkeit von GPT-4o im Bereich der Testfallgenerierung gewonnen. Während sich der Wert der Testfallstruktur bei 100 \% befindet, erzielen die von GPT-4o generierten Testfälle in den beiden anderen Qualitätskriterien nicht so hohe Werte. So erreicht die Factual Correctness einen Mittelwert von 78,1 \% und die Abdeckung einen Mittelwert von 68 \%. Somit sind zwar mehr als zwei Drittel der von GPT-4o erstellten Testfälle richtig aufgebaut, faktisch korrekt und erreichen eine hohe Abdeckung und sind damit praktisch nutzbar, dennoch könnte jedoch die Anzahl in Zukunft noch weiter verbessert werden.
 % chapter diskussion (end)
 
 \chapter{Fazit und Ausblick} % (fold)
@@ -780,10 +780,10 @@ Die Testfallstruktur hat in allen Testszenarien hindurch einen Wert von 100 \% e
 \\
 Bei den beiden Qualitätskriterien \glqq Factual Correctness\grqq{} und \glqq Abdeckung\grqq{} gab es jedoch Schwankungen pro Testszenario. Dennoch erreichten die von GPT-4o generierten Testfälle über alle Testszenarien hinweg einen Wert von über 50 \% in Bezug auf ihre Abdeckung und Factual Correctness. Mit einem Mittelwert von 78,1 \% bei der Factual Correctness und mit dem Mittelwert der Abdeckungsrate von 68 \%, kann jedoch festgehalten werden, dass die Mehrzahl der von ChatGPT-4o generierten Testfälle faktisch korrekt sind und dabei mehr als zwei Drittel der Testfälle pro Testszenario abdecken.\\
 \\
-Dadurch kann ein LLM wie GPT-4o für den Nutzer ein hilfreiches Werkzeug zur Erstellung von Testfällen sein, wenn dieser Anforderungsspezifikationen und Screenshots mit Website-Informationen zur Verfügung gestellt werden. Wie in Kapitel \ref{sec:promptUndVerwendeteMethoden} beschrieben, ist es jedoch wichtig, dass GPT-4o dazu aufgefordert wird, die Testfälle in Tabellenform anzeigen zu lassen, um so Halluzinationen und Fehlinterpretationen vorbeugen zu können. GPT-4o ist in der Lage, Änderungen und Anmerkungen des Nutzers einzubauen und dadurch die Testfälle zu verbessern. Die Kombination aus Nutzer und LLM spielt dabei eine wichtige Rolle. Dies deckt sich, mit den Ergebnissen welche \textcite{Kirinuki2024} erzielen konnten. In dem Werk von \textcite{Kirinuki2024} wurde die Abdeckungsrate erhöht, als die Nutzer mit GPT-4 zusammengearbeitet haben.
+Dadurch kann ein LLM wie GPT-4o für den Nutzer ein hilfreiches Werkzeug zur Erstellung von Testfällen sein, wenn dieser Anforderungsspezifikationen und Screenshots mit Website-Informationen zur Verfügung gestellt werden. Wie in Kapitel \ref{sec:promptUndVerwendeteMethoden} beschrieben, ist es jedoch wichtig, dass GPT-4o dazu aufgefordert wird, die Testfälle in Tabellenform darzustellen, um so Halluzinationen und Fehlinterpretationen vorbeugen zu können. GPT-4o ist in der Lage, Änderungen und Anmerkungen des Nutzers einzubauen und dadurch die Testfälle zu verbessern. Die Kombination aus Nutzer und LLM spielt dabei eine wichtige Rolle. Dies deckt sich mit den Ergebnissen, welche \textcite{Kirinuki2024} erzielen konnten. In dem Werk von \textcite{Kirinuki2024} wurde die Abdeckungsrate erhöht, als die Nutzer mit GPT-4 zusammengearbeitet haben.
 \newpage
 
-\noindent Die Ergebnisse dieser Arbeit zeigen, dass der Einsatz von Künstlicher Intelligenz zur Testfallgenerierung eine praktische Bedeutung besitzt. Zukünftige Werke können dazu andere LLMs verwenden und Vergleiche ziehen und andere Anwendungen testen, um Optimierungsmöglichkeiten beim Einsatz von Künstlicher Intelligenz zur Testfallgenerierung zu untersuchen. Es ist festzuhalten, dass GPT-4o ein Werkzeug ist, das dem Nutzer bei der Erstellung von Anwendungstestfällen von Nutzen ist. Dabei muss GPT-4o nicht trainiert werden, es reicht diesem Informationen und Anforderungsspezifikationen mitzugeben und gegebenenfalls auf Unstimmigkeiten aufmerksam zu machen. Außerdem bietet diese Arbeit ein Vorgehen, wie mit GPT-4o Testfälle generiert werden können und mit welchen Qualitätskriterien diese ausgewertet werden können.
+\noindent Die Ergebnisse dieser Arbeit zeigen, dass der Einsatz von Künstlicher Intelligenz zur Testfallgenerierung eine praktische Bedeutung besitzt. Zukünftige Werke können dazu andere LLMs verwenden und Vergleiche ziehen und andere Anwendungen testen, um Optimierungsmöglichkeiten beim Einsatz von Künstlicher Intelligenz zur Testfallgenerierung zu untersuchen. Es ist festzuhalten, dass GPT-4o ein Werkzeug ist, das dem Nutzer bei der Erstellung von Anwendungstestfällen von Nutzen ist. Dabei muss GPT-4o nicht trainiert werden. Es reicht diesem Informationen und Anforderungsspezifikationen zur Verfügung zu stellen und gegebenenfalls auf Unstimmigkeiten aufmerksam zu machen. Außerdem stellt diese Arbeit ein strukturiertes Vorgehen zur Generierung von Testfällen mit GPT-4o vor und zeigt auf, wie diese anhand ausgewählter Qualitätskriterien bewertet werden können.
 % chapter fazitUndAusblick (end)
 
 \printbibliography
